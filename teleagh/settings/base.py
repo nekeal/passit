@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     # my apps
     'accounts',
     'lecturers',
@@ -142,5 +143,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # GRAPPELI SECTION
 GRAPPELLI_ADMIN_TITLE = 'Teleagh'
-
-
