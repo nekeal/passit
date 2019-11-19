@@ -14,6 +14,14 @@ def year_validator(value):
                               f"between 2018 and {max_year}")
 
 
+class FieldOfStudies(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True, help_text="Slug which identifies field of study in syllabus")
+
+    def __str__(self) -> str:
+        return self.name
+
+
 class Resource(TimeStampedModel, OwnedModel):
     name = models.CharField(max_length=100)
     url = models.URLField(blank=True)
@@ -24,13 +32,6 @@ class Resource(TimeStampedModel, OwnedModel):
 
     def __str__(self) -> str:
         return f'{self.name} - {self.subject}'
-
-
-class FieldOfStudies(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __str__(self) -> str:
-        return self.name
 
 
 class Subject(models.Model):
