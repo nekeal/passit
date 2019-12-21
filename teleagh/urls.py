@@ -18,9 +18,10 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='http://telewiki.tk/admin/')),
+    path('', RedirectView.as_view(url='/api')),
     path('api/', include('subject.urls')),
     path('api/', include('lecturers.urls')),
+    path('api/', include('news.urls')),
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
 ]
