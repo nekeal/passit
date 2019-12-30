@@ -5,6 +5,7 @@ before_script:
 - docker-compose build
 script:
 - sudo docker-compose run web pytest
+
 deploy:
   provider: heroku
   api_key:
@@ -12,4 +13,6 @@ deploy:
   app:
     projekt: teleagh
   on: projekt
-  run: python manage.py migrate
+  run:
+    - restart
+    - "python manage.py migrate"
