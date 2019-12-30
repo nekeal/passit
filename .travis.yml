@@ -1,4 +1,3 @@
-language: python
 dist: bionic
 services:
 - docker
