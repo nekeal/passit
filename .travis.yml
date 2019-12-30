@@ -13,6 +13,6 @@ deploy:
   app:
     projekt: teleagh
   on: projekt
-  run:
-    - restart
-    - "python manage.py migrate"
+#  run:
+#    - restart
+#    - "python manage.py migrate"
