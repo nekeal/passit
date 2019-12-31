@@ -12,7 +12,6 @@ class FieldOfStudiesViewSet(viewsets.ModelViewSet):
     queryset = FieldOfStudies.objects.all()
     model = FieldOfStudies
 
-
     @action(detail=True, methods=['get'])
     def subjects(self, request, pk=None):
         field = self.get_object()
