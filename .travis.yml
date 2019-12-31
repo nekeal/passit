@@ -3,15 +3,17 @@ python:
   - 3.7
 dist: bionic
 services:
-- docker
+  - docker
 install:
   - pip install -r requirements-ci.txt
 before_script:
-- docker-compose build
+  - flake8
+  - mypy .
+  - docker-compose build
 script:
-- flake8
-- mypy .
-- sudo docker-compose run web pytest
+  - flake8
+  - mypy .
+  - sudo docker-compose run web pytest
 
 deploy:
   provider: heroku
