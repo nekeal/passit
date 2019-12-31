@@ -5,15 +5,13 @@ dist: bionic
 services:
   - docker
 install:
-  - pip install -r requirements-ci.txt
+  - pip install flake8
 before_script:
   - flake8 --format=default
-  - mypy .
   - docker-compose build
 script:
-  - flake8
-  - mypy .
   - sudo docker-compose run web pytest
+  - sudo docker-compose run web mypy .
 
 deploy:
   provider: heroku
