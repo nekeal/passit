@@ -7,7 +7,7 @@ services:
 install:
   - pip install -r requirements-ci.txt
 before_script:
-  - flake8
+  - flake8 --format=default
   - mypy .
   - docker-compose build
 script:
