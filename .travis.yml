@@ -11,7 +11,7 @@ before_script:
   - docker-compose build
 script:
   - sudo docker-compose run web pytest
-  - sudo docker-compose run web pip install -r requirements-ci.txt && mypy .
+  - sudo docker-compose run web bash -c "pip install -r requirements-ci.txt && mypy ."
 
 deploy:
   provider: heroku
@@ -21,6 +21,3 @@ deploy:
   app:
     projekt: teleagh
   on: projekt
-#  run:
-#    - restart
-#    - "python manage.py migrate"
