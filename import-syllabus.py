@@ -1,18 +1,18 @@
-import json
-from typing import Dict, Any
-import random
-random.choices()
 import django
+import json
+import random
 import requests
+from typing import Dict, Any
+
+random.choices()
 django.setup()
-from subject.models import Subject
 fields_of_studies = ['stacjonarne-informatyka',
-           'stacjonarne-cyberbezpieczenstwo--2',
-           'stacjonarne-elektronika',
-           'stacjonarne-elektronika-i-telekomunikacja--3',
-           'full-time-studies-electronics-and-telecommunications--2',
-           'stacjonarne-teleinformatyka'
-                    ]
+                     'stacjonarne-cyberbezpieczenstwo--2',
+                     'stacjonarne-elektronika',
+                     'stacjonarne-elektronika-i-telekomunikacja--3',
+                     'full-time-studies-electronics-and-telecommunications--2',
+                     'stacjonarne-teleinformatyka',
+                     ]
 list_of_subjects_url = 'https://syllabuskrk.agh.edu.pl/2019-2020/magnesite/api/faculties/wieit/study_plans/{}/modules'
 detail_of_subject_url = 'https://syllabuskrk.agh.edu.pl/api/current_annual/modules/{}'
 list_of_subjects = []
