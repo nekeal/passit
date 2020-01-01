@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'grappelli',
+    # 'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -88,13 +88,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    # 'production': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'db_name',
-    #     'USER': 'db_user',
-    #     'PASSWORD': 'db_password',
-    #     'HOST': 'db_host',
-    # }
 }
 
 
