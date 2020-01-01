@@ -19,7 +19,7 @@ jobs:
             - v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
           name: install requirements
-          command: pip install requirements.txt
+          command: pip install -r requirements.txt
       - save_cache:
           paths:
             - '/usr/local/lib/python3.7/site-packages'
