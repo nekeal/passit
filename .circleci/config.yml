@@ -50,6 +50,8 @@ jobs:
           name: Running tests
           command: python -m pytest
   deploy:
+    docker:
+      - image: alpine/git
     steps:
       - checkout
       - run:
