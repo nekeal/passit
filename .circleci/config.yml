@@ -20,10 +20,6 @@ jobs:
       - run:
           name: install requirements
           command: pip install -r requirements.txt
-      - save_cache:
-          paths:
-            - '/usr/local/lib/python3.7/site-packages'
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
           name: Running linter
           command: |
@@ -34,6 +30,20 @@ jobs:
           command: |
             pip install -r requirements-ci.txt
             mypy .
+      - save_cache:
+          paths:
+            - '/usr/local/lib/python3.7/site-packages'
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
           name: Running tests
           command: python -m pytest
+  deploy:
+    branches:
+      only:
+        - projekt
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
