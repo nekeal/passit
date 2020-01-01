@@ -30,13 +30,11 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
-          name: install requirements
-          command: pip install -r requirements.txt
+          name: install CI requirements
+          command: pip install -r requirements-ci.txt
       - run:
           name: Running linter
-          command: |
-            pip install flake8
-            flake8
+          command: flake8
       - run:
           name: Running type checker
           command: |
