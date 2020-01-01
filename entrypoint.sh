@@ -1,9 +1,4 @@
 #!/bin/bash
-if [[ $DEPLOYMENT == "true" ]]
-then
-  python manage.py migrate
-fi
-
 if [[ $DJANGO_SETTINGS_MODULE == "teleagh.settings.production" ]]
 then
   echo "Starting gunicorn"
