@@ -1,1 +1,3698 @@
-[{"id": 13052, "code": "IINF-1-201-s", "mode": "Physics 1", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 15513, "code": "IINF-1-501-s", "mode": "Theory of Compiling ", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 15561, "code": "IINF-1-701-s", "mode": "Project 2 ", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 43223, "code": "IINF-1-601-s", "mode": "Badania operacyjne", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 15489, "code": "IINF-1-401-s", "mode": "Computation Methods for Science and Technology", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 40501, "code": "IINF-1-101-s", "mode": "Interpersonal Skills", "semester": 1, "field_of_study": "stacjonarne-informatyka"}, {"id": 15469, "code": "IINF-1-301-s", "mode": "Physics 2", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 32646, "code": "IINF-1-001-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 13048, "code": "IINF-1-202-s", "mode": "Data Structures and Algorithms", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 41168, "code": "IINF-1-102-s", "mode": "Mathematical Analysis 1", "semester": 1, "field_of_study": "stacjonarne-informatyka"}, {"id": 15660, "code": "IINF-1-502-s", "mode": "Podstawy sztucznej inteligencji", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 44899, "code": "IINF-1-402-s", "mode": "Programowanie w jezyku Fortran", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 15527, "code": "IINF-1-602-s", "mode": "Software Engineering", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 13054, "code": "IINF-1-302-s", "mode": "Object Oriented Programming", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 32523, "code": "IINF-1-002-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 40504, "code": "IINF-1-702-s", "mode": "Metody rozpoznawania obraz\u00f3w", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 15471, "code": "IINF-1-303-s", "mode": "Introduction to Databases", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 15529, "code": "IINF-1-603-s", "mode": "Project 1", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 12180, "code": "IINF-1-003-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 15501, "code": "IINF-1-503-s", "mode": "Theory of Concurrency", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 13040, "code": "IINF-1-103-s", "mode": "Introduction to UNIX System", "semester": 1, "field_of_study": "stacjonarne-informatyka"}, {"id": 32521, "code": "IINF-1-203-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 15493, "code": "IINF-1-403-s", "mode": "Operating Systems ", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 43224, "code": "IINF-1-604-s", "mode": "Bezpiecze\u0144stwo sieci komputerowych", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 34171, "code": "IINF-1-704-s", "mode": "Final project", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 44748, "code": "IINF-1-304-s", "mode": "Rachunek prawdopodobie\u0144stwa i statystyka", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 13038, "code": "IINF-1-204-s", "mode": "Imperative Programming", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 44750, "code": "IINF-1-404-s", "mode": "Programowanie w j\u0119zyku C++", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 15521, "code": "IINF-1-504-s", "mode": "Computation and Complexity Theory", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 13036, "code": "IINF-1-104-s", "mode": "Introduction to Computer Science", "semester": 1, "field_of_study": "stacjonarne-informatyka"}, {"id": 33796, "code": "IINF-1-205-s", "mode": "Protection of Intellectual Property", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 38741, "code": "IINF-1-605-s", "mode": "Dzia\u0142alno\u015b\u0107 w kole naukowym", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 15499, "code": "IINF-1-405-s", "mode": "Object-oriented design", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 40502, "code": "IINF-1-705-s", "mode": "Virtual Private Networks", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 13028, "code": "IINF-1-105-s", "mode": "Algebra", "semester": 1, "field_of_study": "stacjonarne-informatyka"}, {"id": 15515, "code": "IINF-1-505-s", "mode": "Computer Networks", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 43069, "code": "IINF-1-305-s", "mode": "Algorytmy geometryczne", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 40595, "code": "IINF-1-506-s", "mode": "Technologies Internet of Things", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 13058, "code": "IINF-1-206-s", "mode": "Mathematical Analysis 2", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 30296, "code": "IINF-1-306-s", "mode": "Physical Education 3", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 40503, "code": "IINF-1-706-s", "mode": "Programming of autonomous mobile robots", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 43225, "code": "IINF-1-606-s", "mode": "Systemy czasu rzeczywistego", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 44751, "code": "IINF-1-406-s", "mode": "Assembler Languages", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 13060, "code": "IINF-1-207-s", "mode": "Mathematical Logic ", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 15519, "code": "IINF-1-507-s", "mode": "Object-oriented technologies ", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 13032, "code": "IINF-1-107-s", "mode": "Discrete Mathematics", "semester": 1, "field_of_study": "stacjonarne-informatyka"}, {"id": 15497, "code": "IINF-1-407-s", "mode": "Automata and Formal Languages Theory", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 40597, "code": "IINF-1-707-s", "mode": "Protecting personal\u00a0 data in the digital society", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 45001, "code": "IINF-1-607-s", "mode": "Przetwarzanie i analiza obraz\u00f3w cyfrowych", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 15479, "code": "IINF-1-307-s", "mode": "Differential and Difference Equations", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 40588, "code": "IINF-1-308-s", "mode": "Graph-based algorithms", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 43226, "code": "IINF-1-608-s", "mode": "Podstawy uczenia maszynowego", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 43206, "code": "IINF-1-508-s", "mode": "Metody i algorytmy podejmowania decyzji", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 43231, "code": "IINF-1-708-s", "mode": "Architektura rozwi\u0105za\u0144 chmurowych", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 12747, "code": "IINF-1-408-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 12713, "code": "IINF-1-208-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 43227, "code": "IINF-1-609-s", "mode": "Algorytmy wsp\u00f3\u0142bie\u017cne", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 44752, "code": "IINF-1-409-s", "mode": "Programowanie w j\u0119zykach Erlang i Elixir", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 43232, "code": "IINF-1-709-s", "mode": "Hurtownie danych", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 12720, "code": "IINF-1-309-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 12176, "code": "IINF-1-209-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 43200, "code": "IINF-1-509-s", "mode": "Algorytmy macierzowe", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 43207, "code": "IINF-1-510-s", "mode": "Metody i algorytmy kompilacji", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 12718, "code": "IINF-1-310-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 43228, "code": "IINF-1-610-s", "mode": "Metody i algorytmy sztucznej inteligencji", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 43233, "code": "IINF-1-710-s", "mode": "Programowanie reaktywne w j\u0119zyku Scala", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 30292, "code": "IINF-1-110-s", "mode": "Physical Education 1", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 30295, "code": "IINF-1-210-s", "mode": "Physical Education 2", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 43234, "code": "IINF-1-711-s", "mode": "Business analysis systems", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 12715, "code": "IINF-1-211-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 32646, "code": "IINF-1-311-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 43208, "code": "IINF-1-511-s", "mode": "Design Patterns", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 32645, "code": "IINF-1-212-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-informatyka"}, {"id": 43209, "code": "IINF-1-512-s", "mode": "Computer Graphics", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 44749, "code": "IINF-1-312-s", "mode": "In\u017cynieria wymaga\u0144 i jako\u015bci", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 43229, "code": "IINF-1-612-s", "mode": "Wprowadzenie do in\u017cynierii bezpiecze\u0144stwa", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 43235, "code": "IINF-1-712-s", "mode": "Systemy i technologie wizualizacji", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 15475, "code": "IINF-1-412-s", "mode": "Digital technology", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 12728, "code": "IINF-1-413-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 15525, "code": "IINF-1-613-s", "mode": "Computer Architecture ", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 43236, "code": "IINF-1-713-s", "mode": "ERP Systems", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 15495, "code": "IINF-1-513-s", "mode": "Microprocessor Techniques", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 15678, "code": "IINF-1-514-s", "mode": "Cryptography", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 15587, "code": "IINF-1-614-s", "mode": "Embedded Systems", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 15507, "code": "IINF-1-414-s", "mode": "Database Systems", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 12178, "code": "IINF-1-314-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 36461, "code": "IINF-1-615-s", "mode": "Complex Digital Systems", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 40596, "code": "IINF-1-515-s", "mode": "Advanced System Programming", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 12180, "code": "IINF-1-415-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 43071, "code": "IINF-1-315-s", "mode": "Wprowadzenie do aplikacji internetowych", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 43210, "code": "IINF-1-516-s", "mode": "IT solutions in manufacturing engineering", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 43230, "code": "IINF-1-616-s", "mode": "UX aplikacji internetowych", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 32523, "code": "IINF-1-416-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 40493, "code": "IINF-1-316-s", "mode": "Functional programming", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 12730, "code": "IINF-1-417-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 40594, "code": "IINF-1-517-s", "mode": "Usability Engineering", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 44921, "code": "IINF-1-617-s", "mode": "Optymalizacja kodu na r\u00f3\u017cne architektury", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 43072, "code": "IINF-1-317-s", "mode": "Transformacje i algorytmy grafowe", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 44998, "code": "IINF-1-518-s", "mode": "Przetwarzanie obraz\u00f3w cyfrowych", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 44754, "code": "IINF-1-418-s", "mode": "Programming in Python", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 45009, "code": "IINF-1-618-s", "mode": "Algorytmy dla problem\u00f3w trudnych obliczeniowo", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 32522, "code": "IINF-1-318-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 43218, "code": "IINF-1-519-s", "mode": "  Introduction to ERP systems", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 45016, "code": "IINF-1-619-s", "mode": "Distributed Systems", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 43073, "code": "IINF-1-319-s", "mode": "Programowanie z ograniczeniami", "semester": 3, "field_of_study": "stacjonarne-informatyka"}, {"id": 43117, "code": "IINF-1-419-s", "mode": "Modelowanie system\u00f3w dyskretnych", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 45022, "code": "IINF-1-620-s", "mode": "Praktyka zawodowa", "semester": 6, "field_of_study": "stacjonarne-informatyka"}, {"id": 44943, "code": "IINF-1-520-s", "mode": "Wst\u0119p do programowania grafiki komputerowej", "semester": 5, "field_of_study": "stacjonarne-informatyka"}, {"id": 43118, "code": "IINF-1-420-s", "mode": "Multimedia i algorytmy przetwarzania multimedi\u00f3w", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 43119, "code": "IINF-1-421-s", "mode": "Algorytmy inspirowane biologicznie", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 44755, "code": "IINF-1-422-s", "mode": "Programming in Ruby", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 44756, "code": "IINF-1-423-s", "mode": "Programming in Scala", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 43130, "code": "IINF-1-424-s", "mode": "Programming in Java Script", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 43131, "code": "IINF-1-425-s", "mode": "Programowanie w j\u0119zyku Prolog", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 44919, "code": "IINF-1-426-s", "mode": "Programowanie w j\u0119zyku Icon", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 44920, "code": "IINF-1-427-s", "mode": "Programowanie w jezyku Julia", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 43116, "code": "IINF-1-431-s", "mode": "Elementy statystycznego uczenia maszynowego", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 40589, "code": "IINF-1-432-s", "mode": "Textual algorithms", "semester": 4, "field_of_study": "stacjonarne-informatyka"}, {"id": 15682, "code": "IINF-1-786-s", "mode": "CAD/CAE Systems", "semester": 7, "field_of_study": "stacjonarne-informatyka"}, {"id": 42469, "code": "ICBZ-1-401-s", "mode": "Security of wireless networks", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 32521, "code": "ICBZ-1-201-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 43040, "code": "ICBZ-1-701-s", "mode": "Elective course from UBPJO", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42436, "code": "ICBZ-1-101-s", "mode": "Analysis 1", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42459, "code": "ICBZ-1-301-s", "mode": "Physics 2", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42479, "code": "ICBZ-1-501-s", "mode": "Wide area network security ", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42488, "code": "ICBZ-1-601-s", "mode": "Security of critical infrastructure and industrial control systems", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42460, "code": "ICBZ-1-302-s", "mode": "Local Area Network Security", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42489, "code": "ICBZ-1-602-s", "mode": "Practical use of information from open sources", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42451, "code": "ICBZ-1-202-s", "mode": "Analysis 2", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42470, "code": "ICBZ-1-402-s", "mode": "Software security ", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42442, "code": "ICBZ-1-102-s", "mode": "Algebra", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 44967, "code": "ICBZ-1-103-s", "mode": "Physical education 1/3", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42452, "code": "ICBZ-1-203-s", "mode": "Probabilistics and statistics", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42471, "code": "ICBZ-1-403-s", "mode": "Databases", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42461, "code": "ICBZ-1-303-s", "mode": "Operating Systems", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42491, "code": "ICBZ-1-604-s", "mode": "Security of operating systems ", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42462, "code": "ICBZ-1-304-s", "mode": "Web and mobile application security", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42474, "code": "ICBZ-1-404-s", "mode": "Forensic analysis", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42453, "code": "ICBZ-1-204-s", "mode": "Physics 1", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42483, "code": "ICBZ-1-505-s", "mode": "Security of mobile systems and 5G networks", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42445, "code": "ICBZ-1-105-s", "mode": "Introduction to computer science", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42472, "code": "ICBZ-1-405-s", "mode": "International organizations and cybersecurity", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42570, "code": "ICBZ-1-605-s", "mode": "Students research group", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42454, "code": "ICBZ-1-205-s", "mode": "Algorithms design and analysis", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42463, "code": "ICBZ-1-305-s", "mode": "Script Programming", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42484, "code": "ICBZ-1-506-s", "mode": "Protection of classified information ", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42464, "code": "ICBZ-1-306-s", "mode": "Digital forensics", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42698, "code": "ICBZ-1-606-s", "mode": "Introduction to quantum computing", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42446, "code": "ICBZ-1-106-s", "mode": "Introduction to the internet", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42475, "code": "ICBZ-1-406-s", "mode": "Hardware aspects of cybersecurity", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42455, "code": "ICBZ-1-206-s", "mode": "Security of ICT networks and systems", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42568, "code": "ICBZ-1-706-s", "mode": "Project 2", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42486, "code": "ICBZ-1-507-s", "mode": "Penetration testing", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42467, "code": "ICBZ-1-307-s", "mode": "Social engineering", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42477, "code": "ICBZ-1-407-s", "mode": "OSINT - introduction", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42456, "code": "ICBZ-1-207-s", "mode": "Incidents detection", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42569, "code": "ICBZ-1-707-s", "mode": "Engineering project", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42447, "code": "ICBZ-1-107-s", "mode": "The national cybersecurity system", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42466, "code": "ICBZ-1-508-s", "mode": "Industrial espionage", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42448, "code": "ICBZ-1-108-s", "mode": "Introduction to administration and computer security", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42476, "code": "ICBZ-1-408-s", "mode": "Malware analysis", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42457, "code": "ICBZ-1-208-s", "mode": "Programming basics", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12178, "code": "ICBZ-1-308-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42449, "code": "ICBZ-1-109-s", "mode": " An introductiom to Criminal Law and Criminal Procedure", "semester": 1, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42465, "code": "ICBZ-1-309-s", "mode": "Combating cybercrime - introduction", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42503, "code": "ICBZ-1-709-s", "mode": "Digital watermarking and steganography", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42473, "code": "ICBZ-1-409-s", "mode": "Machine learning for network anomaly detection", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42458, "code": "ICBZ-1-209-s", "mode": "Information security management", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42500, "code": "ICBZ-1-609-s", "mode": "Network programming supporting secure applications", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 32646, "code": "ICBZ-1-310-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42571, "code": "ICBZ-1-710-s", "mode": "Students research group", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42478, "code": "ICBZ-1-410-s", "mode": "Personal data protection and privacy enhancing technologies", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12713, "code": "ICBZ-1-210-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42567, "code": "ICBZ-1-610-s", "mode": "Project ", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12176, "code": "ICBZ-1-211-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42505, "code": "ICBZ-1-711-s", "mode": "Blockchain", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12728, "code": "ICBZ-1-411-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42482, "code": "ICBZ-1-511-s", "mode": "Security of virtualized environment", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42490, "code": "ICBZ-1-311-s", "mode": "Cryptography", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 32522, "code": "ICBZ-1-312-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42502, "code": "ICBZ-1-712-s", "mode": "Cybersecurity and data processing in the cloud", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12715, "code": "ICBZ-1-212-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42480, "code": "ICBZ-1-512-s", "mode": "Incidents management - SOC and CERT", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42572, "code": "ICBZ-1-612-s", "mode": "Professional training", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12180, "code": "ICBZ-1-412-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 32645, "code": "ICBZ-1-213-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 44969, "code": "ICBZ-1-313-s", "mode": "Physical education 3/3", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42481, "code": "ICBZ-1-513-s", "mode": "Biometrics", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 32523, "code": "ICBZ-1-413-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42871, "code": "ICBZ-1-214-s", "mode": "Discrete Mathematics", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12730, "code": "ICBZ-1-414-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42494, "code": "ICBZ-1-514-s", "mode": "Cybersecurity and contemporary conflicts", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42468, "code": "ICBZ-1-614-s", "mode": "Basics of information analysis", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42506, "code": "ICBZ-1-714-s", "mode": "Cryptanalysis", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12718, "code": "ICBZ-1-314-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 44968, "code": "ICBZ-1-215-s", "mode": "Physical education 2/3", "semester": 2, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12747, "code": "ICBZ-1-415-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42495, "code": "ICBZ-1-515-s", "mode": "Introduction to software engineering", "semester": 5, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42497, "code": "ICBZ-1-615-s", "mode": "Cybersecurity and international law", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42504, "code": "ICBZ-1-715-s", "mode": "IoT Security", "semester": 7, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 12720, "code": "ICBZ-1-315-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 42499, "code": "ICBZ-1-616-s", "mode": "National information resources", "semester": 6, "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"}, {"id": 29636, "code": "IELE-1-701-s", "mode": "Seminarium dyplomowe", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 40780, "code": "IELE-1-601-s", "mode": "Elektronika w medycynie", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 12747, "code": "IELE-1-401-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 38321, "code": "IELE-1-501-s", "mode": "Basics of mechanical constructions", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 40554, "code": "IELE-1-101-s", "mode": "Mathematical analysis 1", "semester": 1, "field_of_study": "stacjonarne-elektronika"}, {"id": 29556, "code": "IELE-1-301-s", "mode": "Electronic devices", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 29751, "code": "IELE-1-201-s", "mode": "Physics 2", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 38337, "code": "IELE-1-402-s", "mode": "Prawo patentowe", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 38322, "code": "IELE-1-502-s", "mode": "CAD tools", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 29568, "code": "IELE-1-202-s", "mode": "Electronic metrology", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 40555, "code": "IELE-1-102-s", "mode": "Algebra", "semester": 1, "field_of_study": "stacjonarne-elektronika"}, {"id": 29753, "code": "IELE-1-302-s", "mode": "Computional techniques", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 40567, "code": "IELE-1-602-s", "mode": "Microwave and antenna technique", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 40784, "code": "IELE-1-703-s", "mode": "Projektowanie system\u00f3w cyfrowych  przy pomocy j\u0119zyk\u00f3w wysokiego poziomu ESL", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 32521, "code": "IELE-1-203-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 40920, "code": "IELE-1-503-s", "mode": "Assembling of electronic systems", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 29624, "code": "IELE-1-603-s", "mode": "Sieci transmisji danych", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 29566, "code": "IELE-1-303-s", "mode": "Signal theory", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 12180, "code": "IELE-1-403-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 40782, "code": "IELE-1-704-s", "mode": "Elektronika spinowa", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 33766, "code": "IELE-1-604-s", "mode": "Praktyka kierunkowa ", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 12730, "code": "IELE-1-404-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 40556, "code": "IELE-1-204-s", "mode": "Circuits analysis I", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 38318, "code": "IELE-1-304-s", "mode": "Management basics", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 29604, "code": "IELE-1-504-s", "mode": "Microprocessors Technology II", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 12728, "code": "IELE-1-405-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 29550, "code": "IELE-1-105-s", "mode": "Probability and statistics", "semester": 1, "field_of_study": "stacjonarne-elektronika"}, {"id": 29628, "code": "IELE-1-605-s", "mode": "Electronic equipment design", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 29606, "code": "IELE-1-505-s", "mode": "Digital systems design", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 38324, "code": "IELE-1-705-s", "mode": "Repetytorium dyplomowe", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 40557, "code": "IELE-1-205-s", "mode": "Mathematical analysis  2", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 32522, "code": "IELE-1-305-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 29608, "code": "IELE-1-506-s", "mode": "Fiber-optics systems", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 29646, "code": "IELE-1-706-s", "mode": "Diploma thesis", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 29590, "code": "IELE-1-406-s", "mode": "Digital signal processing", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 29538, "code": "IELE-1-106-s", "mode": "Introduction to electronics", "semester": 1, "field_of_study": "stacjonarne-elektronika"}, {"id": 40781, "code": "IELE-1-606-s", "mode": "Systemy elektroniczne pojazd\u00f3w", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 12718, "code": "IELE-1-306-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 12713, "code": "IELE-1-206-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 29544, "code": "IELE-1-107-s", "mode": "Basics of computer science", "semester": 1, "field_of_study": "stacjonarne-elektronika"}, {"id": 29558, "code": "IELE-1-207-s", "mode": "Digital Electronics I", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 40788, "code": "IELE-1-607-s", "mode": "Problemy termiczne w uk\u0142adach elektronicznych", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 40789, "code": "IELE-1-707-s", "mode": "Interchips communication standards in embedded systems", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 40562, "code": "IELE-1-507-s", "mode": "Basics of microelectronics", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 29574, "code": "IELE-1-307-s", "mode": "Digital electronic circuits", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 29592, "code": "IELE-1-407-s", "mode": "Microprocessor systems I", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 29586, "code": "IELE-1-308-s", "mode": "Basics of finance economics and law in business", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 40559, "code": "IELE-1-408-s", "mode": "Electronic circuits", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 29612, "code": "IELE-1-508-s", "mode": "Design Laboratory - faculty subject in english", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 29634, "code": "IELE-1-608-s", "mode": "Diploma laboratory I", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 29626, "code": "IELE-1-708-s", "mode": "Techniki i systemy bezprzewodowe", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 12715, "code": "IELE-1-208-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 29576, "code": "IELE-1-209-s", "mode": "Engineering calculation techniques", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 40776, "code": "IELE-1-509-s", "mode": "Renewable energy sources", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 29578, "code": "IELE-1-309-s", "mode": "Industrial Automatic Control", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 30045, "code": "IELE-1-109-s", "mode": "Physics 1", "semester": 1, "field_of_study": "stacjonarne-elektronika"}, {"id": 29596, "code": "IELE-1-409-s", "mode": "Data transmission", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 40807, "code": "IELE-1-609-s", "mode": "Urz\u0105dzenia teleinformatyki ", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 40787, "code": "IELE-1-709-s", "mode": "Functional functional blocks and their applications", "semester": 7, "field_of_study": "stacjonarne-elektronika"}, {"id": 30295, "code": "IELE-1-210-s", "mode": "Physical Education 2", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 16459, "code": "IELE-1-410-s", "mode": "Ochrona w\u0142asno\u015bci intelektualnej", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 40558, "code": "IELE-1-310-s", "mode": "Circuits analysis II", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 40568, "code": "IELE-1-610-s", "mode": " Integrated Circuits Design", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 40783, "code": "IELE-1-510-s", "mode": "Programming in Python Language", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 30292, "code": "IELE-1-110-s", "mode": "Physical Education 1", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 40779, "code": "IELE-1-611-s", "mode": "Applications of microcontrollers", "semester": 6, "field_of_study": "stacjonarne-elektronika"}, {"id": 32645, "code": "IELE-1-211-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 12720, "code": "IELE-1-311-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 32523, "code": "IELE-1-411-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 30296, "code": "IELE-1-312-s", "mode": "Physical Education 3", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 40560, "code": "IELE-1-412-s", "mode": "Simulation of electronic circuits", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 40563, "code": "IELE-1-512-s", "mode": "Electronic systems and circuits", "semester": 5, "field_of_study": "stacjonarne-elektronika"}, {"id": 12176, "code": "IELE-1-212-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 40561, "code": "IELE-1-413-s", "mode": "Introduction to sensor technology", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 29560, "code": "IELE-1-213-s", "mode": "Programming languages", "semester": 2, "field_of_study": "stacjonarne-elektronika"}, {"id": 32646, "code": "IELE-1-313-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 29610, "code": "IELE-1-414-s", "mode": "Control and measurement systems", "semester": 4, "field_of_study": "stacjonarne-elektronika"}, {"id": 12178, "code": "IELE-1-314-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 29594, "code": "IELE-1-315-s", "mode": "Object-oriented programming", "semester": 3, "field_of_study": "stacjonarne-elektronika"}, {"id": 41015, "code": "IETP-1-701-s", "mode": "Diploma thesis", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16455, "code": "IETP-1-101-s", "mode": "Metodyka i techniki programowania 1", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16493, "code": "IETP-1-501-s", "mode": "Technika mikroprocesorowa  2", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16475, "code": "IETP-1-201-s", "mode": "Mathematical analysis  2", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 23957, "code": "IETP-1-601-s", "mode": "Wireless techniques and systems", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17139, "code": "IETP-1-401-s", "mode": "Analog electronic circuits 2", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 32522, "code": "IETP-1-301-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17141, "code": "IETP-1-402-s", "mode": "Technika mikroprocesorowa  1", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17125, "code": "IETP-1-302-s", "mode": "Signals and Systems", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16495, "code": "IETP-1-502-s", "mode": "Telecommunication systems and networks", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 38343, "code": "IETP-1-602-s", "mode": "Bezprzewodowe sieci komputerowe", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17272, "code": "IETP-1-702-s", "mode": "Seminar", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 32521, "code": "IETP-1-202-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 28671, "code": "IETP-1-103-s", "mode": "Introduction to electronics", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17143, "code": "IETP-1-403-s", "mode": "Cyfrowe przetwarzanie sygna\u0142\u00f3w", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 30296, "code": "IETP-1-303-s", "mode": "Physical Education 3", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40815, "code": "IETP-1-603-s", "mode": "Technika sensorowa", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 29612, "code": "IETP-1-503-s", "mode": "Design Laboratory - faculty subject in english", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16479, "code": "IETP-1-203-s", "mode": "Physics 2", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 28673, "code": "IETP-1-104-s", "mode": "Introduction to telecommunications", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16481, "code": "IETP-1-204-s", "mode": "Teoria obwod\u00f3w 2", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17129, "code": "IETP-1-304-s", "mode": "Techniki obliczeniowe", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40816, "code": "IETP-1-604-s", "mode": "Urz\u0105dzenia teleinformatyki ", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 38324, "code": "IETP-1-704-s", "mode": "Repetytorium dyplomowe", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 38342, "code": "IETP-1-504-s", "mode": "Programowanie sieciowe", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12730, "code": "IETP-1-404-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40817, "code": "IETP-1-605-s", "mode": "Elektronika w medycynie", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 30292, "code": "IETP-1-105-s", "mode": "Physical Education 1", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16483, "code": "IETP-1-205-s", "mode": "Metodyka i techniki programowania 2", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17131, "code": "IETP-1-305-s", "mode": "Operating systems", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17147, "code": "IETP-1-405-s", "mode": "Optoelektronika", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17149, "code": "IETP-1-406-s", "mode": "Computer Networks", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16463, "code": "IETP-1-106-s", "mode": "Algebra", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 38365, "code": "IETP-1-506-s", "mode": "Podstawy konstrukcji mechanicznych", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16485, "code": "IETP-1-206-s", "mode": "Electronic devices", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40783, "code": "IETP-1-706-s", "mode": "Programming in Python Language", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17133, "code": "IETP-1-306-s", "mode": "Analogue electronic circuits  1", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17176, "code": "IETP-1-606-s", "mode": "Praktyka kierunkowa", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16459, "code": "IETP-1-407-s", "mode": "Ochrona w\u0142asno\u015bci intelektualnej", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17151, "code": "IETP-1-507-s", "mode": "J\u0119zyki programowania obiektowego ", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16487, "code": "IETP-1-207-s", "mode": "Electronic metrology", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40806, "code": "IETP-1-707-s", "mode": "Renewable energy sources", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40774, "code": "IETP-1-607-s", "mode": "Assembling of electronic systems", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16465, "code": "IETP-1-107-s", "mode": "Mathematical Analysis 1", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17135, "code": "IETP-1-307-s", "mode": "Technika cyfrowa i uk\u0142ady programowalne", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 29586, "code": "IETP-1-308-s", "mode": "Basics of finance economics and law in business", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40808, "code": "IETP-1-708-s", "mode": "Elektronika spinowa", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40818, "code": "IETP-1-608-s", "mode": "Interchips communication standards in embedded systems", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 38359, "code": "IETP-1-408-s", "mode": "Prawo patentowe", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16467, "code": "IETP-1-108-s", "mode": "Fizyka 1", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12713, "code": "IETP-1-208-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17160, "code": "IETP-1-508-s", "mode": "Computer measurement systems", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 16469, "code": "IETP-1-109-s", "mode": "Circuit theory 1", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40809, "code": "IETP-1-709-s", "mode": "Zarz\u0105dzanie serwerami LINUX", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40819, "code": "IETP-1-609-s", "mode": "Systemy elektroniczne pojazd\u00f3w", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 38367, "code": "IETP-1-509-s", "mode": "Narz\u0119dzia CAD", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 38357, "code": "IETP-1-309-s", "mode": "Basics of Management", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12715, "code": "IETP-1-209-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12747, "code": "IETP-1-409-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40820, "code": "IETP-1-610-s", "mode": "Problemy termiczne w uk\u0142adach elektronicznych", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40810, "code": "IETP-1-710-s", "mode": "Programming for Android ", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 29550, "code": "IETP-1-110-s", "mode": "Probability and statistics", "semester": 1, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12718, "code": "IETP-1-310-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 32645, "code": "IETP-1-210-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12180, "code": "IETP-1-410-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12728, "code": "IETP-1-411-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12176, "code": "IETP-1-211-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40811, "code": "IETP-1-711-s", "mode": "Kierunki rozwoju telekomunikacji", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40821, "code": "IETP-1-611-s", "mode": "Komputerowe wspomaganie projektowania", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12720, "code": "IETP-1-311-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40812, "code": "IETP-1-712-s", "mode": "MPLS Networks", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 32646, "code": "IETP-1-312-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 32523, "code": "IETP-1-412-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40823, "code": "IETP-1-613-s", "mode": "Projektowanie system\u00f3w cyfrowych w j\u0119zykach opisu sprz\u0119tu", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40813, "code": "IETP-1-713-s", "mode": "Seminar on ICT", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40824, "code": "IETP-1-614-s", "mode": "Applications of microcontrollers", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40814, "code": "IETP-1-714-s", "mode": "Advanced Java Programming", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 12178, "code": "IETP-1-314-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40825, "code": "IETP-1-615-s", "mode": "Switching nodes for telecommunication and computer networks", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40826, "code": "IETP-1-616-s", "mode": "Introduction to Java Programming ", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40784, "code": "IETP-1-716-s", "mode": "Projektowanie system\u00f3w cyfrowych  przy pomocy j\u0119zyk\u00f3w wysokiego poziomu ESL", "semester": 7, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 28936, "code": "IETP-1-517-s", "mode": "Electronic integrated circuits and systems", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40827, "code": "IETP-1-617-s", "mode": "Systemy kom\u00f3rkowe", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 23943, "code": "IETP-1-518-s", "mode": "Microwave techniques, antenna systems and propagation of radio waves", "semester": 5, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40832, "code": "IETP-1-619-s", "mode": "Multimedia Information Processing and Communications", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40831, "code": "IETP-1-620-s", "mode": "Intradomain Routing in IP Networks", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40834, "code": "IETP-1-621-s", "mode": "Securing Data Transmission: Cryptology, Watermarking and Steganography", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40835, "code": "IETP-1-622-s", "mode": "Databases", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17127, "code": "IETP-1-423-s", "mode": "Simulation of electronic circuits", "semester": 4, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40836, "code": "IETP-1-623-s", "mode": "Software Defined Radio \u2013 Practical Approach", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 40837, "code": "IETP-1-624-s", "mode": "Science Club", "semester": 6, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 30295, "code": "IETP-1-277-s", "mode": "Physical Education 2", "semester": 2, "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"}, {"id": 17993, "code": "IETE-1-201-s", "mode": "Mathematical Analysis 2", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18041, "code": "IETE-1-501-s", "mode": "Microprocessor Technology  2", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17973, "code": "IETE-1-101-s", "mode": "Methodology and programming techniques 1", "semester": 1, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 34270, "code": "IETE-1-701-s", "mode": "Diplom Thesis", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40857, "code": "IETE-1-601-s", "mode": "Sensor Technology", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18027, "code": "IETE-1-401-s", "mode": "Microprocessor Technology 1", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 32522, "code": "IETE-1-301-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18689, "code": "IETE-1-702-s", "mode": "Thesis seminar", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18011, "code": "IETE-1-302-s", "mode": "Signals and Systems", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18043, "code": "IETE-1-502-s", "mode": "Telecommunication Networks and Systems", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18029, "code": "IETE-1-402-s", "mode": "Digital Signal Processing", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17995, "code": "IETE-1-202-s", "mode": "Probability and Statistics", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31576, "code": "IETE-1-602-s", "mode": "Professional practice", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18013, "code": "IETE-1-303-s", "mode": "Simulation Techniques", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31569, "code": "IETE-1-503-s", "mode": "Computer measurement systems", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17997, "code": "IETE-1-203-s", "mode": "Physics 2", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18017, "code": "IETE-1-403-s", "mode": "Operating Systems", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17999, "code": "IETE-1-204-s", "mode": "Circuits Theory 2", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18015, "code": "IETE-1-304-s", "mode": "Computational Techniques", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40858, "code": "IETE-1-604-s", "mode": "Design Digital Systems in Hardware Description Languages", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 38363, "code": "IETE-1-504-s", "mode": "Design Laboratory (elective module in english)", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 38355, "code": "IETE-1-704-s", "mode": "Compendium of Electronics and Telecommunications", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18033, "code": "IETE-1-404-s", "mode": "Optoelectronics", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17981, "code": "IETE-1-105-s", "mode": "Information Technology", "semester": 1, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18001, "code": "IETE-1-205-s", "mode": "Methodology and programming techniques 2 ", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 34267, "code": "IETE-1-505-s", "mode": "Introduction to Mechanics", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12718, "code": "IETE-1-305-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18035, "code": "IETE-1-405-s", "mode": "Computer Networks", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40859, "code": "IETE-1-605-s", "mode": "Switching nodes for telecommunication and computer networks", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40851, "code": "IETE-1-705-s", "mode": "Applications of Digital Signal Processors ", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17983, "code": "IETE-1-106-s", "mode": "Algebra", "semester": 1, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18003, "code": "IETE-1-206-s", "mode": "Electronic  Devices", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40852, "code": "IETE-1-706-s", "mode": "Speech Processing ", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40860, "code": "IETE-1-606-s", "mode": "Introduction to Java Programming ", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18019, "code": "IETE-1-306-s", "mode": "Analogue Electronic Circuits 1", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 34268, "code": "IETE-1-506-s", "mode": "CAD and 3D modeling", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12730, "code": "IETE-1-406-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17985, "code": "IETE-1-107-s", "mode": "Mathematical Analysis 1", "semester": 1, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18021, "code": "IETE-1-307-s", "mode": "Digital Electronics and Programmable Devices", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18005, "code": "IETE-1-207-s", "mode": "Electronic Metrology", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40853, "code": "IETE-1-707-s", "mode": "MPLS Networks", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40861, "code": "IETE-1-607-s", "mode": "Multimedia Information Processing and Communications", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12728, "code": "IETE-1-407-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40854, "code": "IETE-1-708-s", "mode": "Programming for Android ", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 38353, "code": "IETE-1-408-s", "mode": "Protection of intellectual property", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40862, "code": "IETE-1-608-s", "mode": "Securing Data Transmission: Cryptology, Watermarking and Steganography", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17987, "code": "IETE-1-108-s", "mode": "Physics 1", "semester": 1, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 32521, "code": "IETE-1-208-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 18031, "code": "IETE-1-308-s", "mode": "Introduction to Telecommunications", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 30295, "code": "IETE-1-209-s", "mode": "Physical Education 2", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40855, "code": "IETE-1-709-s", "mode": "Seminar on ICT", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40863, "code": "IETE-1-609-s", "mode": "Databases", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 17989, "code": "IETE-1-109-s", "mode": "Circuits Theory 1", "semester": 1, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31566, "code": "IETE-1-309-s", "mode": "Fundamentals of Economics, Finance and Business Law", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12747, "code": "IETE-1-409-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40856, "code": "IETE-1-710-s", "mode": "Advanced Java Programming", "semester": 7, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40864, "code": "IETE-1-610-s", "mode": "Science Club", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 30296, "code": "IETE-1-310-s", "mode": "Physical Education 3", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 38354, "code": "IETE-1-410-s", "mode": "Patent Law", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 30292, "code": "IETE-1-110-s", "mode": "Physical Education 1", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12713, "code": "IETE-1-210-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 38352, "code": "IETE-1-311-s", "mode": "Fundamentals of management", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31567, "code": "IETE-1-411-s", "mode": "Analogue Electronic Circuits 2", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12715, "code": "IETE-1-211-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40783, "code": "IETE-1-712-s", "mode": "Programming in Python Language", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31574, "code": "IETE-1-612-s", "mode": "Wireless techniques and systems", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 32645, "code": "IETE-1-212-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12180, "code": "IETE-1-412-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12720, "code": "IETE-1-312-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31575, "code": "IETE-1-613-s", "mode": "Diplom Laboratory", "semester": 6, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31570, "code": "IETE-1-513-s", "mode": "Integrated circuits and systems", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12176, "code": "IETE-1-213-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 32523, "code": "IETE-1-413-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 32646, "code": "IETE-1-313-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 12178, "code": "IETE-1-314-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31571, "code": "IETE-1-514-s", "mode": "Object-Oriented Programming Language", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 31572, "code": "IETE-1-515-s", "mode": "RF Electronics", "semester": 5, "field_of_study": "full-time-studies-electronics-and-telecommunications--2"}, {"id": 40578, "code": "ITEI-1-301-s", "mode": "Object-oriented Programming", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 34549, "code": "ITEI-1-201-s", "mode": "Data algorithms and structures", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 13544, "code": "ITEI-1-101-s", "mode": "Introduction to the Internet", "semester": 1, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38378, "code": "ITEI-1-701-s", "mode": "Diploma Seminar", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38408, "code": "ITEI-1-501-s", "mode": "Wireless Data Networks", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38400, "code": "ITEI-1-401-s", "mode": "Digital Signal Processing", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38394, "code": "ITEI-1-601-s", "mode": "Signalling and Management Systems", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38717, "code": "ITEI-1-602-s", "mode": "Komunikacja interpersonalna i antropologia komunikacji", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 21162, "code": "ITEI-1-702-s", "mode": "Fundamentals of Economics, Finance and Business Law", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38404, "code": "ITEI-1-502-s", "mode": "Software engineering", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 32523, "code": "ITEI-1-402-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 32522, "code": "ITEI-1-302-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 30295, "code": "ITEI-1-202-s", "mode": "Physical Education 2", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 13530, "code": "ITEI-1-103-s", "mode": "Intellectual Property Rights", "semester": 1, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 21122, "code": "ITEI-1-203-s", "mode": "Local Computer Networks", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38379, "code": "ITEI-1-703-s", "mode": "Diploma workshop", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38416, "code": "ITEI-1-303-s", "mode": "Principles of Electronics", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38399, "code": "ITEI-1-403-s", "mode": "Optical Networks", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38406, "code": "ITEI-1-503-s", "mode": "Introduction to the Networks with Quality of Service", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38396, "code": "ITEI-1-603-s", "mode": "Software Defined Radio \u2013 Practical Approach", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 30292, "code": "ITEI-1-104-s", "mode": "Physical Education 1", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38398, "code": "ITEI-1-404-s", "mode": "Data Communications Networking Devices", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38387, "code": "ITEI-1-604-s", "mode": "Multimedia Information Processing and Communications", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38383, "code": "ITEI-1-704-s", "mode": "Engineering thesis", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38414, "code": "ITEI-1-304-s", "mode": "Signals and Systems", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38409, "code": "ITEI-1-504-s", "mode": "Digital Telecommunications", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 21114, "code": "ITEI-1-204-s", "mode": "Physics", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38415, "code": "ITEI-1-305-s", "mode": "Transmission Media", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38402, "code": "ITEI-1-405-s", "mode": "High-level Programming Languages", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38380, "code": "ITEI-1-705-s", "mode": "Advanced Multimedia Information Processing and Communications", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38407, "code": "ITEI-1-505-s", "mode": "Databases", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38397, "code": "ITEI-1-605-s", "mode": "Traineeship", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 32521, "code": "ITEI-1-205-s", "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 21166, "code": "ITEI-1-306-s", "mode": "Numerical Methods in Science and Engineering", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 13536, "code": "ITEI-1-106-s", "mode": "Algebra", "semester": 1, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38384, "code": "ITEI-1-706-s", "mode": "Secure Communications Systems", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38410, "code": "ITEI-1-506-s", "mode": "Large-scale data distribution systems in the Internet", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38390, "code": "ITEI-1-606-s", "mode": "Internet Traffic Engineering", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38401, "code": "ITEI-1-406-s", "mode": "WWW and Script Languages", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 21104, "code": "ITEI-1-206-s", "mode": "Probability and Statistics", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 13538, "code": "ITEI-1-107-s", "mode": "Mathematical Analysis", "semester": 1, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38381, "code": "ITEI-1-707-s", "mode": "MPLS-enabled Network Services & Applications", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38391, "code": "ITEI-1-607-s", "mode": "Cellular Systems", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38417, "code": "ITEI-1-307-s", "mode": "IP Networks", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 36471, "code": "ITEI-1-207-s", "mode": "Chosen Topics in Advanced Mathematics", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38388, "code": "ITEI-1-407-s", "mode": "Security of Teleinformatic Systems", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38412, "code": "ITEI-1-507-s", "mode": "Intradomain Routing in IP Networks", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 13540, "code": "ITEI-1-108-s", "mode": "Telecommunications Basics", "semester": 1, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 21118, "code": "ITEI-1-208-s", "mode": "Telecommunication Systems and Networks", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38395, "code": "ITEI-1-608-s", "mode": "Network Programming", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38418, "code": "ITEI-1-308-s", "mode": "Operating Systems", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38385, "code": "ITEI-1-708-s", "mode": "LTE mobile communication technologies", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 43839, "code": "ITEI-1-508-s", "mode": "Local Area Networks Security", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12728, "code": "ITEI-1-408-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38413, "code": "ITEI-1-509-s", "mode": "Computer Graphics", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 43843, "code": "ITEI-1-609-s", "mode": "Security of Virtualized Environments", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12180, "code": "ITEI-1-409-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 13542, "code": "ITEI-1-109-s", "mode": "Introduction to Computer Science and Programming ", "semester": 1, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12718, "code": "ITEI-1-309-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 44328, "code": "ITEI-1-709-s", "mode": "Security of Operating Systems", "semester": 7, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12713, "code": "ITEI-1-209-s", "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38382, "code": "ITEI-1-510-s", "mode": "Wireless systems", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12720, "code": "ITEI-1-310-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12715, "code": "ITEI-1-210-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 36483, "code": "ITEI-1-610-s", "mode": "Philosophical cancelling and coaching", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12730, "code": "ITEI-1-410-s", "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 21126, "code": "ITEI-1-111-s", "mode": "Computer Architecture", "semester": 1, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 43838, "code": "ITEI-1-511-s", "mode": "Computation and Complexity Theory", "semester": 5, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12747, "code": "ITEI-1-411-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 32646, "code": "ITEI-1-311-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 32645, "code": "ITEI-1-211-s", "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12178, "code": "ITEI-1-312-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 12176, "code": "ITEI-1-212-s", "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3", "semester": 2, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38405, "code": "ITEI-1-413-s", "mode": "Radio Technologies", "semester": 4, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 30296, "code": "ITEI-1-313-s", "mode": "Physical Education 3", "semester": 3, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38392, "code": "ITEI-1-614-s", "mode": "Information and Communication Systems Engineering", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38393, "code": "ITEI-1-615-s", "mode": "Computer Games", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}, {"id": 38389, "code": "ITEI-1-616-s", "mode": "Science Club", "semester": 6, "field_of_study": "stacjonarne-teleinformatyka"}]
+[
+  {
+    "id": 13052,
+    "code": "IINF-1-201-s",
+    "mode": "Physics 1",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15513,
+    "code": "IINF-1-501-s",
+    "mode": "Theory of Compiling ",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15561,
+    "code": "IINF-1-701-s",
+    "mode": "Project 2 ",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43223,
+    "code": "IINF-1-601-s",
+    "mode": "Badania operacyjne",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15489,
+    "code": "IINF-1-401-s",
+    "mode": "Computation Methods for Science and Technology",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40501,
+    "code": "IINF-1-101-s",
+    "mode": "Interpersonal Skills",
+    "semester": 1,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15469,
+    "code": "IINF-1-301-s",
+    "mode": "Physics 2",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 32646,
+    "code": "IINF-1-001-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13048,
+    "code": "IINF-1-202-s",
+    "mode": "Data Structures and Algorithms",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 41168,
+    "code": "IINF-1-102-s",
+    "mode": "Mathematical Analysis 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15660,
+    "code": "IINF-1-502-s",
+    "mode": "Podstawy sztucznej inteligencji",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44899,
+    "code": "IINF-1-402-s",
+    "mode": "Programowanie w jezyku Fortran",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15527,
+    "code": "IINF-1-602-s",
+    "mode": "Software Engineering",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13054,
+    "code": "IINF-1-302-s",
+    "mode": "Object Oriented Programming",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 32523,
+    "code": "IINF-1-002-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40504,
+    "code": "IINF-1-702-s",
+    "mode": "Metody rozpoznawania obraz\u00f3w",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15471,
+    "code": "IINF-1-303-s",
+    "mode": "Introduction to Databases",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15529,
+    "code": "IINF-1-603-s",
+    "mode": "Project 1",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12180,
+    "code": "IINF-1-003-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15501,
+    "code": "IINF-1-503-s",
+    "mode": "Theory of Concurrency",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13040,
+    "code": "IINF-1-103-s",
+    "mode": "Introduction to UNIX System",
+    "semester": 1,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 32521,
+    "code": "IINF-1-203-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15493,
+    "code": "IINF-1-403-s",
+    "mode": "Operating Systems ",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43224,
+    "code": "IINF-1-604-s",
+    "mode": "Bezpiecze\u0144stwo sieci komputerowych",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 34171,
+    "code": "IINF-1-704-s",
+    "mode": "Final project",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44748,
+    "code": "IINF-1-304-s",
+    "mode": "Rachunek prawdopodobie\u0144stwa i statystyka",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13038,
+    "code": "IINF-1-204-s",
+    "mode": "Imperative Programming",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44750,
+    "code": "IINF-1-404-s",
+    "mode": "Programowanie w j\u0119zyku C++",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15521,
+    "code": "IINF-1-504-s",
+    "mode": "Computation and Complexity Theory",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13036,
+    "code": "IINF-1-104-s",
+    "mode": "Introduction to Computer Science",
+    "semester": 1,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 33796,
+    "code": "IINF-1-205-s",
+    "mode": "Protection of Intellectual Property",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 38741,
+    "code": "IINF-1-605-s",
+    "mode": "Dzia\u0142alno\u015b\u0107 w kole naukowym",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15499,
+    "code": "IINF-1-405-s",
+    "mode": "Object-oriented design",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40502,
+    "code": "IINF-1-705-s",
+    "mode": "Virtual Private Networks",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13028,
+    "code": "IINF-1-105-s",
+    "mode": "Algebra",
+    "semester": 1,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15515,
+    "code": "IINF-1-505-s",
+    "mode": "Computer Networks",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43069,
+    "code": "IINF-1-305-s",
+    "mode": "Algorytmy geometryczne",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40595,
+    "code": "IINF-1-506-s",
+    "mode": "Technologies Internet of Things",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13058,
+    "code": "IINF-1-206-s",
+    "mode": "Mathematical Analysis 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 30296,
+    "code": "IINF-1-306-s",
+    "mode": "Physical Education 3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40503,
+    "code": "IINF-1-706-s",
+    "mode": "Programming of autonomous mobile robots",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43225,
+    "code": "IINF-1-606-s",
+    "mode": "Systemy czasu rzeczywistego",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44751,
+    "code": "IINF-1-406-s",
+    "mode": "Assembler Languages",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13060,
+    "code": "IINF-1-207-s",
+    "mode": "Mathematical Logic ",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15519,
+    "code": "IINF-1-507-s",
+    "mode": "Object-oriented technologies ",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 13032,
+    "code": "IINF-1-107-s",
+    "mode": "Discrete Mathematics",
+    "semester": 1,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15497,
+    "code": "IINF-1-407-s",
+    "mode": "Automata and Formal Languages Theory",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40597,
+    "code": "IINF-1-707-s",
+    "mode": "Protecting personal\u00a0 data in the digital society",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 45001,
+    "code": "IINF-1-607-s",
+    "mode": "Przetwarzanie i analiza obraz\u00f3w cyfrowych",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15479,
+    "code": "IINF-1-307-s",
+    "mode": "Differential and Difference Equations",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40588,
+    "code": "IINF-1-308-s",
+    "mode": "Graph-based algorithms",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43226,
+    "code": "IINF-1-608-s",
+    "mode": "Podstawy uczenia maszynowego",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43206,
+    "code": "IINF-1-508-s",
+    "mode": "Metody i algorytmy podejmowania decyzji",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43231,
+    "code": "IINF-1-708-s",
+    "mode": "Architektura rozwi\u0105za\u0144 chmurowych",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12747,
+    "code": "IINF-1-408-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12713,
+    "code": "IINF-1-208-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43227,
+    "code": "IINF-1-609-s",
+    "mode": "Algorytmy wsp\u00f3\u0142bie\u017cne",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44752,
+    "code": "IINF-1-409-s",
+    "mode": "Programowanie w j\u0119zykach Erlang i Elixir",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43232,
+    "code": "IINF-1-709-s",
+    "mode": "Hurtownie danych",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12720,
+    "code": "IINF-1-309-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12176,
+    "code": "IINF-1-209-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43200,
+    "code": "IINF-1-509-s",
+    "mode": "Algorytmy macierzowe",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43207,
+    "code": "IINF-1-510-s",
+    "mode": "Metody i algorytmy kompilacji",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12718,
+    "code": "IINF-1-310-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43228,
+    "code": "IINF-1-610-s",
+    "mode": "Metody i algorytmy sztucznej inteligencji",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43233,
+    "code": "IINF-1-710-s",
+    "mode": "Programowanie reaktywne w j\u0119zyku Scala",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 30292,
+    "code": "IINF-1-110-s",
+    "mode": "Physical Education 1",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 30295,
+    "code": "IINF-1-210-s",
+    "mode": "Physical Education 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43234,
+    "code": "IINF-1-711-s",
+    "mode": "Business analysis systems",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12715,
+    "code": "IINF-1-211-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 32646,
+    "code": "IINF-1-311-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43208,
+    "code": "IINF-1-511-s",
+    "mode": "Design Patterns",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 32645,
+    "code": "IINF-1-212-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43209,
+    "code": "IINF-1-512-s",
+    "mode": "Computer Graphics",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44749,
+    "code": "IINF-1-312-s",
+    "mode": "In\u017cynieria wymaga\u0144 i jako\u015bci",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43229,
+    "code": "IINF-1-612-s",
+    "mode": "Wprowadzenie do in\u017cynierii bezpiecze\u0144stwa",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43235,
+    "code": "IINF-1-712-s",
+    "mode": "Systemy i technologie wizualizacji",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15475,
+    "code": "IINF-1-412-s",
+    "mode": "Digital technology",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12728,
+    "code": "IINF-1-413-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15525,
+    "code": "IINF-1-613-s",
+    "mode": "Computer Architecture ",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43236,
+    "code": "IINF-1-713-s",
+    "mode": "ERP Systems",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15495,
+    "code": "IINF-1-513-s",
+    "mode": "Microprocessor Techniques",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15678,
+    "code": "IINF-1-514-s",
+    "mode": "Cryptography",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15587,
+    "code": "IINF-1-614-s",
+    "mode": "Embedded Systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15507,
+    "code": "IINF-1-414-s",
+    "mode": "Database Systems",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12178,
+    "code": "IINF-1-314-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 36461,
+    "code": "IINF-1-615-s",
+    "mode": "Complex Digital Systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40596,
+    "code": "IINF-1-515-s",
+    "mode": "Advanced System Programming",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12180,
+    "code": "IINF-1-415-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43071,
+    "code": "IINF-1-315-s",
+    "mode": "Wprowadzenie do aplikacji internetowych",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43210,
+    "code": "IINF-1-516-s",
+    "mode": "IT solutions in manufacturing engineering",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43230,
+    "code": "IINF-1-616-s",
+    "mode": "UX aplikacji internetowych",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 32523,
+    "code": "IINF-1-416-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40493,
+    "code": "IINF-1-316-s",
+    "mode": "Functional programming",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 12730,
+    "code": "IINF-1-417-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40594,
+    "code": "IINF-1-517-s",
+    "mode": "Usability Engineering",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44921,
+    "code": "IINF-1-617-s",
+    "mode": "Optymalizacja kodu na r\u00f3\u017cne architektury",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43072,
+    "code": "IINF-1-317-s",
+    "mode": "Transformacje i algorytmy grafowe",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44998,
+    "code": "IINF-1-518-s",
+    "mode": "Przetwarzanie obraz\u00f3w cyfrowych",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44754,
+    "code": "IINF-1-418-s",
+    "mode": "Programming in Python",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 45009,
+    "code": "IINF-1-618-s",
+    "mode": "Algorytmy dla problem\u00f3w trudnych obliczeniowo",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 32522,
+    "code": "IINF-1-318-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43218,
+    "code": "IINF-1-519-s",
+    "mode": "  Introduction to ERP systems",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 45016,
+    "code": "IINF-1-619-s",
+    "mode": "Distributed Systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43073,
+    "code": "IINF-1-319-s",
+    "mode": "Programowanie z ograniczeniami",
+    "semester": 3,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43117,
+    "code": "IINF-1-419-s",
+    "mode": "Modelowanie system\u00f3w dyskretnych",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 45022,
+    "code": "IINF-1-620-s",
+    "mode": "Praktyka zawodowa",
+    "semester": 6,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44943,
+    "code": "IINF-1-520-s",
+    "mode": "Wst\u0119p do programowania grafiki komputerowej",
+    "semester": 5,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43118,
+    "code": "IINF-1-420-s",
+    "mode": "Multimedia i algorytmy przetwarzania multimedi\u00f3w",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43119,
+    "code": "IINF-1-421-s",
+    "mode": "Algorytmy inspirowane biologicznie",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44755,
+    "code": "IINF-1-422-s",
+    "mode": "Programming in Ruby",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44756,
+    "code": "IINF-1-423-s",
+    "mode": "Programming in Scala",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43130,
+    "code": "IINF-1-424-s",
+    "mode": "Programming in Java Script",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43131,
+    "code": "IINF-1-425-s",
+    "mode": "Programowanie w j\u0119zyku Prolog",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44919,
+    "code": "IINF-1-426-s",
+    "mode": "Programowanie w j\u0119zyku Icon",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 44920,
+    "code": "IINF-1-427-s",
+    "mode": "Programowanie w jezyku Julia",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 43116,
+    "code": "IINF-1-431-s",
+    "mode": "Elementy statystycznego uczenia maszynowego",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 40589,
+    "code": "IINF-1-432-s",
+    "mode": "Textual algorithms",
+    "semester": 4,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 15682,
+    "code": "IINF-1-786-s",
+    "mode": "CAD/CAE Systems",
+    "semester": 7,
+    "field_of_study": "stacjonarne-informatyka"
+  },
+  {
+    "id": 42469,
+    "code": "ICBZ-1-401-s",
+    "mode": "Security of wireless networks",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 32521,
+    "code": "ICBZ-1-201-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 43040,
+    "code": "ICBZ-1-701-s",
+    "mode": "Elective course from UBPJO",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42436,
+    "code": "ICBZ-1-101-s",
+    "mode": "Analysis 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42459,
+    "code": "ICBZ-1-301-s",
+    "mode": "Physics 2",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42479,
+    "code": "ICBZ-1-501-s",
+    "mode": "Wide area network security ",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42488,
+    "code": "ICBZ-1-601-s",
+    "mode": "Security of critical infrastructure and industrial control systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42460,
+    "code": "ICBZ-1-302-s",
+    "mode": "Local Area Network Security",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42489,
+    "code": "ICBZ-1-602-s",
+    "mode": "Practical use of information from open sources",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42451,
+    "code": "ICBZ-1-202-s",
+    "mode": "Analysis 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42470,
+    "code": "ICBZ-1-402-s",
+    "mode": "Software security ",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42442,
+    "code": "ICBZ-1-102-s",
+    "mode": "Algebra",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 44967,
+    "code": "ICBZ-1-103-s",
+    "mode": "Physical education 1/3",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42452,
+    "code": "ICBZ-1-203-s",
+    "mode": "Probabilistics and statistics",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42471,
+    "code": "ICBZ-1-403-s",
+    "mode": "Databases",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42461,
+    "code": "ICBZ-1-303-s",
+    "mode": "Operating Systems",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42491,
+    "code": "ICBZ-1-604-s",
+    "mode": "Security of operating systems ",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42462,
+    "code": "ICBZ-1-304-s",
+    "mode": "Web and mobile application security",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42474,
+    "code": "ICBZ-1-404-s",
+    "mode": "Forensic analysis",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42453,
+    "code": "ICBZ-1-204-s",
+    "mode": "Physics 1",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42483,
+    "code": "ICBZ-1-505-s",
+    "mode": "Security of mobile systems and 5G networks",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42445,
+    "code": "ICBZ-1-105-s",
+    "mode": "Introduction to computer science",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42472,
+    "code": "ICBZ-1-405-s",
+    "mode": "International organizations and cybersecurity",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42570,
+    "code": "ICBZ-1-605-s",
+    "mode": "Students research group",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42454,
+    "code": "ICBZ-1-205-s",
+    "mode": "Algorithms design and analysis",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42463,
+    "code": "ICBZ-1-305-s",
+    "mode": "Script Programming",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42484,
+    "code": "ICBZ-1-506-s",
+    "mode": "Protection of classified information ",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42464,
+    "code": "ICBZ-1-306-s",
+    "mode": "Digital forensics",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42698,
+    "code": "ICBZ-1-606-s",
+    "mode": "Introduction to quantum computing",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42446,
+    "code": "ICBZ-1-106-s",
+    "mode": "Introduction to the internet",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42475,
+    "code": "ICBZ-1-406-s",
+    "mode": "Hardware aspects of cybersecurity",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42455,
+    "code": "ICBZ-1-206-s",
+    "mode": "Security of ICT networks and systems",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42568,
+    "code": "ICBZ-1-706-s",
+    "mode": "Project 2",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42486,
+    "code": "ICBZ-1-507-s",
+    "mode": "Penetration testing",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42467,
+    "code": "ICBZ-1-307-s",
+    "mode": "Social engineering",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42477,
+    "code": "ICBZ-1-407-s",
+    "mode": "OSINT - introduction",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42456,
+    "code": "ICBZ-1-207-s",
+    "mode": "Incidents detection",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42569,
+    "code": "ICBZ-1-707-s",
+    "mode": "Engineering project",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42447,
+    "code": "ICBZ-1-107-s",
+    "mode": "The national cybersecurity system",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42466,
+    "code": "ICBZ-1-508-s",
+    "mode": "Industrial espionage",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42448,
+    "code": "ICBZ-1-108-s",
+    "mode": "Introduction to administration and computer security",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42476,
+    "code": "ICBZ-1-408-s",
+    "mode": "Malware analysis",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42457,
+    "code": "ICBZ-1-208-s",
+    "mode": "Programming basics",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12178,
+    "code": "ICBZ-1-308-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42449,
+    "code": "ICBZ-1-109-s",
+    "mode": " An introductiom to Criminal Law and Criminal Procedure",
+    "semester": 1,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42465,
+    "code": "ICBZ-1-309-s",
+    "mode": "Combating cybercrime - introduction",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42503,
+    "code": "ICBZ-1-709-s",
+    "mode": "Digital watermarking and steganography",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42473,
+    "code": "ICBZ-1-409-s",
+    "mode": "Machine learning for network anomaly detection",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42458,
+    "code": "ICBZ-1-209-s",
+    "mode": "Information security management",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42500,
+    "code": "ICBZ-1-609-s",
+    "mode": "Network programming supporting secure applications",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 32646,
+    "code": "ICBZ-1-310-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42571,
+    "code": "ICBZ-1-710-s",
+    "mode": "Students research group",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42478,
+    "code": "ICBZ-1-410-s",
+    "mode": "Personal data protection and privacy enhancing technologies",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12713,
+    "code": "ICBZ-1-210-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42567,
+    "code": "ICBZ-1-610-s",
+    "mode": "Project ",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12176,
+    "code": "ICBZ-1-211-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42505,
+    "code": "ICBZ-1-711-s",
+    "mode": "Blockchain",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12728,
+    "code": "ICBZ-1-411-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42482,
+    "code": "ICBZ-1-511-s",
+    "mode": "Security of virtualized environment",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42490,
+    "code": "ICBZ-1-311-s",
+    "mode": "Cryptography",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 32522,
+    "code": "ICBZ-1-312-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42502,
+    "code": "ICBZ-1-712-s",
+    "mode": "Cybersecurity and data processing in the cloud",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12715,
+    "code": "ICBZ-1-212-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42480,
+    "code": "ICBZ-1-512-s",
+    "mode": "Incidents management - SOC and CERT",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42572,
+    "code": "ICBZ-1-612-s",
+    "mode": "Professional training",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12180,
+    "code": "ICBZ-1-412-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 32645,
+    "code": "ICBZ-1-213-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 44969,
+    "code": "ICBZ-1-313-s",
+    "mode": "Physical education 3/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42481,
+    "code": "ICBZ-1-513-s",
+    "mode": "Biometrics",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 32523,
+    "code": "ICBZ-1-413-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42871,
+    "code": "ICBZ-1-214-s",
+    "mode": "Discrete Mathematics",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12730,
+    "code": "ICBZ-1-414-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42494,
+    "code": "ICBZ-1-514-s",
+    "mode": "Cybersecurity and contemporary conflicts",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42468,
+    "code": "ICBZ-1-614-s",
+    "mode": "Basics of information analysis",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42506,
+    "code": "ICBZ-1-714-s",
+    "mode": "Cryptanalysis",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12718,
+    "code": "ICBZ-1-314-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 44968,
+    "code": "ICBZ-1-215-s",
+    "mode": "Physical education 2/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12747,
+    "code": "ICBZ-1-415-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42495,
+    "code": "ICBZ-1-515-s",
+    "mode": "Introduction to software engineering",
+    "semester": 5,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42497,
+    "code": "ICBZ-1-615-s",
+    "mode": "Cybersecurity and international law",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42504,
+    "code": "ICBZ-1-715-s",
+    "mode": "IoT Security",
+    "semester": 7,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 12720,
+    "code": "ICBZ-1-315-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 42499,
+    "code": "ICBZ-1-616-s",
+    "mode": "National information resources",
+    "semester": 6,
+    "field_of_study": "stacjonarne-cyberbezpieczenstwo--2"
+  },
+  {
+    "id": 29636,
+    "code": "IELE-1-701-s",
+    "mode": "Seminarium dyplomowe",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40780,
+    "code": "IELE-1-601-s",
+    "mode": "Elektronika w medycynie",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12747,
+    "code": "IELE-1-401-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 38321,
+    "code": "IELE-1-501-s",
+    "mode": "Basics of mechanical constructions",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40554,
+    "code": "IELE-1-101-s",
+    "mode": "Mathematical analysis 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29556,
+    "code": "IELE-1-301-s",
+    "mode": "Electronic devices",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29751,
+    "code": "IELE-1-201-s",
+    "mode": "Physics 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 38337,
+    "code": "IELE-1-402-s",
+    "mode": "Prawo patentowe",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 38322,
+    "code": "IELE-1-502-s",
+    "mode": "CAD tools",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29568,
+    "code": "IELE-1-202-s",
+    "mode": "Electronic metrology",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40555,
+    "code": "IELE-1-102-s",
+    "mode": "Algebra",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29753,
+    "code": "IELE-1-302-s",
+    "mode": "Computional techniques",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40567,
+    "code": "IELE-1-602-s",
+    "mode": "Microwave and antenna technique",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40784,
+    "code": "IELE-1-703-s",
+    "mode": "Projektowanie system\u00f3w cyfrowych  przy pomocy j\u0119zyk\u00f3w wysokiego poziomu ESL",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 32521,
+    "code": "IELE-1-203-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40920,
+    "code": "IELE-1-503-s",
+    "mode": "Assembling of electronic systems",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29624,
+    "code": "IELE-1-603-s",
+    "mode": "Sieci transmisji danych",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29566,
+    "code": "IELE-1-303-s",
+    "mode": "Signal theory",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12180,
+    "code": "IELE-1-403-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40782,
+    "code": "IELE-1-704-s",
+    "mode": "Elektronika spinowa",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 33766,
+    "code": "IELE-1-604-s",
+    "mode": "Praktyka kierunkowa ",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12730,
+    "code": "IELE-1-404-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40556,
+    "code": "IELE-1-204-s",
+    "mode": "Circuits analysis I",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 38318,
+    "code": "IELE-1-304-s",
+    "mode": "Management basics",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29604,
+    "code": "IELE-1-504-s",
+    "mode": "Microprocessors Technology II",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12728,
+    "code": "IELE-1-405-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29550,
+    "code": "IELE-1-105-s",
+    "mode": "Probability and statistics",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29628,
+    "code": "IELE-1-605-s",
+    "mode": "Electronic equipment design",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29606,
+    "code": "IELE-1-505-s",
+    "mode": "Digital systems design",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 38324,
+    "code": "IELE-1-705-s",
+    "mode": "Repetytorium dyplomowe",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40557,
+    "code": "IELE-1-205-s",
+    "mode": "Mathematical analysis  2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 32522,
+    "code": "IELE-1-305-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29608,
+    "code": "IELE-1-506-s",
+    "mode": "Fiber-optics systems",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29646,
+    "code": "IELE-1-706-s",
+    "mode": "Diploma thesis",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29590,
+    "code": "IELE-1-406-s",
+    "mode": "Digital signal processing",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29538,
+    "code": "IELE-1-106-s",
+    "mode": "Introduction to electronics",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40781,
+    "code": "IELE-1-606-s",
+    "mode": "Systemy elektroniczne pojazd\u00f3w",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12718,
+    "code": "IELE-1-306-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12713,
+    "code": "IELE-1-206-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29544,
+    "code": "IELE-1-107-s",
+    "mode": "Basics of computer science",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29558,
+    "code": "IELE-1-207-s",
+    "mode": "Digital Electronics I",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40788,
+    "code": "IELE-1-607-s",
+    "mode": "Problemy termiczne w uk\u0142adach elektronicznych",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40789,
+    "code": "IELE-1-707-s",
+    "mode": "Interchips communication standards in embedded systems",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40562,
+    "code": "IELE-1-507-s",
+    "mode": "Basics of microelectronics",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29574,
+    "code": "IELE-1-307-s",
+    "mode": "Digital electronic circuits",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29592,
+    "code": "IELE-1-407-s",
+    "mode": "Microprocessor systems I",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29586,
+    "code": "IELE-1-308-s",
+    "mode": "Basics of finance economics and law in business",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40559,
+    "code": "IELE-1-408-s",
+    "mode": "Electronic circuits",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29612,
+    "code": "IELE-1-508-s",
+    "mode": "Design Laboratory - faculty subject in english",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29634,
+    "code": "IELE-1-608-s",
+    "mode": "Diploma laboratory I",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29626,
+    "code": "IELE-1-708-s",
+    "mode": "Techniki i systemy bezprzewodowe",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12715,
+    "code": "IELE-1-208-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29576,
+    "code": "IELE-1-209-s",
+    "mode": "Engineering calculation techniques",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40776,
+    "code": "IELE-1-509-s",
+    "mode": "Renewable energy sources",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29578,
+    "code": "IELE-1-309-s",
+    "mode": "Industrial Automatic Control",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 30045,
+    "code": "IELE-1-109-s",
+    "mode": "Physics 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29596,
+    "code": "IELE-1-409-s",
+    "mode": "Data transmission",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40807,
+    "code": "IELE-1-609-s",
+    "mode": "Urz\u0105dzenia teleinformatyki ",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40787,
+    "code": "IELE-1-709-s",
+    "mode": "Functional functional blocks and their applications",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 30295,
+    "code": "IELE-1-210-s",
+    "mode": "Physical Education 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 16459,
+    "code": "IELE-1-410-s",
+    "mode": "Ochrona w\u0142asno\u015bci intelektualnej",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40558,
+    "code": "IELE-1-310-s",
+    "mode": "Circuits analysis II",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40568,
+    "code": "IELE-1-610-s",
+    "mode": " Integrated Circuits Design",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40783,
+    "code": "IELE-1-510-s",
+    "mode": "Programming in Python Language",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 30292,
+    "code": "IELE-1-110-s",
+    "mode": "Physical Education 1",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40779,
+    "code": "IELE-1-611-s",
+    "mode": "Applications of microcontrollers",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 32645,
+    "code": "IELE-1-211-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12720,
+    "code": "IELE-1-311-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 32523,
+    "code": "IELE-1-411-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 30296,
+    "code": "IELE-1-312-s",
+    "mode": "Physical Education 3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40560,
+    "code": "IELE-1-412-s",
+    "mode": "Simulation of electronic circuits",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40563,
+    "code": "IELE-1-512-s",
+    "mode": "Electronic systems and circuits",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12176,
+    "code": "IELE-1-212-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 40561,
+    "code": "IELE-1-413-s",
+    "mode": "Introduction to sensor technology",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29560,
+    "code": "IELE-1-213-s",
+    "mode": "Programming languages",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 32646,
+    "code": "IELE-1-313-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29610,
+    "code": "IELE-1-414-s",
+    "mode": "Control and measurement systems",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 12178,
+    "code": "IELE-1-314-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 29594,
+    "code": "IELE-1-315-s",
+    "mode": "Object-oriented programming",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika"
+  },
+  {
+    "id": 41015,
+    "code": "IETP-1-701-s",
+    "mode": "Diploma thesis",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16455,
+    "code": "IETP-1-101-s",
+    "mode": "Metodyka i techniki programowania 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16493,
+    "code": "IETP-1-501-s",
+    "mode": "Technika mikroprocesorowa  2",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16475,
+    "code": "IETP-1-201-s",
+    "mode": "Mathematical analysis  2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 23957,
+    "code": "IETP-1-601-s",
+    "mode": "Wireless techniques and systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17139,
+    "code": "IETP-1-401-s",
+    "mode": "Analog electronic circuits 2",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 32522,
+    "code": "IETP-1-301-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17141,
+    "code": "IETP-1-402-s",
+    "mode": "Technika mikroprocesorowa  1",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17125,
+    "code": "IETP-1-302-s",
+    "mode": "Signals and Systems",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16495,
+    "code": "IETP-1-502-s",
+    "mode": "Telecommunication systems and networks",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 38343,
+    "code": "IETP-1-602-s",
+    "mode": "Bezprzewodowe sieci komputerowe",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17272,
+    "code": "IETP-1-702-s",
+    "mode": "Seminar",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 32521,
+    "code": "IETP-1-202-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 28671,
+    "code": "IETP-1-103-s",
+    "mode": "Introduction to electronics",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17143,
+    "code": "IETP-1-403-s",
+    "mode": "Cyfrowe przetwarzanie sygna\u0142\u00f3w",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 30296,
+    "code": "IETP-1-303-s",
+    "mode": "Physical Education 3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40815,
+    "code": "IETP-1-603-s",
+    "mode": "Technika sensorowa",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 29612,
+    "code": "IETP-1-503-s",
+    "mode": "Design Laboratory - faculty subject in english",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16479,
+    "code": "IETP-1-203-s",
+    "mode": "Physics 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 28673,
+    "code": "IETP-1-104-s",
+    "mode": "Introduction to telecommunications",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16481,
+    "code": "IETP-1-204-s",
+    "mode": "Teoria obwod\u00f3w 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17129,
+    "code": "IETP-1-304-s",
+    "mode": "Techniki obliczeniowe",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40816,
+    "code": "IETP-1-604-s",
+    "mode": "Urz\u0105dzenia teleinformatyki ",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 38324,
+    "code": "IETP-1-704-s",
+    "mode": "Repetytorium dyplomowe",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 38342,
+    "code": "IETP-1-504-s",
+    "mode": "Programowanie sieciowe",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12730,
+    "code": "IETP-1-404-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40817,
+    "code": "IETP-1-605-s",
+    "mode": "Elektronika w medycynie",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 30292,
+    "code": "IETP-1-105-s",
+    "mode": "Physical Education 1",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16483,
+    "code": "IETP-1-205-s",
+    "mode": "Metodyka i techniki programowania 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17131,
+    "code": "IETP-1-305-s",
+    "mode": "Operating systems",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17147,
+    "code": "IETP-1-405-s",
+    "mode": "Optoelektronika",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17149,
+    "code": "IETP-1-406-s",
+    "mode": "Computer Networks",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16463,
+    "code": "IETP-1-106-s",
+    "mode": "Algebra",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 38365,
+    "code": "IETP-1-506-s",
+    "mode": "Podstawy konstrukcji mechanicznych",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16485,
+    "code": "IETP-1-206-s",
+    "mode": "Electronic devices",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40783,
+    "code": "IETP-1-706-s",
+    "mode": "Programming in Python Language",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17133,
+    "code": "IETP-1-306-s",
+    "mode": "Analogue electronic circuits  1",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17176,
+    "code": "IETP-1-606-s",
+    "mode": "Praktyka kierunkowa",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16459,
+    "code": "IETP-1-407-s",
+    "mode": "Ochrona w\u0142asno\u015bci intelektualnej",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17151,
+    "code": "IETP-1-507-s",
+    "mode": "J\u0119zyki programowania obiektowego ",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16487,
+    "code": "IETP-1-207-s",
+    "mode": "Electronic metrology",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40806,
+    "code": "IETP-1-707-s",
+    "mode": "Renewable energy sources",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40774,
+    "code": "IETP-1-607-s",
+    "mode": "Assembling of electronic systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16465,
+    "code": "IETP-1-107-s",
+    "mode": "Mathematical Analysis 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17135,
+    "code": "IETP-1-307-s",
+    "mode": "Technika cyfrowa i uk\u0142ady programowalne",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 29586,
+    "code": "IETP-1-308-s",
+    "mode": "Basics of finance economics and law in business",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40808,
+    "code": "IETP-1-708-s",
+    "mode": "Elektronika spinowa",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40818,
+    "code": "IETP-1-608-s",
+    "mode": "Interchips communication standards in embedded systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 38359,
+    "code": "IETP-1-408-s",
+    "mode": "Prawo patentowe",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16467,
+    "code": "IETP-1-108-s",
+    "mode": "Fizyka 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12713,
+    "code": "IETP-1-208-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17160,
+    "code": "IETP-1-508-s",
+    "mode": "Computer measurement systems",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 16469,
+    "code": "IETP-1-109-s",
+    "mode": "Circuit theory 1",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40809,
+    "code": "IETP-1-709-s",
+    "mode": "Zarz\u0105dzanie serwerami LINUX",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40819,
+    "code": "IETP-1-609-s",
+    "mode": "Systemy elektroniczne pojazd\u00f3w",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 38367,
+    "code": "IETP-1-509-s",
+    "mode": "Narz\u0119dzia CAD",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 38357,
+    "code": "IETP-1-309-s",
+    "mode": "Basics of Management",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12715,
+    "code": "IETP-1-209-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12747,
+    "code": "IETP-1-409-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40820,
+    "code": "IETP-1-610-s",
+    "mode": "Problemy termiczne w uk\u0142adach elektronicznych",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40810,
+    "code": "IETP-1-710-s",
+    "mode": "Programming for Android ",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 29550,
+    "code": "IETP-1-110-s",
+    "mode": "Probability and statistics",
+    "semester": 1,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12718,
+    "code": "IETP-1-310-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 32645,
+    "code": "IETP-1-210-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12180,
+    "code": "IETP-1-410-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12728,
+    "code": "IETP-1-411-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12176,
+    "code": "IETP-1-211-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40811,
+    "code": "IETP-1-711-s",
+    "mode": "Kierunki rozwoju telekomunikacji",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40821,
+    "code": "IETP-1-611-s",
+    "mode": "Komputerowe wspomaganie projektowania",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12720,
+    "code": "IETP-1-311-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40812,
+    "code": "IETP-1-712-s",
+    "mode": "MPLS Networks",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 32646,
+    "code": "IETP-1-312-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 32523,
+    "code": "IETP-1-412-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40823,
+    "code": "IETP-1-613-s",
+    "mode": "Projektowanie system\u00f3w cyfrowych w j\u0119zykach opisu sprz\u0119tu",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40813,
+    "code": "IETP-1-713-s",
+    "mode": "Seminar on ICT",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40824,
+    "code": "IETP-1-614-s",
+    "mode": "Applications of microcontrollers",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40814,
+    "code": "IETP-1-714-s",
+    "mode": "Advanced Java Programming",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 12178,
+    "code": "IETP-1-314-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40825,
+    "code": "IETP-1-615-s",
+    "mode": "Switching nodes for telecommunication and computer networks",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40826,
+    "code": "IETP-1-616-s",
+    "mode": "Introduction to Java Programming ",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40784,
+    "code": "IETP-1-716-s",
+    "mode": "Projektowanie system\u00f3w cyfrowych  przy pomocy j\u0119zyk\u00f3w wysokiego poziomu ESL",
+    "semester": 7,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 28936,
+    "code": "IETP-1-517-s",
+    "mode": "Electronic integrated circuits and systems",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40827,
+    "code": "IETP-1-617-s",
+    "mode": "Systemy kom\u00f3rkowe",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 23943,
+    "code": "IETP-1-518-s",
+    "mode": "Microwave techniques, antenna systems and propagation of radio waves",
+    "semester": 5,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40832,
+    "code": "IETP-1-619-s",
+    "mode": "Multimedia Information Processing and Communications",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40831,
+    "code": "IETP-1-620-s",
+    "mode": "Intradomain Routing in IP Networks",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40834,
+    "code": "IETP-1-621-s",
+    "mode": "Securing Data Transmission: Cryptology, Watermarking and Steganography",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40835,
+    "code": "IETP-1-622-s",
+    "mode": "Databases",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17127,
+    "code": "IETP-1-423-s",
+    "mode": "Simulation of electronic circuits",
+    "semester": 4,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40836,
+    "code": "IETP-1-623-s",
+    "mode": "Software Defined Radio \u2013 Practical Approach",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 40837,
+    "code": "IETP-1-624-s",
+    "mode": "Science Club",
+    "semester": 6,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 30295,
+    "code": "IETP-1-277-s",
+    "mode": "Physical Education 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-elektronika-i-telekomunikacja--3"
+  },
+  {
+    "id": 17993,
+    "code": "IETE-1-201-s",
+    "mode": "Mathematical Analysis 2",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18041,
+    "code": "IETE-1-501-s",
+    "mode": "Microprocessor Technology  2",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17973,
+    "code": "IETE-1-101-s",
+    "mode": "Methodology and programming techniques 1",
+    "semester": 1,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 34270,
+    "code": "IETE-1-701-s",
+    "mode": "Diplom Thesis",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40857,
+    "code": "IETE-1-601-s",
+    "mode": "Sensor Technology",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18027,
+    "code": "IETE-1-401-s",
+    "mode": "Microprocessor Technology 1",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 32522,
+    "code": "IETE-1-301-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18689,
+    "code": "IETE-1-702-s",
+    "mode": "Thesis seminar",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18011,
+    "code": "IETE-1-302-s",
+    "mode": "Signals and Systems",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18043,
+    "code": "IETE-1-502-s",
+    "mode": "Telecommunication Networks and Systems",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18029,
+    "code": "IETE-1-402-s",
+    "mode": "Digital Signal Processing",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17995,
+    "code": "IETE-1-202-s",
+    "mode": "Probability and Statistics",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31576,
+    "code": "IETE-1-602-s",
+    "mode": "Professional practice",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18013,
+    "code": "IETE-1-303-s",
+    "mode": "Simulation Techniques",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31569,
+    "code": "IETE-1-503-s",
+    "mode": "Computer measurement systems",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17997,
+    "code": "IETE-1-203-s",
+    "mode": "Physics 2",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18017,
+    "code": "IETE-1-403-s",
+    "mode": "Operating Systems",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17999,
+    "code": "IETE-1-204-s",
+    "mode": "Circuits Theory 2",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18015,
+    "code": "IETE-1-304-s",
+    "mode": "Computational Techniques",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40858,
+    "code": "IETE-1-604-s",
+    "mode": "Design Digital Systems in Hardware Description Languages",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 38363,
+    "code": "IETE-1-504-s",
+    "mode": "Design Laboratory (elective module in english)",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 38355,
+    "code": "IETE-1-704-s",
+    "mode": "Compendium of Electronics and Telecommunications",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18033,
+    "code": "IETE-1-404-s",
+    "mode": "Optoelectronics",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17981,
+    "code": "IETE-1-105-s",
+    "mode": "Information Technology",
+    "semester": 1,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18001,
+    "code": "IETE-1-205-s",
+    "mode": "Methodology and programming techniques 2 ",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 34267,
+    "code": "IETE-1-505-s",
+    "mode": "Introduction to Mechanics",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12718,
+    "code": "IETE-1-305-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18035,
+    "code": "IETE-1-405-s",
+    "mode": "Computer Networks",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40859,
+    "code": "IETE-1-605-s",
+    "mode": "Switching nodes for telecommunication and computer networks",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40851,
+    "code": "IETE-1-705-s",
+    "mode": "Applications of Digital Signal Processors ",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17983,
+    "code": "IETE-1-106-s",
+    "mode": "Algebra",
+    "semester": 1,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18003,
+    "code": "IETE-1-206-s",
+    "mode": "Electronic  Devices",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40852,
+    "code": "IETE-1-706-s",
+    "mode": "Speech Processing ",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40860,
+    "code": "IETE-1-606-s",
+    "mode": "Introduction to Java Programming ",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18019,
+    "code": "IETE-1-306-s",
+    "mode": "Analogue Electronic Circuits 1",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 34268,
+    "code": "IETE-1-506-s",
+    "mode": "CAD and 3D modeling",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12730,
+    "code": "IETE-1-406-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17985,
+    "code": "IETE-1-107-s",
+    "mode": "Mathematical Analysis 1",
+    "semester": 1,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18021,
+    "code": "IETE-1-307-s",
+    "mode": "Digital Electronics and Programmable Devices",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18005,
+    "code": "IETE-1-207-s",
+    "mode": "Electronic Metrology",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40853,
+    "code": "IETE-1-707-s",
+    "mode": "MPLS Networks",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40861,
+    "code": "IETE-1-607-s",
+    "mode": "Multimedia Information Processing and Communications",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12728,
+    "code": "IETE-1-407-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40854,
+    "code": "IETE-1-708-s",
+    "mode": "Programming for Android ",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 38353,
+    "code": "IETE-1-408-s",
+    "mode": "Protection of intellectual property",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40862,
+    "code": "IETE-1-608-s",
+    "mode": "Securing Data Transmission: Cryptology, Watermarking and Steganography",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17987,
+    "code": "IETE-1-108-s",
+    "mode": "Physics 1",
+    "semester": 1,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 32521,
+    "code": "IETE-1-208-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 18031,
+    "code": "IETE-1-308-s",
+    "mode": "Introduction to Telecommunications",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 30295,
+    "code": "IETE-1-209-s",
+    "mode": "Physical Education 2",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40855,
+    "code": "IETE-1-709-s",
+    "mode": "Seminar on ICT",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40863,
+    "code": "IETE-1-609-s",
+    "mode": "Databases",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 17989,
+    "code": "IETE-1-109-s",
+    "mode": "Circuits Theory 1",
+    "semester": 1,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31566,
+    "code": "IETE-1-309-s",
+    "mode": "Fundamentals of Economics, Finance and Business Law",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12747,
+    "code": "IETE-1-409-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40856,
+    "code": "IETE-1-710-s",
+    "mode": "Advanced Java Programming",
+    "semester": 7,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40864,
+    "code": "IETE-1-610-s",
+    "mode": "Science Club",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 30296,
+    "code": "IETE-1-310-s",
+    "mode": "Physical Education 3",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 38354,
+    "code": "IETE-1-410-s",
+    "mode": "Patent Law",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 30292,
+    "code": "IETE-1-110-s",
+    "mode": "Physical Education 1",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12713,
+    "code": "IETE-1-210-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 38352,
+    "code": "IETE-1-311-s",
+    "mode": "Fundamentals of management",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31567,
+    "code": "IETE-1-411-s",
+    "mode": "Analogue Electronic Circuits 2",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12715,
+    "code": "IETE-1-211-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40783,
+    "code": "IETE-1-712-s",
+    "mode": "Programming in Python Language",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31574,
+    "code": "IETE-1-612-s",
+    "mode": "Wireless techniques and systems",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 32645,
+    "code": "IETE-1-212-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12180,
+    "code": "IETE-1-412-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12720,
+    "code": "IETE-1-312-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31575,
+    "code": "IETE-1-613-s",
+    "mode": "Diplom Laboratory",
+    "semester": 6,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31570,
+    "code": "IETE-1-513-s",
+    "mode": "Integrated circuits and systems",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12176,
+    "code": "IETE-1-213-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 32523,
+    "code": "IETE-1-413-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 32646,
+    "code": "IETE-1-313-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 12178,
+    "code": "IETE-1-314-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31571,
+    "code": "IETE-1-514-s",
+    "mode": "Object-Oriented Programming Language",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 31572,
+    "code": "IETE-1-515-s",
+    "mode": "RF Electronics",
+    "semester": 5,
+    "field_of_study": "full-time-studies-electronics-and-telecommunications--2"
+  },
+  {
+    "id": 40578,
+    "code": "ITEI-1-301-s",
+    "mode": "Object-oriented Programming",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 34549,
+    "code": "ITEI-1-201-s",
+    "mode": "Data algorithms and structures",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 13544,
+    "code": "ITEI-1-101-s",
+    "mode": "Introduction to the Internet",
+    "semester": 1,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38378,
+    "code": "ITEI-1-701-s",
+    "mode": "Diploma Seminar",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38408,
+    "code": "ITEI-1-501-s",
+    "mode": "Wireless Data Networks",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38400,
+    "code": "ITEI-1-401-s",
+    "mode": "Digital Signal Processing",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38394,
+    "code": "ITEI-1-601-s",
+    "mode": "Signalling and Management Systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38717,
+    "code": "ITEI-1-602-s",
+    "mode": "Komunikacja interpersonalna i antropologia komunikacji",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 21162,
+    "code": "ITEI-1-702-s",
+    "mode": "Fundamentals of Economics, Finance and Business Law",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38404,
+    "code": "ITEI-1-502-s",
+    "mode": "Software engineering",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 32523,
+    "code": "ITEI-1-402-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 32522,
+    "code": "ITEI-1-302-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 30295,
+    "code": "ITEI-1-202-s",
+    "mode": "Physical Education 2",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 13530,
+    "code": "ITEI-1-103-s",
+    "mode": "Intellectual Property Rights",
+    "semester": 1,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 21122,
+    "code": "ITEI-1-203-s",
+    "mode": "Local Computer Networks",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38379,
+    "code": "ITEI-1-703-s",
+    "mode": "Diploma workshop",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38416,
+    "code": "ITEI-1-303-s",
+    "mode": "Principles of Electronics",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38399,
+    "code": "ITEI-1-403-s",
+    "mode": "Optical Networks",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38406,
+    "code": "ITEI-1-503-s",
+    "mode": "Introduction to the Networks with Quality of Service",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38396,
+    "code": "ITEI-1-603-s",
+    "mode": "Software Defined Radio \u2013 Practical Approach",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 30292,
+    "code": "ITEI-1-104-s",
+    "mode": "Physical Education 1",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38398,
+    "code": "ITEI-1-404-s",
+    "mode": "Data Communications Networking Devices",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38387,
+    "code": "ITEI-1-604-s",
+    "mode": "Multimedia Information Processing and Communications",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38383,
+    "code": "ITEI-1-704-s",
+    "mode": "Engineering thesis",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38414,
+    "code": "ITEI-1-304-s",
+    "mode": "Signals and Systems",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38409,
+    "code": "ITEI-1-504-s",
+    "mode": "Digital Telecommunications",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 21114,
+    "code": "ITEI-1-204-s",
+    "mode": "Physics",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38415,
+    "code": "ITEI-1-305-s",
+    "mode": "Transmission Media",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38402,
+    "code": "ITEI-1-405-s",
+    "mode": "High-level Programming Languages",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38380,
+    "code": "ITEI-1-705-s",
+    "mode": "Advanced Multimedia Information Processing and Communications",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38407,
+    "code": "ITEI-1-505-s",
+    "mode": "Databases",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38397,
+    "code": "ITEI-1-605-s",
+    "mode": "Traineeship",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 32521,
+    "code": "ITEI-1-205-s",
+    "mode": "English B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 21166,
+    "code": "ITEI-1-306-s",
+    "mode": "Numerical Methods in Science and Engineering",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 13536,
+    "code": "ITEI-1-106-s",
+    "mode": "Algebra",
+    "semester": 1,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38384,
+    "code": "ITEI-1-706-s",
+    "mode": "Secure Communications Systems",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38410,
+    "code": "ITEI-1-506-s",
+    "mode": "Large-scale data distribution systems in the Internet",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38390,
+    "code": "ITEI-1-606-s",
+    "mode": "Internet Traffic Engineering",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38401,
+    "code": "ITEI-1-406-s",
+    "mode": "WWW and Script Languages",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 21104,
+    "code": "ITEI-1-206-s",
+    "mode": "Probability and Statistics",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 13538,
+    "code": "ITEI-1-107-s",
+    "mode": "Mathematical Analysis",
+    "semester": 1,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38381,
+    "code": "ITEI-1-707-s",
+    "mode": "MPLS-enabled Network Services & Applications",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38391,
+    "code": "ITEI-1-607-s",
+    "mode": "Cellular Systems",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38417,
+    "code": "ITEI-1-307-s",
+    "mode": "IP Networks",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 36471,
+    "code": "ITEI-1-207-s",
+    "mode": "Chosen Topics in Advanced Mathematics",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38388,
+    "code": "ITEI-1-407-s",
+    "mode": "Security of Teleinformatic Systems",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38412,
+    "code": "ITEI-1-507-s",
+    "mode": "Intradomain Routing in IP Networks",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 13540,
+    "code": "ITEI-1-108-s",
+    "mode": "Telecommunications Basics",
+    "semester": 1,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 21118,
+    "code": "ITEI-1-208-s",
+    "mode": "Telecommunication Systems and Networks",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38395,
+    "code": "ITEI-1-608-s",
+    "mode": "Network Programming",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38418,
+    "code": "ITEI-1-308-s",
+    "mode": "Operating Systems",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38385,
+    "code": "ITEI-1-708-s",
+    "mode": "LTE mobile communication technologies",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 43839,
+    "code": "ITEI-1-508-s",
+    "mode": "Local Area Networks Security",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12728,
+    "code": "ITEI-1-408-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38413,
+    "code": "ITEI-1-509-s",
+    "mode": "Computer Graphics",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 43843,
+    "code": "ITEI-1-609-s",
+    "mode": "Security of Virtualized Environments",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12180,
+    "code": "ITEI-1-409-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 13542,
+    "code": "ITEI-1-109-s",
+    "mode": "Introduction to Computer Science and Programming ",
+    "semester": 1,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12718,
+    "code": "ITEI-1-309-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 44328,
+    "code": "ITEI-1-709-s",
+    "mode": "Security of Operating Systems",
+    "semester": 7,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12713,
+    "code": "ITEI-1-209-s",
+    "mode": "French B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38382,
+    "code": "ITEI-1-510-s",
+    "mode": "Wireless systems",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12720,
+    "code": "ITEI-1-310-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12715,
+    "code": "ITEI-1-210-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 36483,
+    "code": "ITEI-1-610-s",
+    "mode": "Philosophical cancelling and coaching",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12730,
+    "code": "ITEI-1-410-s",
+    "mode": "Spanish B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 21126,
+    "code": "ITEI-1-111-s",
+    "mode": "Computer Architecture",
+    "semester": 1,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 43838,
+    "code": "ITEI-1-511-s",
+    "mode": "Computation and Complexity Theory",
+    "semester": 5,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12747,
+    "code": "ITEI-1-411-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 3/3",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 32646,
+    "code": "ITEI-1-311-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 32645,
+    "code": "ITEI-1-211-s",
+    "mode": "Russian B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12178,
+    "code": "ITEI-1-312-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 2/3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 12176,
+    "code": "ITEI-1-212-s",
+    "mode": "German B2 course - compulsory course of 135 hours for students of FIRST-CYCLE studies - semester 1/3",
+    "semester": 2,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38405,
+    "code": "ITEI-1-413-s",
+    "mode": "Radio Technologies",
+    "semester": 4,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 30296,
+    "code": "ITEI-1-313-s",
+    "mode": "Physical Education 3",
+    "semester": 3,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38392,
+    "code": "ITEI-1-614-s",
+    "mode": "Information and Communication Systems Engineering",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38393,
+    "code": "ITEI-1-615-s",
+    "mode": "Computer Games",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  },
+  {
+    "id": 38389,
+    "code": "ITEI-1-616-s",
+    "mode": "Science Club",
+    "semester": 6,
+    "field_of_study": "stacjonarne-teleinformatyka"
+  }
+]

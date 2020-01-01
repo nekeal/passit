@@ -2,7 +2,6 @@ Django==2.2.6
 gunicorn==19.9.0
 psycopg2-binary==2.8.3
 python-dotenv==0.10.3
-pytest==5.2.1
 Pillow==6.2.1
 djangorestframework==3.10.3
 django-grappelli==2.13.1
