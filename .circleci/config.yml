@@ -34,7 +34,7 @@ jobs:
           command: pip install -r requirements-ci.txt
       - run:
           name: Running linter
-          command: flake8
+          command: python -m flake8
       - run:
           name: Running type checker
           command: |
