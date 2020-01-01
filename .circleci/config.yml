@@ -37,9 +37,7 @@ jobs:
           command: python -m flake8
       - run:
           name: Running type checker
-          command: |
-            pip install -r requirements-ci.txt
-            mypy .
+          command: python -m mypy .
       - save_cache:
           paths:
             - '/usr/local/lib/python3.7/site-packages'
