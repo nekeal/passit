@@ -1,3 +1,15 @@
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: projekt
+
 version: 2
 jobs:
   build:
@@ -38,9 +50,6 @@ jobs:
           name: Running tests
           command: python -m pytest
   deploy:
-    branches:
-      only:
-        - projekt
     steps:
       - checkout
       - run:
