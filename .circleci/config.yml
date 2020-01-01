@@ -25,4 +25,15 @@ jobs:
             - '/usr/local/lib/python3.7/site-packages'
           key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
+          name: Running linter
+          command: |
+            pip install flake8
+            flake8
+      - run:
+          name: Running type checker
+          command: |
+            pip install -r requirements-ci.txt
+            mypy .
+      - run:
+          name: Running tests
           command: pytest
