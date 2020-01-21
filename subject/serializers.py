@@ -49,7 +49,7 @@ class ResourceListSerializer(serializers.ModelSerializer):
 class ResourceDetailSerializer(serializers.ModelSerializer):
     subject = SubjectListSerializer(read_only=True)
     subject_pk = serializers.PrimaryKeyRelatedField(write_only=True, queryset=Subject.objects.all())
-    
+
     class Meta:
         model = Resource
         fields = ('id', 'name', 'image', 'url', 'description', 'subject', 'subject_pk', 'created_by', 'modified_by')
