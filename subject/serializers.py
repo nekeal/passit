@@ -18,11 +18,17 @@ class SubjectListSerializer(serializers.ModelSerializer):
 
 
 class SubjectDetailSerializer(serializers.ModelSerializer):
-    field_of_studies = serializers.CharField(source='field_of_studies.name')
+    field_of_studies = serializers.CharField(source='field_of_studies.name', read_only=True)
+    field_of_studies_pk = serializers.PrimaryKeyRelatedField(write_only=True, queryset=FieldOfStudies.objects.all())
 
     class Meta:
         model = Subject
-        fields = ('id', 'name', 'semester', 'general_description', 'field_of_studies')
+        fields = ('id', 'name', 'semester', 'general_description', 'field_of_studies', 'field_of_studies_pk')
+
+    def create(self, validated_data):
+        validated_data["field_of_studies"] = validated_data.pop("field_of_studies_pk")
+        print(validated_data)
+        return super().create(validated_data)
 
 
 class ResourceListSerializer(serializers.ModelSerializer):
@@ -42,7 +48,12 @@ class ResourceListSerializer(serializers.ModelSerializer):
 
 class ResourceDetailSerializer(serializers.ModelSerializer):
     subject = SubjectListSerializer(read_only=True)
-
+    subject_pk = serializers.PrimaryKeyRelatedField(write_only=True, queryset=Subject.objects.all())
+    
     class Meta:
         model = Resource
-        fields = ('id', 'name', 'image', 'url', 'description', 'subject', 'created_by', 'modified_by')
+        fields = ('id', 'name', 'image', 'url', 'description', 'subject', 'subject_pk', 'created_by', 'modified_by')
+
+    def create(self, validated_data):
+        validated_data['subject'] = validated_data.pop('subject_pk')
+        return super(ResourceDetailSerializer, self).create(validated_data)
