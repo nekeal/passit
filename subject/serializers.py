@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework_serializer_extensions.serializers import SerializerExtensionsMixin
 
 from subject.models import FieldOfStudies, Subject, Resource
 
@@ -40,9 +41,18 @@ class ResourceListSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'is_url', 'is_image', 'url')
 
 
-class ResourceDetailSerializer(serializers.ModelSerializer):
-    subject = SubjectListSerializer(read_only=True)
+class ResourceDetailSerializer(SerializerExtensionsMixin, serializers.ModelSerializer):
 
     class Meta:
         model = Resource
-        fields = ('id', 'name', 'image', 'url', 'description', 'subject', 'created_by', 'modified_by')
+        fields = ('id', 'name', 'image', 'url', 'description', 'created_by', 'modified_by')
+        expandable_fields = dict(
+            subject=dict(
+                serializer=SubjectListSerializer,
+                read_only=False
+            )
+        )
+    #     
+    # def create(self, validated_data):
+    #     validated_data['subject'] = validated_data.pop('subject_id_resolved')
+    #     return super(ResourceDetailSerializer, self).create(validated_data)
