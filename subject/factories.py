@@ -20,7 +20,7 @@ class SubjectFactory(factory.DjangoModelFactory):
 
     name = factory.sequence(lambda n: f'subject{n}')
     semester = factory.LazyAttribute(lambda n: randint(1, 6))
-    general_description = "opis"
+    general_description = "description"
     field_of_studies = factory.SubFactory(FieldOfStudiesFactory)
 
 
