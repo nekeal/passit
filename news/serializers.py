@@ -1,10 +1,10 @@
-from rest_framework import serializers
+from rest_flex_fields import FlexFieldsModelSerializer
 
 from news.models import News
 
 
-class NewsListSerializer(serializers.ModelSerializer):
+class NewsBaseSerializer(FlexFieldsModelSerializer):
 
     class Meta:
         model = News
-        fields = ('id', 'title', 'subject_group')
+        fields = ('id', 'title', 'content', 'subject_group')

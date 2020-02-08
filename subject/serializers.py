@@ -4,24 +4,24 @@ from rest_flex_fields import FlexFieldsModelSerializer
 from rest_framework import serializers
 from rest_framework.serializers import Serializer
 
-from subject.models import FieldOfStudies, Subject, Resource
+from subject.models import FieldOfStudy, Subject, Resource
 
 
 class FieldOfStudiesBaseSerializer(FlexFieldsModelSerializer):
 
     class Meta:
-        model = FieldOfStudies
+        model = FieldOfStudy
         fields = ('id', 'name', 'slug')
 
 
 class SubjectBaseSerializer(FlexFieldsModelSerializer):
-    field_of_studies = serializers.CharField(source='field_of_studies.name')
+    field_of_study = serializers.CharField(source='field_of_study.name')
 
     class Meta:
         model = Subject
-        fields = ('id', 'name', 'semester', 'general_description', 'field_of_studies')
+        fields = ('id', 'name', 'semester', 'general_description', 'field_of_study')
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
-            'field_of_studies': (FieldOfStudiesBaseSerializer, {})
+            'field_of_study': (FieldOfStudiesBaseSerializer, {})
         }
 
 
