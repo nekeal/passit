@@ -47,6 +47,9 @@ class Subject(models.Model):
 class SubjectOfAgeGroup(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='subjects')
     students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
+#   TODO consider representative to be not null.
+    representative = models.OneToOneField('accounts.UserProfile', on_delete=models.PROTECT, null=True,
+                                          related_name='own_group')
     description = models.TextField(blank=True)
     lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubject, related_name='lecturer_age_groups')
 
