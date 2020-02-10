@@ -6,7 +6,7 @@ from django.db import models
 
 from common.admin import OwnedModelAdminMixin
 from lecturers.models import LecturerOfSubject
-from subject.models import Subject, SubjectOfAgeGroup, Exam, Resource, FieldOfStudies
+from subject.models import Subject, SubjectOfAgeGroup, Exam, Resource, FieldOfStudy
 
 
 class ExamInline(admin.TabularInline):
@@ -58,4 +58,4 @@ class ExamAdmin(admin.ModelAdmin):
 
 
 admin.site.register(SubjectOfAgeGroup, SubjectOfAgeGroupAdmin)
-admin.site.register(FieldOfStudies)
+admin.site.register(FieldOfStudy)

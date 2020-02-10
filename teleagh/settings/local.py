@@ -1,3 +1,5 @@
+import dj_database_url
+
 from .base import *
 
 ALLOWED_HOSTS = ['*']
@@ -11,3 +13,6 @@ DATABASES = {
         'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
     }
 }
+DATABASE_URL = os.environ.get('DATABASE_URL')
+db_from_env = dj_database_url.config(default=DATABASE_URL, conn_max_age=500, ssl_require=False)
+DATABASES['default'].update(db_from_env)

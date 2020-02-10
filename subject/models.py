@@ -14,7 +14,7 @@ def year_validator(value):
                               f"between 2018 and {max_year}")
 
 
-class FieldOfStudies(models.Model):
+class FieldOfStudy(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, help_text="Slug which identifies field of study in syllabus")
 
@@ -38,7 +38,7 @@ class Subject(models.Model):
     name = models.CharField(max_length=50)
     semester = models.IntegerField()
     general_description = models.TextField()
-    field_of_studies = models.ForeignKey('FieldOfStudies', on_delete=models.PROTECT, related_name='subjects')
+    field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='subjects')
 
     def __str__(self) -> str:
         return f'{self.name}'

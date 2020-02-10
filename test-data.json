@@ -5,10 +5,10 @@
          "slug" : "informatyka"
       },
       "pk" : 3,
-      "model" : "subject.fieldofstudies"
+      "model" : "subject.fieldofstudy"
    },
    {
-      "model" : "subject.fieldofstudies",
+      "model" : "subject.fieldofstudy",
       "fields" : {
          "name" : "Cyberbezpieczeństwo",
          "slug" : "cyberbezpieczenstwo"
@@ -16,7 +16,7 @@
       "pk" : 4
    },
    {
-      "model" : "subject.fieldofstudies",
+      "model" : "subject.fieldofstudy",
       "fields" : {
          "name" : "Elektronika",
          "slug" : "elektronika"
@@ -24,7 +24,7 @@
       "pk" : 5
    },
    {
-      "model" : "subject.fieldofstudies",
+      "model" : "subject.fieldofstudy",
       "pk" : 6,
       "fields" : {
          "name" : "Elektronika i Telekomunikacja",
@@ -32,7 +32,7 @@
       }
    },
    {
-      "model" : "subject.fieldofstudies",
+      "model" : "subject.fieldofstudy",
       "fields" : {
          "name" : "Teleinformatyka",
          "slug" : "stacjonarne-teleinformatyka"
@@ -45,7 +45,7 @@
          "name" : "Electronics and Telecommunications",
          "slug" : "electronics-and-telecommunications"
       },
-      "model" : "subject.fieldofstudies"
+      "model" : "subject.fieldofstudy"
    },
    {
       "fields" : {
@@ -27848,7 +27848,7 @@
          "general_description" : "",
          "name" : "Physics 1",
          "semester" : 2,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "model" : "subject.subject"
    },
@@ -27856,7 +27856,7 @@
       "fields" : {
          "name" : "Theory of Compiling ",
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1403,
@@ -27867,7 +27867,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 7,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Project 2 "
       },
       "pk" : 1404
@@ -27876,7 +27876,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Badania operacyjne",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6
       },
       "pk" : 1405,
@@ -27887,7 +27887,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Computation Methods for Science and Technology",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       },
       "pk" : 1406
@@ -27897,7 +27897,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Interpersonal Skills",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 1
       },
       "pk" : 1407
@@ -27906,7 +27906,7 @@
       "fields" : {
          "name" : "Physics 2",
          "semester" : 3,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1408,
@@ -27917,7 +27917,7 @@
       "pk" : 1409,
       "fields" : {
          "name" : "Russian B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "general_description" : ""
       }
@@ -27926,7 +27926,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 2,
          "name" : "Data Structures and Algorithms"
       },
@@ -27935,7 +27935,7 @@
    {
       "fields" : {
          "name" : "Mathematical Analysis 1",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 1,
          "general_description" : ""
       },
@@ -27948,7 +27948,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Podstawy sztucznej inteligencji",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5
       }
    },
@@ -27957,7 +27957,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Programowanie w jezyku Fortran"
       },
       "model" : "subject.subject"
@@ -27965,7 +27965,7 @@
    {
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Software Engineering",
          "general_description" : ""
       },
@@ -27976,7 +27976,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Object Oriented Programming",
          "general_description" : ""
       },
@@ -27988,7 +27988,7 @@
          "general_description" : "",
          "name" : "English B2 course - compulsory course of 135 hours",
          "semester" : 4,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1416
    },
@@ -27998,7 +27998,7 @@
          "general_description" : "",
          "name" : "Metody rozpoznawania obrazów",
          "semester" : 7,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "model" : "subject.subject"
    },
@@ -28006,7 +28006,7 @@
       "model" : "subject.subject",
       "pk" : 1418,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "name" : "Introduction to Databases",
          "general_description" : ""
@@ -28016,7 +28016,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6,
          "name" : "Project 1"
       },
@@ -28026,7 +28026,7 @@
       "model" : "subject.subject",
       "pk" : 1420,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -28038,7 +28038,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Theory of Concurrency"
       }
    },
@@ -28046,7 +28046,7 @@
       "fields" : {
          "name" : "Introduction to UNIX System",
          "semester" : 1,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1422,
@@ -28055,7 +28055,7 @@
    {
       "pk" : 1423,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 2,
          "name" : "English B2 course - compulsory course of 135 hours",
          "general_description" : ""
@@ -28065,7 +28065,7 @@
    {
       "pk" : 1424,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4,
          "name" : "Operating Systems ",
          "general_description" : ""
@@ -28077,7 +28077,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Bezpieczeństwo sieci komputerowych",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6
       },
       "model" : "subject.subject"
@@ -28087,7 +28087,7 @@
       "fields" : {
          "name" : "Final project",
          "semester" : 7,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1426
@@ -28098,7 +28098,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Rachunek prawdopodobieństwa i statystyka",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3
       }
    },
@@ -28107,7 +28107,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Imperative Programming"
       },
       "model" : "subject.subject"
@@ -28118,7 +28118,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Programowanie w języku C++",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       }
    },
@@ -28126,7 +28126,7 @@
       "pk" : 1430,
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Computation and Complexity Theory",
          "general_description" : ""
       },
@@ -28138,14 +28138,14 @@
       "fields" : {
          "general_description" : "",
          "name" : "Introduction to Computer Science",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 1
       }
    },
    {
       "fields" : {
          "semester" : 2,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Protection of Intellectual Property",
          "general_description" : ""
       },
@@ -28157,7 +28157,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Działalność w kole naukowym",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6
       },
       "model" : "subject.subject"
@@ -28168,14 +28168,14 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Object-oriented design"
       }
    },
    {
       "fields" : {
          "semester" : 7,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Virtual Private Networks",
          "general_description" : ""
       },
@@ -28187,7 +28187,7 @@
       "fields" : {
          "name" : "Algebra",
          "semester" : 1,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1436
@@ -28195,7 +28195,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Computer Networks",
          "general_description" : ""
@@ -28207,7 +28207,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Algorytmy geometryczne",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3
       },
       "pk" : 1438
@@ -28215,7 +28215,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Technologies Internet of Things",
          "general_description" : ""
@@ -28227,7 +28227,7 @@
          "general_description" : "",
          "name" : "Mathematical Analysis 2",
          "semester" : 2,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1440,
       "model" : "subject.subject"
@@ -28237,14 +28237,14 @@
       "fields" : {
          "general_description" : "",
          "name" : "Physical Education 3",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3
       },
       "model" : "subject.subject"
    },
    {
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 7,
          "name" : "Programming of autonomous mobile robots",
          "general_description" : ""
@@ -28255,7 +28255,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6,
          "name" : "Systemy czasu rzeczywistego"
       },
@@ -28268,7 +28268,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Assembler Languages",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       }
    },
@@ -28276,7 +28276,7 @@
       "pk" : 1445,
       "fields" : {
          "semester" : 2,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Mathematical Logic ",
          "general_description" : ""
       },
@@ -28287,7 +28287,7 @@
          "general_description" : "",
          "name" : "Object-oriented technologies ",
          "semester" : 5,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1446,
       "model" : "subject.subject"
@@ -28296,7 +28296,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 1,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Discrete Mathematics",
          "general_description" : ""
       },
@@ -28307,7 +28307,7 @@
       "fields" : {
          "name" : "Automata and Formal Languages Theory",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1448
@@ -28318,7 +28318,7 @@
          "general_description" : "",
          "name" : "Protecting personal  data in the digital society",
          "semester" : 7,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "model" : "subject.subject"
    },
@@ -28326,7 +28326,7 @@
       "pk" : 1450,
       "fields" : {
          "name" : "Przetwarzanie i analiza obrazów cyfrowych",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6,
          "general_description" : ""
       },
@@ -28336,7 +28336,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "name" : "Differential and Difference Equations"
       },
@@ -28347,7 +28347,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Graph-based algorithms",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3
       },
       "model" : "subject.subject"
@@ -28357,7 +28357,7 @@
       "fields" : {
          "name" : "Podstawy uczenia maszynowego",
          "semester" : 6,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -28365,7 +28365,7 @@
    {
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Metody i algorytmy podejmowania decyzji",
          "general_description" : ""
       },
@@ -28376,7 +28376,7 @@
       "pk" : 1455,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 7,
          "name" : "Architektura rozwiązań chmurowych"
       },
@@ -28387,7 +28387,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       },
       "model" : "subject.subject"
@@ -28397,7 +28397,7 @@
       "pk" : 1457,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 2,
          "name" : "French B2 course - compulsory course of 135 hours "
       }
@@ -28408,7 +28408,7 @@
          "general_description" : "",
          "name" : "Algorytmy współbieżne",
          "semester" : 6,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1458
    },
@@ -28418,7 +28418,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Programowanie w językach Erlang i Elixir",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       }
    },
@@ -28429,14 +28429,14 @@
          "general_description" : "",
          "name" : "Hurtownie danych",
          "semester" : 7,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       }
    },
    {
       "pk" : 1461,
       "fields" : {
          "name" : "Spanish B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "general_description" : ""
       },
@@ -28448,7 +28448,7 @@
          "general_description" : "",
          "name" : "German B2 course - compulsory course of 135 hours ",
          "semester" : 2,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "model" : "subject.subject"
    },
@@ -28456,7 +28456,7 @@
       "pk" : 1463,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Algorytmy macierzowe"
       },
@@ -28467,7 +28467,7 @@
       "fields" : {
          "name" : "Metody i algorytmy kompilacji",
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1464
@@ -28476,7 +28476,7 @@
       "pk" : 1465,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "name" : "French B2 course - compulsory course of 135 hours "
       },
@@ -28487,7 +28487,7 @@
       "pk" : 1466,
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Metody i algorytmy sztucznej inteligencji",
          "general_description" : ""
       }
@@ -28497,7 +28497,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 7,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Programowanie reaktywne w języku Scala"
       },
       "pk" : 1467
@@ -28507,7 +28507,7 @@
          "general_description" : "",
          "name" : "Physical Education 1",
          "semester" : 2,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1468,
       "model" : "subject.subject"
@@ -28515,7 +28515,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 2,
          "name" : "Physical Education 2",
          "general_description" : ""
@@ -28525,7 +28525,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 7,
          "name" : "Business analysis systems",
          "general_description" : ""
@@ -28535,7 +28535,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 2,
          "name" : "Spanish B2 course - compulsory course of 135 hours",
          "general_description" : ""
@@ -28546,7 +28546,7 @@
       "fields" : {
          "name" : "Russian B2 course - compulsory course of 135 hours",
          "semester" : 3,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1472,
@@ -28555,7 +28555,7 @@
    {
       "pk" : 1473,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Design Patterns",
          "general_description" : ""
@@ -28565,7 +28565,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 2,
          "name" : "Russian B2 course - compulsory course of 135 hours"
       },
@@ -28574,7 +28574,7 @@
    },
    {
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Computer Graphics",
          "general_description" : ""
@@ -28587,7 +28587,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Inżynieria wymagań i jakości",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3
       },
       "model" : "subject.subject"
@@ -28598,7 +28598,7 @@
          "general_description" : "",
          "name" : "Wprowadzenie do inżynierii bezpieczeństwa",
          "semester" : 6,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "model" : "subject.subject"
    },
@@ -28608,7 +28608,7 @@
          "general_description" : "",
          "name" : "Systemy i technologie wizualizacji",
          "semester" : 7,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1478
    },
@@ -28618,7 +28618,7 @@
          "general_description" : "",
          "name" : "Digital technology",
          "semester" : 4,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1479
    },
@@ -28627,7 +28627,7 @@
       "fields" : {
          "name" : "French B2 course - compulsory course of 135 hours ",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1480
@@ -28637,7 +28637,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Computer Architecture "
       },
       "model" : "subject.subject"
@@ -28646,7 +28646,7 @@
       "pk" : 1482,
       "fields" : {
          "name" : "ERP Systems",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 7,
          "general_description" : ""
       },
@@ -28655,7 +28655,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Microprocessor Techniques",
          "general_description" : ""
@@ -28667,7 +28667,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Cryptography",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5
       },
       "model" : "subject.subject"
@@ -28678,7 +28678,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Embedded Systems"
       }
    },
@@ -28686,7 +28686,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Database Systems",
          "general_description" : ""
       },
@@ -28697,7 +28697,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "German B2 course - compulsory course of 135 hours ",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3
       },
       "model" : "subject.subject"
@@ -28706,7 +28706,7 @@
       "pk" : 1488,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6,
          "name" : "Complex Digital Systems"
       },
@@ -28715,7 +28715,7 @@
    {
       "pk" : 1489,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Advanced System Programming",
          "general_description" : ""
@@ -28727,7 +28727,7 @@
          "general_description" : "",
          "name" : "German B2 course - compulsory course of 135 hours ",
          "semester" : 4,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1490,
       "model" : "subject.subject"
@@ -28738,7 +28738,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Wprowadzenie do aplikacji internetowych",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3
       }
    },
@@ -28747,7 +28747,7 @@
       "pk" : 1492,
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "IT solutions in manufacturing engineering",
          "general_description" : ""
       }
@@ -28756,7 +28756,7 @@
       "pk" : 1493,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6,
          "name" : "UX aplikacji internetowych"
       },
@@ -28766,7 +28766,7 @@
       "pk" : 1494,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "English B2 course - compulsory course of 135 hours",
          "general_description" : ""
       },
@@ -28776,7 +28776,7 @@
       "model" : "subject.subject",
       "pk" : 1495,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "name" : "Functional programming",
          "general_description" : ""
@@ -28788,7 +28788,7 @@
          "general_description" : "",
          "name" : "Spanish B2 course - compulsory course of 135 hours",
          "semester" : 4,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1496
    },
@@ -28796,7 +28796,7 @@
       "pk" : 1497,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 5,
          "name" : "Usability Engineering"
       },
@@ -28807,7 +28807,7 @@
       "pk" : 1498,
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Optymalizacja kodu na różne architektury",
          "general_description" : ""
       }
@@ -28817,7 +28817,7 @@
          "general_description" : "",
          "name" : "Transformacje i algorytmy grafowe",
          "semester" : 3,
-         "field_of_studies" : 3
+         "field_of_study" : 3
       },
       "pk" : 1499,
       "model" : "subject.subject"
@@ -28827,7 +28827,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Przetwarzanie obrazów cyfrowych"
       },
       "pk" : 1500
@@ -28836,7 +28836,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Programming in Python",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4,
          "general_description" : ""
       },
@@ -28847,7 +28847,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Algorytmy dla problemów trudnych obliczeniowo",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6
       },
       "pk" : 1502
@@ -28856,7 +28856,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "name" : "English B2 course - compulsory course of 135 hours"
       },
@@ -28866,7 +28866,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "  Introduction to ERP systems",
          "general_description" : ""
       },
@@ -28875,7 +28875,7 @@
    {
       "pk" : 1505,
       "fields" : {
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6,
          "name" : "Distributed Systems",
          "general_description" : ""
@@ -28885,7 +28885,7 @@
    {
       "fields" : {
          "name" : "Programowanie z ograniczeniami",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 3,
          "general_description" : ""
       },
@@ -28895,7 +28895,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4,
          "name" : "Modelowanie systemów dyskretnych"
       },
@@ -28907,7 +28907,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Praktyka zawodowa",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 6
       },
       "model" : "subject.subject"
@@ -28917,7 +28917,7 @@
       "fields" : {
          "name" : "Wstęp do programowania grafiki komputerowej",
          "semester" : 5,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -28927,7 +28927,7 @@
       "fields" : {
          "name" : "Multimedia i algorytmy przetwarzania multimediów",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1510
@@ -28936,7 +28936,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Algorytmy inspirowane biologicznie",
          "general_description" : ""
       },
@@ -28947,7 +28947,7 @@
       "fields" : {
          "name" : "Programming in Ruby",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "general_description" : ""
       },
       "pk" : 1512
@@ -28957,7 +28957,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Programming in Scala"
       },
       "model" : "subject.subject"
@@ -28967,7 +28967,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Programming in Java Script",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       },
       "model" : "subject.subject"
@@ -28976,7 +28976,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Programowanie w języku Prolog",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       },
       "pk" : 1515,
@@ -28986,7 +28986,7 @@
       "pk" : 1516,
       "fields" : {
          "name" : "Programowanie w języku Icon",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4,
          "general_description" : ""
       },
@@ -28996,7 +28996,7 @@
       "pk" : 1517,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Programowanie w jezyku Julia",
          "general_description" : ""
       },
@@ -29006,7 +29006,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "name" : "Elementy statystycznego uczenia maszynowego"
       },
       "pk" : 1518,
@@ -29018,7 +29018,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Textual algorithms",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 4
       }
    },
@@ -29026,7 +29026,7 @@
       "pk" : 1520,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 3,
+         "field_of_study" : 3,
          "semester" : 7,
          "name" : "CAD/CAE Systems"
       },
@@ -29036,7 +29036,7 @@
       "pk" : 1521,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 4,
          "name" : "Security of wireless networks"
       },
@@ -29047,7 +29047,7 @@
       "fields" : {
          "name" : "English B2 course - compulsory course of 135 hours",
          "semester" : 2,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1522
@@ -29056,7 +29056,7 @@
       "pk" : 1523,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 7,
          "name" : "Elective course from UBPJO"
       },
@@ -29067,7 +29067,7 @@
       "fields" : {
          "name" : "Analysis 1",
          "semester" : 1,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -29076,7 +29076,7 @@
       "pk" : 1525,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3,
          "name" : "Physics 2"
       },
@@ -29088,14 +29088,14 @@
       "fields" : {
          "name" : "Wide area network security ",
          "semester" : 5,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       }
    },
    {
       "pk" : 1527,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 6,
          "name" : "Security of critical infrastructure and industrial",
          "general_description" : ""
@@ -29108,7 +29108,7 @@
          "general_description" : "",
          "name" : "Local Area Network Security",
          "semester" : 3,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1528
    },
@@ -29117,7 +29117,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Practical use of information from open sources",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 6
       },
       "model" : "subject.subject"
@@ -29128,7 +29128,7 @@
       "fields" : {
          "name" : "Analysis 2",
          "semester" : 2,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       }
    },
@@ -29136,7 +29136,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Software security "
       },
       "pk" : 1531,
@@ -29147,7 +29147,7 @@
          "general_description" : "",
          "name" : "Algebra",
          "semester" : 1,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1532,
       "model" : "subject.subject"
@@ -29155,7 +29155,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 1,
          "name" : "Physical education 1/3",
          "general_description" : ""
@@ -29166,7 +29166,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Probabilistics and statistics",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "general_description" : ""
       },
@@ -29177,7 +29177,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Databases",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 4
       },
       "pk" : 1535
@@ -29188,7 +29188,7 @@
          "general_description" : "",
          "name" : "Operating Systems",
          "semester" : 3,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1536
    },
@@ -29196,7 +29196,7 @@
       "model" : "subject.subject",
       "pk" : 1537,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 6,
          "name" : "Security of operating systems ",
          "general_description" : ""
@@ -29206,7 +29206,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3,
          "name" : "Web and mobile application security"
       },
@@ -29216,7 +29216,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 4,
          "name" : "Forensic analysis"
       },
@@ -29226,7 +29226,7 @@
       "pk" : 1540,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "name" : "Physics 1"
       },
@@ -29237,7 +29237,7 @@
       "pk" : 1541,
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Security of mobile systems and 5G networks",
          "general_description" : ""
       }
@@ -29248,7 +29248,7 @@
          "general_description" : "",
          "name" : "Introduction to computer science",
          "semester" : 1,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1542
    },
@@ -29258,7 +29258,7 @@
          "general_description" : "",
          "name" : "International organizations and cybersecurity",
          "semester" : 4,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1543
    },
@@ -29266,7 +29266,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Students research group"
       },
       "pk" : 1544,
@@ -29278,7 +29278,7 @@
          "general_description" : "",
          "name" : "Algorithms design and analysis",
          "semester" : 2,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "model" : "subject.subject"
    },
@@ -29286,7 +29286,7 @@
       "pk" : 1546,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3,
          "name" : "Script Programming"
       },
@@ -29295,7 +29295,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 5,
          "name" : "Protection of classified information "
       },
@@ -29307,7 +29307,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Digital forensics",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3
       },
       "model" : "subject.subject"
@@ -29318,7 +29318,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Introduction to quantum computing"
       }
    },
@@ -29326,7 +29326,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 1,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Introduction to the internet"
       },
       "pk" : 1550,
@@ -29337,7 +29337,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Hardware aspects of cybersecurity",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 4
       },
       "model" : "subject.subject"
@@ -29347,7 +29347,7 @@
       "pk" : 1552,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "name" : "Security of ICT networks and systems"
       }
@@ -29356,7 +29356,7 @@
       "pk" : 1553,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 7,
          "name" : "Project 2"
       },
@@ -29366,7 +29366,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 5,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Penetration testing"
       },
       "pk" : 1554,
@@ -29375,7 +29375,7 @@
    {
       "pk" : 1555,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3,
          "name" : "Social engineering",
          "general_description" : ""
@@ -29387,7 +29387,7 @@
       "pk" : 1556,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "OSINT - introduction",
          "general_description" : ""
       }
@@ -29396,7 +29396,7 @@
       "pk" : 1557,
       "fields" : {
          "name" : "Incidents detection",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "general_description" : ""
       },
@@ -29408,7 +29408,7 @@
          "general_description" : "",
          "name" : "Engineering project",
          "semester" : 7,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "model" : "subject.subject"
    },
@@ -29416,7 +29416,7 @@
       "pk" : 1559,
       "fields" : {
          "name" : "The national cybersecurity system",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 1,
          "general_description" : ""
       },
@@ -29426,7 +29426,7 @@
       "fields" : {
          "name" : "Industrial espionage",
          "semester" : 5,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1560,
@@ -29436,7 +29436,7 @@
       "pk" : 1561,
       "fields" : {
          "name" : "Introduction to administration and computer securi",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 1,
          "general_description" : ""
       },
@@ -29446,7 +29446,7 @@
       "pk" : 1562,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Malware analysis",
          "general_description" : ""
       },
@@ -29457,7 +29457,7 @@
          "general_description" : "",
          "name" : "Programming basics",
          "semester" : 2,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1563,
       "model" : "subject.subject"
@@ -29465,7 +29465,7 @@
    {
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
       },
@@ -29477,7 +29477,7 @@
       "fields" : {
          "general_description" : "",
          "name" : " An introductiom to Criminal Law and Criminal Proc",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 1
       },
       "pk" : 1565
@@ -29487,7 +29487,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Combating cybercrime - introduction",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3
       },
       "pk" : 1566
@@ -29495,7 +29495,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 7,
          "name" : "Digital watermarking and steganography",
          "general_description" : ""
@@ -29506,7 +29506,7 @@
       "fields" : {
          "name" : "Machine learning for network anomaly detection",
          "semester" : 4,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1568,
@@ -29516,7 +29516,7 @@
       "model" : "subject.subject",
       "pk" : 1569,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "name" : "Information security management",
          "general_description" : ""
@@ -29524,7 +29524,7 @@
    },
    {
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 6,
          "name" : "Network programming supporting secure applications",
          "general_description" : ""
@@ -29536,7 +29536,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3
       },
       "pk" : 1571,
@@ -29546,7 +29546,7 @@
       "model" : "subject.subject",
       "pk" : 1572,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 7,
          "name" : "Students research group",
          "general_description" : ""
@@ -29556,7 +29556,7 @@
       "pk" : 1573,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Personal data protection and privacy enhancing tec",
          "general_description" : ""
       },
@@ -29566,7 +29566,7 @@
       "fields" : {
          "name" : "French B2 course - compulsory course of 135 hours ",
          "semester" : 2,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1574,
@@ -29576,7 +29576,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Project ",
          "general_description" : ""
       },
@@ -29588,7 +29588,7 @@
          "general_description" : "",
          "name" : "German B2 course - compulsory course of 135 hours ",
          "semester" : 2,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1576
    },
@@ -29598,7 +29598,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 7,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Blockchain"
       }
    },
@@ -29607,7 +29607,7 @@
       "pk" : 1578,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 4,
          "name" : "French B2 course - compulsory course of 135 hours "
       }
@@ -29617,7 +29617,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Security of virtualized environment",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 5
       },
       "pk" : 1579
@@ -29626,7 +29626,7 @@
       "pk" : 1580,
       "fields" : {
          "name" : "Cryptography",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3,
          "general_description" : ""
       },
@@ -29636,7 +29636,7 @@
       "pk" : 1581,
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "English B2 course - compulsory course of 135 hours",
          "general_description" : ""
       },
@@ -29647,7 +29647,7 @@
       "fields" : {
          "name" : "Cybersecurity and data processing in the cloud",
          "semester" : 7,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1582
@@ -29656,7 +29656,7 @@
       "model" : "subject.subject",
       "pk" : 1583,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "name" : "Spanish B2 course - compulsory course of 135 hours",
          "general_description" : ""
@@ -29666,7 +29666,7 @@
       "pk" : 1584,
       "fields" : {
          "name" : "Incidents management - SOC and CERT",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 5,
          "general_description" : ""
       },
@@ -29677,7 +29677,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Professional training",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 6
       },
       "model" : "subject.subject"
@@ -29686,7 +29686,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "German B2 course - compulsory course of 135 hours "
       },
       "pk" : 1586,
@@ -29696,7 +29696,7 @@
       "pk" : 1587,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "name" : "Russian B2 course - compulsory course of 135 hours"
       },
@@ -29708,14 +29708,14 @@
          "general_description" : "",
          "name" : "Physical education 3/3",
          "semester" : 3,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "model" : "subject.subject"
    },
    {
       "pk" : 1589,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 5,
          "name" : "Biometrics",
          "general_description" : ""
@@ -29728,7 +29728,7 @@
          "general_description" : "",
          "name" : "English B2 course - compulsory course of 135 hours",
          "semester" : 4,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "model" : "subject.subject"
    },
@@ -29737,7 +29737,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Discrete Mathematics",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2
       },
       "model" : "subject.subject"
@@ -29747,7 +29747,7 @@
       "fields" : {
          "name" : "Spanish B2 course - compulsory course of 135 hours",
          "semester" : 4,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1592
@@ -29755,7 +29755,7 @@
    {
       "pk" : 1593,
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 5,
          "name" : "Cybersecurity and contemporary conflicts",
          "general_description" : ""
@@ -29768,7 +29768,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "name" : "Basics of information analysis"
       }
    },
@@ -29777,7 +29777,7 @@
          "general_description" : "",
          "name" : "Cryptanalysis",
          "semester" : 7,
-         "field_of_studies" : 4
+         "field_of_study" : 4
       },
       "pk" : 1595,
       "model" : "subject.subject"
@@ -29787,14 +29787,14 @@
       "fields" : {
          "name" : "French B2 course - compulsory course of 135 hours ",
          "semester" : 3,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1596
    },
    {
       "fields" : {
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 2,
          "name" : "Physical education 2/3",
          "general_description" : ""
@@ -29806,7 +29806,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Russian B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 4,
          "general_description" : ""
       },
@@ -29815,7 +29815,7 @@
    {
       "fields" : {
          "name" : "Introduction to software engineering",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 5,
          "general_description" : ""
       },
@@ -29827,7 +29827,7 @@
       "fields" : {
          "name" : "Cybersecurity and international law",
          "semester" : 6,
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "general_description" : ""
       },
       "pk" : 1600
@@ -29836,7 +29836,7 @@
       "pk" : 1601,
       "fields" : {
          "name" : "IoT Security",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 7,
          "general_description" : ""
       },
@@ -29847,7 +29847,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Spanish B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 3
       },
       "pk" : 1602
@@ -29856,7 +29856,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "National information resources",
-         "field_of_studies" : 4,
+         "field_of_study" : 4,
          "semester" : 6,
          "general_description" : ""
       },
@@ -29866,7 +29866,7 @@
       "model" : "subject.subject",
       "pk" : 1604,
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 7,
          "name" : "Seminarium dyplomowe",
          "general_description" : ""
@@ -29876,7 +29876,7 @@
       "pk" : 1605,
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Elektronika w medycynie",
          "general_description" : ""
       },
@@ -29887,7 +29887,7 @@
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
          "semester" : 4,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1606,
       "model" : "subject.subject"
@@ -29897,7 +29897,7 @@
       "fields" : {
          "name" : "Basics of mechanical constructions",
          "semester" : 5,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "pk" : 1607
@@ -29906,7 +29906,7 @@
       "fields" : {
          "name" : "Mathematical analysis 1",
          "semester" : 1,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "pk" : 1608,
@@ -29917,7 +29917,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 3,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Electronic devices"
       },
       "model" : "subject.subject"
@@ -29927,14 +29927,14 @@
       "fields" : {
          "general_description" : "",
          "name" : "Physics 2",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2
       },
       "model" : "subject.subject"
    },
    {
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 4,
          "name" : "Prawo patentowe",
          "general_description" : ""
@@ -29946,7 +29946,7 @@
       "model" : "subject.subject",
       "pk" : 1612,
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 5,
          "name" : "CAD tools",
          "general_description" : ""
@@ -29959,13 +29959,13 @@
          "general_description" : "",
          "name" : "Electronic metrology",
          "semester" : 2,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       }
    },
    {
       "fields" : {
          "semester" : 1,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Algebra",
          "general_description" : ""
       },
@@ -29978,7 +29978,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Computional techniques",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 3
       }
    },
@@ -29987,7 +29987,7 @@
       "pk" : 1616,
       "fields" : {
          "name" : "Microwave and antenna technique",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 6,
          "general_description" : ""
       }
@@ -29997,7 +29997,7 @@
       "pk" : 1617,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 7,
          "name" : "Projektowanie systemów cyfrowych  przy pomocy języ"
       }
@@ -30007,7 +30007,7 @@
       "fields" : {
          "name" : "English B2 course - compulsory course of 135 hours",
          "semester" : 2,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "pk" : 1618
@@ -30017,7 +30017,7 @@
       "pk" : 1619,
       "fields" : {
          "name" : "Assembling of electronic systems",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 5,
          "general_description" : ""
       }
@@ -30027,7 +30027,7 @@
       "fields" : {
          "name" : "Sieci transmisji danych",
          "semester" : 6,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -30037,7 +30037,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Signal theory",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 3
       },
       "model" : "subject.subject"
@@ -30048,7 +30048,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "German B2 course - compulsory course of 135 hours "
       }
    },
@@ -30056,7 +30056,7 @@
       "model" : "subject.subject",
       "pk" : 1623,
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 7,
          "name" : "Elektronika spinowa",
          "general_description" : ""
@@ -30067,7 +30067,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Praktyka kierunkowa "
       },
       "pk" : 1624
@@ -30077,7 +30077,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Spanish B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 4
       },
       "model" : "subject.subject"
@@ -30089,7 +30089,7 @@
          "general_description" : "",
          "name" : "Circuits analysis I",
          "semester" : 2,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       }
    },
    {
@@ -30097,7 +30097,7 @@
          "general_description" : "",
          "name" : "Management basics",
          "semester" : 3,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1627,
       "model" : "subject.subject"
@@ -30107,7 +30107,7 @@
          "general_description" : "",
          "name" : "Microprocessors Technology II",
          "semester" : 5,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1628,
       "model" : "subject.subject"
@@ -30115,7 +30115,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 4,
          "name" : "French B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -30126,7 +30126,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Probability and statistics",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 1,
          "general_description" : ""
       },
@@ -30137,7 +30137,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Electronic equipment design",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 6
       },
       "pk" : 1631
@@ -30147,7 +30147,7 @@
          "general_description" : "",
          "name" : "Digital systems design",
          "semester" : 5,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1632,
       "model" : "subject.subject"
@@ -30156,7 +30156,7 @@
       "pk" : 1633,
       "fields" : {
          "name" : "Repetytorium dyplomowe",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 7,
          "general_description" : ""
       },
@@ -30165,7 +30165,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2,
          "name" : "Mathematical analysis  2"
       },
@@ -30176,7 +30176,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 3,
          "name" : "English B2 course - compulsory course of 135 hours"
       },
@@ -30187,7 +30187,7 @@
       "pk" : 1636,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 5,
          "name" : "Fiber-optics systems"
       }
@@ -30198,14 +30198,14 @@
          "general_description" : "",
          "name" : "Diploma thesis",
          "semester" : 7,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "model" : "subject.subject"
    },
    {
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Digital signal processing",
          "general_description" : ""
       },
@@ -30218,7 +30218,7 @@
          "general_description" : "",
          "name" : "Introduction to electronics",
          "semester" : 1,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1639
    },
@@ -30228,7 +30228,7 @@
          "general_description" : "",
          "name" : "Systemy elektroniczne pojazdów",
          "semester" : 6,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1640
    },
@@ -30237,7 +30237,7 @@
       "fields" : {
          "name" : "French B2 course - compulsory course of 135 hours ",
          "semester" : 3,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -30247,14 +30247,14 @@
       "pk" : 1642,
       "fields" : {
          "name" : "French B2 course - compulsory course of 135 hours ",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2,
          "general_description" : ""
       }
    },
    {
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 1,
          "name" : "Basics of computer science",
          "general_description" : ""
@@ -30267,7 +30267,7 @@
       "pk" : 1644,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2,
          "name" : "Digital Electronics I"
       }
@@ -30276,7 +30276,7 @@
       "pk" : 1645,
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Problemy termiczne w układach elektronicznych",
          "general_description" : ""
       },
@@ -30286,7 +30286,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 7,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Interchips communication standards in embedded sys"
       },
       "pk" : 1646,
@@ -30296,7 +30296,7 @@
       "pk" : 1647,
       "fields" : {
          "name" : "Basics of microelectronics",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 5,
          "general_description" : ""
       },
@@ -30307,7 +30307,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Digital electronic circuits",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 3
       },
       "model" : "subject.subject"
@@ -30317,7 +30317,7 @@
       "pk" : 1649,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 4,
          "name" : "Microprocessor systems I"
       }
@@ -30326,7 +30326,7 @@
       "fields" : {
          "name" : "Basics of finance economics and law in business",
          "semester" : 3,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "pk" : 1650,
@@ -30336,7 +30336,7 @@
       "pk" : 1651,
       "fields" : {
          "name" : "Electronic circuits",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 4,
          "general_description" : ""
       },
@@ -30347,7 +30347,7 @@
       "pk" : 1652,
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Design Laboratory - faculty subject in english",
          "general_description" : ""
       }
@@ -30356,7 +30356,7 @@
       "pk" : 1653,
       "fields" : {
          "name" : "Diploma laboratory I",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 6,
          "general_description" : ""
       },
@@ -30368,7 +30368,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 7,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Techniki i systemy bezprzewodowe"
       }
    },
@@ -30377,7 +30377,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Spanish B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2
       },
       "model" : "subject.subject"
@@ -30386,7 +30386,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 2,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Engineering calculation techniques",
          "general_description" : ""
       },
@@ -30395,7 +30395,7 @@
    {
       "pk" : 1657,
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 5,
          "name" : "Renewable energy sources",
          "general_description" : ""
@@ -30408,7 +30408,7 @@
       "fields" : {
          "name" : "Industrial Automatic Control",
          "semester" : 3,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       }
    },
@@ -30417,7 +30417,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 1,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Physics 1"
       },
       "pk" : 1659
@@ -30426,7 +30426,7 @@
       "fields" : {
          "name" : "Data transmission",
          "semester" : 4,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "pk" : 1660,
@@ -30436,7 +30436,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Urządzenia teleinformatyki ",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 6
       },
       "pk" : 1661,
@@ -30445,7 +30445,7 @@
    {
       "fields" : {
          "name" : "Functional functional blocks and their application",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 7,
          "general_description" : ""
       },
@@ -30456,7 +30456,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Physical Education 2",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2,
          "general_description" : ""
       },
@@ -30466,7 +30466,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Ochrona własności intelektualnej"
       },
       "pk" : 1664,
@@ -30476,7 +30476,7 @@
       "model" : "subject.subject",
       "pk" : 1665,
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 3,
          "name" : "Circuits analysis II",
          "general_description" : ""
@@ -30485,7 +30485,7 @@
    {
       "fields" : {
          "name" : " Integrated Circuits Design",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 6,
          "general_description" : ""
       },
@@ -30494,7 +30494,7 @@
    },
    {
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 5,
          "name" : "Programming in Python Language",
          "general_description" : ""
@@ -30506,7 +30506,7 @@
       "pk" : 1668,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2,
          "name" : "Physical Education 1"
       },
@@ -30517,7 +30517,7 @@
       "fields" : {
          "name" : "Applications of microcontrollers",
          "semester" : 6,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -30527,7 +30527,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Russian B2 course - compulsory course of 135 hours"
       },
       "pk" : 1670
@@ -30537,7 +30537,7 @@
          "general_description" : "",
          "name" : "Spanish B2 course - compulsory course of 135 hours",
          "semester" : 3,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1671,
       "model" : "subject.subject"
@@ -30546,7 +30546,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "English B2 course - compulsory course of 135 hours"
       },
       "pk" : 1672,
@@ -30557,7 +30557,7 @@
       "pk" : 1673,
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "name" : "Physical Education 3",
          "general_description" : ""
       }
@@ -30567,7 +30567,7 @@
       "pk" : 1674,
       "fields" : {
          "name" : "Simulation of electronic circuits",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 4,
          "general_description" : ""
       }
@@ -30576,7 +30576,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Electronic systems and circuits",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 5,
          "general_description" : ""
       },
@@ -30586,7 +30586,7 @@
       "model" : "subject.subject",
       "pk" : 1676,
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 2,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -30599,7 +30599,7 @@
          "general_description" : "",
          "name" : "Introduction to sensor technology",
          "semester" : 4,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       }
    },
    {
@@ -30607,7 +30607,7 @@
          "general_description" : "",
          "name" : "Programming languages",
          "semester" : 2,
-         "field_of_studies" : 5
+         "field_of_study" : 5
       },
       "pk" : 1678,
       "model" : "subject.subject"
@@ -30618,7 +30618,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 3
       }
    },
@@ -30628,14 +30628,14 @@
       "fields" : {
          "general_description" : "",
          "name" : "Control and measurement systems",
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 4
       }
    },
    {
       "pk" : 1681,
       "fields" : {
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "semester" : 3,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -30646,7 +30646,7 @@
       "fields" : {
          "name" : "Object-oriented programming",
          "semester" : 3,
-         "field_of_studies" : 5,
+         "field_of_study" : 5,
          "general_description" : ""
       },
       "pk" : 1682,
@@ -30657,7 +30657,7 @@
       "pk" : 1683,
       "fields" : {
          "name" : "Diploma thesis",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "general_description" : ""
       }
@@ -30667,7 +30667,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 1,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Metodyka i techniki programowania 1"
       },
       "model" : "subject.subject"
@@ -30677,7 +30677,7 @@
       "pk" : 1685,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 5,
          "name" : "Technika mikroprocesorowa  2"
       }
@@ -30688,7 +30688,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Mathematical analysis  2"
       }
    },
@@ -30697,7 +30697,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Wireless techniques and systems",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6
       },
       "model" : "subject.subject"
@@ -30706,7 +30706,7 @@
       "fields" : {
          "name" : "Analog electronic circuits 2",
          "semester" : 4,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       },
       "pk" : 1688,
@@ -30718,7 +30718,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "English B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 3
       }
    },
@@ -30727,7 +30727,7 @@
       "pk" : 1690,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Technika mikroprocesorowa  1",
          "general_description" : ""
       }
@@ -30737,7 +30737,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 3,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Signals and Systems"
       },
       "pk" : 1691
@@ -30746,7 +30746,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Telecommunication systems and networks",
          "general_description" : ""
       },
@@ -30757,7 +30757,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Bezprzewodowe sieci komputerowe",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6
       },
       "pk" : 1693
@@ -30766,7 +30766,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "name" : "Seminar"
       },
@@ -30776,7 +30776,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "English B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 2
       },
       "pk" : 1695,
@@ -30788,7 +30788,7 @@
          "general_description" : "",
          "name" : "Introduction to electronics",
          "semester" : 1,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "pk" : 1696
    },
@@ -30796,7 +30796,7 @@
       "pk" : 1697,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 4,
          "name" : "Cyfrowe przetwarzanie sygnałów"
       },
@@ -30805,7 +30805,7 @@
    {
       "fields" : {
          "name" : "Physical Education 3",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 3,
          "general_description" : ""
       },
@@ -30816,7 +30816,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Technika sensorowa",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6
       },
       "pk" : 1699,
@@ -30827,7 +30827,7 @@
       "pk" : 1700,
       "fields" : {
          "name" : "Design Laboratory - faculty subject in english",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 5,
          "general_description" : ""
       }
@@ -30838,14 +30838,14 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Physics 2"
       }
    },
    {
       "fields" : {
          "semester" : 1,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Introduction to telecommunications",
          "general_description" : ""
       },
@@ -30856,7 +30856,7 @@
       "fields" : {
          "name" : "Teoria obwodów 2",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       },
       "pk" : 1703,
@@ -30866,7 +30866,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Techniki obliczeniowe",
          "general_description" : ""
       },
@@ -30879,14 +30879,14 @@
          "general_description" : "",
          "name" : "Urządzenia teleinformatyki ",
          "semester" : 6,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       }
    },
    {
       "pk" : 1706,
       "fields" : {
          "name" : "Repetytorium dyplomowe",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "general_description" : ""
       },
@@ -30895,7 +30895,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 5,
          "name" : "Programowanie sieciowe"
       },
@@ -30906,7 +30906,7 @@
       "pk" : 1708,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 4,
          "name" : "Spanish B2 course - compulsory course of 135 hours"
       },
@@ -30917,7 +30917,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Elektronika w medycynie"
       },
       "model" : "subject.subject"
@@ -30926,7 +30926,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Physical Education 1"
       },
       "pk" : 1710,
@@ -30935,7 +30935,7 @@
    {
       "pk" : 1711,
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 2,
          "name" : "Metodyka i techniki programowania 2",
          "general_description" : ""
@@ -30948,7 +30948,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Operating systems",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 3
       }
    },
@@ -30956,7 +30956,7 @@
       "model" : "subject.subject",
       "pk" : 1713,
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 4,
          "name" : "Optoelektronika",
          "general_description" : ""
@@ -30965,7 +30965,7 @@
    {
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Computer Networks",
          "general_description" : ""
       },
@@ -30975,7 +30975,7 @@
    {
       "pk" : 1715,
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 1,
          "name" : "Algebra",
          "general_description" : ""
@@ -30988,7 +30988,7 @@
       "fields" : {
          "name" : "Podstawy konstrukcji mechanicznych",
          "semester" : 5,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       }
    },
@@ -30997,7 +30997,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Electronic devices",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 2
       },
       "model" : "subject.subject"
@@ -31006,7 +31006,7 @@
       "pk" : 1718,
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Programming in Python Language",
          "general_description" : ""
       },
@@ -31016,7 +31016,7 @@
       "model" : "subject.subject",
       "pk" : 1719,
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 3,
          "name" : "Analogue electronic circuits  1",
          "general_description" : ""
@@ -31025,7 +31025,7 @@
    {
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Praktyka kierunkowa",
          "general_description" : ""
       },
@@ -31036,7 +31036,7 @@
       "pk" : 1721,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 4,
          "name" : "Ochrona własności intelektualnej"
       },
@@ -31046,7 +31046,7 @@
       "pk" : 1722,
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Języki programowania obiektowego ",
          "general_description" : ""
       },
@@ -31057,7 +31057,7 @@
       "fields" : {
          "name" : "Electronic metrology",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       },
       "pk" : 1723
@@ -31067,7 +31067,7 @@
          "general_description" : "",
          "name" : "Renewable energy sources",
          "semester" : 7,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "pk" : 1724,
       "model" : "subject.subject"
@@ -31075,7 +31075,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6,
          "name" : "Assembling of electronic systems"
       },
@@ -31086,7 +31086,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Mathematical Analysis 1",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 1,
          "general_description" : ""
       },
@@ -31096,7 +31096,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Technika cyfrowa i układy programowalne",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 3
       },
       "pk" : 1727,
@@ -31107,7 +31107,7 @@
       "fields" : {
          "name" : "Basics of finance economics and law in business",
          "semester" : 3,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       },
       "pk" : 1728
@@ -31117,14 +31117,14 @@
       "pk" : 1729,
       "fields" : {
          "name" : "Elektronika spinowa",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "general_description" : ""
       }
    },
    {
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6,
          "name" : "Interchips communication standards in embedded sys",
          "general_description" : ""
@@ -31135,7 +31135,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 4,
          "name" : "Prawo patentowe"
       },
@@ -31147,7 +31147,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Fizyka 1",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 1
       },
       "model" : "subject.subject"
@@ -31157,7 +31157,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "French B2 course - compulsory course of 135 hours "
       },
       "model" : "subject.subject"
@@ -31168,7 +31168,7 @@
          "general_description" : "",
          "name" : "Computer measurement systems",
          "semester" : 5,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "pk" : 1734
    },
@@ -31177,7 +31177,7 @@
          "general_description" : "",
          "name" : "Circuit theory 1",
          "semester" : 1,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "pk" : 1735,
       "model" : "subject.subject"
@@ -31185,7 +31185,7 @@
    {
       "fields" : {
          "semester" : 7,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Zarządzanie serwerami LINUX",
          "general_description" : ""
       },
@@ -31196,7 +31196,7 @@
       "pk" : 1737,
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Systemy elektroniczne pojazdów",
          "general_description" : ""
       },
@@ -31206,7 +31206,7 @@
       "model" : "subject.subject",
       "pk" : 1738,
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 5,
          "name" : "Narzędzia CAD",
          "general_description" : ""
@@ -31215,7 +31215,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 3,
          "name" : "Basics of Management",
          "general_description" : ""
@@ -31226,7 +31226,7 @@
       "pk" : 1740,
       "fields" : {
          "name" : "Spanish B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 2,
          "general_description" : ""
       },
@@ -31238,7 +31238,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Russian B2 course - compulsory course of 135 hours"
       }
    },
@@ -31248,7 +31248,7 @@
          "general_description" : "",
          "name" : "Problemy termiczne w układach elektronicznych",
          "semester" : 6,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "pk" : 1742
    },
@@ -31257,7 +31257,7 @@
       "pk" : 1743,
       "fields" : {
          "name" : "Programming for Android ",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "general_description" : ""
       }
@@ -31266,7 +31266,7 @@
       "pk" : 1744,
       "fields" : {
          "name" : "Probability and statistics",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 1,
          "general_description" : ""
       },
@@ -31276,7 +31276,7 @@
       "pk" : 1745,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 3,
          "name" : "French B2 course - compulsory course of 135 hours "
       },
@@ -31286,7 +31286,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Russian B2 course - compulsory course of 135 hours"
       },
       "pk" : 1746,
@@ -31295,7 +31295,7 @@
    {
       "pk" : 1747,
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 4,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -31308,7 +31308,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "French B2 course - compulsory course of 135 hours "
       }
    },
@@ -31317,7 +31317,7 @@
       "pk" : 1749,
       "fields" : {
          "name" : "German B2 course - compulsory course of 135 hours ",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 2,
          "general_description" : ""
       }
@@ -31328,7 +31328,7 @@
       "fields" : {
          "name" : "Kierunki rozwoju telekomunikacji",
          "semester" : 7,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       }
    },
@@ -31338,7 +31338,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Komputerowe wspomaganie projektowania",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6
       }
    },
@@ -31346,7 +31346,7 @@
       "fields" : {
          "name" : "Spanish B2 course - compulsory course of 135 hours",
          "semester" : 3,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       },
       "pk" : 1752,
@@ -31357,7 +31357,7 @@
       "pk" : 1753,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "name" : "MPLS Networks"
       }
@@ -31367,7 +31367,7 @@
       "pk" : 1754,
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Russian B2 course - compulsory course of 135 hours",
          "general_description" : ""
       }
@@ -31375,7 +31375,7 @@
    {
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "English B2 course - compulsory course of 135 hours",
          "general_description" : ""
       },
@@ -31385,7 +31385,7 @@
    {
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Projektowanie systemów cyfrowych w językach opisu ",
          "general_description" : ""
       },
@@ -31396,7 +31396,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "name" : "Seminar on ICT"
       },
@@ -31405,7 +31405,7 @@
    {
       "fields" : {
          "name" : "Applications of microcontrollers",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6,
          "general_description" : ""
       },
@@ -31416,7 +31416,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Advanced Java Programming",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "general_description" : ""
       },
@@ -31426,7 +31426,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
       },
@@ -31438,13 +31438,13 @@
       "fields" : {
          "general_description" : "",
          "name" : "Switching nodes for telecommunication and computer",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6
       }
    },
    {
       "fields" : {
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6,
          "name" : "Introduction to Java Programming ",
          "general_description" : ""
@@ -31456,7 +31456,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Projektowanie systemów cyfrowych  przy pomocy języ",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 7,
          "general_description" : ""
       },
@@ -31466,7 +31466,7 @@
       "pk" : 1764,
       "fields" : {
          "name" : "Electronic integrated circuits and systems",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 5,
          "general_description" : ""
       },
@@ -31478,7 +31478,7 @@
          "general_description" : "",
          "name" : "Systemy komórkowe",
          "semester" : 6,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "model" : "subject.subject"
    },
@@ -31486,7 +31486,7 @@
       "fields" : {
          "name" : "Microwave techniques, antenna systems and propagat",
          "semester" : 5,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       },
       "pk" : 1766,
@@ -31496,7 +31496,7 @@
       "fields" : {
          "name" : "Multimedia Information Processing and Communicatio",
          "semester" : 6,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "general_description" : ""
       },
       "pk" : 1767,
@@ -31507,7 +31507,7 @@
          "general_description" : "",
          "name" : "Intradomain Routing in IP Networks",
          "semester" : 6,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "pk" : 1768,
       "model" : "subject.subject"
@@ -31516,7 +31516,7 @@
       "pk" : 1769,
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Securing Data Transmission: Cryptology, Watermarki",
          "general_description" : ""
       },
@@ -31528,7 +31528,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Databases",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6
       }
    },
@@ -31536,7 +31536,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 4,
          "name" : "Simulation of electronic circuits"
       },
@@ -31546,7 +31546,7 @@
       "pk" : 1772,
       "fields" : {
          "name" : "Software Defined Radio – Practical Approach",
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "semester" : 6,
          "general_description" : ""
       },
@@ -31558,7 +31558,7 @@
          "general_description" : "",
          "name" : "Science Club",
          "semester" : 6,
-         "field_of_studies" : 6
+         "field_of_study" : 6
       },
       "model" : "subject.subject"
    },
@@ -31566,7 +31566,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 6,
+         "field_of_study" : 6,
          "name" : "Physical Education 2"
       },
       "pk" : 1774,
@@ -31576,7 +31576,7 @@
       "pk" : 1775,
       "fields" : {
          "name" : "Mathematical Analysis 2",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 2,
          "general_description" : ""
       },
@@ -31588,7 +31588,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Microprocessor Technology  2",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 5
       }
    },
@@ -31597,7 +31597,7 @@
       "pk" : 1777,
       "fields" : {
          "name" : "Methodology and programming techniques 1",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 1,
          "general_description" : ""
       }
@@ -31605,7 +31605,7 @@
    {
       "fields" : {
          "semester" : 7,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Diplom Thesis",
          "general_description" : ""
       },
@@ -31617,7 +31617,7 @@
       "pk" : 1779,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 6,
          "name" : "Sensor Technology"
       }
@@ -31628,7 +31628,7 @@
          "general_description" : "",
          "name" : "Microprocessor Technology 1",
          "semester" : 4,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "model" : "subject.subject"
    },
@@ -31636,7 +31636,7 @@
       "model" : "subject.subject",
       "pk" : 1781,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "name" : "English B2 course - compulsory course of 135 hours",
          "general_description" : ""
@@ -31648,7 +31648,7 @@
          "general_description" : "",
          "name" : "Thesis seminar",
          "semester" : 7,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "model" : "subject.subject"
    },
@@ -31656,7 +31656,7 @@
       "pk" : 1783,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "name" : "Signals and Systems"
       },
@@ -31666,7 +31666,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Telecommunication Networks and Systems",
          "general_description" : ""
       },
@@ -31677,7 +31677,7 @@
       "pk" : 1785,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 4,
          "name" : "Digital Signal Processing"
       }
@@ -31687,7 +31687,7 @@
       "pk" : 1786,
       "fields" : {
          "semester" : 2,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Probability and Statistics",
          "general_description" : ""
       }
@@ -31698,7 +31698,7 @@
          "general_description" : "",
          "name" : "Professional practice",
          "semester" : 6,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "pk" : 1787
    },
@@ -31707,7 +31707,7 @@
          "general_description" : "",
          "name" : "Simulation Techniques",
          "semester" : 3,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "pk" : 1788,
       "model" : "subject.subject"
@@ -31715,7 +31715,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 5,
          "name" : "Computer measurement systems"
       },
@@ -31724,7 +31724,7 @@
    },
    {
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 2,
          "name" : "Physics 2",
          "general_description" : ""
@@ -31736,7 +31736,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 4,
          "name" : "Operating Systems"
       },
@@ -31747,7 +31747,7 @@
       "fields" : {
          "name" : "Circuits Theory 2",
          "semester" : 2,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "general_description" : ""
       },
       "pk" : 1792
@@ -31757,14 +31757,14 @@
       "fields" : {
          "general_description" : "",
          "name" : "Computational Techniques",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3
       },
       "model" : "subject.subject"
    },
    {
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 6,
          "name" : "Design Digital Systems in Hardware Description Lan",
          "general_description" : ""
@@ -31774,7 +31774,7 @@
    },
    {
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 5,
          "name" : "Design Laboratory (elective module in english)",
          "general_description" : ""
@@ -31786,7 +31786,7 @@
       "model" : "subject.subject",
       "pk" : 1796,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 7,
          "name" : "Compendium of Electronics and Telecommunications",
          "general_description" : ""
@@ -31797,7 +31797,7 @@
       "fields" : {
          "name" : "Optoelectronics",
          "semester" : 4,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -31807,7 +31807,7 @@
       "fields" : {
          "name" : "Information Technology",
          "semester" : 1,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "general_description" : ""
       },
       "pk" : 1798
@@ -31817,7 +31817,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Methodology and programming techniques 2 "
       },
       "pk" : 1799
@@ -31826,7 +31826,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 5,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Introduction to Mechanics"
       },
       "pk" : 1800,
@@ -31838,7 +31838,7 @@
          "general_description" : "",
          "name" : "French B2 course - compulsory course of 135 hours ",
          "semester" : 3,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "model" : "subject.subject"
    },
@@ -31847,7 +31847,7 @@
       "pk" : 1802,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 4,
          "name" : "Computer Networks"
       }
@@ -31855,7 +31855,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 6,
          "name" : "Switching nodes for telecommunication and computer"
       },
@@ -31866,7 +31866,7 @@
       "pk" : 1804,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 7,
          "name" : "Applications of Digital Signal Processors "
       },
@@ -31878,7 +31878,7 @@
       "fields" : {
          "name" : "Algebra",
          "semester" : 1,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "general_description" : ""
       }
    },
@@ -31886,7 +31886,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 2,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Electronic  Devices",
          "general_description" : ""
       },
@@ -31897,7 +31897,7 @@
       "pk" : 1807,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 7,
          "name" : "Speech Processing "
       }
@@ -31906,7 +31906,7 @@
       "pk" : 1808,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 6,
          "name" : "Introduction to Java Programming "
       },
@@ -31918,7 +31918,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Analogue Electronic Circuits 1",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3
       }
    },
@@ -31926,7 +31926,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "CAD and 3D modeling",
          "general_description" : ""
       },
@@ -31937,7 +31937,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Spanish B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 4
       },
       "model" : "subject.subject"
@@ -31946,7 +31946,7 @@
       "pk" : 1812,
       "fields" : {
          "semester" : 1,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Mathematical Analysis 1",
          "general_description" : ""
       },
@@ -31956,7 +31956,7 @@
       "pk" : 1813,
       "fields" : {
          "name" : "Digital Electronics and Programmable Devices",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "general_description" : ""
       },
@@ -31967,7 +31967,7 @@
       "pk" : 1814,
       "fields" : {
          "semester" : 2,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Electronic Metrology",
          "general_description" : ""
       }
@@ -31977,7 +31977,7 @@
       "pk" : 1815,
       "fields" : {
          "name" : "MPLS Networks",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 7,
          "general_description" : ""
       }
@@ -31986,7 +31986,7 @@
       "fields" : {
          "name" : "Multimedia Information Processing and Communicatio",
          "semester" : 6,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "general_description" : ""
       },
       "pk" : 1816,
@@ -31996,7 +31996,7 @@
       "model" : "subject.subject",
       "pk" : 1817,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 4,
          "name" : "French B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -32008,14 +32008,14 @@
       "fields" : {
          "general_description" : "",
          "semester" : 7,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Programming for Android "
       }
    },
    {
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Protection of intellectual property",
          "general_description" : ""
       },
@@ -32027,7 +32027,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Securing Data Transmission: Cryptology, Watermarki"
       },
       "pk" : 1820
@@ -32036,7 +32036,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Physics 1",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 1,
          "general_description" : ""
       },
@@ -32045,7 +32045,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 2,
          "name" : "English B2 course - compulsory course of 135 hours"
       },
@@ -32055,7 +32055,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "name" : "Introduction to Telecommunications",
          "general_description" : ""
@@ -32066,7 +32066,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Physical Education 2"
       },
       "pk" : 1824,
@@ -32077,7 +32077,7 @@
       "pk" : 1825,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 7,
          "name" : "Seminar on ICT"
       }
@@ -32085,7 +32085,7 @@
    {
       "fields" : {
          "name" : "Databases",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 6,
          "general_description" : ""
       },
@@ -32095,7 +32095,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 1,
          "name" : "Circuits Theory 1"
       },
@@ -32106,7 +32106,7 @@
       "model" : "subject.subject",
       "pk" : 1828,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "name" : "Fundamentals of Economics, Finance and Business La",
          "general_description" : ""
@@ -32116,7 +32116,7 @@
       "pk" : 1829,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Russian B2 course - compulsory course of 135 hours",
          "general_description" : ""
       },
@@ -32125,7 +32125,7 @@
    {
       "fields" : {
          "semester" : 7,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Advanced Java Programming",
          "general_description" : ""
       },
@@ -32138,7 +32138,7 @@
          "general_description" : "",
          "name" : "Science Club",
          "semester" : 6,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "pk" : 1831
    },
@@ -32147,7 +32147,7 @@
       "fields" : {
          "name" : "Physical Education 3",
          "semester" : 3,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "general_description" : ""
       },
       "pk" : 1832
@@ -32158,7 +32158,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Patent Law"
       }
    },
@@ -32166,7 +32166,7 @@
       "model" : "subject.subject",
       "pk" : 1834,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 2,
          "name" : "Physical Education 1",
          "general_description" : ""
@@ -32176,7 +32176,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 2,
          "name" : "French B2 course - compulsory course of 135 hours "
       },
@@ -32186,7 +32186,7 @@
       "pk" : 1836,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "name" : "Fundamentals of management"
       },
@@ -32197,7 +32197,7 @@
       "pk" : 1837,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Analogue Electronic Circuits 2",
          "general_description" : ""
       }
@@ -32206,7 +32206,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Spanish B2 course - compulsory course of 135 hours"
       },
       "pk" : 1838,
@@ -32216,7 +32216,7 @@
       "model" : "subject.subject",
       "pk" : 1839,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 5,
          "name" : "Programming in Python Language",
          "general_description" : ""
@@ -32225,7 +32225,7 @@
    {
       "pk" : 1840,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 6,
          "name" : "Wireless techniques and systems",
          "general_description" : ""
@@ -32238,7 +32238,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 2
       }
    },
@@ -32247,7 +32247,7 @@
          "general_description" : "",
          "name" : "German B2 course - compulsory course of 135 hours ",
          "semester" : 4,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "pk" : 1842,
       "model" : "subject.subject"
@@ -32255,7 +32255,7 @@
    {
       "pk" : 1843,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "name" : "Spanish B2 course - compulsory course of 135 hours",
          "general_description" : ""
@@ -32268,14 +32268,14 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Diplom Laboratory"
       }
    },
    {
       "pk" : 1845,
       "fields" : {
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 5,
          "name" : "Integrated circuits and systems",
          "general_description" : ""
@@ -32289,7 +32289,7 @@
          "general_description" : "",
          "name" : "German B2 course - compulsory course of 135 hours ",
          "semester" : 2,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       }
    },
    {
@@ -32297,7 +32297,7 @@
       "pk" : 1847,
       "fields" : {
          "name" : "English B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 4,
          "general_description" : ""
       }
@@ -32308,7 +32308,7 @@
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
          "semester" : 3,
-         "field_of_studies" : 13
+         "field_of_study" : 13
       },
       "pk" : 1848
    },
@@ -32317,7 +32317,7 @@
       "pk" : 1849,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "semester" : 3,
          "name" : "German B2 course - compulsory course of 135 hours "
       }
@@ -32327,7 +32327,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 5,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "Object-Oriented Programming Language"
       },
       "model" : "subject.subject"
@@ -32335,7 +32335,7 @@
    {
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 13,
+         "field_of_study" : 13,
          "name" : "RF Electronics",
          "general_description" : ""
       },
@@ -32346,7 +32346,7 @@
       "fields" : {
          "name" : "Object-oriented Programming",
          "semester" : 3,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "pk" : 1852,
@@ -32355,7 +32355,7 @@
    {
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 2,
          "name" : "Data algorithms and structures"
       },
@@ -32364,7 +32364,7 @@
    },
    {
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 1,
          "name" : "Introduction to the Internet",
          "general_description" : ""
@@ -32376,7 +32376,7 @@
       "model" : "subject.subject",
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7,
          "name" : "Diploma Seminar"
       },
@@ -32386,7 +32386,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Wireless Data Networks",
          "general_description" : ""
       },
@@ -32397,7 +32397,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Digital Signal Processing",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 4
       },
       "model" : "subject.subject"
@@ -32407,14 +32407,14 @@
       "fields" : {
          "general_description" : "",
          "name" : "Signalling and Management Systems",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 6
       },
       "pk" : 1858
    },
    {
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 6,
          "name" : "Komunikacja interpersonalna i antropologia komunik",
          "general_description" : ""
@@ -32427,7 +32427,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Fundamentals of Economics, Finance and Business La",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7
       },
       "model" : "subject.subject"
@@ -32436,7 +32436,7 @@
       "pk" : 1861,
       "fields" : {
          "semester" : 5,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Software engineering",
          "general_description" : ""
       },
@@ -32446,7 +32446,7 @@
       "fields" : {
          "name" : "English B2 course - compulsory course of 135 hours",
          "semester" : 4,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "pk" : 1862,
@@ -32457,7 +32457,7 @@
          "general_description" : "",
          "name" : "English B2 course - compulsory course of 135 hours",
          "semester" : 3,
-         "field_of_studies" : 12
+         "field_of_study" : 12
       },
       "pk" : 1863,
       "model" : "subject.subject"
@@ -32467,7 +32467,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Physical Education 2"
       },
       "pk" : 1864
@@ -32477,7 +32477,7 @@
       "pk" : 1865,
       "fields" : {
          "semester" : 1,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Intellectual Property Rights",
          "general_description" : ""
       }
@@ -32486,7 +32486,7 @@
       "pk" : 1866,
       "fields" : {
          "name" : "Local Computer Networks",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 2,
          "general_description" : ""
       },
@@ -32496,7 +32496,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Diploma workshop",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7
       },
       "pk" : 1867,
@@ -32508,7 +32508,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Principles of Electronics",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 3
       }
    },
@@ -32518,7 +32518,7 @@
       "fields" : {
          "name" : "Optical Networks",
          "semester" : 4,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       }
    },
@@ -32527,7 +32527,7 @@
       "fields" : {
          "name" : "Introduction to the Networks with Quality of Servi",
          "semester" : 5,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "pk" : 1870
@@ -32536,7 +32536,7 @@
       "pk" : 1871,
       "fields" : {
          "name" : "Software Defined Radio – Practical Approach",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 6,
          "general_description" : ""
       },
@@ -32546,7 +32546,7 @@
       "model" : "subject.subject",
       "pk" : 1872,
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 2,
          "name" : "Physical Education 1",
          "general_description" : ""
@@ -32557,7 +32557,7 @@
       "pk" : 1873,
       "fields" : {
          "name" : "Data Communications Networking Devices",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 4,
          "general_description" : ""
       }
@@ -32568,7 +32568,7 @@
          "general_description" : "",
          "name" : "Multimedia Information Processing and Communicatio",
          "semester" : 6,
-         "field_of_studies" : 12
+         "field_of_study" : 12
       },
       "pk" : 1874
    },
@@ -32576,7 +32576,7 @@
       "pk" : 1875,
       "fields" : {
          "name" : "Engineering thesis",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7,
          "general_description" : ""
       },
@@ -32586,7 +32586,7 @@
       "pk" : 1876,
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Signals and Systems",
          "general_description" : ""
       },
@@ -32597,7 +32597,7 @@
       "pk" : 1877,
       "fields" : {
          "name" : "Digital Telecommunications",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 5,
          "general_description" : ""
       }
@@ -32606,7 +32606,7 @@
       "pk" : 1878,
       "fields" : {
          "semester" : 2,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Physics",
          "general_description" : ""
       },
@@ -32617,7 +32617,7 @@
       "pk" : 1879,
       "fields" : {
          "name" : "Transmission Media",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 3,
          "general_description" : ""
       }
@@ -32625,7 +32625,7 @@
    {
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "High-level Programming Languages",
          "general_description" : ""
       },
@@ -32636,7 +32636,7 @@
       "model" : "subject.subject",
       "pk" : 1881,
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7,
          "name" : "Advanced Multimedia Information Processing and Com",
          "general_description" : ""
@@ -32647,7 +32647,7 @@
       "fields" : {
          "name" : "Databases",
          "semester" : 5,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -32656,7 +32656,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Traineeship",
          "general_description" : ""
       },
@@ -32667,7 +32667,7 @@
          "general_description" : "",
          "name" : "English B2 course - compulsory course of 135 hours",
          "semester" : 2,
-         "field_of_studies" : 12
+         "field_of_study" : 12
       },
       "pk" : 1884,
       "model" : "subject.subject"
@@ -32675,7 +32675,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 3,
          "name" : "Numerical Methods in Science and Engineering",
          "general_description" : ""
@@ -32687,7 +32687,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Algebra",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 1
       },
       "pk" : 1886
@@ -32696,7 +32696,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Secure Communications Systems",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7,
          "general_description" : ""
       },
@@ -32706,7 +32706,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 5,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Large-scale data distribution systems in the Inter"
       },
       "pk" : 1888,
@@ -32717,7 +32717,7 @@
       "pk" : 1889,
       "fields" : {
          "name" : "Internet Traffic Engineering",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 6,
          "general_description" : ""
       }
@@ -32725,7 +32725,7 @@
    {
       "fields" : {
          "name" : "WWW and Script Languages",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 4,
          "general_description" : ""
       },
@@ -32735,7 +32735,7 @@
    {
       "fields" : {
          "name" : "Probability and Statistics",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 2,
          "general_description" : ""
       },
@@ -32748,7 +32748,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Mathematical Analysis",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 1
       }
    },
@@ -32758,7 +32758,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 7,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "MPLS-enabled Network Services & Applications"
       }
    },
@@ -32767,7 +32767,7 @@
       "fields" : {
          "name" : "Cellular Systems",
          "semester" : 6,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "pk" : 1894
@@ -32776,7 +32776,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "IP Networks",
          "general_description" : ""
       },
@@ -32787,7 +32787,7 @@
          "general_description" : "",
          "name" : "Chosen Topics in Advanced Mathematics",
          "semester" : 2,
-         "field_of_studies" : 12
+         "field_of_study" : 12
       },
       "pk" : 1896,
       "model" : "subject.subject"
@@ -32797,7 +32797,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 4,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Security of Teleinformatic Systems"
       },
       "model" : "subject.subject"
@@ -32806,7 +32806,7 @@
       "pk" : 1898,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 5,
          "name" : "Intradomain Routing in IP Networks"
       },
@@ -32816,7 +32816,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Telecommunications Basics",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 1,
          "general_description" : ""
       },
@@ -32828,7 +32828,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Telecommunication Systems and Networks",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 2
       }
    },
@@ -32838,14 +32838,14 @@
          "general_description" : "",
          "name" : "Network Programming",
          "semester" : 6,
-         "field_of_studies" : 12
+         "field_of_study" : 12
       },
       "model" : "subject.subject"
    },
    {
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Operating Systems",
          "general_description" : ""
       },
@@ -32857,7 +32857,7 @@
       "pk" : 1903,
       "fields" : {
          "name" : "LTE mobile communication technologies",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7,
          "general_description" : ""
       }
@@ -32866,7 +32866,7 @@
       "model" : "subject.subject",
       "pk" : 1904,
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 5,
          "name" : "Local Area Networks Security",
          "general_description" : ""
@@ -32875,7 +32875,7 @@
    {
       "pk" : 1905,
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 4,
          "name" : "French B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -32887,7 +32887,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 5,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Computer Graphics"
       },
       "pk" : 1906
@@ -32898,7 +32898,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Security of Virtualized Environments",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 6
       }
    },
@@ -32907,7 +32907,7 @@
       "pk" : 1908,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
       }
@@ -32917,7 +32917,7 @@
       "pk" : 1909,
       "fields" : {
          "name" : "Introduction to Computer Science and Programming ",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 1,
          "general_description" : ""
       }
@@ -32927,7 +32927,7 @@
       "fields" : {
          "name" : "French B2 course - compulsory course of 135 hours ",
          "semester" : 3,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "model" : "subject.subject"
@@ -32935,7 +32935,7 @@
    {
       "pk" : 1911,
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 7,
          "name" : "Security of Operating Systems",
          "general_description" : ""
@@ -32946,7 +32946,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "French B2 course - compulsory course of 135 hours "
       },
       "pk" : 1912,
@@ -32956,7 +32956,7 @@
       "model" : "subject.subject",
       "pk" : 1913,
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 5,
          "name" : "Wireless systems",
          "general_description" : ""
@@ -32967,7 +32967,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 3,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Spanish B2 course - compulsory course of 135 hours"
       },
       "model" : "subject.subject"
@@ -32976,7 +32976,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 2,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Spanish B2 course - compulsory course of 135 hours"
       },
       "pk" : 1915,
@@ -32986,7 +32986,7 @@
       "fields" : {
          "general_description" : "",
          "semester" : 6,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Philosophical cancelling and coaching"
       },
       "pk" : 1916,
@@ -32996,7 +32996,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Spanish B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 4
       },
       "pk" : 1917,
@@ -33006,7 +33006,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Computer Architecture",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 1
       },
       "pk" : 1918,
@@ -33016,7 +33016,7 @@
       "model" : "subject.subject",
       "fields" : {
          "name" : "Computation and Complexity Theory",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 5,
          "general_description" : ""
       },
@@ -33028,7 +33028,7 @@
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
          "semester" : 4,
-         "field_of_studies" : 12
+         "field_of_study" : 12
       },
       "pk" : 1920
    },
@@ -33036,7 +33036,7 @@
       "pk" : 1921,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 3,
          "name" : "Russian B2 course - compulsory course of 135 hours"
       },
@@ -33046,7 +33046,7 @@
       "fields" : {
          "general_description" : "",
          "name" : "Russian B2 course - compulsory course of 135 hours",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 2
       },
       "pk" : 1922,
@@ -33055,7 +33055,7 @@
    {
       "model" : "subject.subject",
       "fields" : {
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 3,
          "name" : "German B2 course - compulsory course of 135 hours ",
          "general_description" : ""
@@ -33067,7 +33067,7 @@
       "pk" : 1924,
       "fields" : {
          "general_description" : "",
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "semester" : 2,
          "name" : "German B2 course - compulsory course of 135 hours "
       }
@@ -33076,7 +33076,7 @@
       "pk" : 1925,
       "fields" : {
          "semester" : 4,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Radio Technologies",
          "general_description" : ""
       },
@@ -33086,7 +33086,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 3,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Physical Education 3",
          "general_description" : ""
       },
@@ -33096,7 +33096,7 @@
       "fields" : {
          "name" : "Information and Communication Systems Engineering",
          "semester" : 6,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "pk" : 1927,
@@ -33106,7 +33106,7 @@
       "model" : "subject.subject",
       "fields" : {
          "semester" : 6,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "name" : "Computer Games",
          "general_description" : ""
       },
@@ -33117,7 +33117,7 @@
       "fields" : {
          "name" : "Science Club",
          "semester" : 6,
-         "field_of_studies" : 12,
+         "field_of_study" : 12,
          "general_description" : ""
       },
       "model" : "subject.subject"

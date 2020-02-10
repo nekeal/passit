@@ -2,22 +2,21 @@ import datetime
 from random import randint
 import factory
 
-from subject.models import FieldOfStudies, Subject, SubjectOfAgeGroup, Resource, Exam
+from subject.models import FieldOfStudy, Subject, SubjectOfAgeGroup, Resource, Exam
 
 
-class FieldOfStudiesFactory(factory.DjangoModelFactory):
+class FieldOfStudyFactory(factory.DjangoModelFactory):
     name = factory.sequence(lambda n: f'field{n}')
 
     class Meta:
-        model = FieldOfStudies
+        model = FieldOfStudy
 
 
 class SubjectFactory(factory.DjangoModelFactory):
-
     name = factory.sequence(lambda n: f'subject{n}')
     semester = factory.LazyAttribute(lambda n: randint(1, 6))
     general_description = "description"
-    field_of_studies = factory.SubFactory(FieldOfStudiesFactory)
+    field_of_study = factory.SubFactory(FieldOfStudyFactory)
 
     class Meta:
         model = Subject
