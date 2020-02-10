@@ -1,31 +1,21 @@
+from rest_flex_fields import FlexFieldsModelViewSet
 from rest_framework import viewsets
 
-from subject.models import FieldOfStudies, Subject, Resource
-from subject.serializers import FieldOfStudiesSerializer, SubjectListSerializer, SubjectDetailSerializer, \
-    ResourceListSerializer, ResourceDetailSerializer
+from subject.models import FieldOfStudy, Subject, Resource
+from subject.serializers import FieldOfStudiesBaseSerializer, SubjectBaseSerializer, ResourceBaseSerializer
 
 
-class FieldOfStudiesViewSet(viewsets.ModelViewSet):
-    serializer_class = FieldOfStudiesSerializer
-    queryset = FieldOfStudies.objects.all()
-    model = FieldOfStudies
+class FieldOfStudiesViewSet(FlexFieldsModelViewSet):
+    serializer_class = FieldOfStudiesBaseSerializer
+    queryset = FieldOfStudy.objects.all()
 
 
 class SubjectViewSet(viewsets.ModelViewSet):
-    serializer_class = SubjectListSerializer
+    serializer_class = SubjectBaseSerializer
     queryset = Subject.objects.all()
 
-    def get_serializer_class(self):
-        if self.action != 'list':
-            return SubjectDetailSerializer
-        return super(SubjectViewSet, self).get_serializer_class()
 
-
-class ResourceViewSet(viewsets.ModelViewSet):
-    serializer_class = ResourceListSerializer
+class ResourceViewSet(FlexFieldsModelViewSet):
+    serializer_class = ResourceBaseSerializer
     queryset = Resource.objects.all()
-
-    def get_serializer_class(self):
-        if self.action != 'list':
-            return ResourceDetailSerializer
-        return super(ResourceViewSet, self).get_serializer_class()
+    permit_list_expands = ('subject',)
