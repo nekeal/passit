@@ -22,6 +22,11 @@ class FieldOfStudy(models.Model):
         return self.name
 
 
+class FieldOfStudyOfAgeGroup(models.Model):
+    field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='age_groups')
+    students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
+
+
 class Resource(TimeStampedModel, OwnedModel):
     name = models.CharField(max_length=100)
     url = models.URLField(blank=True)
@@ -46,15 +51,13 @@ class Subject(models.Model):
 
 class SubjectOfAgeGroup(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='subjects')
-    students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
-#   TODO consider representative to be not null.
-    representative = models.OneToOneField('accounts.UserProfile', on_delete=models.PROTECT, null=True,
-                                          related_name='own_group')
+    field_age_group = models.ForeignKey('FieldOfStudyOfAgeGroup', on_delete=models.PROTECT,
+                                        related_name='subject_groups')
     description = models.TextField(blank=True)
     lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubject, related_name='lecturer_age_groups')
 
     def __str__(self) -> str:
-        return f"{self.subject} {self.students_start_year}"
+        return f"{self.subject}"
 
 
 class Exam(models.Model):

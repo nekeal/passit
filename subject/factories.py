@@ -2,7 +2,7 @@ import datetime
 from random import randint
 import factory
 
-from subject.models import FieldOfStudy, Subject, SubjectOfAgeGroup, Resource, Exam
+from subject.models import FieldOfStudy, Subject, SubjectOfAgeGroup, Resource, Exam, FieldOfStudyOfAgeGroup
 
 
 class FieldOfStudyFactory(factory.DjangoModelFactory):
@@ -10,6 +10,14 @@ class FieldOfStudyFactory(factory.DjangoModelFactory):
 
     class Meta:
         model = FieldOfStudy
+
+
+class FieldOfStudyOfAgeGroupFactory(factory.DjangoModelFactory):
+    field_of_study = factory.SubFactory(FieldOfStudyFactory)
+    students_start_year = factory.LazyAttribute(lambda n: datetime.datetime.now().year - 1)
+
+    class Meta:
+        model = FieldOfStudyOfAgeGroup
 
 
 class SubjectFactory(factory.DjangoModelFactory):
@@ -24,7 +32,7 @@ class SubjectFactory(factory.DjangoModelFactory):
 
 class SubjectOfAgeGroupFactory(factory.DjangoModelFactory):
     subject = factory.SubFactory(SubjectFactory)
-    students_start_year = factory.LazyAttribute(lambda n: datetime.datetime.now().year - 1)
+    field_age_group = factory.SubFactory(FieldOfStudyOfAgeGroupFactory)
 
     class Meta:
         model = SubjectOfAgeGroup

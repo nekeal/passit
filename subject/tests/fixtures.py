@@ -1,11 +1,17 @@
 import pytest
 
-from subject.factories import SubjectFactory, FieldOfStudyFactory, SubjectOfAgeGroupFactory
+from subject.factories import SubjectFactory, FieldOfStudyFactory, SubjectOfAgeGroupFactory, \
+    FieldOfStudyOfAgeGroupFactory
 
 
 @pytest.fixture
 def field_of_study(db):
     return FieldOfStudyFactory(name='ICT', slug="ICT")
+
+
+@pytest.fixture
+def field_group(db, field_of_study):
+    return FieldOfStudyOfAgeGroupFactory(field_of_study=field_of_study)
 
 
 @pytest.fixture
