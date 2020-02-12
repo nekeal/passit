@@ -8,3 +8,5 @@ django-grappelli==2.13.1
 dj-database-url==0.5.0
 whitenoise==5.0.1
 drf-flex-fields==0.6.1
+djoser==2.0.3
+djangorestframework-simplejwt==4.4.0
