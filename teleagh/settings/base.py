@@ -138,3 +138,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # GRAPPELI SECTION
 GRAPPELLI_ADMIN_TITLE = 'Teleagh'
 
+#REST FRAMEWORK CONFIGURATION
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
