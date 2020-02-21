@@ -26,6 +26,9 @@ class FieldOfStudyOfAgeGroup(models.Model):
     field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='age_groups')
     students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
 
+    def __str__(self):
+        return f"{self.field_of_study} {self.students_start_year}"
+
 
 class Resource(TimeStampedModel, OwnedModel):
     name = models.CharField(max_length=100)
@@ -57,7 +60,7 @@ class SubjectOfAgeGroup(models.Model):
     lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubject, related_name='lecturer_age_groups')
 
     def __str__(self) -> str:
-        return f"{self.subject}"
+        return f"{self.subject} {self.field_age_group}"
 
 
 class Exam(models.Model):

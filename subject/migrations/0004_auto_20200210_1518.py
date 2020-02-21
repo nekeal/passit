@@ -7,7 +7,7 @@ import subject.models
 from subject.models import FieldOfStudyOfAgeGroup, FieldOfStudy
 
 
-def default_field_group():
+def get_default_field_age_group():
     default_field_of_study, _ = FieldOfStudy.objects.get_or_create(name='default field', slug='default-field')
     default_field_age_group, _ = FieldOfStudyOfAgeGroup.objects.get_or_create(field_of_study=default_field_of_study,
                                                                               students_start_year=2000)
@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='subjectofagegroup',
             name='field_age_group',
-            field=models.ForeignKey(default=default_field_group, on_delete=django.db.models.deletion.PROTECT, related_name='subject_groups', to='subject.FieldOfStudyOfAgeGroup'),
+            field=models.ForeignKey(default=get_default_field_age_group, on_delete=django.db.models.deletion.PROTECT, related_name='subject_groups', to='subject.FieldOfStudyOfAgeGroup'),
             preserve_default=False,
         ),
     ]

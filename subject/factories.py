@@ -2,11 +2,14 @@ import datetime
 from random import randint
 import factory
 
+from django.utils.text import slugify
+
 from subject.models import FieldOfStudy, Subject, SubjectOfAgeGroup, Resource, Exam, FieldOfStudyOfAgeGroup
 
 
 class FieldOfStudyFactory(factory.DjangoModelFactory):
     name = factory.sequence(lambda n: f'field{n}')
+    slug = factory.LazyAttribute(lambda o: f'{slugify(o.name)}')
 
     class Meta:
         model = FieldOfStudy

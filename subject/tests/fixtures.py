@@ -10,7 +10,7 @@ def field_of_study(db):
 
 
 @pytest.fixture
-def field_group(db, field_of_study):
+def field_age_group(db, field_of_study):
     return FieldOfStudyOfAgeGroupFactory(field_of_study=field_of_study)
 
 
@@ -20,5 +20,5 @@ def subject(db, field_of_study):
 
 
 @pytest.fixture
-def subject_group(db, subject):
-    return SubjectOfAgeGroupFactory(subject=subject)
+def subject_group(db, subject, field_age_group):
+    return SubjectOfAgeGroupFactory(subject=subject, field_age_group=field_age_group)
