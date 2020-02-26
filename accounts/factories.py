@@ -1,7 +1,8 @@
 import factory
+from factory.fuzzy import FuzzyChoice
 
-from accounts.models import CustomUser, UserProfile, Membership
-from subject.models import FieldOfStudyOfAgeGroup
+from accounts.models import CustomUser, UserProfile, Membership, MembershipTypeChoices
+from subject.factories import FieldOfStudyOfAgeGroupFactory
 
 
 class UserProfileFactory(factory.DjangoModelFactory):
@@ -21,7 +22,8 @@ class UserFactory(factory.DjangoModelFactory):
 
 class MembershipFactory(factory.DjangoModelFactory):
     profile = factory.SubFactory(UserProfileFactory)
-    field_age_group = factory.SubFactory(FieldOfStudyOfAgeGroup)
+    field_age_group = factory.SubFactory(FieldOfStudyOfAgeGroupFactory)
+    type = FuzzyChoice(MembershipTypeChoices.choices(), getter=lambda c: c[0])
 
     class Meta:
         model = Membership

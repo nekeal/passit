@@ -17,17 +17,11 @@ def test_serializer_serializes_news(news):
     assert data.data == expected_data
 
 
-def test_serializer_can_create_news(subject_group):
-    data = {
-        'title': 'New timetable',
-        'content': 'not blank',
-        'subject_group': subject_group.id,
-        'field_age_group': subject_group.field_age_group.id
-    }
-    news = NewsSerializer(data=data)
+def test_serializer_can_create_news(news_data):
+    news = NewsSerializer(data=news_data)
     news.is_valid(raise_exception=True)
     news.save()
-    assert (news.instance.title, news.instance.subject_group_id) == (data['title'], data['subject_group'])
+    assert (news.instance.title, news.instance.subject_group_id) == (news_data['title'], news_data['subject_group'])
 
 
 def test_content_cant_be_empty(subject_group):

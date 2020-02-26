@@ -1,6 +1,7 @@
 import pytest
 
 from accounts.factories import UserProfileFactory, MembershipFactory, UserFactory
+from accounts.models import UserProfile
 
 
 @pytest.fixture
@@ -9,7 +10,7 @@ def user(db):
 
 
 @pytest.fixture
-def user_profile(db):
+def user_profile(db) -> 'UserProfile':
     return UserProfileFactory(user__username='student')
 
 
