@@ -26,7 +26,7 @@ class FieldOfStudyOfAgeGroupFactory(factory.DjangoModelFactory):
 class SubjectFactory(factory.DjangoModelFactory):
     name = factory.sequence(lambda n: f'subject{n}')
     semester = factory.LazyAttribute(lambda n: randint(1, 6))
-    general_description = "description"
+    general_description = 'description'
     field_of_study = factory.SubFactory(FieldOfStudyFactory)
 
     class Meta:
@@ -50,7 +50,7 @@ class ExamFactory(factory.DjangoModelFactory):
 
 
 class ResourceFactory(factory.DjangoModelFactory):
-    name = factory.sequence(lambda n: f"Resource {n}")
+    name = factory.sequence(lambda n: f'Resource {n}')
     subject = factory.SubFactory(Subject)
 
     class Meta:

@@ -14,7 +14,7 @@ class News(TimeStampedModel):
     objects = NewsManager.from_queryset(NewsQuerySet)()
 
     def __str__(self) -> str:
-        return f"{self.subject_group}"
+        return f'{self.subject_group}'
 
     class Meta:
         verbose_name = 'news'
