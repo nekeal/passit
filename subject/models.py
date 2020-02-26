@@ -10,16 +10,24 @@ from lecturers.models import LecturerOfSubject, Lecturer
 def year_validator(value):
     max_year = datetime.datetime.now().year
     if value < 2018 or value > max_year:
-        raise ValidationError(f"{value} year is not valid. Provide value"
-                              f"between 2018 and {max_year}")
+        raise ValidationError(f'{value} year is not valid. Provide value'
+                              f'between 2018 and {max_year}')
 
 
 class FieldOfStudy(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True, help_text="Slug which identifies field of study in syllabus")
+    slug = models.SlugField(unique=True, help_text='Slug which identifies field of study in syllabus')
 
     def __str__(self) -> str:
         return self.name
+
+
+class FieldOfStudyOfAgeGroup(models.Model):
+    field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='age_groups')
+    students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
+
+    def __str__(self):
+        return f'{self.field_of_study} {self.students_start_year}'
 
 
 class Resource(TimeStampedModel, OwnedModel):
@@ -46,12 +54,13 @@ class Subject(models.Model):
 
 class SubjectOfAgeGroup(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='subjects')
-    students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
+    field_age_group = models.ForeignKey('FieldOfStudyOfAgeGroup', on_delete=models.PROTECT,
+                                        related_name='subject_groups')
     description = models.TextField(blank=True)
     lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubject, related_name='lecturer_age_groups')
 
     def __str__(self) -> str:
-        return f"{self.subject} {self.students_start_year}"
+        return f'{self.subject} {self.field_age_group}'
 
 
 class Exam(models.Model):

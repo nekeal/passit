@@ -1,29 +1,30 @@
-from news.serializers import NewsBaseSerializer
+from news.serializers import NewsSerializer
 
 
 def test_serializer_have_correct_fields():
-    assert set(NewsBaseSerializer().fields) == {'id', 'title', 'content', 'subject_group'}
+    assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group'}
 
 
 def test_serializer_serializes_news(news):
-    data = NewsBaseSerializer(news)
+    data = NewsSerializer(news)
     expected_data = {
         'id': news.id,
         'title': 'New timetable',
         'content': '',
-        'subject_group': news.subject_group_id
+        'subject_group': news.subject_group_id,
+        'field_age_group': news.subject_group.field_age_group_id
     }
     assert data.data == expected_data
 
 
 def test_serializer_can_create_news(subject_group):
     data = {
-        'id': 1,
         'title': 'New timetable',
         'content': 'not blank',
-        'subject_group': subject_group.id
+        'subject_group': subject_group.id,
+        'field_age_group': subject_group.field_age_group.id
     }
-    news = NewsBaseSerializer(data=data)
+    news = NewsSerializer(data=data)
     news.is_valid(raise_exception=True)
     news.save()
     assert (news.instance.title, news.instance.subject_group_id) == (data['title'], data['subject_group'])
@@ -34,8 +35,9 @@ def test_content_cant_be_empty(subject_group):
         'id': 1,
         'title': 'New timetable',
         'content': '',
-        'subject_group': subject_group.id
+        'subject_group': subject_group.id,
+        'field_age_group': subject_group.field_age_group.id
     }
-    serializer = NewsBaseSerializer(data=data)
+    serializer = NewsSerializer(data=data)
     serializer.is_valid()
     assert set(serializer.errors.keys()) == {'content',}

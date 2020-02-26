@@ -30,7 +30,7 @@ router.registry.extend(news_router.registry)
 
 urlpatterns = [
     path('', RedirectView.as_view(url='/api')),
-    path('api/', include(router.urls)),
+    path('api/', include((router.urls, 'api'))),
     path('api/auth/', include('accounts.urls')),
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),

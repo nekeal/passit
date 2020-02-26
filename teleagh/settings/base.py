@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     # my apps
     'accounts',
     'lecturers',
@@ -138,7 +139,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # GRAPPELI SECTION
 GRAPPELLI_ADMIN_TITLE = 'Teleagh'
 
-#REST FRAMEWORK CONFIGURATION
+# REST FRAMEWORK CONFIGURATION
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
