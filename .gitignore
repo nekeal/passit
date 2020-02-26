@@ -5,10 +5,11 @@
 __pycache__/
 db.sqlite3
 media
-public
+/public
 /.env
 /.env-production
 .venv
 pg_data/
 deployment/group_vars/github.yml
 .mypy_cache
+node_modules
