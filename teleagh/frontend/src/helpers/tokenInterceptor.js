@@ -2,19 +2,18 @@ import axios from 'axios';
 import { localStorageService } from "../services";
 
 export default () => {
-
   axios.interceptors.response.use( (response) => {
     // Return a successful response back to the calling service
     return response;
   }, (error) => {
     // Return any error which is not due to authentication back to the calling service
-    if (error.response.status !== 401 || error.config.url === '/auth/jwt/create/') {
+    if (error.response.status !== 401 || error.config.url === '/api/auth/jwt/create/') {
       return new Promise((resolve, reject) => {
         reject(error);
       });
     }
 
-    const refreshToken = localStorage.getItem('refresh-token');
+    const refreshToken = localStorageService.getTokens().refresh;
 
     // Logout user if token refresh didn't work or there is no refresh-token
     if (error.config.url === '/api/auth/jwt/refresh/' || !refreshToken) {
