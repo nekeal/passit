@@ -16,11 +16,27 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.permissions import AllowAny
 from rest_framework.routers import DefaultRouter
 
 from subject.urls import router as subject_router
 from lecturers.urls import router as lecturers_router
 from news.urls import router as news_router
+
+
+schema_view = get_schema_view(openapi.Info(
+    title='Passit API',
+    default_version='v1',
+    description='API passit wiki',
+    license=openapi.License(name='GNU General Public License v3.0'),
+),
+    authentication_classes=(SessionAuthentication, ),
+    permission_classes=(AllowAny,)
+)
+
 
 router = DefaultRouter()
 
@@ -34,4 +50,5 @@ urlpatterns = [
     path('api/auth/', include('accounts.urls')),
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
+    path('docs/', schema_view.with_ui('redoc')),
 ]
