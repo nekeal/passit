@@ -14,13 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.views.generic import RedirectView
 from rest_framework.routers import DefaultRouter
 
 from subject.urls import router as subject_router
 from lecturers.urls import router as lecturers_router
 from news.urls import router as news_router
+from teleagh.views import index
 
 router = DefaultRouter()
 
@@ -29,9 +30,9 @@ router.registry.extend(lecturers_router.registry)
 router.registry.extend(news_router.registry)
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='/api')),
     path('api/', include((router.urls, 'api'))),
     path('api/auth/', include('accounts.urls')),
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
 ]
+urlpatterns.append(re_path(r'^.*$', index),)
