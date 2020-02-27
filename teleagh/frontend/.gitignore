@@ -10,7 +10,7 @@
 
 # production
 /build
-
+config/webpack-stats.json
 # misc
 .DS_Store
 .env.local
