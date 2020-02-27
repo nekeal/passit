@@ -13,3 +13,4 @@ pg_data/
 deployment/group_vars/github.yml
 .mypy_cache
 node_modules
+webpack-stats.json
