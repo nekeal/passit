@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     # my apps
-    'accounts',
-    'lecturers',
-    'subject',
-    'news',
+    'teleagh.accounts',
+    'teleagh.lecturers',
+    'teleagh.subject',
+    'teleagh.news',
 ]
 
 MIDDLEWARE = [
