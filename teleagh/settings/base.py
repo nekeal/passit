@@ -44,10 +44,10 @@ INSTALLED_APPS = [
     'drf_yasg',
     'django_filters',
     # my apps
-    'accounts',
-    'lecturers',
-    'subject',
-    'news',
+    'teleagh.accounts',
+    'teleagh.lecturers',
+    'teleagh.subject',
+    'teleagh.news',
 ]
 
 MIDDLEWARE = [
