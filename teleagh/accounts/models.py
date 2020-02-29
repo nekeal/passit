@@ -10,8 +10,8 @@ from teleagh.accounts.querysets import CustomUserQuerySet, UserProfileQuerySet, 
 
 
 class CustomUser(AbstractUser):
-
-    objects = CustomUserManager.from_queryset(CustomUserQuerySet)()
+    pass
+    # objects = CustomUserManager.from_queryset(CustomUserQuerySet)()
 
 
 class UserProfile(models.Model):
