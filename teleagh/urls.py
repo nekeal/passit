@@ -21,11 +21,10 @@ from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import AllowAny
 from rest_framework.routers import DefaultRouter
 
-from teleagh.views import index
-from teleagh.subject.urls import router as subject_router
-from .lecturers.urls import router as lecturers_router
 from teleagh.news.urls import router as news_router
-
+from teleagh.subject.urls import router as subject_router
+from teleagh.views import index
+from .lecturers.urls import router as lecturers_router
 
 schema_view = get_schema_view(openapi.Info(
     title='Passit API',
@@ -50,5 +49,5 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('docs/', schema_view.with_ui('redoc')),
+    re_path(r'^.*$', index),
 ]
-urlpatterns.append(re_path(r'^.*$', index),)
