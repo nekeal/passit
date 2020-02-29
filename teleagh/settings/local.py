@@ -18,6 +18,6 @@ db_from_env = dj_database_url.config(default=DATABASE_URL, conn_max_age=500, ssl
 DATABASES['default'].update(db_from_env)
 
 REST_FRAMEWORK['DEFAULT_AUTHENTICATION_CLASSES'] = (
-    'rest_framework.authentication.SessionAuthentication',
     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    'rest_framework.authentication.SessionAuthentication',
 )

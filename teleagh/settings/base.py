@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'django_filters',
+    'webpack_loader',
     # my apps
     'teleagh.accounts',
     'teleagh.lecturers',
@@ -130,6 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'teleagh/frontend/build/static'),
 ]
 
 STATIC_URL = '/static/'
@@ -146,4 +148,12 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+}
+# WEBPACK LOADER
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'teleagh/frontend/build/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'teleagh/frontend/config/webpack-stats.json'),
+    }
 }
