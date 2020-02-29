@@ -11,6 +11,7 @@ class News(TimeStampedModel):
     content = models.TextField()
     subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', on_delete=models.PROTECT, related_name='news')
     field_age_group = models.ForeignKey('subject.FieldOfStudyOfAgeGroup', on_delete=models.PROTECT, related_name='news')
+
     objects = NewsManager.from_queryset(NewsQuerySet)()
 
     def __str__(self) -> str:

@@ -5,15 +5,21 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.db.models import Q
 
+from teleagh.accounts.managers import CustomUserManager, UserProfileManager, MembershipManager
+from teleagh.accounts.querysets import CustomUserQuerySet, UserProfileQuerySet, MembershipQuerySet
+
 
 class CustomUser(AbstractUser):
-    pass
+
+    objects = CustomUserManager.from_queryset(CustomUserQuerySet)()
 
 
 class UserProfile(models.Model):
     user = models.OneToOneField('CustomUser', on_delete=models.CASCADE, related_name='profile')
     field_age_groups = models.ManyToManyField('subject.FieldOfStudyOfAgeGroup', blank=True,
                                               through='Membership', related_name='students')
+
+    objects = UserProfileManager.from_queryset(UserProfileQuerySet)()
 
     def __str__(self) -> str:
         return f'{self.user}'
@@ -43,3 +49,5 @@ class Membership(models.Model):
                                         related_name='memberships')
     type = models.PositiveSmallIntegerField(default=MembershipTypeChoices.NORMAL,
                                             choices=MembershipTypeChoices.choices())
+
+    objects = MembershipManager.from_queryset(MembershipQuerySet)()
