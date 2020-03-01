@@ -1,3 +1,11 @@
+FROM node:alpine as nodejs
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY teleagh/frontend/package.json package.json
+RUN npm install
+COPY teleagh/frontend .
+RUN npm run build
+
 # pull official base image
 FROM python:3.7-slim
 
