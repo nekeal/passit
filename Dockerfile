@@ -21,5 +21,7 @@ WORKDIR /app
 ADD requirements.txt .
 RUN pip install -r requirements.txt
 ADD . ./
+COPY --from=nodejs /app/build ./teleagh/frontend/build
+COPY --from=nodejs /app/config ./teleagh/frontend/config
 RUN python manage.py collectstatic --noinput
 CMD ["./entrypoint.sh"]
