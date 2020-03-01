@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from pathlib import Path
-from dotenv import load_dotenv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -41,13 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_yasg',
     'django_filters',
     'webpack_loader',
     # my apps
-    'accounts',
-    'lecturers',
-    'subject',
-    'news',
+    'teleagh.accounts',
+    'teleagh.lecturers',
+    'teleagh.subject',
+    'teleagh.news',
 ]
 
 MIDDLEWARE = [
@@ -154,5 +153,13 @@ WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'teleagh/frontend/build/',
         'STATS_FILE': os.path.join(BASE_DIR, 'teleagh/frontend/config/webpack-stats.json'),
+    }
+}
+
+# DJOSER
+
+DJOSER = {
+    'SERIALIZERS': {
+        'current_user': 'teleagh.accounts.serializers.CustomUserSerializer'
     }
 }
