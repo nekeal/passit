@@ -1,12 +1,11 @@
 from django.db import models
 
-from ..common.models import TimeStampedModel
-
 from .managers import NewsManager
 from .querysets import NewsQuerySet
+from ..common.models import TimeStampedModel, OwnedModel
 
 
-class News(TimeStampedModel):
+class News(TimeStampedModel, OwnedModel):
     title = models.CharField(max_length=100)
     content = models.TextField()
     subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', on_delete=models.PROTECT, related_name='news')
