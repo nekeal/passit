@@ -1,8 +1,11 @@
+from unittest import mock
+
 from ..serializers import NewsSerializer
 
 
 def test_serializer_have_correct_fields():
-    assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group'}
+    assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by',
+                                            'modified_by'}
 
 
 def test_serializer_serializes_news(news):
@@ -41,3 +44,20 @@ def test_content_cant_be_empty(subject_group):
     serializer = NewsSerializer(data=data)
     serializer.is_valid()
     assert set(serializer.errors.keys()) == {'content',}
+
+
+def test_owned_model_serializer_mixin(news_data, api_rf, user_profile1, user_profile2):
+    request_user1 = mock.Mock()
+    request_user1.user = user_profile1.user
+    request_user2 = mock.Mock()
+    request_user2.user = user_profile2.user
+    serializer = NewsSerializer(data=news_data, context={'request': request_user1})
+    serializer.is_valid(raise_exception=True)
+    instance = serializer.save()
+    assert instance.created_by == user_profile1, "Creator is set on instace"
+    assert instance.modified_by == user_profile1, "Modifier is set on instance"
+    serializer = NewsSerializer(data=news_data, instance=instance, context={'request': request_user2})
+    serializer.is_valid(raise_exception=True)
+    instance = serializer.save()
+    assert instance.created_by == user_profile1, "Creator is unchanged on instace"
+    assert instance.modified_by == user_profile2, "Modifier is changed on instance"
