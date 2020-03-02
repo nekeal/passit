@@ -29,7 +29,7 @@ class CustomUserSerializer(FlexFieldsModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = ('id', 'username', 'profile')
+        fields = ('id', 'username', 'profile', 'first_name', 'last_name')
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
             'profile': (ProfileSerializer, {})
         }
