@@ -3,9 +3,9 @@ import datetime
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from .managers import SubjectManager, SubjectOfAgeGroupManager, FieldOfStudyManager,\
+from .managers import SubjectManager, SubjectOfAgeGroupManager, FieldOfStudyManager, \
     FieldOfStudyOfAgeGroupManager, ResourceManager
-from .querysets import SubjectQuerySet, SubjectOfAgeGroupQuerySet, FieldOfStudyQuerySet,\
+from .querysets import SubjectQuerySet, SubjectOfAgeGroupQuerySet, FieldOfStudyQuerySet, \
     FieldOfStudyOfAgeGroupQuerySet, ResourceQuerySet
 from ..common.models import TimeStampedModel, OwnedModel
 from ..lecturers.models import LecturerOfSubject, Lecturer
@@ -39,7 +39,7 @@ class FieldOfStudyOfAgeGroup(models.Model):
 
 
 class Subject(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     semester = models.IntegerField()
     general_description = models.TextField()
     field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='subjects')
