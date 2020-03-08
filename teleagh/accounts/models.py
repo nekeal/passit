@@ -6,12 +6,12 @@ from django.db import models
 from django.db.models import Q
 
 from teleagh.accounts.managers import CustomUserManager, UserProfileManager, MembershipManager
-from teleagh.accounts.querysets import CustomUserQuerySet, UserProfileQuerySet, MembershipQuerySet
+from teleagh.accounts.querysets import UserProfileQuerySet, MembershipQuerySet
 
 
 class CustomUser(AbstractUser):
 
-    objects = CustomUserManager.from_queryset(CustomUserQuerySet)()
+    objects = CustomUserManager()
 
 
 class UserProfile(models.Model):
