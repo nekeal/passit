@@ -1,7 +1,10 @@
 import datetime
+from enum import Enum
+from typing import List, Tuple
 
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 from .managers import SubjectManager, SubjectOfAgeGroupManager, FieldOfStudyManager, \
     FieldOfStudyOfAgeGroupManager, ResourceManager
@@ -50,12 +53,23 @@ class Subject(models.Model):
         return f'{self.name}'
 
 
+class ResourceCategoryChoices(Enum):
+    LECTURE = _('Lecture')
+    EXAM = _('Exam')
+    MID_TERM_EXAM = _('Mid_term_exam')
+    OTHER = _('Other')
+
+    @classmethod
+    def choices(cls) -> List[Tuple[str, str]]:
+        return [(tag.name, tag.value) for tag in cls]
+
+
 class Resource(TimeStampedModel, OwnedModel):
     name = models.CharField(max_length=100)
     url = models.URLField(blank=True)
     image = models.ImageField(blank=True)
     description = models.TextField(blank=True)
-
+    category = models.CharField(max_length=50, choices=ResourceCategoryChoices.choices())
     subject = models.ForeignKey('Subject', on_delete=models.CASCADE, related_name='resources')
 
     objects = ResourceManager.from_queryset(ResourceQuerySet)()

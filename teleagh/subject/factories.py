@@ -1,10 +1,11 @@
 import datetime
 from random import randint
-import factory
 
+import factory
 from django.utils.text import slugify
 
-from ..subject.models import FieldOfStudy, Subject, SubjectOfAgeGroup, Resource, Exam, FieldOfStudyOfAgeGroup
+from ..subject.models import FieldOfStudy, Subject, SubjectOfAgeGroup, Resource, Exam, FieldOfStudyOfAgeGroup, \
+    ResourceCategoryChoices
 
 
 class FieldOfStudyFactory(factory.DjangoModelFactory):
@@ -51,7 +52,8 @@ class ExamFactory(factory.DjangoModelFactory):
 
 class ResourceFactory(factory.DjangoModelFactory):
     name = factory.sequence(lambda n: f'Resource {n}')
-    subject = factory.SubFactory(Subject)
+    subject = factory.SubFactory(SubjectFactory)
+    category = ResourceCategoryChoices.OTHER
 
     class Meta:
         model = Resource
