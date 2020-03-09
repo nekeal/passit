@@ -5,7 +5,7 @@ from ..serializers import NewsSerializer
 
 def test_serializer_have_correct_fields():
     assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by',
-                                            'modified_by'}
+                                            'modified_by', 'created_at', 'updated_at'}
 
 
 def test_serializer_serializes_news(news):
@@ -15,8 +15,11 @@ def test_serializer_serializes_news(news):
         'title': 'New timetable',
         'content': '',
         'subject_group': news.subject_group_id,
-        'field_age_group': news.subject_group.field_age_group_id
+        'field_age_group': news.subject_group.field_age_group_id,
+        'created_at': data.data['created_at'],
+        'updated_at': data.data['updated_at'],
     }
+
     assert data.data == expected_data
 
 
@@ -59,5 +62,5 @@ def test_owned_model_serializer_mixin(news_data, api_rf, user_profile1, user_pro
     serializer = NewsSerializer(data=news_data, instance=instance, context={'request': request_user2})
     serializer.is_valid(raise_exception=True)
     instance = serializer.save()
-    assert instance.created_by == user_profile1, "Creator is unchanged on instace"
+    assert instance.created_by == user_profile1, "Creator is unchanged on instance"
     assert instance.modified_by == user_profile2, "Modifier is changed on instance"

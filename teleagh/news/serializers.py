@@ -8,4 +8,5 @@ class NewsSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
 
     class Meta:
         model = News
-        fields = ('id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by', 'modified_by')
+        fields = ('id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by', 'modified_by',
+                  'created_at', 'updated_at')
