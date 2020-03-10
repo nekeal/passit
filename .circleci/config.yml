@@ -34,7 +34,7 @@ jobs:
           command: pip install -r requirements-ci.txt
       - run:
           name: Running linter
-          command: python -m flake8
+          command: python -m flake8 --format=default
       - run:
           name: install core requirements
           command: pip install -r requirements.txt
