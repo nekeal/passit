@@ -5,7 +5,7 @@ from ..serializers import NewsSerializer
 
 def test_serializer_have_correct_fields():
     assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by',
-                                            'modified_by'}
+                                            'modified_by', 'created_by_profile', 'modified_by_profile',}
 
 
 def test_serializer_serializes_news(news):
@@ -15,7 +15,9 @@ def test_serializer_serializes_news(news):
         'title': 'New timetable',
         'content': '',
         'subject_group': news.subject_group_id,
-        'field_age_group': news.subject_group.field_age_group_id
+        'field_age_group': news.subject_group.field_age_group_id,
+        'created_by': None,
+        'modified_by': None,
     }
     assert data.data == expected_data
 
