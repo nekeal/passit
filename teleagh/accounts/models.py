@@ -24,7 +24,12 @@ class UserProfile(models.Model):
     def __str__(self) -> str:
         return f'{self.user}'
 
-    def is_privileged(self):
+    def get_name(self) -> str:
+        if self.user_id:
+            return f'{self.user.first_name} {self.user.last_name}'
+        return 'Anonymous'
+
+    def is_privileged(self) -> bool:
         return Membership.objects.filter(Q(profile=self)
                                          & (Q(type__in=MembershipTypeChoices.privileged_membership_types()))).exists()
 
