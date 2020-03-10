@@ -17,8 +17,8 @@ def test_serializer_serializes_news(news):
         'content': '',
         'subject_group': news.subject_group_id,
         'field_age_group': news.subject_group.field_age_group_id,
-        'created_by': None,
-        'modified_by': None,
+        'created_by': 'Anonymous',
+        'modified_by': 'Anonymous',
         'created_at': data.data['created_at'],
         'updated_at': data.data['updated_at'],
     }
