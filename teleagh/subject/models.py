@@ -59,6 +59,9 @@ class ResourceCategoryChoices(Enum):
     MID_TERM_EXAM = _('Mid_term_exam')
     OTHER = _('Other')
 
+    def __str__(self) -> str:
+        return self.name
+
     @classmethod
     def choices(cls) -> List[Tuple[str, str]]:
         return [(tag.name, tag.value) for tag in cls]
