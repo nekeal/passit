@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='resource',
             name='category',
-            field=models.CharField(choices=[('LECTURE', 'Lecture'), ('EXAM', 'Exam'), ('MID_TERM_EXAM', 'Mid_term_exam'), ('OTHER', 'Other')], default=ResourceCategoryChoices.OTHER, max_length=50),
+            field=models.CharField(choices=ResourceCategoryChoices.choices(), default=ResourceCategoryChoices.OTHER, max_length=50),
             preserve_default=False,
         ),
     ]
