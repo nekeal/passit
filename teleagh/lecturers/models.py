@@ -15,7 +15,7 @@ class Lecturer(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 
-class LecturerOfSubject(models.Model):
+class LecturerOfSubjectOfAgeGroup(models.Model):
     lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
     subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', on_delete=models.CASCADE,
                                       related_name='subject_groups')
