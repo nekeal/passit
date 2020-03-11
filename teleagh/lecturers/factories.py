@@ -1,6 +1,6 @@
 import factory
 
-from .models import Lecturer, LecturerOfSubject
+from .models import Lecturer, LecturerOfSubjectOfAgeGroup
 from ..subject.factories import SubjectOfAgeGroupFactory
 
 
@@ -17,4 +17,4 @@ class LecturerOfSubjectGroupFactory(factory.DjangoModelFactory):
     subject_group = factory.SubFactory(SubjectOfAgeGroupFactory)
 
     class Meta:
-        model = LecturerOfSubject
+        model = LecturerOfSubjectOfAgeGroup
