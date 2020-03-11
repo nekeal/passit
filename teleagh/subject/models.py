@@ -11,7 +11,7 @@ from .managers import SubjectManager, SubjectOfAgeGroupManager, FieldOfStudyMana
 from .querysets import SubjectQuerySet, SubjectOfAgeGroupQuerySet, FieldOfStudyQuerySet, \
     FieldOfStudyOfAgeGroupQuerySet, ResourceQuerySet
 from ..common.models import TimeStampedModel, OwnedModel
-from ..lecturers.models import LecturerOfSubject, Lecturer
+from ..lecturers.models import LecturerOfSubjectOfAgeGroup, Lecturer
 
 
 def year_validator(value):
@@ -86,7 +86,7 @@ class SubjectOfAgeGroup(models.Model):
     field_age_group = models.ForeignKey('FieldOfStudyOfAgeGroup', on_delete=models.PROTECT,
                                         related_name='subject_groups')
     description = models.TextField(blank=True)
-    lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubject, related_name='lecturer_age_groups')
+    lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubjectOfAgeGroup, related_name='subject_groups')
 
     objects = SubjectOfAgeGroupManager.from_queryset(SubjectOfAgeGroupQuerySet)()
 
