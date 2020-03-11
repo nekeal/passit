@@ -1,6 +1,6 @@
 import django_filters
 
-from teleagh.subject.models import Subject
+from .models import Subject, Resource
 
 
 class SubjectFilterSet(django_filters.FilterSet):
@@ -8,3 +8,10 @@ class SubjectFilterSet(django_filters.FilterSet):
     class Meta:
         model = Subject
         fields = ('semester',)
+
+
+class ResourceFilterSet(django_filters.FilterSet):
+
+    class Meta:
+        model = Resource
+        fields = ('subject',)
