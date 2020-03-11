@@ -12,7 +12,7 @@ class LecturerFactory(factory.DjangoModelFactory):
         model = Lecturer
 
 
-class LecturerOfSubjectGroupFactory(factory.DjangoModelFactory):
+class LecturerOfSubjectOfAgeGroupFactory(factory.DjangoModelFactory):
     lecturer = factory.SubFactory(LecturerFactory)
     subject_group = factory.SubFactory(SubjectOfAgeGroupFactory)
 
