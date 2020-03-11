@@ -10,8 +10,6 @@ services:
       - "8000:8000"
     links:
       - postgres:postgres
-    volumes:
-      - .:/app
     environment:
       POSTGRES_HOST: postgres
     env_file:
