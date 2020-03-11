@@ -32,7 +32,8 @@ class SubjectBaseSerializer(FlexFieldsModelSerializer):
     def get_lecturers(self, instance: Subject):
         lecturers_of_age_group = LecturerOfSubjectOfAgeGroup.objects.filter(subject_group__subject=instance.id).\
             annotate_students_start_year()
-        serializer = LecturerOfSubjectOfAgeGroupSerializer(lecturers_of_age_group, many=True, expand=['lecturer', 'students_start_year'])
+        serializer = LecturerOfSubjectOfAgeGroupSerializer(lecturers_of_age_group, many=True,
+                                                           expand=['lecturer', 'students_start_year'])
         return serializer.data
 
     class Meta:
