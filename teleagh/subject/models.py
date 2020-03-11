@@ -56,7 +56,7 @@ class Subject(models.Model):
 class ResourceCategoryChoices(Enum):
     LECTURE = _('Lecture')
     EXAM = _('Exam')
-    MID_TERM_EXAM = _('Mid_term_exam')
+    MID_TERM_EXAM = _('Mid term exam')
     OTHER = _('Other')
 
     def __str__(self) -> str:

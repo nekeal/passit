@@ -14,4 +14,4 @@ class ResourceFilterSet(django_filters.FilterSet):
 
     class Meta:
         model = Resource
-        fields = ('subject',)
+        fields = ('subject', 'category')
