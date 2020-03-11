@@ -2,10 +2,10 @@ from django.db.models import QuerySet
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
 
-from ..common.permissions import IsPrivilegedOrReadOnly
 from .filters import NewsFilterSet
 from .models import News
 from .serializers import NewsSerializer
+from ..common.permissions import IsPrivilegedOrReadOnly
 
 
 class NewsViewSet(viewsets.ModelViewSet):
@@ -15,4 +15,4 @@ class NewsViewSet(viewsets.ModelViewSet):
     filterset_class = NewsFilterSet
 
     def get_queryset(self) -> 'QuerySet[News]':
-        return News.objects.get_by_profile(self.request.user.profile)
+        return News.objects.get_by_profile(self.request.user.profile).order_by('-created_at')
