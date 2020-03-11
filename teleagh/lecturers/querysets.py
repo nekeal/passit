@@ -1,4 +1,4 @@
-from django.db.models import QuerySet
+from django.db.models import QuerySet, F
 
 
 class LecturerQuerySet(QuerySet):  # type: ignore
@@ -6,4 +6,6 @@ class LecturerQuerySet(QuerySet):  # type: ignore
 
 
 class LecturerOfSubjectQuerySet(QuerySet):  # type: ignore
-    pass
+
+    def annotate_students_start_year(self, *args, **kwargs) -> 'QuerySet[LecturerOfSubjectQuerySet]':
+        return self.annotate(students_start_year=F('subject_group__field_age_group__students_start_year'))
