@@ -1,5 +1,4 @@
 from rest_flex_fields import FlexFieldsModelViewSet
-from rest_framework import viewsets
 
 from .filters import SubjectFilterSet
 from ..subject.models import FieldOfStudy, Subject, Resource
@@ -11,7 +10,7 @@ class FieldOfStudiesViewSet(FlexFieldsModelViewSet):
     queryset = FieldOfStudy.objects.all()
 
 
-class SubjectViewSet(viewsets.ModelViewSet):
+class SubjectViewSet(FlexFieldsModelViewSet):
     serializer_class = SubjectBaseSerializer
     queryset = Subject.objects.select_related('field_of_study')
     filterset_class = SubjectFilterSet

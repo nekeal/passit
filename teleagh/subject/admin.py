@@ -1,11 +1,11 @@
 from django.contrib import admin
+from django.db import models
 from django.db.models import QuerySet
 from django.forms import widgets
-from django.db import models
 from django.http import HttpRequest
 
-from ..lecturers.models import LecturerOfSubject
 from teleagh.subject.models import Subject, SubjectOfAgeGroup, Exam, Resource, FieldOfStudy, FieldOfStudyOfAgeGroup
+from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 
 
 class ExamInline(admin.TabularInline):
@@ -14,7 +14,7 @@ class ExamInline(admin.TabularInline):
 
 
 class LecturerOfSubjectInlineAdmin(admin.TabularInline):
-    model = LecturerOfSubject
+    model = LecturerOfSubjectOfAgeGroup
     extra = 1
 
 
