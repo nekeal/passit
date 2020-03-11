@@ -2,6 +2,7 @@ import pytest
 
 from teleagh.subject.factories import SubjectFactory, FieldOfStudyFactory, SubjectOfAgeGroupFactory, \
     FieldOfStudyOfAgeGroupFactory
+from teleagh.subject.models import ResourceCategoryChoices
 
 
 @pytest.fixture
@@ -29,4 +30,13 @@ def field_age_group_data(field_of_study):
     return {
         'field_of_study': field_of_study.id,
         'students_start_year': 2018,
+    }
+
+
+@pytest.fixture
+def resource_data(subject):
+    return {
+        'name': 'resource',
+        'subject': subject.id,
+        'category': ResourceCategoryChoices.OTHER,
     }
