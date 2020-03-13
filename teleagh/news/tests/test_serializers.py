@@ -56,7 +56,7 @@ def test_content_cant_be_empty(subject_group):
     assert set(serializer.errors.keys()) == {'content',}
 
 
-def test_owned_model_serializer_mixin(news_data, api_rf, user_profile1, user_profile2):
+def test_news_owned_model_serializer(news_data, api_rf, user_profile1, user_profile2):
     request_user1 = mock.Mock()
     request_user1.user = user_profile1.user
     request_user2 = mock.Mock()
