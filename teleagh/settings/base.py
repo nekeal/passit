@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'teleagh.lecturers',
     'teleagh.subject',
     'teleagh.news',
+    'teleagh.events'
 ]
 
 MIDDLEWARE = [
