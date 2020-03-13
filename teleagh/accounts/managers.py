@@ -10,7 +10,8 @@ if TYPE_CHECKING:
 
 
 class CustomUserManager(UserManager.from_queryset(CustomUserQuerySet)):  # type: ignore
-    pass
+    def get_queryset(self):
+        return super().get_queryset().select_related('profile')
 
 
 class UserProfileManager(Manager):  # type: ignore
