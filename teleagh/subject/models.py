@@ -1,6 +1,4 @@
 import datetime
-from enum import Enum
-from typing import List, Tuple
 
 from django.core.exceptions import ValidationError
 from django.db import models
@@ -11,6 +9,7 @@ from .managers import SubjectManager, SubjectOfAgeGroupManager, FieldOfStudyMana
 from .querysets import SubjectQuerySet, SubjectOfAgeGroupQuerySet, FieldOfStudyQuerySet, \
     FieldOfStudyOfAgeGroupQuerySet, ResourceQuerySet
 from ..common.models import TimeStampedModel, OwnedModel
+from ..common.utils import CustomEnum
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup, Lecturer
 
 
@@ -38,7 +37,7 @@ class FieldOfStudyOfAgeGroup(models.Model):
     objects = FieldOfStudyOfAgeGroupManager.from_queryset(FieldOfStudyOfAgeGroupQuerySet)()
 
     def __str__(self):
-        return f'{self.field_of_study} {self.students_start_year}'
+        return super().__str__()
 
 
 class Subject(models.Model):
@@ -53,18 +52,11 @@ class Subject(models.Model):
         return f'{self.name}'
 
 
-class ResourceCategoryChoices(Enum):
+class ResourceCategoryChoices(CustomEnum):
     LECTURE = _('Lecture')
     EXAM = _('Exam')
     MID_TERM_EXAM = _('Mid term exam')
     OTHER = _('Other')
-
-    def __str__(self) -> str:
-        return self.name
-
-    @classmethod
-    def choices(cls) -> List[Tuple[str, str]]:
-        return [(tag.name, tag.value) for tag in cls]
 
 
 class Resource(TimeStampedModel, OwnedModel):
@@ -83,9 +75,10 @@ class Resource(TimeStampedModel, OwnedModel):
 
 class SubjectOfAgeGroup(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='subjects')
+    description = models.TextField(blank=True)
+
     field_age_group = models.ForeignKey('FieldOfStudyOfAgeGroup', on_delete=models.PROTECT,
                                         related_name='subject_groups')
-    description = models.TextField(blank=True)
     lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubjectOfAgeGroup, related_name='subject_groups')
 
     objects = SubjectOfAgeGroupManager.from_queryset(SubjectOfAgeGroupQuerySet)()
