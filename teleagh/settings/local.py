@@ -4,6 +4,10 @@ from .base import *
 
 ALLOWED_HOSTS = ['*']
 
+INSTALLED_APPS.append('silk')
+MIDDLEWARE.insert(0, 'silk.middleware.SilkyMiddleware')
+SILKY_PYTHON_PROFILER = True
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
