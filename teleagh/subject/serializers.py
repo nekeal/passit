@@ -6,7 +6,7 @@ from rest_framework.serializers import Serializer
 
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 from ..lecturers.serializers import LecturerOfSubjectOfAgeGroupSerializer
-from ..subject.models import FieldOfStudy, Subject, Resource, FieldOfStudyOfAgeGroup
+from ..subject.models import FieldOfStudy, Subject, Resource, FieldOfStudyOfAgeGroup, SubjectOfAgeGroup
 
 
 class FieldOfStudyBaseSerializer(FlexFieldsModelSerializer):
@@ -42,6 +42,18 @@ class SubjectBaseSerializer(FlexFieldsModelSerializer):
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
             'field_of_study': (FieldOfStudyBaseSerializer, {}),
             'lecturers': (serializers.SerializerMethodField, {})
+        }
+
+
+class SubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):
+
+    class Meta:
+        model = SubjectOfAgeGroup
+        fields = ('id', )
+        expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
+            'field_age_group': (FieldOfStudyOfAgeGroupSerializer, {}),
+            'lecturers': (LecturerOfSubjectOfAgeGroupSerializer, {'many': True}),
+            'subject': (SubjectBaseSerializer, {}),
         }
 
 
