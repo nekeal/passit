@@ -29,12 +29,14 @@ class OwnedModelSerializerMixin(metaclass=serializers.SerializerMetaclass):
                                                  default=serializers.CreateOnlyDefault(CurrentUserProfileDefault()))
     modified_by_profile = serializers.HiddenField(source='modified_by', default=CurrentUserProfileDefault())
 
-    def get_created_by(self, instance):
+    @staticmethod
+    def get_created_by(instance):
         if instance.created_by:
             return instance.created_by.get_name()
         return 'Anonymous'
 
-    def get_modified_by(self, instance):
+    @staticmethod
+    def get_modified_by(instance):
         if instance.modified_by:
             return instance.modified_by.get_name()
         return 'Anonymous'
