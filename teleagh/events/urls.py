@@ -10,5 +10,3 @@ router.register('events', EventViewSet)
 urlpatterns: List[Any] = [
 
 ]
-
-

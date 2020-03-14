@@ -20,7 +20,7 @@ class EventSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
             'field_age_group': (FieldOfStudyOfAgeGroupSerializer, {}),
             'subject_group': (SubjectOfAgeGroupSerializer, {"omit": 'subject.field_of_study'}),
-         }
+        }
 
     def validate_subject_group(self, value: SubjectOfAgeGroup):
         data = self.get_initial()
