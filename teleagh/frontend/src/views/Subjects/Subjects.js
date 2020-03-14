@@ -9,6 +9,7 @@ const SubjectsContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 4rem;
   
   .semester-select {
     margin: 1rem 0;
@@ -30,10 +31,11 @@ function Subjects() {
       <SubjectsContainer>
         <FormControl variant="outlined" className="semester-select">
           <Select id="semester" value={semester} onChange={e => setSemester(e.target.value)}>
-            <MenuItem value={1}>Semestr 1</MenuItem>
-            <MenuItem value={2}>Semestr 2</MenuItem>
-            <MenuItem value={3}>Semestr 3</MenuItem>
-            <MenuItem value={4}>Semestr 4</MenuItem>
+            {
+              [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(semester =>
+                <MenuItem value={semester}>Semestr {semester}</MenuItem>
+              )
+            }
           </Select>
         </FormControl>
         { subjects && subjects.map(subject =>

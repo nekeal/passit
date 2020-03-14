@@ -54,6 +54,7 @@ function Subject() {
   const [ resourcesTabIndex, setResourcesTabIndex ] = useState(3);
   const [ resources, setResources ] = useState({});
 
+  console.log(resources);
 
   useEffect(() => {
     subjectsService.getSubject(params.id).then((subject) => setSubject(subject));

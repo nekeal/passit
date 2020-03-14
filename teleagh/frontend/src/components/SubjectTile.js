@@ -27,17 +27,13 @@ const SubjectContainer = styled(Paper)`
 
 function SubjectTile({ subject }) {
   const { name } = subject;
-  const mainLecturer = "Aleksander Smywiński-Pohl", isExam = true;
+  const isExam = true;
   return (
     <SubjectContainer variant="outlined">
       <div className="data">
         <Typography variant="h6">
           { name }
         </Typography>
-        <div className="lecturer">
-          <Icon name="lecturer" size="small"/>
-          <div>{ mainLecturer }</div>
-        </div>
       </div>
       <div className="exam">{isExam && 'E'}</div>
     </SubjectContainer>
