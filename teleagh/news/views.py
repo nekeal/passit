@@ -15,4 +15,7 @@ class NewsViewSet(viewsets.ModelViewSet):
     filterset_class = NewsFilterSet
 
     def get_queryset(self) -> 'QuerySet[News]':
-        return News.objects.get_by_profile(self.request.user.profile).order_by('-created_at')
+        return News.objects.get_by_profile(self.request.user.profile).\
+            select_related('created_by__user').\
+            select_related('modified_by__user').\
+            order_by('-created_at')
