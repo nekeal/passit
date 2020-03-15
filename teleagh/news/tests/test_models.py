@@ -1,6 +1,6 @@
-from ...accounts.factories import MembershipFactory
 from ..factories import NewsFactory
 from ..models import News
+from ...accounts.factories import MembershipFactory
 from ...subject.factories import SubjectOfAgeGroupFactory
 
 
@@ -9,7 +9,7 @@ def test_get_news_by_profile(user_profile_with_membership, subject_group):
     NewsFactory.create_batch(2, subject_group=SubjectOfAgeGroupFactory())
     user_news = News.objects.get_by_profile(user_profile_with_membership)
     assert len(user_news) == 3, "method gets wrong news for user"
-    assert list(user_news) == expected_news, "method gets wrong news for user"
+    assert set(user_news) == set(expected_news), "method gets wrong news for user"
 
 
 def test_get_news_by_profile_with_multiple_memberships(user_profile_with_membership, subject_group):

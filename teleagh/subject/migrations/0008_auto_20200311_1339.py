@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='subjectofagegroup',
             name='lecturers',
-            field=models.ManyToManyField(related_name='subject_groups', through='lecturers.LecturerOfSubjectOfAgeGroup', to='lecturers.Lecturer'),
+            field=models.ManyToManyField(related_name='subject_groups', through='lecturers.LecturerOfSubject', to='lecturers.Lecturer'),
         ),
     ]
