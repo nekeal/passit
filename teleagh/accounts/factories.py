@@ -1,7 +1,7 @@
 import factory
 
 from .models import CustomUser, UserProfile, Membership
-from teleagh.subject.models import FieldOfStudyOfAgeGroup
+from ..subject.factories import FieldOfStudyOfAgeGroupFactory
 
 
 class UserProfileFactory(factory.DjangoModelFactory):
@@ -21,7 +21,7 @@ class UserFactory(factory.DjangoModelFactory):
 
 class MembershipFactory(factory.DjangoModelFactory):
     profile = factory.SubFactory(UserProfileFactory)
-    field_age_group = factory.SubFactory(FieldOfStudyOfAgeGroup)
+    field_age_group = factory.SubFactory(FieldOfStudyOfAgeGroupFactory)
 
     class Meta:
         model = Membership
