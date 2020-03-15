@@ -1,5 +1,6 @@
 from typing import Dict, Any, Tuple
 
+from django.db.models import QuerySet
 from rest_flex_fields import FlexFieldsModelSerializer
 from rest_framework import serializers
 from rest_framework.serializers import Serializer
@@ -8,6 +9,15 @@ from ..common.serializers import OwnedModelSerializerMixin
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 from ..lecturers.serializers import LecturerOfSubjectOfAgeGroupSerializer
 from ..subject.models import FieldOfStudy, Subject, Resource, FieldOfStudyOfAgeGroup, SubjectOfAgeGroup
+
+
+class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
+    def get_queryset(self) -> 'QuerySet[FieldOfStudyOfAgeGroup]':
+        request = self.context.get('request')
+        profile = request and request.user and request.user.profile
+        if not profile:
+            return FieldOfStudyOfAgeGroup.objects.all()
+        return FieldOfStudyOfAgeGroup.objects.filter_by_profile(profile)
 
 
 class FieldOfStudyBaseSerializer(FlexFieldsModelSerializer):

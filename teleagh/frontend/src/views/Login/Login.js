@@ -1,18 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useHistory } from "react-router";
 import { useForm, Controller } from 'react-hook-form';
-import { Container, Button, TextField, Typography } from '@material-ui/core';
+import { Container, Button, TextField, Typography, InputAdornment, IconButton } from '@material-ui/core';
 import styled from 'styled-components';
 import { authService } from '../../services';
 import logo from '../../assets/logo.png';
+import Icon from '../../components/Icon';
 
 const LoginContainer = styled(Container)`
   display: flex;
   flex-direction: column; 
   align-items: center;
+  background-color: ${props => props.theme.bgColor};
+  min-height: 100vh;
   
   .logo {
     width: 10rem;
+    margin: 2rem 0;
   }
   
   .header {
@@ -47,6 +51,7 @@ const LoginContainer = styled(Container)`
 
 function Login() {
   const { handleSubmit, errors, setError, control } = useForm();
+  const [ showPassword, setShowPassword ] = useState(false);
   const history = useHistory();
 
   const onSubmit = data => {
@@ -65,16 +70,40 @@ function Login() {
   return (
     <LoginContainer>
       <img className="logo" src={logo} alt="PassIt logo"/>
-      <Typography className="header" component="h1">Pass your experience</Typography>
       <Typography className="subheader" component="h5">Cześć! Zaloguj się, aby kontynuować.</Typography>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <Controller name="username" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
-          <TextField className="form-field" name="username" label="adres e-mail lub nazwa użytkownika" error={!!errors.username} helperText={errors.username && errors.username.message} />
+          <TextField
+            className="form-field"
+            type="text"
+            name="username"
+            label="adres e-mail lub nazwa użytkownika"
+            error={!!errors.username}
+            helperText={errors.username && errors.username.message}
+          />
         } />
         <Controller name="password" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
-          <TextField className="form-field" name="password" label="hasło" error={!!errors.password} helperText={errors.password && errors.password.message}/>
+          <TextField
+            className="form-field"
+            type={showPassword ? "text" : "password"}
+            name="password"
+            label="hasło"
+            error={!!errors.password}
+            helperText={errors.password && errors.password.message}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={() => setShowPassword(!showPassword)}
+                  edge="end"
+                >
+                  <Icon name={showPassword ? 'eyeOpen' : 'eyeClosed'} />
+                </IconButton>
+              </InputAdornment>
+            }}
+          />
         } />
-        <Button className="submit-button" type="submit" variant="contained" color="primary">Zaloguj</Button>
+        <Button className="submit-button" type="submit" variant="outlined" color="secondary">Zaloguj</Button>
       </form>
     </LoginContainer>
   )

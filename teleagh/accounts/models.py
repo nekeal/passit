@@ -1,5 +1,5 @@
 from enum import IntEnum
-from typing import Tuple, List
+from typing import Tuple, List, TYPE_CHECKING
 
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -7,6 +7,9 @@ from django.db.models import Q
 
 from teleagh.accounts.managers import CustomUserManager, UserProfileManager, MembershipManager
 from teleagh.accounts.querysets import UserProfileQuerySet, MembershipQuerySet
+
+if TYPE_CHECKING:
+    from ..subject.models import FieldOfStudyOfAgeGroup
 
 
 class CustomUser(AbstractUser):
@@ -33,6 +36,16 @@ class UserProfile(models.Model):
         return Membership.objects.filter(Q(profile=self)
                                          & (Q(type__in=MembershipTypeChoices.privileged_membership_types()))).exists()
 
+    def set_default_field_age_group(self, field_age_group: 'FieldOfStudyOfAgeGroup') -> 'Membership':
+        current_default = Membership.objects.get_default_by_profile(self)
+        new_default = Membership.objects.filter_by_profile(self).get(field_age_group=field_age_group)
+        if new_default == current_default:
+            return current_default
+        Membership.objects.filter_by_profile(self).update(is_default=False)
+        new_default.is_default = True
+        new_default.save()
+        return new_default
+
 
 class MembershipTypeChoices(IntEnum):
     REPRESENTATIVE = 1
@@ -54,5 +67,9 @@ class Membership(models.Model):
                                         related_name='memberships')
     type = models.PositiveSmallIntegerField(default=MembershipTypeChoices.NORMAL,
                                             choices=MembershipTypeChoices.choices())
+    is_default = models.BooleanField(default=False)
 
     objects = MembershipManager.from_queryset(MembershipQuerySet)()
+
+    class Meta:
+        unique_together = ('profile', 'field_age_group')

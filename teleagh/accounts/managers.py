@@ -22,3 +22,9 @@ class UserProfileManager(Manager):  # type: ignore
 class MembershipManager(Manager):  # type: ignore
     def get_queryset(self) -> 'QuerySet[Membership]':
         return MembershipQuerySet(self.model, self._db)  # type: ignore
+
+    def filter_by_profile(self, profile: 'UserProfile') -> 'QuerySet[Membership]':
+        return self.get_queryset().filter(profile=profile)
+
+    def get_default_by_profile(self, profile: 'UserProfile') -> 'Membership':
+        return self.get_queryset().get(profile=profile, is_default=True)
