@@ -7,7 +7,7 @@ class SubjectFilterSet(django_filters.FilterSet):
 
     class Meta:
         model = Subject
-        fields = ('semester',)
+        fields = ('semester', 'field_of_study')
 
 
 class ResourceFilterSet(django_filters.FilterSet):
