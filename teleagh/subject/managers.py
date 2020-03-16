@@ -15,14 +15,18 @@ class FieldOfStudyManager(Manager):  # type: ignore
     def get_queryset(self) -> 'QuerySet[FieldOfStudy]':
         return FieldOfStudyQuerySet(self.model, self._db)  # type: ignore
 
+    def get_default_by_profile(self, profile: 'UserProfile') -> 'FieldOfStudy':
+        from .models import FieldOfStudyOfAgeGroup
+        default_field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(profile)
+        return self.get_queryset().get(field_age_groups=default_field_age_group)
 
 class FieldOfStudyOfAgeGroupManager(Manager):  # type: ignore
     def get_queryset(self) -> 'QuerySet[FieldOfStudyOfAgeGroup]':
         return FieldOfStudyOfAgeGroupQuerySet(self.model, self._db)  # type: ignore
 
-    def filter_by_profile(self, profile: 'UserProfile') -> 'QuerySet[FieldOfStudyOfAgeGroup]':
-        field_age_groups_ids = Membership.objects.filter(profile=profile).values('field_age_group')
-        return self.get_queryset().filter(id__in=field_age_groups_ids)
+    def get_default_by_profile(self, profile: 'UserProfile'):
+        default_membership = Membership.objects.get_default_by_profile(profile)
+        return self.get_queryset().filter_by_profile(profile).get(memberships=default_membership)  # type: ignore
 
 
 class SubjectManager(Manager):  # type: ignore

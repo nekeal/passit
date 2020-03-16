@@ -31,7 +31,7 @@ class FieldOfStudy(models.Model):
 
 
 class FieldOfStudyOfAgeGroup(models.Model):
-    field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='age_groups')
+    field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='field_age_groups')
     students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
 
     objects = FieldOfStudyOfAgeGroupManager.from_queryset(FieldOfStudyOfAgeGroupQuerySet)()
