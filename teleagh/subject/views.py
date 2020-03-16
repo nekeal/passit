@@ -14,6 +14,7 @@ class SubjectViewSet(FlexFieldsModelViewSet):
     serializer_class = SubjectBaseSerializer
     queryset = Subject.objects.select_related('field_of_study')
     filterset_class = SubjectFilterSet
+    permit_list_expands = ['field_of_study']
 
 
 class ResourceViewSet(FlexFieldsModelViewSet):
