@@ -1,6 +1,9 @@
+from typing import TYPE_CHECKING
+
 from django.db import models
 
-from teleagh.accounts.models import UserProfile
+if TYPE_CHECKING:
+    from ..accounts.models import UserProfile
 
 
 class TimeStampedModel(models.Model):
@@ -20,5 +23,5 @@ class OwnedModel(models.Model):
     class Meta:
         abstract = True
 
-    def is_owner(self, profile: UserProfile) -> bool:
+    def is_owner(self, profile: 'UserProfile') -> bool:
         return profile == self.created_by
