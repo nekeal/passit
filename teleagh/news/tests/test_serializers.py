@@ -1,9 +1,9 @@
 from unittest import mock
 
 from ..serializers import NewsSerializer
-
-
 # --- NewsSerializer ---
+from ...subject.models import FieldOfStudyOfAgeGroup
+
 
 def test_serializer_have_correct_fields():
     assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by',
@@ -30,17 +30,20 @@ def test_serializer_serializes_news(news, user_profile1, user_profile2):
     assert data.data == expected_data
 
 
-def test_serializer_can_create_news(subject_group):
+def test_serializer_can_create_news(user_profile1_with_membership, subject_group):
+    request = mock.Mock()
+    request.user = user_profile1_with_membership.user
     data = {
         'title': 'New timetable',
         'content': 'not blank',
         'subject_group': subject_group.id,
         'field_age_group': subject_group.field_age_group.id
     }
-    news = NewsSerializer(data=data)
+    news = NewsSerializer(data=data, context={'request': request})
     news.is_valid(raise_exception=True)
     news.save()
-    assert (news.instance.title, news.instance.subject_group_id) == (data['title'], data['subject_group'])
+    assert (news.instance.title, news.instance.subject_group_id, news.instance.field_age_group_id) ==\
+           (data['title'], data['subject_group'], subject_group.field_age_group_id)
 
 
 def test_content_cant_be_empty(subject_group):
@@ -56,18 +59,21 @@ def test_content_cant_be_empty(subject_group):
     assert set(serializer.errors.keys()) == {'content',}
 
 
-def test_news_owned_model_serializer(news_data, api_rf, user_profile1, user_profile2):
+def test_news_owned_model_serializer(news_data, api_rf, user_profile1_with_membership, user_profile2_with_membership):
+    field_age_group = FieldOfStudyOfAgeGroup.objects.get(id=news_data['field_age_group'])
+    # MembershipFactory(profile=user_profile1_with_membership, field_age_group=field_age_group, is_default=True)
+    # MembershipFactory(profile=user_profile2_with_membership, field_age_group=field_age_group)
     request_user1 = mock.Mock()
-    request_user1.user = user_profile1.user
+    request_user1.user = user_profile1_with_membership.user
     request_user2 = mock.Mock()
-    request_user2.user = user_profile2.user
+    request_user2.user = user_profile2_with_membership.user
     serializer = NewsSerializer(data=news_data, context={'request': request_user1})
     serializer.is_valid(raise_exception=True)
     instance = serializer.save()
-    assert instance.created_by == user_profile1, "Creator is set on instace"
-    assert instance.modified_by == user_profile1, "Modifier is set on instance"
+    assert instance.created_by == user_profile1_with_membership, "Creator is set on instace"
+    assert instance.modified_by == user_profile1_with_membership, "Modifier is set on instance"
     serializer = NewsSerializer(data=news_data, instance=instance, context={'request': request_user2})
     serializer.is_valid(raise_exception=True)
     instance = serializer.save()
-    assert instance.created_by == user_profile1, "Creator is unchanged on instance"
-    assert instance.modified_by == user_profile2, "Modifier is changed on instance"
+    assert instance.created_by == user_profile1_with_membership, "Creator is unchanged on instance"
+    assert instance.modified_by == user_profile2_with_membership, "Modifier is changed on instance"

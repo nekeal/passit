@@ -25,6 +25,11 @@ def user_profile2(db) -> UserProfile:
 
 
 @pytest.fixture
-def user_profile_with_membership(user_profile1, field_age_group):
-    MembershipFactory(profile=user_profile1, field_age_group=field_age_group)
+def user_profile1_with_membership(user_profile1, field_age_group):
+    MembershipFactory(profile=user_profile1, field_age_group=field_age_group, is_default=True)
     return user_profile1
+
+@pytest.fixture
+def user_profile2_with_membership(user_profile2, field_age_group):
+    MembershipFactory(profile=user_profile2, field_age_group=field_age_group, is_default=True)
+    return user_profile2
