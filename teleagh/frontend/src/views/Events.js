@@ -3,7 +3,7 @@ import {Container, Typography} from '@material-ui/core';
 import styled from "styled-components";
 import {BottomBar, TopBar} from "../components";
 import { eventsService } from "../services";
-import styleHelpers from "../helpers/styles";
+import styleHelpers from "../consts/styles";
 
 
 const EventsContainer = styled(Container)`  

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { localStorageService, authService } from "../services";
-import { APP_ROUTES, API_ROUTES } from "./routes";
+import { APP_ROUTES, API_ROUTES } from "../consts/routes";
 
 export default (history) => {
   axios.interceptors.response.use( (response) => {

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {BottomBar, Icon, TopBar} from "../components";
 import { subjectsService } from "../services";
 import { useParams } from "react-router-dom";
-import styleHelpers from "../helpers/styles";
+import styleHelpers from "../consts/styles";
 
 const SubjectContainer = styled(Container)`  
   .tabs {

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {BottomBar, SubjectTile, TopBar} from "../components";
 import { subjectsService, localStorageService } from "../services";
 import { Link as RouterLink } from 'react-router-dom';
-import { SEMESTERS } from "../helpers/options";
+import { SEMESTERS } from "../consts/options";
 
 const SubjectsContainer = styled(Container)`
   display: flex;

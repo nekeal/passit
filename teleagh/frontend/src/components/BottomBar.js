@@ -3,7 +3,7 @@ import {BottomNavigation, BottomNavigationAction} from "@material-ui/core";
 import Icon from "./Icon";
 import styled from "styled-components";
 import {useHistory, useLocation} from "react-router";
-import { APP_ROUTES } from "../helpers/routes";
+import { APP_ROUTES } from "../consts/routes";
 
 const BottomNavigationContainer = styled(BottomNavigation)`
   position: fixed;

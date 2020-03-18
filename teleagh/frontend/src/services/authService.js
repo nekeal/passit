@@ -1,6 +1,6 @@
 import axios from "axios";
 import { localStorageService } from "./index";
-import { API_ROUTES } from "../helpers/routes";
+import { API_ROUTES } from "../consts/routes";
 
 function login(username, password) {
   return axios

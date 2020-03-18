@@ -2,14 +2,24 @@ import React from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import {Dashboard, Events, Lecturers, Login, Memes, PasswordChange, Subject, Subjects} from "./views";
+import {
+  ConnectionProblem,
+  Dashboard,
+  Events,
+  Lecturers,
+  Login,
+  Memes,
+  PasswordChange,
+  Subject,
+  Subjects
+} from "./views";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import { MuiThemeProvider } from '@material-ui/core/styles';
 
 import { createBrowserHistory } from 'history';
-import { tokenInterceptor, authInterceptor } from "./helpers";
+import { tokenInterceptor, authInterceptor } from "./interceptors";
 
-import { APP_ROUTES } from "./helpers/routes";
+import { APP_ROUTES } from "./consts/routes";
 
 const history = createBrowserHistory();
 tokenInterceptor(history);
@@ -86,6 +96,9 @@ function Root() {
             </Route>
             <Route exact path={APP_ROUTES.MEMES}>
               <Memes/>
+            </Route>
+            <Route exact path={APP_ROUTES.CONNECTION_PROBLEM}>
+              <ConnectionProblem/>
             </Route>
           </Switch>
         </Router>

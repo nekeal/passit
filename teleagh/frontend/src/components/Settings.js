@@ -15,7 +15,7 @@ import { authService, localStorageService } from "../services";
 import {Link as RouterLink} from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import {SubjectTile} from "./index";
-import {APP_ROUTES} from "../helpers/routes";
+import {APP_ROUTES} from "../consts/routes";
 
 const SettingsContainer = styled(Paper)`
   display: flex;

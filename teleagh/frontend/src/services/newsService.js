@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_ROUTES } from "../helpers/routes";
+import { API_ROUTES } from "../consts/routes";
 
 function formatDate(date) {
   return `${("0" + (date.getDate() + 1)).slice(-2)}.${("0" + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}, ${date.getHours()}:${("0" + date.getMinutes()).slice(-2)}`;

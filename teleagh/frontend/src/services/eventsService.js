@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_ROUTES } from "../helpers/routes";
+import { API_ROUTES } from "../consts/routes";
 
 
 function formatTime(date) {
