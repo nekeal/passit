@@ -23,10 +23,7 @@ class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
 
 
 class FieldAgeGroupDefault:
-    requires_context = True
-
-    def __init__(self):
-        self.field_age_group = None
+    field_age_group = None
 
     def set_context(self, serializer_field: Field):
         profile: 'UserProfile' = serializer_field.context['request'].user.profile
