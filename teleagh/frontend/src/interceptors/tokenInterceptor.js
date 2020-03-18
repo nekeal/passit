@@ -8,6 +8,11 @@ export default (history) => {
     return response;
   }, (error) => {
     // Return any error which is not due to authentication back to the calling service
+
+    if (error.response.status === 500) {
+      history.push(APP_ROUTES.CONNECTION_PROBLEM);
+    }
+
     if (error.response.status !== 401 || error.config.url === API_ROUTES.JWT_CREATE) {
       return new Promise((resolve, reject) => {
         reject(error);
