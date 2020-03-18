@@ -4,7 +4,7 @@ import { Container, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
 
-const LoginContainer = styled(Container)`
+const ConnectionProblemContainer = styled(Container)`
   display: flex;
   flex-direction: column; 
   align-items: center;
@@ -24,35 +24,19 @@ const LoginContainer = styled(Container)`
   
   .subheader {
     margin-bottom: 1rem;
+    text-align: center;
   }
   
-  .form {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .form-field {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  
-  .submit-button {
-    align-self: flex-end;
-    margin-top: 2rem;
-  }
-
 `;
 
 function ConnectionProblem() {
   const history = useHistory();
 
   return (
-    <LoginContainer>
+    <ConnectionProblemContainer onClick={() => history.goBack()}>
       <img className="logo" src={logo} alt="PassIt logo"/>
-      <Typography className="subheader" component="h5">Ups, wystąpił problem z łącznością :( Stuknij w ekran, aby spróbować ponownie.</Typography>
-    </LoginContainer>
+      <Typography className="subheader" component="h5">Ups, wystąpił problem z łącznością :( <br/> Stuknij w ekran, aby spróbować ponownie.</Typography>
+    </ConnectionProblemContainer>
   )
 }
 
