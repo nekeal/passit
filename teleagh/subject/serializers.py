@@ -3,8 +3,10 @@ from typing import Dict, Any, Tuple
 from django.db.models import QuerySet
 from rest_flex_fields import FlexFieldsModelSerializer
 from rest_framework import serializers
+from rest_framework.fields import Field
 from rest_framework.serializers import Serializer
 
+from ..accounts.models import UserProfile
 from ..common.serializers import OwnedModelSerializerMixin
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 from ..lecturers.serializers import LecturerOfSubjectOfAgeGroupSerializer
@@ -18,6 +20,20 @@ class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
         if not profile:
             return FieldOfStudyOfAgeGroup.objects.all()
         return FieldOfStudyOfAgeGroup.objects.filter_by_profile(profile)
+
+
+class FieldAgeGroupDefault:
+    requires_context = True
+
+    def __init__(self):
+        self.field_age_group = None
+
+    def set_context(self, serializer_field: Field):
+        profile: 'UserProfile' = serializer_field.context['request'].user.profile
+        self.field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(profile)
+
+    def __call__(self):
+        return self.field_age_group
 
 
 class FieldOfStudyBaseSerializer(FlexFieldsModelSerializer):

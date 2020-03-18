@@ -2,9 +2,11 @@ from rest_flex_fields import FlexFieldsModelSerializer
 
 from .models import News
 from ..common.serializers import OwnedModelSerializerMixin
+from ..subject.serializers import FieldAgeGroupRelatedField, FieldAgeGroupDefault
 
 
 class NewsSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
+    field_age_group = FieldAgeGroupRelatedField(default=FieldAgeGroupDefault())
 
     class Meta:
         model = News
