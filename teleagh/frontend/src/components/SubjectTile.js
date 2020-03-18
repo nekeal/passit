@@ -1,6 +1,5 @@
-import React, {useState} from "react";
-import {Paper, Typography, Link} from "@material-ui/core";
-import Icon from "./Icon";
+import React from "react";
+import {Paper, Typography} from "@material-ui/core";
 import styled from "styled-components";
 import styleHelpers from "../helpers/styles";
 

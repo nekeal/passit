@@ -1,16 +1,13 @@
 import axios from "axios";
-import { tokenInterceptor, authInterceptor } from "../helpers";
-
-authInterceptor();
-tokenInterceptor();
+import { API_ROUTES } from "../helpers/routes";
 
 function formatDate(date) {
-  return `${("0" + date.getDay()).slice(-2)}.${("0" + date.getMonth()).slice(-2)}.${date.getFullYear()}, ${date.getHours()}:${("0" + date.getMinutes()).slice(-2)}`;
+  return `${("0" + (date.getDate() + 1)).slice(-2)}.${("0" + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}, ${date.getHours()}:${("0" + date.getMinutes()).slice(-2)}`;
 }
 
 function getNews() {
   return axios
-    .get('/api/news/')
+    .get(API_ROUTES.NEWS)
     .then(response => {
       return response.data.map(news => {
         const { id, title, content, created_at, created_by: author } = news;

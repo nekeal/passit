@@ -1,7 +1,8 @@
 
 function setTokens(tokens) {
-  localStorage.setItem('access-token', tokens.access);
-  localStorage.setItem('refresh-token', tokens.refresh);
+  const { access, refresh } = tokens;
+  access && localStorage.setItem('access-token', access);
+  refresh && localStorage.setItem('refresh-token', refresh);
 }
 
 function getTokens() {
@@ -16,4 +17,12 @@ function removeTokens() {
   localStorage.removeItem('refresh-token');
 }
 
-export default { setTokens, getTokens, removeTokens };
+function getSemester() {
+  return localStorage.getItem("semester");
+}
+
+function setSemester(semester) {
+  localStorage.setItem("semester", semester);
+}
+
+export default { setTokens, getTokens, removeTokens, getSemester, setSemester };

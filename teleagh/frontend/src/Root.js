@@ -1,10 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import {Dashboard, Login, Subject, Subjects} from "./views";
+import {Dashboard, Events, Lecturers, Login, Memes, PasswordChange, Subject, Subjects} from "./views";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import { MuiThemeProvider } from '@material-ui/core/styles';
+
+import { createBrowserHistory } from 'history';
+import { tokenInterceptor, authInterceptor } from "./helpers";
+
+import { APP_ROUTES } from "./helpers/routes";
+
+const history = createBrowserHistory();
+tokenInterceptor(history);
+authInterceptor();
 
 const muiTheme = createMuiTheme({
   palette: {
@@ -52,19 +61,31 @@ function Root() {
   return (
     <MuiThemeProvider theme={muiTheme}>
       <ThemeProvider theme={theme}>
-        <Router>
+        <Router history={history}>
           <Switch>
-            <Route exact path='/'>
+            <Route exact path={APP_ROUTES.DASHBOARD}>
               <Dashboard/>
             </Route>
-            <Route exact path='/login'>
+            <Route exact path={APP_ROUTES.LOGIN}>
               <Login/>
             </Route>
-            <Route exact path='/subjects'>
+            <Route exact path={APP_ROUTES.SUBJECTS}>
               <Subjects/>
             </Route>
-            <Route exact path='/subjects/:id'>
+            <Route exact path={APP_ROUTES.SUBJECT(":id")}>
               <Subject/>
+            </Route>
+            <Route exact path={APP_ROUTES.EVENTS}>
+              <Events/>
+            </Route>
+            <Route exact path={APP_ROUTES.PASSWORD_CHANGE}>
+              <PasswordChange/>
+            </Route>
+            <Route exact path={APP_ROUTES.LECTURERS}>
+              <Lecturers/>
+            </Route>
+            <Route exact path={APP_ROUTES.MEMES}>
+              <Memes/>
             </Route>
           </Switch>
         </Router>

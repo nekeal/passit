@@ -9,18 +9,28 @@ import meme from '../assets/meme.png';
 import settings from '../assets/settings.png';
 import profile from '../assets/profile.png';
 import download from '../assets/download.png';
+import link from '../assets/link.png';
+import pdf from '../assets/pdf.png';
+import photo from '../assets/photo.png';
+import accept from '../assets/accept.png';
+import decline from '../assets/decline.png';
 
 const icons = {
-  'eyeClosed': eye_closed,
-  'eyeOpen': eye_open,
-  'calendar': calendar,
-  'home': home,
-  'resources': resources,
-  'lecturer': lecturer,
-  'meme': meme,
-  'settings': settings,
-  'profile': profile,
-  'download': download
+  eyeClosed: eye_closed,
+  eyeOpen: eye_open,
+  calendar: calendar,
+  home: home,
+  resources: resources,
+  lecturer: lecturer,
+  meme: meme,
+  settings: settings,
+  profile: profile,
+  download: download,
+  link: link,
+  pdf: pdf,
+  photo: photo,
+  accept: accept,
+  decline: decline
 };
 
 const sizes = {
