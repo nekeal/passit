@@ -20,6 +20,7 @@ class FieldOfStudyManager(Manager):  # type: ignore
         default_field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(profile)
         return self.get_queryset().get(field_age_groups=default_field_age_group)
 
+
 class FieldOfStudyOfAgeGroupManager(Manager):  # type: ignore
     def get_queryset(self) -> 'QuerySet[FieldOfStudyOfAgeGroup]':
         return FieldOfStudyOfAgeGroupQuerySet(self.model, self._db)  # type: ignore
