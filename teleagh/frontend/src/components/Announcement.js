@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Paper, Typography, Link } from "@material-ui/core";
 import Icon from "./Icon";
 import styled from "styled-components";
-import styleHelpers from "../helpers/styles";
+import styleHelpers from "../consts/styles";
 
 const AnnouncementContainer = styled(Paper)`
   ${styleHelpers.gradientBorder};

@@ -1,13 +1,9 @@
 import axios from "axios";
-import { tokenInterceptor, authInterceptor } from "../helpers";
-
-
-tokenInterceptor();
-authInterceptor();
+import { API_ROUTES } from "../consts/routes";
 
 function getSubjects(semester) {
   return axios
-    .get(`/api/subjects/?semester=${semester}`)
+    .get(API_ROUTES.SUBJECTS(semester))
     .then(response => {
       return response.data;
     })
@@ -16,7 +12,7 @@ function getSubjects(semester) {
 
 function getSubject(id) {
   return axios
-    .get(`/api/subjects/${id}/`)
+    .get(API_ROUTES.SUBJECT(id))
     .then(response => {
       return response.data;
     })
@@ -25,12 +21,17 @@ function getSubject(id) {
 
 function getResources(subjectId) {
   return axios
-    .get('/api/resources/')
+    .get(API_ROUTES.RESOURCES(subjectId))
     .then(response => {
-      console.log(response.data);
       return response.data.reduce((categorizedResources, resource) => {
         const { id, name, url, category } = resource;
-        categorizedResources[resource.category || "OTHER"].push({ id, name, url});
+
+        let type;
+        if(url.match(/\.pdf/)) type = "pdf";
+        else if(url.match(/\.png/)) type = "photo";
+        else type = "link";
+
+        categorizedResources[category || "OTHER"].push({ id, name, url, type });
         return categorizedResources;
       }, { LECTURE: [], EXAM: [], MID_TERM_EXAM: [], OTHER: [] });
     })
