@@ -11,7 +11,7 @@ class LecturerListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Lecturer
-        fields = ('id', 'first_name', 'last_name', 'title')
+        fields = ('id', 'first_name', 'last_name', 'title', 'contact', 'consultations')
 
 
 class LecturerOfSubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):

@@ -8,6 +8,8 @@ class Lecturer(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     title = models.CharField(max_length=20, blank=True)
+    contact = models.CharField(max_length=200, blank=True)
+    consultations = models.CharField(max_length=100, blank=True)
 
     objects = LecturerManager.from_queryset(LecturerQuerySet)()
 
