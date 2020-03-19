@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING
 
-from django.db.models import QuerySet
+from django.db.models import QuerySet, F
 
 from teleagh.accounts.models import Membership, UserProfile
 
@@ -28,4 +28,10 @@ class ResourceQuerySet(QuerySet):  # type: ignore
 
 
 class SubjectOfAgeGroupQuerySet(QuerySet):  # type: ignore
-    pass
+
+    def filter_by_profile(self, profile: 'UserProfile'):
+        field_age_groups_ids = Membership.objects.filter(profile=profile).values('field_age_group')
+        return self.filter(field_age_group_id__in=field_age_groups_ids)
+
+    def add_subject_name(self):
+        return self.annotate(subject_name=F('subject__name'))
