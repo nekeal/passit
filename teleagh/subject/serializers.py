@@ -78,6 +78,7 @@ class SubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):
             'field_age_group': (FieldOfStudyOfAgeGroupSerializer, {}),
             'lecturers': (LecturerOfSubjectOfAgeGroupSerializer, {'many': True}),
             'subject': (SubjectBaseSerializer, {}),
+            'subject_name': (serializers.CharField, {}),
         }
 
 
