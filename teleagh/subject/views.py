@@ -1,6 +1,6 @@
 from rest_flex_fields import FlexFieldsModelViewSet, is_expanded
 
-from .filters import SubjectFilterSet, ResourceFilterSet
+from .filters import SubjectFilterSet, ResourceFilterSet, SubjectOfAgeGroupFilterSet
 from ..subject.models import FieldOfStudy, Subject, Resource, SubjectOfAgeGroup
 from ..subject.serializers import FieldOfStudyBaseSerializer, SubjectBaseSerializer, ResourceBaseSerializer, \
     SubjectOfAgeGroupSerializer
@@ -21,6 +21,7 @@ class SubjectViewSet(FlexFieldsModelViewSet):
 class SubjectOfAgeGroupViewSet(FlexFieldsModelViewSet):
     serializer_class = SubjectOfAgeGroupSerializer
     permit_list_expands = ['field_age_group', 'subject_name']
+    filterset_class = SubjectOfAgeGroupFilterSet
 
     def get_queryset(self):
         profile = self.request.user.profile
