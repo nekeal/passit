@@ -18,4 +18,5 @@ class NewsViewSet(viewsets.ModelViewSet):
         return News.objects.get_by_profile(self.request.user.profile).\
             select_related('created_by__user').\
             select_related('modified_by__user').\
+            annotate_is_owner(self.request.user.profile).\
             order_by('-created_at')

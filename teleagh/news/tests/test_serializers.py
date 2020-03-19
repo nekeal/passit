@@ -1,20 +1,23 @@
 from unittest import mock
 
 from ..serializers import NewsSerializer
+
+
 # --- NewsSerializer ---
-from ...subject.models import FieldOfStudyOfAgeGroup
 
 
 def test_serializer_have_correct_fields():
     assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by',
                                             'modified_by', 'created_by_profile', 'modified_by_profile', 'created_at',
-                                            'updated_at'}
+                                            'updated_at', 'is_owner'}
 
 
 def test_serializer_serializes_news(news, user_profile1, user_profile2):
+    request = mock.Mock()
+    request.user = user_profile1.user
     news.created_by = user_profile1
     news.modified_by = user_profile2
-    data = NewsSerializer(news)
+    data = NewsSerializer(news, context={'request': request})
     expected_data = {
         'id': news.id,
         'title': 'New timetable',
@@ -25,6 +28,7 @@ def test_serializer_serializes_news(news, user_profile1, user_profile2):
         'modified_by': user_profile2.get_name(),
         'created_at': data.data['created_at'],
         'updated_at': data.data['updated_at'],
+        'is_owner': True
     }
 
     assert data.data == expected_data
@@ -60,9 +64,6 @@ def test_content_cant_be_empty(subject_group):
 
 
 def test_news_owned_model_serializer(news_data, api_rf, user_profile1_with_membership, user_profile2_with_membership):
-    field_age_group = FieldOfStudyOfAgeGroup.objects.get(id=news_data['field_age_group'])
-    # MembershipFactory(profile=user_profile1_with_membership, field_age_group=field_age_group, is_default=True)
-    # MembershipFactory(profile=user_profile2_with_membership, field_age_group=field_age_group)
     request_user1 = mock.Mock()
     request_user1.user = user_profile1_with_membership.user
     request_user2 = mock.Mock()

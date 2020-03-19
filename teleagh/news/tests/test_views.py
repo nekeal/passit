@@ -5,6 +5,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import force_authenticate
 
+from ..factories import NewsFactory
 from ..managers import NewsManager
 from ..models import News
 from ..views import NewsViewSet
@@ -45,3 +46,24 @@ def test_field_age_group_is_auto_set_by_profile(api_rf, news_data, news_list_vie
     response = news_list_view(request)
     assert response.status_code == status.HTTP_201_CREATED
     assert response.data['field_age_group'] == expected_field_age_group.id
+
+
+def test_is_news_owner_flag_is_in_response(api_rf, news_list_view, user_profile1_with_membership,
+                                           user_profile2_with_membership, field_age_group):
+    request = api_rf.get(reverse('api:news-list'), data={'expand': 'is_news_owner'})
+    force_authenticate(request, user_profile1_with_membership.user)
+    owned_by_user1 = NewsFactory(created_by=user_profile1_with_membership,
+                                 field_age_group=field_age_group)
+    owned_by_user2 = NewsFactory(created_by=user_profile2_with_membership,
+                                 field_age_group=field_age_group)
+    response = news_list_view(request)
+    news = response.data
+    assert news[0]['is_owner'] if news[0]['id'] == owned_by_user1.id else not news[0]['is_owner']
+    assert not news[1]['is_owner'] if news[1]['id'] == owned_by_user2.id else news[1]['is_owner']
+
+
+def test_is_owner_is_returned_when_creating_news(api_rf, news_list_view, news_data, user_profile1_with_membership):
+    request = api_rf.post(reverse('api:news-list'), data=news_data)
+    force_authenticate(request, user_profile1_with_membership.user)
+    response = news_list_view(request)
+    assert response.data['is_owner']
