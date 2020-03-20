@@ -17,5 +17,5 @@ class NewsSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
 
     class Meta:
         model = News
-        fields = ('id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by_profile',
+        fields = ('id', 'title', 'content', 'subject_group', 'field_age_group', 'attachment', 'created_by_profile',
                   'modified_by_profile', 'is_owner', 'created_by', 'modified_by', 'created_at', 'updated_at')
