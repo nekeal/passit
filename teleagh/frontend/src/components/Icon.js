@@ -14,6 +14,7 @@ import pdf from '../assets/pdf.png';
 import photo from '../assets/photo.png';
 import accept from '../assets/accept.png';
 import decline from '../assets/decline.png';
+import add from '../assets/add.png';
 
 const icons = {
   eyeClosed: eye_closed,
@@ -30,7 +31,8 @@ const icons = {
   pdf: pdf,
   photo: photo,
   accept: accept,
-  decline: decline
+  decline: decline,
+  add: add
 };
 
 const sizes = {
@@ -41,11 +43,11 @@ const sizes = {
   'huge': '4rem'
 };
 
-function Icon({ name, size }) {
+function Icon({ name, size, ...props }) {
   const iconSrc = icons[name];
   const iconSize = sizes[size || 'normal'];
   return (
-    <img src={iconSrc} alt="" style={{ height: iconSize }}/>
+    <img src={iconSrc} alt="" style={{ height: iconSize }} {...props}/>
   );
 }
 

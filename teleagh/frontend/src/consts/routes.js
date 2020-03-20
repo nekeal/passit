@@ -15,13 +15,16 @@ const API_ROUTES = {
   JWT_REFRESH: '/api/auth/jwt/refresh/',
   SET_PASSWORD: '/api/auth/users/set_password/',
   EVENTS: '/api/events/',
-  NEWS: '/api/news/',
+  NEWS: `/api/news/`,
+  NEWS_FAG: fagId => `/api/news/?field_age_group=${fagId}`,
+  NEWS_ITEM: id => `/api/news/${id}/`,
   SUBJECTS: semester => `/api/subjects/?semester=${semester}`,
   SUBJECT: id => `/api/subjects/${id}/`,
   RESOURCES: subjectId => `/api/resources/?subject=${subjectId}`,
-  ME: '/api/auth/users/me/?expand=profile.field_age_groups.field_of_study',
+  ME: '/api/auth/users/me/?expand=profile.field_age_groups.field_of_study,profile.memberships',
   LECTURERS: '/api/lecturers/',
-  SET_DEFAULT_FAG: '/api/auth/users/set_default_fag/'
+  SET_DEFAULT_FAG: '/api/auth/users/set_default_fag/',
+  SAGS: fagId => `/api/subjectsagegroup/?field_age_group=${fagId}&expand=subject_name`
 };
 
 export { APP_ROUTES, API_ROUTES };

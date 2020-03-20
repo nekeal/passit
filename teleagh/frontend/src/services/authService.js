@@ -38,12 +38,15 @@ function profileInfo() {
       const { first_name, last_name, profile: { memberships, field_age_groups }} = response.data;
       const fags = field_age_groups.map(fag => {
         const { id, field_of_study: { name }, students_start_year } = fag;
-        return { id, name: `${name} ${students_start_year}`};
+        const type = memberships.find(m => m.field_age_group === id).type;
+        return { id, name: `${name} ${students_start_year}`, type };
       });
-      return { fullName: `${first_name} ${last_name}`, fags };
+      const defaultFagId = memberships.find(m => m.is_default === true).field_age_group;
+      const defaultFag = fags.find(fag => fag.id === defaultFagId);
+      return { fullName: `${first_name} ${last_name}`, fags, defaultFag };
     })
     .catch(error => {
-      console.log(error.response.data);
+      console.log(error);
     });
 }
 

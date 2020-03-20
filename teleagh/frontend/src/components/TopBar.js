@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Backdrop } from "@material-ui/core";
 import Icon from "./Icon";
 import Settings from "./Settings";
 
-function TopBar({ title }) {
+function TopBar({ title, onFagChange }) {
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ function TopBar({ title }) {
         </div>
       </Toolbar>
       <Backdrop open={settingsOpen} onClick={() => setSettingsOpen(false)}>
-        { settingsOpen && <Settings/> }
+        { settingsOpen && <Settings onFagChange={onFagChange}/> }
       </Backdrop>
     </AppBar>
   );
