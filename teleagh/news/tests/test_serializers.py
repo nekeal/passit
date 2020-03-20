@@ -7,9 +7,9 @@ from ..serializers import NewsSerializer
 
 
 def test_serializer_have_correct_fields():
-    assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'created_by',
-                                            'modified_by', 'created_by_profile', 'modified_by_profile', 'created_at',
-                                            'updated_at', 'is_owner'}
+    assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'attachment',
+                                            'created_by', 'modified_by', 'created_by_profile', 'modified_by_profile',
+                                            'created_at', 'updated_at', 'is_owner'}
 
 
 def test_serializer_serializes_news(news, user_profile1, user_profile2):
@@ -28,6 +28,7 @@ def test_serializer_serializes_news(news, user_profile1, user_profile2):
         'modified_by': user_profile2.get_name(),
         'created_at': data.data['created_at'],
         'updated_at': data.data['updated_at'],
+        'attachment': None,
         'is_owner': True
     }
 
