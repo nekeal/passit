@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include, re_path
 from drf_yasg import openapi
@@ -47,6 +48,7 @@ router.registry.extend(news_router.registry)
 router.registry.extend(events_router.registry)
 
 urlpatterns = [
+    path('', index),
     path('api/', include((router.urls, 'api'))),
     path('api/auth/', include('teleagh.accounts.urls')),
     path('grappelli/', include('grappelli.urls')),
@@ -55,4 +57,6 @@ urlpatterns = [
 ]
 if settings.DEBUG:
     urlpatterns.append(path('silk/', include('silk.urls', namespace='silk')))
-urlpatterns.append(re_path(r'^.*$', index))
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns.append(re_path(r'^.*/$', index))
