@@ -22,7 +22,7 @@ const SettingsContainer = styled(Paper)`
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  width: 80%;
+  width: 90%;
   
   .profile {
     display: flex;
@@ -85,14 +85,17 @@ const SettingsContainer = styled(Paper)`
   }
 `;
 
-function Settings() {
+function Settings({ onFagChange }) {
   const [highContrast, setHighContrast] = useState(false);
   const [profileInfo, setProfileInfo] = useState(undefined);
   const [activeFag, setActiveFag] = useState(1);
   const history = useHistory();
 
   useEffect(() => {
-    authService.profileInfo().then(profileInfo => setProfileInfo(profileInfo));
+    authService.profileInfo().then(profileInfo => {
+      setProfileInfo(profileInfo);
+      setActiveFag(profileInfo.defaultFag.id);
+    });
   }, []);
 
   return (
@@ -133,7 +136,10 @@ function Settings() {
                     <Typography
                       className={fag.id === activeFag ? "fag-option selected" : "fag-option"}
                       onClick={() => {
-                        authService.changeFAG(fag.id).then(() => setActiveFag(fag.id));
+                        authService.changeFAG(fag.id).then(() => {
+                          setActiveFag(fag.id);
+                          onFagChange && onFagChange();
+                        });
                       }}
                       key={fag.id}
                     >{fag.name}</Typography>

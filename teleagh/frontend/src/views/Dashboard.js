@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import { Container, Typography, Link } from '@material-ui/core';
+import {Container, Typography, Link, Backdrop, AppBar} from '@material-ui/core';
 import styled from "styled-components";
-import {BottomBar, TopBar, Announcement} from "../components";
-import { newsService } from "../services";
+import {BottomBar, TopBar, News, Icon, NewsEdit} from "../components";
+import {authService, newsService} from "../services";
 import { Link as RouterLink } from 'react-router-dom';
+import {USER_TYPES} from "../consts/options";
 
 const DashboardContainer = styled(Container)`
   .calendar-link {
@@ -22,25 +23,76 @@ const DashboardContainer = styled(Container)`
   .announcement-header {
     margin-top: 2rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
 function Dashboard() {
-  const [ announcements, setAnnouncements ] = useState([]);
+  const [ newses, setNewses ] = useState([]);
+  const [ sags, setSags ] = useState([]);
+  const [ profileInfo, setProfileInfo ] = useState(undefined);
+  const [ newsEditOpen, setNewsEditOpen ] = useState(false);
+  const [ newsToUpdate, setNewsToUpdate ] = useState(undefined);
 
-  useEffect(() => {
-    newsService.getNews().then((news) => setAnnouncements(news));
-  }, []);
+  const loadData = () => {
+    authService.profileInfo()
+      .then(info => {
+        setProfileInfo(info);
+        const { id } = info.defaultFag;
+        return Promise.all([
+          newsService.getNews(id),
+          newsService.getSags(id)
+        ]);
+      })
+      .then(([newses, sags]) => {
+        setNewses(newses);
+        setSags(sags);
+      });
+  };
+
+  useEffect(loadData, []);
+
+  const handleAdd = news => newsService.addNews(news).then(addedNews => {
+    newses.unshift(addedNews);
+    setNewses(newses);
+  });
+
+  const handleUpdateInit = news => {
+    setNewsToUpdate(news);
+    setNewsEditOpen(true);
+  };
+
+  const handleUpdateConfirm = news => newsService.updateNews({id: newsToUpdate.id, ...news}).then(updatedNews => {
+    setNewses(newses.map(news => news.id === updatedNews.id ? updatedNews : news));
+  });
+
+  const handleDelete = id => newsService.deleteNews(id).then(() => setNewses(newses.filter(ann => ann.id !== id)));
 
   return (
     <>
-      <TopBar title="Główna"/>
+      <TopBar title="Główna" onFagChange={() => loadData()}/>
       <DashboardContainer>
         <Link component={RouterLink} to="/events" className="calendar-link">Kalendarz zaliczeń</Link>
-        <Typography variant="h6" className="announcement-header">Ogłoszenia</Typography>
-        { announcements && announcements.map(announcement => <Announcement key={announcement.id}  announcement={announcement}/>) }
+        <div className="announcement-header">
+          <Typography variant="h6" >Ogłoszenia</Typography>
+          <Icon name="add" size="big" onClick={() => setNewsEditOpen(true)}/>
+        </div>
+        { profileInfo && newses && newses.map(news => {
+          const { type } = profileInfo.defaultFag;
+          const canEdit = type === USER_TYPES.REPRESENTATIVE || type === USER_TYPES.MODERATOR || news.isOwner;
+          return <News key={news.id} sags={sags} news={news} canEdit={canEdit} onEdit={handleUpdateInit} onDelete={handleDelete}/>;
+        })}
       </DashboardContainer>
       <BottomBar/>
+      <Backdrop open={newsEditOpen} style={{zIndex: 1100}}>
+        { newsEditOpen && (
+          newsToUpdate ?
+          <NewsEdit onClose={() => setNewsEditOpen(false)} onAdd={handleUpdateConfirm} sags={sags} news={newsToUpdate}/> :
+          <NewsEdit onClose={() => setNewsEditOpen(false)} onAdd={handleAdd} sags={sags}/>
+        )}
+      </Backdrop>
     </>
   );
 }
