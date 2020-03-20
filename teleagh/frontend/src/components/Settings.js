@@ -138,7 +138,7 @@ function Settings({ onFagChange }) {
                       onClick={() => {
                         authService.changeFAG(fag.id).then(() => {
                           setActiveFag(fag.id);
-                          onFagChange && onFagChange();
+                          onFagChange && onFagChange(fag);
                         });
                       }}
                       key={fag.id}

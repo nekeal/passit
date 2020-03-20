@@ -18,7 +18,7 @@ const API_ROUTES = {
   NEWS: `/api/news/`,
   NEWS_FAG: fagId => `/api/news/?field_age_group=${fagId}`,
   NEWS_ITEM: id => `/api/news/${id}/`,
-  SUBJECTS: semester => `/api/subjects/?semester=${semester}`,
+  SUBJECTS: (semester, fieldOfStudyId) => `/api/subjects/?semester=${semester}&field_of_study=${fieldOfStudyId}`,
   SUBJECT: id => `/api/subjects/${id}/`,
   RESOURCES: subjectId => `/api/resources/?subject=${subjectId}`,
   ME: '/api/auth/users/me/?expand=profile.field_age_groups.field_of_study,profile.memberships',

@@ -1,9 +1,9 @@
 import axios from "axios";
 import { API_ROUTES } from "../consts/routes";
 
-function getSubjects(semester) {
+function getSubjects(semester, fieldOfStudyId) {
   return axios
-    .get(API_ROUTES.SUBJECTS(semester))
+    .get(API_ROUTES.SUBJECTS(semester, fieldOfStudyId))
     .then(response => {
       return response.data;
     })

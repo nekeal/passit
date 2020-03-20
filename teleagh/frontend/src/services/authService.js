@@ -37,9 +37,9 @@ function profileInfo() {
     .then(response => {
       const { first_name, last_name, profile: { memberships, field_age_groups }} = response.data;
       const fags = field_age_groups.map(fag => {
-        const { id, field_of_study: { name }, students_start_year } = fag;
+        const { id, field_of_study: { id: fieldOfStudyId, name }, students_start_year } = fag;
         const type = memberships.find(m => m.field_age_group === id).type;
-        return { id, name: `${name} ${students_start_year}`, type };
+        return { id, name: `${name} ${students_start_year}`, type, fieldOfStudyId };
       });
       const defaultFagId = memberships.find(m => m.is_default === true).field_age_group;
       const defaultFag = fags.find(fag => fag.id === defaultFagId);

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Container, Link, Select, MenuItem, FormControl } from '@material-ui/core';
 import styled from "styled-components";
 import {BottomBar, SubjectTile, TopBar} from "../components";
-import { subjectsService, localStorageService } from "../services";
+import {subjectsService, localStorageService, authService, newsService} from "../services";
 import { Link as RouterLink } from 'react-router-dom';
 import { SEMESTERS } from "../consts/options";
 
@@ -20,15 +20,22 @@ const SubjectsContainer = styled(Container)`
 function Subjects() {
   const [ subjects, setSubjects ] = useState([]);
   const [ semester, setSemester ] = useState(localStorageService.getSemester() || 1);
+  const [ defaultFag, setDefaultFag ] = useState(undefined);
 
   useEffect(() => {
-    subjectsService.getSubjects(semester).then((subjects) => setSubjects(subjects));
-    localStorageService.setSemester(semester);
-  }, [semester]);
+    authService.profileInfo().then(({ defaultFag }) => setDefaultFag(defaultFag));
+  }, []);
+
+  useEffect(() => {
+    if(defaultFag) {
+      subjectsService.getSubjects(semester, defaultFag.fieldOfStudyId).then((subjects) => setSubjects(subjects));
+      localStorageService.setSemester(semester);
+    }
+  }, [semester, defaultFag]);
 
   return (
     <>
-      <TopBar title="Przedmioty"/>
+      <TopBar title="Przedmioty" onFagChange={fag => setDefaultFag(fag)}/>
       <SubjectsContainer>
         <FormControl variant="outlined" className="semester-select">
           <Select id="semester" value={semester} onChange={e => setSemester(e.target.value)}>

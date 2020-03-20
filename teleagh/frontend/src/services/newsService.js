@@ -15,7 +15,6 @@ function getNews(fagId) {
   return axios
     .get(API_ROUTES.NEWS_FAG(fagId))
     .then(response => {
-      console.log(response.data);
       return response.data.map(newsResponseTransformer);
     })
 }
@@ -27,17 +26,6 @@ function getSags(fag) {
       const { id, subject_name } = sag;
       return { id, subjectName: subject_name };
     }));
-
-  // return authService.profileInfo()
-  //   .then(info => {
-  //     console.log(info);
-  //     return axios
-  //       .get(API_ROUTES.SAGS(info.defaultFag))
-  //       .then(response => response.data.map(sag => {
-  //         const { id, subject_name } = sag;
-  //         return { id, subjectName: subject_name };
-  //       }));
-  //   })
 }
 
 function addNews(news) {
@@ -48,7 +36,6 @@ function addNews(news) {
 }
 
 function updateNews(news) {
-  console.log(news);
   return axios
     .patch(API_ROUTES.NEWS_ITEM(news.id), news)
     .then(response => newsResponseTransformer(response.data));

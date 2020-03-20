@@ -60,8 +60,8 @@ function TabPanel(props) {
 function Subject() {
   const params = useParams();
   const [ subject, setSubject ] = useState({});
-  const [ tabIndex, setTabIndex ] = useState(1);
-  const [ resourcesTabIndex, setResourcesTabIndex ] = useState(3);
+  const [ tabIndex, setTabIndex ] = useState(0);
+  const [ resourcesTabIndex, setResourcesTabIndex ] = useState(0);
   const [ resources, setResources ] = useState({});
 
   console.log(resources);

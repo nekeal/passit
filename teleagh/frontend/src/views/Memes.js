@@ -10,7 +10,7 @@ const MemesContainer = styled(Container)`
 function Memes() {
   return (
     <>
-      <TopBar title={"Feature in progress"}/>
+      <TopBar title="Feature in progress"/>
       <MemesContainer>
         <img src={Loader} alt=""/>
       </MemesContainer>

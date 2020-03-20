@@ -72,7 +72,7 @@ function PasswordChange() {
               InputProps={{
                 endAdornment: <InputAdornment position="end">
                   <IconButton
-                    aria-label="toggle password visibility"
+                    tabIndex="-1"
                     onClick={() => setShowCurrentPass(!showCurrentPass)}
                     edge="end"
                   >
@@ -93,7 +93,7 @@ function PasswordChange() {
               InputProps={{
                 endAdornment: <InputAdornment position="end">
                   <IconButton
-                    aria-label="toggle password visibility"
+                    tabIndex="-1"
                     onClick={() => setShowNewPass(!showNewPass)}
                     edge="end"
                   >
@@ -114,6 +114,7 @@ function PasswordChange() {
               InputProps={{
                 endAdornment: <InputAdornment position="end">
                   <IconButton
+                    tabIndex="-1"
                     aria-label="toggle password visibility"
                     onClick={() => setShowRepeatNewPass(!showRepeatNewPass)}
                     edge="end"
@@ -124,16 +125,16 @@ function PasswordChange() {
               }}
             />
           } />
-          <IconButton>
-            <Icon name="accept"/>
-          </IconButton>
+          {/*<IconButton>*/}
+          {/*  <Icon name="accept"/>*/}
+          {/*</IconButton>*/}
           {/*<Snackbar open={true} autoHideDuration={6000}>*/}
           {/*  <Alert severity="success">*/}
           {/*    This is a success message!*/}
           {/*  </Alert>*/}
           {/*</Snackbar>*/}
 
-          {/*<Button className="submit-button" type="submit" variant="outlined" color="secondary">Zaloguj</Button>*/}
+          <Button className="submit-button" type="submit" variant="outlined" color="secondary">Zmień hasło</Button>
         </form>
       </PasswordChangeContainer>
       <BottomBar/>

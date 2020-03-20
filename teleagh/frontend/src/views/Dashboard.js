@@ -35,11 +35,13 @@ function Dashboard() {
   const [ profileInfo, setProfileInfo ] = useState(undefined);
   const [ newsEditOpen, setNewsEditOpen ] = useState(false);
   const [ newsToUpdate, setNewsToUpdate ] = useState(undefined);
+  const [ defaultFag, setDefaultFag ] = useState(undefined);
 
-  const loadData = () => {
+  useEffect(() => {
     authService.profileInfo()
       .then(info => {
         setProfileInfo(info);
+        setDefaultFag(info.defaultFag);
         const { id } = info.defaultFag;
         return Promise.all([
           newsService.getNews(id),
@@ -50,13 +52,20 @@ function Dashboard() {
         setNewses(newses);
         setSags(sags);
       });
-  };
 
-  useEffect(loadData, []);
+  }, []);
+
+  useEffect(() => {
+    if(defaultFag) {
+      newsService.getSags(defaultFag.id).then(sags => setSags(sags));
+      newsService.getNews(defaultFag.id).then(newses => setNewses(newses));
+    }
+  }, [defaultFag]);
 
   const handleAdd = news => newsService.addNews(news).then(addedNews => {
     newses.unshift(addedNews);
     setNewses(newses);
+    setNewsEditOpen(false);
   });
 
   const handleUpdateInit = news => {
@@ -72,7 +81,7 @@ function Dashboard() {
 
   return (
     <>
-      <TopBar title="Główna" onFagChange={() => loadData()}/>
+      <TopBar title="Główna" onFagChange={fag => setDefaultFag(fag)}/>
       <DashboardContainer>
         <Link component={RouterLink} to="/events" className="calendar-link">Kalendarz zaliczeń</Link>
         <div className="announcement-header">
@@ -86,7 +95,7 @@ function Dashboard() {
         })}
       </DashboardContainer>
       <BottomBar/>
-      <Backdrop open={newsEditOpen} style={{zIndex: 1100}}>
+      <Backdrop open={newsEditOpen} style={{zIndex: 1100}} onClick={() => setNewsEditOpen(false)}>
         { newsEditOpen && (
           newsToUpdate ?
           <NewsEdit onClose={() => setNewsEditOpen(false)} onAdd={handleUpdateConfirm} sags={sags} news={newsToUpdate}/> :
