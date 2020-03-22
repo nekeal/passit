@@ -14,3 +14,4 @@ deployment/group_vars/github.yml
 .mypy_cache
 node_modules
 webpack-stats.json
+/deployment/configs/nginx/app.conf.sample
