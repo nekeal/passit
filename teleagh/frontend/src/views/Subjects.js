@@ -10,7 +10,7 @@ const SubjectsContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
   
   .semester-select {
     margin: 1rem 0;

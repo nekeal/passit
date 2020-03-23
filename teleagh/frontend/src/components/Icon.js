@@ -15,24 +15,26 @@ import photo from '../assets/photo.png';
 import accept from '../assets/accept.png';
 import decline from '../assets/decline.png';
 import add from '../assets/add.png';
+import loader from '../assets/loader.gif';
 
 const icons = {
   eyeClosed: eye_closed,
   eyeOpen: eye_open,
-  calendar: calendar,
-  home: home,
-  resources: resources,
-  lecturer: lecturer,
-  meme: meme,
-  settings: settings,
-  profile: profile,
-  download: download,
-  link: link,
-  pdf: pdf,
-  photo: photo,
-  accept: accept,
-  decline: decline,
-  add: add
+  calendar,
+  home,
+  resources,
+  lecturer,
+  meme,
+  settings,
+  profile,
+  download,
+  link,
+  pdf,
+  photo,
+  accept,
+  decline,
+  add,
+  loader
 };
 
 const sizes = {

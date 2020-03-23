@@ -32,7 +32,13 @@ function addNews(news) {
   const { title, content, sag } = news;
   return axios
     .post(API_ROUTES.NEWS, { title, content, subject_group: sag })
-    .then(response => newsResponseTransformer(response.data));
+    .then(response => {
+      return newsResponseTransformer(response.data)
+    })
+    .catch(error => {
+      const { title, content, subject_group: sag } = error.response.data;
+      throw { title, content, sag };
+    });
 }
 
 function updateNews(news) {

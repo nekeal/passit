@@ -38,9 +38,16 @@ const NewsEditContainer = styled(Paper)`
 function NewsEdit({ news, sags, onAdd, onClose }) {
   const { register, handleSubmit, errors, setValue, setError, getValues, control } = useForm();
   const [ sagSelected, setSagSelected ] = useState(null);
+  const [ loading, setLoading ] = useState(false);
 
   const onSubmit = data => {
-    onAdd(data);
+    setLoading(true);
+    onAdd(data).catch(error => {
+      if(error.title) { setError('title', 'serverError', error.title.join(" ")); }
+      if(error.content) { setError('content', 'serverError', error.content.join(" ")); }
+      if(error.sag) { setError('sag', 'serverError', error.sag.join(" ")); }
+      setLoading(false);
+    });
   };
 
   useEffect(() => {
@@ -49,6 +56,7 @@ function NewsEdit({ news, sags, onAdd, onClose }) {
       setValue("title", title);
       setValue("content", content);
       setValue("sag", sag);
+      setSagSelected(sags.find(s => s.id === sag));
     }
   }, [news, setValue]);
 
@@ -62,7 +70,11 @@ function NewsEdit({ news, sags, onAdd, onClose }) {
         <div className="header">
           <IconButton onClick={onClose}><Icon name="decline"/></IconButton>
           <Typography variant="h6" >{ news ? "Edytuj ogłoszenie" : "Dodaj ogłoszenie" }</Typography>
-          <IconButton type="submit"><Icon name="accept"/></IconButton>
+          {
+            loading ?
+              <IconButton disabled><Icon name="loader"/></IconButton> :
+              <IconButton type="submit"><Icon name="accept"/></IconButton>
+          }
         </div>
         <Controller name="title" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
           <TextField

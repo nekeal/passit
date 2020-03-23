@@ -7,6 +7,8 @@ import { Link as RouterLink } from 'react-router-dom';
 import {USER_TYPES} from "../consts/options";
 
 const DashboardContainer = styled(Container)`
+  padding-bottom: 5rem;
+  
   .calendar-link {
     background: linear-gradient(#fff, #fff), linear-gradient(90deg, rgba(135,18,154,0.6) 40%, rgba(9,83,159,0.6) 100%);
     background-repeat: no-repeat;
@@ -75,6 +77,7 @@ function Dashboard() {
 
   const handleUpdateConfirm = news => newsService.updateNews({id: newsToUpdate.id, ...news}).then(updatedNews => {
     setNewses(newses.map(news => news.id === updatedNews.id ? updatedNews : news));
+    setNewsEditOpen(false);
   });
 
   const handleDelete = id => newsService.deleteNews(id).then(() => setNewses(newses.filter(ann => ann.id !== id)));

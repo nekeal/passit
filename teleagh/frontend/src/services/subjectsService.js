@@ -19,21 +19,31 @@ function getSubject(id) {
     .catch(error => console.log(error));
 }
 
-function getResources(subjectId) {
+function getResources(subjectId, category) {
   return axios
-    .get(API_ROUTES.RESOURCES(subjectId))
+    .get(API_ROUTES.RESOURCES(subjectId, category))
     .then(response => {
-      return response.data.reduce((categorizedResources, resource) => {
-        const { id, name, url, category } = resource;
+      return response.data.map(resource => {
+        const { id, name, url } = resource;
 
         let type;
         if(url.match(/\.pdf/)) type = "pdf";
         else if(url.match(/\.png/)) type = "photo";
         else type = "link";
 
-        categorizedResources[category || "OTHER"].push({ id, name, url, type });
-        return categorizedResources;
-      }, { LECTURE: [], EXAM: [], MID_TERM_EXAM: [], OTHER: [] });
+        return { id, name, url, type };
+      });
+      // return response.data.reduce((categorizedResources, resource) => {
+      //   const { id, name, url, category } = resource;
+      //
+      //   let type;
+      //   if(url.match(/\.pdf/)) type = "pdf";
+      //   else if(url.match(/\.png/)) type = "photo";
+      //   else type = "link";
+      //
+      //   categorizedResources[category || "OTHER"].push({ id, name, url, type });
+      //   return categorizedResources;
+      // }, { LECTURE: [], EXAM: [], MID_TERM_EXAM: [], OTHER: [] });
     })
     .catch(error => console.log(error));
 }

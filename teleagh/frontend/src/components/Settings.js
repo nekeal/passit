@@ -116,7 +116,7 @@ function Settings({ onFagChange }) {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails className="panel-details">
               <div className="contrast-switch">
-                <Typography>Zwiększ kontrast</Typography>
+                <Typography>Placeholder</Typography>
                 <Switch
                   checked={highContrast}
                   onChange={() => setHighContrast(!highContrast)}

@@ -8,6 +8,7 @@ import styleHelpers from "../consts/styles";
 
 const EventsContainer = styled(Container)`  
   margin-top: 1rem;
+  padding-bottom: 5rem;
   
   .month {
     margin: 0.5rem 0;

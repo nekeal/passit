@@ -20,7 +20,7 @@ const API_ROUTES = {
   NEWS_ITEM: id => `/api/news/${id}/`,
   SUBJECTS: (semester, fieldOfStudyId) => `/api/subjects/?semester=${semester}&field_of_study=${fieldOfStudyId}`,
   SUBJECT: id => `/api/subjects/${id}/`,
-  RESOURCES: subjectId => `/api/resources/?subject=${subjectId}`,
+  RESOURCES: (subjectId, category) => `/api/resources/?subject=${subjectId}&category=${category}`,
   ME: '/api/auth/users/me/?expand=profile.field_age_groups.field_of_study,profile.memberships',
   LECTURERS: '/api/lecturers/',
   SET_DEFAULT_FAG: '/api/auth/users/set_default_fag/',

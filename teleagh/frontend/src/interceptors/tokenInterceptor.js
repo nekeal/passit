@@ -9,7 +9,7 @@ export default (history) => {
   }, (error) => {
     // Return any error which is not due to authentication back to the calling service
 
-    if (error.response.status === 500) {
+    if (error.response.status === 500 && error.response.status === 502) {
       history.push(APP_ROUTES.CONNECTION_PROBLEM);
     }
 

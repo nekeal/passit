@@ -5,6 +5,7 @@ import {BottomBar, Icon, TopBar} from "../components";
 import { subjectsService } from "../services";
 import { useParams } from "react-router-dom";
 import styleHelpers from "../consts/styles";
+import { RESOURCE_TYPES } from "../consts/options";
 
 const SubjectContainer = styled(Container)`  
   .tabs {
@@ -64,12 +65,19 @@ function Subject() {
   const [ resourcesTabIndex, setResourcesTabIndex ] = useState(0);
   const [ resources, setResources ] = useState({});
 
-  console.log(resources);
-
   useEffect(() => {
     subjectsService.getSubject(params.id).then((subject) => setSubject(subject));
-    subjectsService.getResources(params.id).then((resources) => setResources(resources));
   }, [params.id]);
+
+  useEffect(() => {
+    if(tabIndex === 1) {
+      subjectsService.getResources(params.id, RESOURCE_TYPES[resourcesTabIndex]).then((categoryResources) => {
+        const newResources = { ...resources };
+        newResources[RESOURCE_TYPES[resourcesTabIndex]] = categoryResources;
+        setResources(newResources);
+      });
+    }
+  }, [params.id, tabIndex, resourcesTabIndex]);
 
   return (
     <>
@@ -101,7 +109,7 @@ function Subject() {
             <Tab label="Inne"/>
           </Tabs>
           {
-            ["LECTURE", "EXAM", "MID_TERM_EXAM", "OTHER"].map((category, index) =>
+            RESOURCE_TYPES.map((category, index) =>
               <TabPanel value={resourcesTabIndex} key={index} index={index} className="resource-container">
                 { resources[category] && resources[category].length ? resources[category].map(resource =>
                   <a href={resource.url} key={resource.id} target="_blank" rel="noopener noreferrer">
