@@ -56,8 +56,8 @@ class SubjectAdmin(admin.ModelAdmin):
             instances = formset.save(commit=False)
             for instance in instances:
                 if not instance.pk:
-                    instance.created_by = request.user
-                instance.modified_by = request.user
+                    instance.created_by = request.user.profile
+                instance.modified_by = request.user.profile
                 instance.save()
         super(SubjectAdmin, self).save_formset(request, form, formset, change)
 
