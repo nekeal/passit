@@ -2,6 +2,7 @@ from django.db.models import F
 from rest_flex_fields import is_expanded
 from rest_framework import viewsets
 
+from teleagh.events.filters import EventFilterSet
 from teleagh.events.models import Event
 from teleagh.events.serializers import EventSerializer
 
@@ -10,6 +11,7 @@ class EventViewSet(viewsets.ModelViewSet):
 
     queryset = Event.objects.select_related('created_by__user', 'modified_by__user')
     serializer_class = EventSerializer
+    filterset_class = EventFilterSet
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -21,4 +23,4 @@ class EventViewSet(viewsets.ModelViewSet):
             queryset = queryset.select_related('subject_group')
         if is_expanded(self.request, 'subject'):
             queryset = queryset.select_related('subject_group__subject')
-        return queryset
+        return queryset.order_by('due_date')

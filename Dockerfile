@@ -1,4 +1,4 @@
-FROM node:alpine as nodejs
+FROM node:12.13.1-alpine as nodejs
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY teleagh/frontend/package.json package.json

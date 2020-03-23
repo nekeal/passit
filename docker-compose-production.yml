@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  web:
+    restart: always
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+#    links:
+#      - postgres:postgres
+    volumes:
+#      - ..:/app
+      - web-static:/app/public
+    environment:
+      DJANGO_SETTINGS_MODULE: teleagh.settings.production
+    env_file:
+      - .env
+    command: bash -c "python manage.py migrate && gunicorn -b 0:8000 teleagh.wsgi"
+  nginx:
+    image: nginx:1.17.3
+    restart: unless-stopped
+    volumes:
+      - web-static:/www/static
+      - ./deployment/configs/certbot/conf:/etc/letsencrypt
+      - ./deployment/configs/certbot/www:/var/www/certbot
+      - ./deployment/configs/nginx:/etc/nginx/conf.d
+    links:
+      - web:web
+    ports:
+      - "80:80"
+      - "443:443"
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+  certbot:
+    image: certbot/certbot
+    restart: unless-stopped
+    volumes:
+      - ./deployment/configs/certbot/conf:/etc/letsencrypt
+      - ./deployment/configs/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+volumes:
+  web-static:
