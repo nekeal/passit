@@ -72,6 +72,7 @@ if [ "$staging" != "0" ]; then staging_arg="--staging"; fi
 
 docker-compose -f docker-compose-production.yml run --rm --entrypoint "\
   certbot certonly --webroot -w /var/www/certbot \
+    --non-interactive\
     $staging_arg \
     $email_arg \
     $domain_args \
