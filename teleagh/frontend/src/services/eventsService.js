@@ -14,7 +14,7 @@ function getEvents() {
       return response.data
         .sort((a, b) => new Date(a.due_date) - new Date(b.due_date))
         .reduce((eventsByMonth, event) => {
-          const { name, description, category, due_date } = event;
+          const { id, name, description, category, due_date } = event;
           const date = new Date(due_date);
           const month = date.getMonth();
 
@@ -24,7 +24,7 @@ function getEvents() {
             monthEvents = eventsByMonth[eventsByMonth.length - 1];
           }
 
-          monthEvents.events.push({ name, description, category, weekDay: date.getDay(), monthDay: date.getDate(), time: formatTime(date) });
+          monthEvents.events.push({ id, name, description, category, weekDay: date.getDay(), monthDay: date.getDate(), time: formatTime(date) });
           return eventsByMonth;
         }, []);
     })

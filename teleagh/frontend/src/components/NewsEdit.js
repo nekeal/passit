@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Typography, Paper, IconButton, TextField } from "@material-ui/core";
+import {Typography, Paper, IconButton, TextField, Button, Link} from "@material-ui/core";
 import Icon from "./Icon";
 import styled from "styled-components";
 import { Controller, useForm } from "react-hook-form";
@@ -24,7 +24,6 @@ const NewsEditContainer = styled(Paper)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
   }
   
   .form-field {
@@ -32,6 +31,27 @@ const NewsEditContainer = styled(Paper)`
     margin-bottom: 0.5rem;
   }
   
+  .attachment {
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    
+    .filename {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 0.3rem;
+    }
+    
+    img {
+      margin-left: 0.75rem;
+    }
+  }
+
   
 `;
 
@@ -39,6 +59,7 @@ function NewsEdit({ news, sags, onAdd, onClose }) {
   const { register, handleSubmit, errors, setValue, setError, getValues, control } = useForm();
   const [ sagSelected, setSagSelected ] = useState(null);
   const [ loading, setLoading ] = useState(false);
+  const [ filename, setFilename ] = useState(undefined);
 
   const onSubmit = data => {
     setLoading(true);
@@ -52,17 +73,30 @@ function NewsEdit({ news, sags, onAdd, onClose }) {
 
   useEffect(() => {
     if(news) {
-      const { title, content, sag } = news;
+      const { title, content, sag, attachment } = news;
       setValue("title", title);
       setValue("content", content);
       setValue("sag", sag);
+      setFilename(attachment.filename);
       setSagSelected(sags.find(s => s.id === sag));
     }
   }, [news, setValue]);
 
   useEffect(() => {
-    register({ name: "sag" })
+    register({ name: "sag" });
+    register({ name: "attachment" });
   }, [register]);
+
+  const attachmentAdd = (e) => {
+    e.persist();
+    setFilename(e.target.files[0].name);
+    setValue("attachment", e.target.files[0]);
+  };
+
+  const attachmentRemove = () => {
+    setFilename(undefined);
+    setValue("attachment", undefined);
+  };
 
   return (
     <NewsEditContainer onClick={e => e.stopPropagation()}>
@@ -76,6 +110,22 @@ function NewsEdit({ news, sags, onAdd, onClose }) {
               <IconButton type="submit"><Icon name="accept"/></IconButton>
           }
         </div>
+        {
+          filename ?
+            <div className="attachment">
+              <div className="filename">{ filename }</div>
+              <Icon name="decline" size="small" onClick={attachmentRemove}/>
+            </div>
+            :
+            <Button component="label" startIcon={<Icon name="attachment" size="big"/>}>
+              Dodaj załącznik
+              <input
+                type="file"
+                style={{ display: "none" }}
+                onChange={attachmentAdd}
+              />
+            </Button>
+        }
         <Controller name="title" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
           <TextField
             className="form-field"

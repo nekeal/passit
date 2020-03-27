@@ -61,7 +61,6 @@ const weekdayShorts = ["pon.", "wt.", "śr.", "czw.", "pt.", "sb.", "nd."];
 
 function Events() {
   const [ eventsByMonths, setEventsByMonths ] = useState([]);
-  console.log(eventsByMonths);
 
   useEffect(() => {
     eventsService.getEvents().then(eventsByMonths => setEventsByMonths(eventsByMonths));
@@ -73,10 +72,10 @@ function Events() {
       <EventsContainer>
         {
           eventsByMonths && eventsByMonths.map(monthEvents =>
-            <>
+            <div key={monthEvents.month}>
               <Typography className="month" variant="h5">{ monthNames[monthEvents.month] }</Typography>
               { monthEvents.events.map(event =>
-                <div className="event">
+                <div className="event" key={event.id}>
                   <div className="event-date">
                     <div>{ weekdayShorts[event.weekDay] }</div>
                     <div>{ event.monthDay }</div>
@@ -88,7 +87,7 @@ function Events() {
                   </div>
                 </div>
               ) }
-            </>
+            </div>
           )
         }
       </EventsContainer>

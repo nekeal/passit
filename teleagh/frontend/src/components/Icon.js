@@ -16,6 +16,7 @@ import accept from '../assets/accept.png';
 import decline from '../assets/decline.png';
 import add from '../assets/add.png';
 import loader from '../assets/loader.gif';
+import attachment from '../assets/attachment.png';
 
 const icons = {
   eyeClosed: eye_closed,
@@ -34,7 +35,8 @@ const icons = {
   accept,
   decline,
   add,
-  loader
+  loader,
+  attachment
 };
 
 const sizes = {

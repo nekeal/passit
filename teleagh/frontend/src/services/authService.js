@@ -46,7 +46,7 @@ function profileInfo() {
       return { fullName: `${first_name} ${last_name}`, fags, defaultFag };
     })
     .catch(error => {
-      console.log(error);
+      throw error.response.data;
     });
 }
 
@@ -57,7 +57,9 @@ function changeFAG(fagID) {
       console.log(response.data);
       return response.data;
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      throw error.response.data;
+    });
 }
 
 export default { login, logout, changePassword, profileInfo, changeFAG };

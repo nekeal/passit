@@ -36,7 +36,8 @@ const AnnouncementContainer = styled(Paper)`
   
   .attachment {
     margin-top: 1rem;
-    display: ${props => props.expanded ? 'flex' : 'none'};
+    //display: ${props => props.expanded ? 'flex' : 'none'};
+    display: flex;
     align-items: center;
     font-style: italic;
     
@@ -81,7 +82,8 @@ function News({ news, canEdit, onEdit, onDelete }) {
     setAnchorEl(null);
   };
 
-  const { id, title, content, date, author } = news;
+  const { id, title, content, date, author, attachment } = news;
+
   return (
     <AnnouncementContainer variant="outlined" expanded={expanded ? 1 : 0}>
       <div className="header">
@@ -102,14 +104,17 @@ function News({ news, canEdit, onEdit, onDelete }) {
       <div className="content" onClick={() => setExpanded(!expanded)}>
         { content }
       </div>
-      {/*<div className="attachments">*/}
-      {/*  <Link href='/' target='_blank'>*/}
-      {/*    <div className="attachment">*/}
-      {/*      file1.jpg*/}
-      {/*      <Icon name="download"/>*/}
-      {/*    </div>*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
+      {
+        attachment &&
+        <div className="attachments">
+          <Link href={attachment.link} target="_blank">
+            <div className="attachment">
+              { attachment.filename }
+              <Icon name="download"/>
+            </div>
+          </Link>
+        </div>
+      }
       <div className="info">
         <div className="date">
           <Icon name='calendar' size='big'/>
