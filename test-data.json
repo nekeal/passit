@@ -1,4 +1,12 @@
 [
+    {
+    "model": "subject.fieldofstudy",
+    "pk": 1,
+    "fields": {
+      "name": "default field",
+      "slug": "default-field"
+    }
+  },
   {
     "model": "subject.fieldofstudy",
     "pk": 3,
@@ -48,18 +56,10 @@
     }
   },
   {
-    "model": "subject.fieldofstudy",
-    "pk": 14,
-    "fields": {
-      "name": "default field",
-      "slug": "default-field"
-    }
-  },
-  {
     "model": "subject.fieldofstudyofagegroup",
     "pk": 1,
     "fields": {
-      "field_of_study": 14,
+      "field_of_study": 1,
       "students_start_year": 2000
     }
   },

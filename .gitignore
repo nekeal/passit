@@ -6,7 +6,6 @@ __pycache__/
 db.sqlite3
 media
 /public
-/.env
 /.env-production
 .venv
 pg_data/
