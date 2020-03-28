@@ -12,7 +12,8 @@ class News(TimeStampedModel, OwnedModel):
 
     field_age_group = models.ForeignKey('subject.FieldOfStudyOfAgeGroup', on_delete=models.PROTECT,
                                         blank=True, null=True, related_name='news')
-    subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', on_delete=models.PROTECT, related_name='news')
+    subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', on_delete=models.PROTECT, blank=True, null=True,
+                                      related_name='news')
 
     objects = NewsManager.from_queryset(NewsQuerySet)()
 

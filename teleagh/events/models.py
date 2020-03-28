@@ -21,7 +21,7 @@ class Event(TimeStampedModel, OwnedModel):
     due_date = models.DateTimeField()
 
     field_age_group = models.ForeignKey('subject.FieldOfStudyOfAgeGroup', on_delete=models.PROTECT)
-    subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', blank=True, on_delete=models.PROTECT, null=True)
+    subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', blank=True, null=True, on_delete=models.PROTECT)
 
     objects = EventManager.from_queryset(EventQuerySet)()
 
