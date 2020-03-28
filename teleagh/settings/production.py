@@ -51,4 +51,3 @@ DATABASES['default'].update(db_from_env)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'public')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-print(DATABASES)

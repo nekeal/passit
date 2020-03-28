@@ -1,3 +1,0 @@
-static_bucket_name = "terraform-static"
-media_bucket_name = "terraform-media"
-ssh_pub_key = "id_rsa.pub"
