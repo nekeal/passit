@@ -1,7 +1,7 @@
 import React, {useEffect, useReducer} from 'react';
 import {Container, Typography, Link, Backdrop, Input, IconButton, InputAdornment} from '@material-ui/core';
 import styled from "styled-components";
-import {BottomBar, TopBar, News, Icon, NewsEdit, ConfirmationDialog} from "../components";
+import {BottomBar, TopBar, News, Icon, NewsEdit, ConfirmationDialog, Loader} from "../components";
 import {authService, newsService} from "../services";
 import { Link as RouterLink } from 'react-router-dom';
 import {USER_TYPES} from "../consts/options";
@@ -63,7 +63,7 @@ const initialState = {
 
 const filterNewses = (newses, searchText) => {
   searchText = searchText.toUpperCase();
-  return newses.filter(news => news.title.toUpperCase().includes(searchText) || news.content.toUpperCase().includes(searchText) || news.author.includes(searchText));
+  return newses.filter(news => news.title.toUpperCase().includes(searchText) || news.content.toUpperCase().includes(searchText) || news.author.toUpperCase().includes(searchText));
 };
 
 function reducer(state, action) {
@@ -157,60 +157,64 @@ function Dashboard() {
   });
 
   return (
-    <>
-      <TopBar title={t("DASHBOARD")} onFagChange={fag => dispatch({ type: 'CHANGE_DEFAULT_FAG', payload: fag })}/>
-      <DashboardContainer>
-        <Link component={RouterLink} to="/events" className="calendar-link">{t("ASSIGNMENTS_CALENDAR")}</Link>
-        {
-          newsSearchOpen ? (
-            <>
-              <div className="announcement-header">
-                <Input
-                  className="news-search"
-                  value={searchText}
-                  onChange={e => dispatch({ type: "NEWS_SEARCH_CHANGE", payload: e.target.value })}
-                  placeholder="Słowo klucz, imię lub nazwisko"
-                  startAdornment={
-                    <Icon name="search"/>
-                  }
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton onClick={() => dispatch({ type: "NEWS_SEARCH_END"})}>
-                        <Icon name="decline"/>
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                />
-              </div>
-              { profileInfo && newses && mapNewses(displayedNewses)}
-            </>
-          ) : (
-            <>
-              <div className="announcement-header">
-                <Typography variant="h6" >{t("ANNOUNCEMENTS")}</Typography>
-                <div>
-                  <Icon name="search" size="big" onClick={() => dispatch({ type: 'NEWS_SEARCH_INIT'})}/>
-                  <Icon name="add" size="big" onClick={() => dispatch({ type: 'NEWS_ADD_INIT'})}/>
+    initialized ? (
+      <>
+        <TopBar title={t("DASHBOARD")} onFagChange={fag => dispatch({ type: 'CHANGE_DEFAULT_FAG', payload: fag })}/>
+        <DashboardContainer>
+          <Link component={RouterLink} to="/events" className="calendar-link">{t("ASSIGNMENTS_CALENDAR")}</Link>
+          {
+            newsSearchOpen ? (
+              <>
+                <div className="announcement-header">
+                  <Input
+                    className="news-search"
+                    value={searchText}
+                    onChange={e => dispatch({ type: "NEWS_SEARCH_CHANGE", payload: e.target.value })}
+                    placeholder="Słowo klucz, imię lub nazwisko"
+                    startAdornment={
+                      <Icon name="search"/>
+                    }
+                    endAdornment={
+                      <InputAdornment position="end">
+                        <IconButton onClick={() => dispatch({ type: "NEWS_SEARCH_END"})}>
+                          <Icon name="decline"/>
+                        </IconButton>
+                      </InputAdornment>
+                    }
+                  />
                 </div>
-              </div>
-              { profileInfo && newses && mapNewses(newses)}
-            </>
-          )
-        }
-      </DashboardContainer>
-      <BottomBar/>
-      <Backdrop open={newsEditOpen} style={{zIndex: 1100}} onClick={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}>
-        { newsEditOpen && (
-          <NewsEdit
-            onAccept={processedNews ? handleUpdate : handleAdd}
-            onDecline={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}
-            sags={sags}
-            news={processedNews}
-          />
-        )}
-      </Backdrop>
-      <ConfirmationDialog open={newsDeleteOpen} onAccept={handleDelete} onDecline={() => dispatch({ type: 'NEWS_DELETE_DECLINE' })}/>
-    </>
+                { profileInfo && newses && mapNewses(displayedNewses)}
+              </>
+            ) : (
+              <>
+                <div className="announcement-header">
+                  <Typography variant="h6" >{t("ANNOUNCEMENTS")}</Typography>
+                  <div>
+                    <Icon name="search" size="big" onClick={() => dispatch({ type: 'NEWS_SEARCH_INIT'})}/>
+                    <Icon name="add" size="big" onClick={() => dispatch({ type: 'NEWS_ADD_INIT'})}/>
+                  </div>
+                </div>
+                { profileInfo && newses && mapNewses(newses)}
+              </>
+            )
+          }
+        </DashboardContainer>
+        <BottomBar/>
+        <Backdrop open={newsEditOpen} style={{zIndex: 1100}} onClick={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}>
+          { newsEditOpen && (
+            <NewsEdit
+              onAccept={processedNews ? handleUpdate : handleAdd}
+              onDecline={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}
+              sags={sags}
+              news={processedNews}
+            />
+          )}
+        </Backdrop>
+        <ConfirmationDialog open={newsDeleteOpen} onAccept={handleDelete} onDecline={() => dispatch({ type: 'NEWS_DELETE_DECLINE' })}/>
+      </>
+    ) : (
+      <Loader/>
+    )
   );
 }
 

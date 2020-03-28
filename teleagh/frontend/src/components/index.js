@@ -5,3 +5,4 @@ export { default as News } from './News';
 export { default as SubjectTile } from './SubjectTile';
 export { default as NewsEdit } from './NewsEdit';
 export { default as ConfirmationDialog } from './ConfirmationDialog';
+export { default as Loader } from './Loader';

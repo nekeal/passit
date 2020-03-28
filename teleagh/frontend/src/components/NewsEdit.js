@@ -77,8 +77,8 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
       setValue("title", title);
       setValue("content", content);
       setValue("sag", sag);
-      setFilename(attachment.filename);
       setSagSelected(sags.find(s => s.id === sag));
+      attachment && setFilename(attachment.filename);
     }
   }, [news, setValue]);
 
