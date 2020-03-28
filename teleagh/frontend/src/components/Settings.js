@@ -1,21 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {
-  Typography,
-  Paper,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-  Switch,
-  Button,
-  Link
-} from "@material-ui/core";
+import { Typography, Paper, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Switch, Button, Link } from "@material-ui/core";
 import Icon from "./Icon";
 import styled from "styled-components";
 import { authService, localStorageService } from "../services";
 import {Link as RouterLink} from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import {SubjectTile} from "./index";
 import {APP_ROUTES} from "../consts/routes";
+import {useTranslation} from "react-i18next";
 
 const SettingsContainer = styled(Paper)`
   display: flex;
@@ -90,6 +81,7 @@ function Settings({ onFagChange }) {
   const [profileInfo, setProfileInfo] = useState(undefined);
   const [activeFag, setActiveFag] = useState(1);
   const history = useHistory();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     authService.profileInfo().then(profileInfo => {
@@ -119,7 +111,7 @@ function Settings({ onFagChange }) {
                 <Typography>Placeholder</Typography>
                 <Switch
                   checked={highContrast}
-                  onChange={() => setHighContrast(!highContrast)}
+                  onChange={() => i18n.language === "en" ? i18n.changeLanguage("pl") : i18n.changeLanguage("en")}
                   value="contrast"
                 />
               </div>

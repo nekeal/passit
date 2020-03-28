@@ -4,6 +4,7 @@ import Icon from "./Icon";
 import styled from "styled-components";
 import {useHistory, useLocation} from "react-router";
 import { APP_ROUTES } from "../consts/routes";
+import { useTranslation } from 'react-i18next';
 
 const BottomNavigationContainer = styled(BottomNavigation)`
   position: fixed;
@@ -15,13 +16,14 @@ const BottomNavigationContainer = styled(BottomNavigation)`
 function BottomBar() {
   const location = useLocation();
   const history = useHistory();
+  const { t } = useTranslation();
 
   return (
     <BottomNavigationContainer value={location.pathname} onChange={(event, newValue) => history.push(newValue)} showLabels>
-      <BottomNavigationAction label="Główna" value={APP_ROUTES.DASHBOARD} icon={<Icon name='home'/>} />
-      <BottomNavigationAction label="Przedmioty" value={APP_ROUTES.SUBJECTS} icon={<Icon name='resources'/>} />
-      <BottomNavigationAction label="Prowadzący" value={APP_ROUTES.LECTURERS} icon={<Icon name='lecturer'/>} />
-      <BottomNavigationAction label="Memy" value={APP_ROUTES.MEMES} icon={<Icon name='meme'/>} />
+      <BottomNavigationAction label={t("HOME")} value={APP_ROUTES.DASHBOARD} icon={<Icon name='home'/>} />
+      <BottomNavigationAction label={t("SUBJECTS")} value={APP_ROUTES.SUBJECTS} icon={<Icon name='resources'/>} />
+      <BottomNavigationAction label={t("LECTURERS")} value={APP_ROUTES.LECTURERS} icon={<Icon name='lecturer'/>} />
+      <BottomNavigationAction label={t("MEMES")} value={APP_ROUTES.MEMES} icon={<Icon name='meme'/>} />
     </BottomNavigationContainer>
 
   );

@@ -1,26 +1,25 @@
-import React, {useEffect, useState} from 'react';
-import {Container, Typography, Link, Backdrop, AppBar} from '@material-ui/core';
+import React, {useEffect, useReducer} from 'react';
+import {Container, Typography, Link, Backdrop, Input, IconButton, InputAdornment} from '@material-ui/core';
 import styled from "styled-components";
-import {BottomBar, TopBar, News, Icon, NewsEdit} from "../components";
+import {BottomBar, TopBar, News, Icon, NewsEdit, ConfirmationDialog} from "../components";
 import {authService, newsService} from "../services";
 import { Link as RouterLink } from 'react-router-dom';
 import {USER_TYPES} from "../consts/options";
+import styleHelpers from "../consts/styles";
+import {useTranslation} from "react-i18next";
 
 const DashboardContainer = styled(Container)`
   padding-bottom: 5rem;
   
   .calendar-link {
-    background: linear-gradient(#fff, #fff), linear-gradient(90deg, rgba(135,18,154,0.6) 40%, rgba(9,83,159,0.6) 100%);
-    background-repeat: no-repeat;
-    background-origin: padding-box,border-box;
-    border: 2px solid transparent;
+    ${styleHelpers.gradientBorder};
     padding: 0.7rem 1rem;
     margin-top: 1.5rem;
-    box-shadow: 0 4px 4px #C8CCD6;
     color: inherit;
     display: block;
     text-decoration: none;
   }
+  
   
   .announcement-header {
     margin-top: 2rem;
@@ -28,22 +27,91 @@ const DashboardContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    img {
+      margin-left: 0.8rem;
+    }
+    
+    .news-search {
+      ${styleHelpers.gradientBorder};
+      padding: 0.2rem;
+      width: 100%;
+      
+      .MuiIconButton-root {
+        padding: 0;
+      }
+      
+      img {
+        margin: 0 0.4rem;
+      }
+    }
   }
 `;
 
+const initialState = {
+  initialized: false,
+  profileInfo: undefined,
+  newses: [],
+  sags: [],
+  processedNews: undefined,
+  newsEditOpen: false,
+  newsDeleteOpen: false,
+  newsSearchOpen: false,
+  searchText: "",
+  displayedNewses: []
+};
+
+const filterNewses = (newses, searchText) => {
+  searchText = searchText.toUpperCase();
+  return newses.filter(news => news.title.toUpperCase().includes(searchText) || news.content.toUpperCase().includes(searchText) || news.author.includes(searchText));
+};
+
+function reducer(state, action) {
+  const { type, payload } = action;
+  switch (type) {
+    case 'SET_PROFILE_INFO':
+      return { ...state, profileInfo: payload };
+    case 'SET_DATA':
+      return { ...state, newses: payload.newses, sags: payload.sags, initialized: true };
+    case 'CHANGE_DEFAULT_FAG':
+      return { ...state, profileInfo: { ...state.profileInfo, defaultFag: payload }};
+    case 'NEWS_ADD_INIT':
+      return { ...state, newsEditOpen: true };
+    case 'NEWS_EDIT_INIT':
+      return { ...state, newsEditOpen: true, processedNews: payload };
+    case 'NEWS_EDIT_ACCEPT':
+      if(state.processedNews) {
+        return { ...state, newsEditOpen: false, processedNews: undefined, newses: state.newses.map(news => news.id === state.processedNews.id ? payload : news) }
+      } else {
+        return { ...state, newsEditOpen: false, newses: [ payload, ...state.newses ] }
+      }
+    case 'NEWS_EDIT_DECLINE':
+      return { ...state, newsEditOpen: false, processedNews: undefined };
+    case 'NEWS_DELETE_INIT':
+      return { ...state, newsDeleteOpen: true, processedNews: payload };
+    case 'NEWS_DELETE_ACCEPT':
+      return { ...state, newsDeleteOpen: false, processedNews: undefined,  newses: state.newses.filter(news => news.id !== state.processedNews.id) };
+    case 'NEWS_DELETE_DECLINE':
+      return { ...state, newsDeleteOpen: false, processedNews: undefined };
+    case 'NEWS_SEARCH_INIT':
+      return { ...state, newsSearchOpen: true, displayedNewses: state.newses };
+    case 'NEWS_SEARCH_CHANGE':
+      return { ...state, searchText: payload, displayedNewses: filterNewses(state.newses, payload) };
+    case 'NEWS_SEARCH_END':
+      return { ...state, searchText: "", newsSearchOpen: false };
+  }
+}
+
 function Dashboard() {
-  const [ newses, setNewses ] = useState([]);
-  const [ sags, setSags ] = useState([]);
-  const [ profileInfo, setProfileInfo ] = useState(undefined);
-  const [ newsEditOpen, setNewsEditOpen ] = useState(false);
-  const [ newsToUpdate, setNewsToUpdate ] = useState(undefined);
-  const [ defaultFag, setDefaultFag ] = useState(undefined);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { t } = useTranslation();
+
+  const { initialized, profileInfo, newses, sags, processedNews, newsEditOpen, newsDeleteOpen, newsSearchOpen, searchText, displayedNewses } = state;
 
   useEffect(() => {
     authService.profileInfo()
       .then(info => {
-        setProfileInfo(info);
-        setDefaultFag(info.defaultFag);
+        dispatch({ type: 'SET_PROFILE_INFO', payload: info });
         const { id } = info.defaultFag;
         return Promise.all([
           newsService.getNews(id),
@@ -51,60 +119,97 @@ function Dashboard() {
         ]);
       })
       .then(([newses, sags]) => {
-        setNewses(newses);
-        setSags(sags);
+        dispatch({ type: 'SET_DATA', payload: { newses, sags }});
       });
 
   }, []);
 
   useEffect(() => {
-    if(defaultFag) {
-      newsService.getSags(defaultFag.id).then(sags => setSags(sags));
-      newsService.getNews(defaultFag.id).then(newses => setNewses(newses));
+    if(initialized) {
+      const { defaultFag: { id } } = profileInfo;
+      Promise.all([
+        newsService.getNews(id),
+        newsService.getSags(id)
+      ]).then(([newses, sags]) => {
+        dispatch({ type: 'SET_DATA', payload: { newses, sags }});
+      });
     }
-  }, [defaultFag]);
+  }, [profileInfo]);
 
-  const handleAdd = news => newsService.addNews(news).then(addedNews => {
-    newses.unshift(addedNews);
-    setNewses(newses);
-    setNewsEditOpen(false);
+  const handleAdd = news => newsService.addNews(news).then(addedNews => dispatch({ type: 'NEWS_EDIT_ACCEPT', payload: addedNews }));
+
+  const handleUpdate = news =>
+    newsService.updateNews({id: processedNews.id, ...news}).then(updatedNews => dispatch({ type: 'NEWS_EDIT_ACCEPT', payload: updatedNews }));
+
+  const handleDelete = () => newsService.deleteNews(processedNews.id).then(() => dispatch({ type: 'NEWS_DELETE_ACCEPT'}));
+
+  const mapNewses = newses => newses.map(news => {
+    const { type } = profileInfo.defaultFag;
+    const canEdit = type === USER_TYPES.REPRESENTATIVE || type === USER_TYPES.MODERATOR || news.isOwner;
+    return <News
+      key={news.id}
+      sags={sags}
+      news={news}
+      canEdit={canEdit}
+      onEdit={() => dispatch({type: 'NEWS_EDIT_INIT', payload: news })}
+      onDelete={() => dispatch({type: 'NEWS_DELETE_INIT', payload: news})}
+    />;
   });
-
-  const handleUpdateInit = news => {
-    setNewsToUpdate(news);
-    setNewsEditOpen(true);
-  };
-
-  const handleUpdateConfirm = news => newsService.updateNews({id: newsToUpdate.id, ...news}).then(updatedNews => {
-    setNewses(newses.map(news => news.id === updatedNews.id ? updatedNews : news));
-    setNewsEditOpen(false);
-  });
-
-  const handleDelete = id => newsService.deleteNews(id).then(() => setNewses(newses.filter(ann => ann.id !== id)));
 
   return (
     <>
-      <TopBar title="Główna" onFagChange={fag => setDefaultFag(fag)}/>
+      <TopBar title={t("DASHBOARD")} onFagChange={fag => dispatch({ type: 'CHANGE_DEFAULT_FAG', payload: fag })}/>
       <DashboardContainer>
-        <Link component={RouterLink} to="/events" className="calendar-link">Kalendarz zaliczeń</Link>
-        <div className="announcement-header">
-          <Typography variant="h6" >Ogłoszenia</Typography>
-          <Icon name="add" size="big" onClick={() => setNewsEditOpen(true)}/>
-        </div>
-        { profileInfo && newses && newses.map(news => {
-          const { type } = profileInfo.defaultFag;
-          const canEdit = type === USER_TYPES.REPRESENTATIVE || type === USER_TYPES.MODERATOR || news.isOwner;
-          return <News key={news.id} sags={sags} news={news} canEdit={canEdit} onEdit={handleUpdateInit} onDelete={handleDelete}/>;
-        })}
+        <Link component={RouterLink} to="/events" className="calendar-link">{t("ASSIGNMENTS_CALENDAR")}</Link>
+        {
+          newsSearchOpen ? (
+            <>
+              <div className="announcement-header">
+                <Input
+                  className="news-search"
+                  value={searchText}
+                  onChange={e => dispatch({ type: "NEWS_SEARCH_CHANGE", payload: e.target.value })}
+                  placeholder="Słowo klucz, imię lub nazwisko"
+                  startAdornment={
+                    <Icon name="search"/>
+                  }
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton onClick={() => dispatch({ type: "NEWS_SEARCH_END"})}>
+                        <Icon name="decline"/>
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
+              </div>
+              { profileInfo && newses && mapNewses(displayedNewses)}
+            </>
+          ) : (
+            <>
+              <div className="announcement-header">
+                <Typography variant="h6" >{t("ANNOUNCEMENTS")}</Typography>
+                <div>
+                  <Icon name="search" size="big" onClick={() => dispatch({ type: 'NEWS_SEARCH_INIT'})}/>
+                  <Icon name="add" size="big" onClick={() => dispatch({ type: 'NEWS_ADD_INIT'})}/>
+                </div>
+              </div>
+              { profileInfo && newses && mapNewses(newses)}
+            </>
+          )
+        }
       </DashboardContainer>
       <BottomBar/>
-      <Backdrop open={newsEditOpen} style={{zIndex: 1100}} onClick={() => setNewsEditOpen(false)}>
+      <Backdrop open={newsEditOpen} style={{zIndex: 1100}} onClick={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}>
         { newsEditOpen && (
-          newsToUpdate ?
-          <NewsEdit onClose={() => setNewsEditOpen(false)} onAdd={handleUpdateConfirm} sags={sags} news={newsToUpdate}/> :
-          <NewsEdit onClose={() => setNewsEditOpen(false)} onAdd={handleAdd} sags={sags}/>
+          <NewsEdit
+            onAccept={processedNews ? handleUpdate : handleAdd}
+            onDecline={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}
+            sags={sags}
+            news={processedNews}
+          />
         )}
       </Backdrop>
+      <ConfirmationDialog open={newsDeleteOpen} onAccept={handleDelete} onDecline={() => dispatch({ type: 'NEWS_DELETE_DECLINE' })}/>
     </>
   );
 }

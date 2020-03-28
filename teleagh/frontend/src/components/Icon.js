@@ -17,6 +17,8 @@ import decline from '../assets/decline.png';
 import add from '../assets/add.png';
 import loader from '../assets/loader.gif';
 import attachment from '../assets/attachment.png';
+import search from '../assets/search.png';
+import back from '../assets/back.png';
 
 const icons = {
   eyeClosed: eye_closed,
@@ -36,7 +38,9 @@ const icons = {
   decline,
   add,
   loader,
-  attachment
+  attachment,
+  search,
+  back
 };
 
 const sizes = {

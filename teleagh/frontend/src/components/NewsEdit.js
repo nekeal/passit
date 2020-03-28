@@ -55,7 +55,7 @@ const NewsEditContainer = styled(Paper)`
   
 `;
 
-function NewsEdit({ news, sags, onAdd, onClose }) {
+function NewsEdit({ news, sags, onAccept, onDecline }) {
   const { register, handleSubmit, errors, setValue, setError, getValues, control } = useForm();
   const [ sagSelected, setSagSelected ] = useState(null);
   const [ loading, setLoading ] = useState(false);
@@ -63,7 +63,7 @@ function NewsEdit({ news, sags, onAdd, onClose }) {
 
   const onSubmit = data => {
     setLoading(true);
-    onAdd(data).catch(error => {
+    onAccept(data).catch(error => {
       if(error.title) { setError('title', 'serverError', error.title.join(" ")); }
       if(error.content) { setError('content', 'serverError', error.content.join(" ")); }
       if(error.sag) { setError('sag', 'serverError', error.sag.join(" ")); }
@@ -102,7 +102,7 @@ function NewsEdit({ news, sags, onAdd, onClose }) {
     <NewsEditContainer onClick={e => e.stopPropagation()}>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="header">
-          <IconButton onClick={onClose}><Icon name="decline"/></IconButton>
+          <IconButton onClick={onDecline}><Icon name="decline"/></IconButton>
           <Typography variant="h6" >{ news ? "Edytuj ogłoszenie" : "Dodaj ogłoszenie" }</Typography>
           {
             loading ?

@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "HOME": "Home",
+    "SUBJECTS": "Subjects",
+    "LECTURERS": "Lecturers",
+    "MEMES": "Memes",
+    "DASHBOARD": "Dashboard",
+    "ASSIGNMENTS_CALENDAR": "Assignments calendar",
+    "ANNOUNCEMENTS": "Announcements",
+    "ADD_ANNOUNCEMENT": "Add announcement",
+    "ADD_ATTACHMENT": "Add attachment",
+    "ANNOUNCEMENT_TITLE": "Announcement title",
+    "ANNOUNCEMENT_CONTENT": "Announcement content",
+    "SUBJECT": "Subject"
+  }
+}

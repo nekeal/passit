@@ -2,14 +2,23 @@ import React, {useState} from 'react';
 import { AppBar, Toolbar, Typography, Backdrop } from "@material-ui/core";
 import Icon from "./Icon";
 import Settings from "./Settings";
+import {useHistory} from "react-router";
 
-function TopBar({ title, onFagChange }) {
+function TopBar({ title, onFagChange, allowBack }) {
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const history = useHistory();
 
   return (
     <AppBar position="sticky" color='default'>
       <Toolbar style={{ justifyContent: "space-between" }}>
-        <Typography variant="h5">{ title }</Typography>
+        <div style={{ display: "flex" }}>
+          { allowBack &&
+            <div onClick={() => history.goBack()} style={{ marginRight: "1rem" }}>
+              <Icon name='back' size='big'/>
+            </div>
+          }
+          <Typography variant="h5">{ title }</Typography>
+        </div>
         <div onClick={() => setSettingsOpen(!settingsOpen)}>
           <Icon name='settings' size='big'/>
         </div>

@@ -68,7 +68,7 @@ function Events() {
 
   return (
     <>
-      <TopBar title="Kalendarz zaliczeń"/>
+      <TopBar title="Kalendarz zaliczeń" allowBack/>
       <EventsContainer>
         {
           eventsByMonths && eventsByMonths.map(monthEvents =>

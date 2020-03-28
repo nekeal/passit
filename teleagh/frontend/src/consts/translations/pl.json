@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "HOME": "Główna",
+    "SUBJECTS": "Przedmioty",
+    "LECTURERS": "Prowadzący",
+    "MEMES": "Memy",
+    "DASHBOARD": "Główna",
+    "ASSIGNMENTS_CALENDAR": "Kalendarz zaliczeń",
+    "ANNOUNCEMENTS": "Ogłoszenia",
+    "ADD_ANNOUNCEMENT": "Dodaj ogłoszenie",
+    "ADD_ATTACHMENT": "Dodaj załącznik",
+    "ANNOUNCEMENT_TITLE": "Tytuł ogłoszenia",
+    "ANNOUNCEMENT_CONTENT": "Treść ogłoszenia",
+    "SUBJECT": "Przedmiot"
+  }
+}

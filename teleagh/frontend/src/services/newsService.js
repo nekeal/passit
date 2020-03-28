@@ -1,7 +1,5 @@
 import axios from "axios";
 import { API_ROUTES } from "../consts/routes";
-import authService from "./authService";
-import qs from 'querystring';
 
 function formatDate(date) {
   return `${("0" + (date.getDate())).slice(-2)}.${("0" + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}, ${date.getHours()}:${("0" + date.getMinutes()).slice(-2)}`;
@@ -11,8 +9,8 @@ function newsResponseTransformer(news) {
   const { id, title, content, created_at, created_by: author, subject_group: sag, is_owner: isOwner, attachment } = news;
   const transformedNews = { id, title, content, date: formatDate(new Date(created_at)), author, sag, isOwner };
   if(attachment) {
-    const attachmentFilename = attachment && /[^\/]+$/.exec(attachment)[0];
-    transformedNews.attachment = { link: attachment, filename: attachmentFilename};
+    const filename = /[^\/]+$/.exec(attachment)[0];
+    transformedNews.attachment = { link: attachment, filename };
   }
   return transformedNews;
 }
