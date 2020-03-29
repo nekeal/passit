@@ -4,11 +4,9 @@ services:
   web:
     restart: always
     image: nekeal/passit
-#    links:
-#      - postgres:postgres
     volumes:
-#      - ..:/app
       - web-static:/app/public
+      - web-medial:/app/media
     environment:
       DJANGO_SETTINGS_MODULE: teleagh.settings.production
     env_file:
@@ -19,6 +17,7 @@ services:
     restart: unless-stopped
     volumes:
       - web-static:/www/static
+      - web-media:/www/media
       - ./deployment/configs/certbot/conf:/etc/letsencrypt
       - ./deployment/configs/certbot/www:/var/www/certbot
       - ./deployment/configs/nginx:/etc/nginx/conf.d
@@ -38,3 +37,4 @@ services:
 
 volumes:
   web-static:
+  web-media:
