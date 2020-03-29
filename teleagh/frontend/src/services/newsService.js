@@ -39,8 +39,8 @@ function addNews(news) {
 
   formData.set("title", title);
   formData.set("content", content);
-  formData.set("subject_group", sag);
-  formData.set("attachment", attachment);
+  sag && formData.set("subject_group", sag);
+  attachment && formData.set("attachment", attachment);
 
   const config = { headers: { 'Content-Type': 'multipart/form-data' } };
 

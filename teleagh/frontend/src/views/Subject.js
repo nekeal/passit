@@ -81,7 +81,7 @@ function Subject() {
 
   return (
     <>
-      <TopBar/>
+      <TopBar title={subject && subject.name} allowBack />
       <SubjectContainer>
         <Tabs value={tabIndex} onChange={(e, newValue) => setTabIndex(newValue)} centered className="tabs">
           <Tab label="Opis"/>

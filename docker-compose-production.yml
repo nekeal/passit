@@ -6,7 +6,7 @@ services:
     image: nekeal/passit
     volumes:
       - web-static:/app/public
-      - web-medial:/app/media
+      - web-media:/app/media
     environment:
       DJANGO_SETTINGS_MODULE: teleagh.settings.production
     env_file:
