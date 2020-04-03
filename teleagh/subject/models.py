@@ -44,6 +44,8 @@ class Subject(models.Model):
     name = models.CharField(max_length=100)
     semester = models.IntegerField()
     general_description = models.TextField()
+    module_code = models.CharField(max_length=50, unique=True)
+    category = models.CharField(max_length=100)
     field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='subjects')
 
     objects = SubjectManager.from_queryset(SubjectQuerySet)()
