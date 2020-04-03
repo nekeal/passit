@@ -5,13 +5,14 @@ from .base import *
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS.append('silk')
+# INSTALLED_APPS.append('django_extensions')
 MIDDLEWARE.insert(0, 'silk.middleware.SilkyMiddleware')
 SILKY_PYTHON_PROFILER = True
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_DB', 'teleagh'),
+        'NAME': os.environ.get('POSTGRES_DB', 'teleagh2'),
         'USER': os.environ.get('POSTGRES_USER', 'teleagh'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'teleagh'),
         'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),

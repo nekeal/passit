@@ -43,12 +43,14 @@ INSTALLED_APPS = [
     'drf_yasg',
     'django_filters',
     'webpack_loader',
+    'django_extensions',
     # my apps
     'teleagh.accounts',
     'teleagh.lecturers',
     'teleagh.subject',
     'teleagh.news',
-    'teleagh.events'
+    'teleagh.events',
+    'teleagh.syllabus',
 ]
 
 MIDDLEWARE = [
