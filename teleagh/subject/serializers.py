@@ -69,6 +69,19 @@ class SubjectBaseSerializer(FlexFieldsModelSerializer):
         }
 
 
+class SubjectSyllabusImportSerializer(serializers.ModelSerializer):
+    module_code = serializers.CharField(max_length=50)
+
+    class Meta:
+        model = Subject
+        fields = ('name', 'semester', 'general_description', 'module_code', 'category', 'field_of_study')
+
+    def create(self, validated_data):
+        subject, created = Subject.objects.get_or_create(module_code=validated_data.pop('module_code'),
+                                                         defaults=validated_data)
+        return subject
+
+
 class SubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):
 
     class Meta:
