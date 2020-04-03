@@ -2,13 +2,12 @@
 
 from django.db import migrations, models
 from django.utils.crypto import get_random_string
-from tqdm import tqdm
 
 
 def set_random_module_code(apps, schema_editor):
     '''Set random module code on subjects'''
     subjects = apps.get_model("subject", "Subject").objects.filter(module_code__isnull=True)
-    for subject in tqdm(subjects):
+    for subject in subjects:
         subject.module_code = get_random_string()
         subject.save()
 
