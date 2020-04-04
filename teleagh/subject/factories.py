@@ -28,6 +28,7 @@ class SubjectFactory(factory.DjangoModelFactory):
     name = factory.sequence(lambda n: f'subject{n}')
     semester = factory.LazyAttribute(lambda n: randint(1, 6))
     general_description = 'description'
+    module_code = factory.sequence(lambda n: f'module{n}')
     field_of_study = factory.SubFactory(FieldOfStudyFactory)
 
     class Meta:
