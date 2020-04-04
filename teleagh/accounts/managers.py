@@ -13,7 +13,7 @@ class CustomUserManager(UserManager.from_queryset(CustomUserQuerySet)):  # type:
     def get_queryset(self):
         return super().get_queryset().select_related('profile')
 
-    def create_student(self, username: str, field_age_group: 'FieldOfStudyOfAgeGroup', type: int,
+    def create_student(self, username: str, field_age_group: 'FieldOfStudyOfAgeGroup', type: int, first_name, last_name,
                        email: Optional[str] = None, password: Optional[str] = None):
         from .models import UserProfile, Membership
         user = super(CustomUserManager, self).create_user(username, email, password)
