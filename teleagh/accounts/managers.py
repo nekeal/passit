@@ -6,7 +6,8 @@ from django.db.models import Manager, QuerySet
 from .querysets import UserProfileQuerySet, CustomUserQuerySet, MembershipQuerySet
 
 if TYPE_CHECKING:
-    from .models import UserProfile, Membership, FieldOfStudyOfAgeGroup
+    from .models import UserProfile, Membership
+    from ..subject.models import FieldOfStudyOfAgeGroup
 
 
 class CustomUserManager(UserManager.from_queryset(CustomUserQuerySet)):  # type: ignore
