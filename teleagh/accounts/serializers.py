@@ -60,4 +60,3 @@ class StudentsImportSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         return CustomUser.objects.create_student(**validated_data)
-
