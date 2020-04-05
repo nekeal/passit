@@ -2,6 +2,7 @@ from typing import Dict, Tuple, Any
 
 from rest_flex_fields import FlexFieldsModelSerializer
 from rest_framework import serializers
+from rest_framework.exceptions import ValidationError
 
 from .models import CustomUser, Membership, UserProfile
 from ..subject.serializers import FieldOfStudyOfAgeGroupSerializer, FieldAgeGroupRelatedField
@@ -41,3 +42,21 @@ class DefaultFieldOfAgeGroupSerializer(serializers.Serializer):
     def update(self, instance: 'UserProfile', validated_data):
         new_default = instance.set_default_field_age_group(validated_data['field_age_group'])
         return new_default
+
+
+class StudentsImportSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=150)
+    password = serializers.CharField()
+    first_name = serializers.CharField(max_length=100)
+    last_name = serializers.CharField(max_length=100)
+
+    class Meta:
+        model = CustomUser
+
+    def validate_username(self, value):
+        if CustomUser.objects.filter(username=value).exists():
+            raise ValidationError("User with this username already exists")
+        return value
+
+    def create(self, validated_data):
+        return CustomUser.objects.create_student(**validated_data)
