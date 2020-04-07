@@ -18,6 +18,22 @@ services:
     command: bash -c "python manage.py migrate && python manage.py runserver 0:8000"
     depends_on:
       - postgres
+      - redis
+
+  celery:
+    restart: always
+    build: .
+    links:
+      - postgres:postgres
+      - redis:redis
+    environment:
+      POSTGRES_HOST: postgres
+    env_file:
+      - .local-env
+    command: bash -c "celery worker -A teleagh -B"
+    depends_on:
+      - postgres
+      - redis
 
   postgres:
     restart: always

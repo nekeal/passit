@@ -17,3 +17,5 @@ django-silk==4.0.1
 django-extensions==2.2.9
 requests==2.23.0
 django-redis==4.11.0
+celery==4.4.2
+django-celery-results== 1.2.1

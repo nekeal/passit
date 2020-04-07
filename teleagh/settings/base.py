@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_filters',
     'webpack_loader',
     'django_extensions',
+    'django_celery_results',
     # my apps
     'teleagh.accounts',
     'teleagh.lecturers',
@@ -185,3 +186,8 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=14),
 }
+
+# CELERY
+
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", 'redis://localhost:6379/2')
+CELERY_RESULT_BACKEND = 'django-db'

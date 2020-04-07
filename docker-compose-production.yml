@@ -16,6 +16,22 @@ services:
     command: bash -c "python manage.py migrate
              && python manage.py collectstatic --noinput
              && gunicorn -b 0:8000 teleagh.wsgi"
+    depends_on:
+      - redis
+
+  celery:
+    restart: always
+    image: nekeal/passit
+    volumes:
+      - web-static:/app/public
+      - web-media:/app/media
+    links:
+      - redis:redis
+    environment:
+      DJANGO_SETTINGS_MODULE: teleagh.settings.production
+    env_file:
+      - .env
+    command: bash -c "celery worker -A teleagh -B"
 
   redis:
     image: 'redis:5.0.8-alpine'
