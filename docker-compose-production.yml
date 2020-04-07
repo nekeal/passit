@@ -11,7 +11,9 @@ services:
       DJANGO_SETTINGS_MODULE: teleagh.settings.production
     env_file:
       - .env
-    command: bash -c "python manage.py migrate && gunicorn -b 0:8000 teleagh.wsgi"
+    command: bash -c "python manage.py migrate
+             && python manage.py collectstatic --noinput
+             && gunicorn -b 0:8000 teleagh.wsgi"
   nginx:
     image: nginx:1.17.3
     restart: unless-stopped
