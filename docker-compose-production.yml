@@ -7,6 +7,8 @@ services:
     volumes:
       - web-static:/app/public
       - web-media:/app/media
+    links:
+      - redis:redis
     environment:
       DJANGO_SETTINGS_MODULE: teleagh.settings.production
     env_file:
@@ -14,6 +16,14 @@ services:
     command: bash -c "python manage.py migrate
              && python manage.py collectstatic --noinput
              && gunicorn -b 0:8000 teleagh.wsgi"
+
+  redis:
+    image: 'redis:5.0.8-alpine'
+    ports:
+      - '6379:6379'
+    volumes:
+      - redisdata:/data
+
   nginx:
     image: nginx:1.17.3
     restart: unless-stopped
@@ -40,3 +50,4 @@ services:
 volumes:
   web-static:
   web-media:
+  redisdata:
