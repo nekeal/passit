@@ -6,11 +6,12 @@ from rest_framework.permissions import IsAuthenticated
 from .filters import NewsFilterSet
 from .models import News
 from .serializers import NewsSerializer
+from ..common.permissions import IsPrivilegedOrOwnerOrReadOnly
 
 
 class NewsViewSet(viewsets.ModelViewSet):
     serializer_class = NewsSerializer
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated, IsPrivilegedOrOwnerOrReadOnly)
     filter_backends = (DjangoFilterBackend, )
     filterset_class = NewsFilterSet
 
