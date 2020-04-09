@@ -1,6 +1,7 @@
 {
   "translation": {
     "HOME": "Główna",
+    "SUBJECT": "Przedmiot",
     "SUBJECTS": "Przedmioty",
     "LECTURERS": "Prowadzący",
     "MEMES": "Memy",
@@ -8,9 +9,17 @@
     "ASSIGNMENTS_CALENDAR": "Kalendarz zaliczeń",
     "ANNOUNCEMENTS": "Ogłoszenia",
     "ADD_ANNOUNCEMENT": "Dodaj ogłoszenie",
+    "EDIT_ANNOUNCEMENT": "Edytuj ogłoszenie",
     "ADD_ATTACHMENT": "Dodaj załącznik",
     "ANNOUNCEMENT_TITLE": "Tytuł ogłoszenia",
     "ANNOUNCEMENT_CONTENT": "Treść ogłoszenia",
-    "SUBJECT": "Przedmiot"
+    "COONECTION_PROBLEM": "Ups, wystąpił problem z łącznością :(",
+    "TAP_TO_TRY_AGAIN": "Stuknij w ekran, aby spróbować ponownie.",
+    "CONFIRM_ANNOUNCEMENT_DELETION": "Czy na pewno chcesz usunąć ogłoszenie?",
+    "REQUIRED_FIELD": "Pole jest wymagane",
+    "PASSWORD_CHANGE": "Zmień hasło",
+    "ACCESSIBILITY": "Ułatwienia dostępu",
+    "FIELD_OF_STUDY_SELECTION": "Wybór kierunku studiów",
+    "LOGOUT": "Wyloguj się"
   }
 }

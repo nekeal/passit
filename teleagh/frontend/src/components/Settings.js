@@ -81,7 +81,7 @@ function Settings({ onFagChange }) {
   const [profileInfo, setProfileInfo] = useState(undefined);
   const [activeFag, setActiveFag] = useState(1);
   const history = useHistory();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     authService.profileInfo().then(profileInfo => {
@@ -98,13 +98,13 @@ function Settings({ onFagChange }) {
           </div>
           <div className="profile-info">
             <Typography variant="h5">{profileInfo && profileInfo.fullName}</Typography>
-            <Link component={RouterLink} to={`/password-change`}>Zmień hasło</Link>
+            <Link component={RouterLink} to={`/password-change`}>{t("PASSWORD_CHANGE")}</Link>
           </div>
         </div>
         <div className="panel-container">
           <ExpansionPanel square className="panel">
             <ExpansionPanelSummary>
-              <Typography variant="h6">Ułatwienia dostępu</Typography>
+              <Typography variant="h6">{t("ACCESSIBILITY")}</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails className="panel-details">
               <div className="contrast-switch">
@@ -119,7 +119,7 @@ function Settings({ onFagChange }) {
           </ExpansionPanel>
           <ExpansionPanel square className="panel">
             <ExpansionPanelSummary>
-              <Typography variant="h6">Wybór kierunku studiów</Typography>
+              <Typography variant="h6">{t("FIELD_OF_STUDY_SELECTION")}</Typography>
             </ExpansionPanelSummary>
               {
                 profileInfo &&
@@ -143,7 +143,7 @@ function Settings({ onFagChange }) {
         <Button color="secondary" className="logout-button" onClick={() => {
           localStorageService.removeTokens();
           history.push(APP_ROUTES.LOGIN);
-        }}>Wyloguj się</Button>
+        }}>{t("LOGOUT")}</Button>
       </SettingsContainer>
   );
 }

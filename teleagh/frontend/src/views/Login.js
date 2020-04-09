@@ -33,6 +33,7 @@ const LoginContainer = styled(Container)`
   
   .form {
     width: 90%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,5 +1,5 @@
 import React, {useEffect, useReducer} from 'react';
-import {Container, Typography, Link, Backdrop, Input, IconButton, InputAdornment} from '@material-ui/core';
+import {Container, Typography, Link, Backdrop, Input, IconButton, InputAdornment, useMediaQuery} from '@material-ui/core';
 import styled from "styled-components";
 import {BottomBar, TopBar, News, Icon, NewsEdit, ConfirmationDialog, Loader} from "../components";
 import {authService, newsService} from "../services";
@@ -105,6 +105,7 @@ function reducer(state, action) {
 function Dashboard() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { t } = useTranslation();
+  const desktopView = useMediaQuery("(min-width:800px)");
 
   const { initialized, profileInfo, newses, sags, processedNews, newsEditOpen, newsDeleteOpen, newsSearchOpen, searchText, displayedNewses } = state;
 
@@ -159,7 +160,7 @@ function Dashboard() {
   return (
     initialized ? (
       <>
-        <TopBar title={t("DASHBOARD")} onFagChange={fag => dispatch({ type: 'CHANGE_DEFAULT_FAG', payload: fag })}/>
+        <TopBar desktopView={desktopView} title={t("DASHBOARD")} onFagChange={fag => dispatch({ type: 'CHANGE_DEFAULT_FAG', payload: fag })}/>
         <DashboardContainer>
           <Link component={RouterLink} to="/events" className="calendar-link">{t("ASSIGNMENTS_CALENDAR")}</Link>
           {
@@ -199,7 +200,9 @@ function Dashboard() {
             )
           }
         </DashboardContainer>
-        <BottomBar/>
+        {
+          !desktopView && <BottomBar/>
+        }
         <Backdrop open={newsEditOpen} style={{zIndex: 1100}} onClick={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}>
           { newsEditOpen && (
             <NewsEdit

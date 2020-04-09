@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Controller, useForm } from "react-hook-form";
 import {newsService} from "../services";
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import {useTranslation} from "react-i18next";
 
 const NewsEditContainer = styled(Paper)`
   width: 90%;
@@ -60,6 +61,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
   const [ sagSelected, setSagSelected ] = useState(null);
   const [ loading, setLoading ] = useState(false);
   const [ filename, setFilename ] = useState(undefined);
+  const { t } = useTranslation();
 
   const onSubmit = data => {
     setLoading(true);
@@ -103,7 +105,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="header">
           <IconButton onClick={onDecline}><Icon name="decline"/></IconButton>
-          <Typography variant="h6" >{ news ? "Edytuj ogłoszenie" : "Dodaj ogłoszenie" }</Typography>
+          <Typography variant="h6" >{ news ? t("EDIT_ANNOUNCEMENT") : t("ADD_ANNOUNCEMENT") }</Typography>
           {
             loading ?
               <IconButton disabled><Icon name="loader"/></IconButton> :
@@ -118,7 +120,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
             </div>
             :
             <Button component="label" startIcon={<Icon name="attachment" size="big"/>}>
-              Dodaj załącznik
+              {t("ADD_ATTACHMENT")}
               <input
                 type="file"
                 style={{ display: "none" }}
@@ -126,22 +128,22 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
               />
             </Button>
         }
-        <Controller name="title" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
+        <Controller name="title" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD") }} as={
           <TextField
             className="form-field"
             type="text"
             name="title"
-            label="Tytuł ogłoszenia"
+            label={t("ANNOUNCEMENT_TITLE")}
             error={!!errors.title}
             helperText={errors.title && errors.title.message}
           />
         } />
-        <Controller name="content" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
+        <Controller name="content" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD") }} as={
           <TextField
             className="form-field"
             type="text"
             name="content"
-            label="Treść ogłoszenia"
+            label={t("ANNOUNCEMENT_CONTENT")}
             multiline
             error={!!errors.content}
             helperText={errors.content && errors.content.message}
@@ -165,7 +167,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
             <TextField
               {...params}
               name="sag"
-              label="Przedmiot"
+              label={t("SUBJECT")}
             />
           }
         />
