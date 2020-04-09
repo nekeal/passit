@@ -2,6 +2,7 @@ import React from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button, IconButton } from "@material-ui/core";
 import styled from 'styled-components';
 import Icon from "./Icon";
+import {useTranslation} from "react-i18next";
 
 const DialogContainer = styled(Dialog)`
   .MuiDialog-paper {
@@ -21,9 +22,11 @@ const DialogContainer = styled(Dialog)`
 `;
 
 function ConfirmationDialog({ open, onAccept, onDecline }) {
+  const { t } = useTranslation();
+
   return (
     <DialogContainer open={open}>
-      <DialogTitle id="alert-dialog-title">Czy na pewno chcesz usunąć ogłoszenie?</DialogTitle>
+      <DialogTitle id="alert-dialog-title">{t("CONFIRM_ANNOUNCEMENT_DELETION")}</DialogTitle>
       <DialogActions>
         <IconButton onClick={onDecline}>
           <Icon name="decline"/>

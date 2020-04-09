@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import { Container, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
+import {useTranslation} from "react-i18next";
 
 const ConnectionProblemContainer = styled(Container)`
   display: flex;
@@ -31,11 +32,12 @@ const ConnectionProblemContainer = styled(Container)`
 
 function ConnectionProblem() {
   const history = useHistory();
+  const { t } = useTranslation();
 
   return (
     <ConnectionProblemContainer onClick={() => history.goBack()}>
       <img className="logo" src={logo} alt="PassIt logo"/>
-      <Typography className="subheader" component="h5">Ups, wystąpił problem z łącznością :( <br/> Stuknij w ekran, aby spróbować ponownie.</Typography>
+      <Typography className="subheader" component="h5">{t("COONECTION_PROBLEM")}<br/>{t("TAP_TO_TRY_AGAIN")}</Typography>
     </ConnectionProblemContainer>
   )
 }

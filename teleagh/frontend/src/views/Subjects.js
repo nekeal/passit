@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useReducer} from 'react';
 import { Container, Link, Select, MenuItem, FormControl } from '@material-ui/core';
 import styled from "styled-components";
 import {BottomBar, SubjectTile, TopBar} from "../components";
@@ -17,28 +17,46 @@ const SubjectsContainer = styled(Container)`
   }
 `;
 
+const initialState = {
+  defaultFag: undefined,
+  semester: localStorageService.getSemester() || 1,
+  subjects: []
+};
+
+function reducer(state, action) {
+  const { type, payload } = action;
+  switch (type) {
+    case 'SET_DEFAULT_FAG':
+      return { ...state, defaultFag: payload };
+    case 'SET_SEMESTER':
+      return { ...state, semester: payload };
+    case 'SET_SUBJECTS':
+      return { ...state, subjects: payload };
+  }
+}
+
 function Subjects() {
-  const [ subjects, setSubjects ] = useState([]);
-  const [ semester, setSemester ] = useState(localStorageService.getSemester() || 1);
-  const [ defaultFag, setDefaultFag ] = useState(undefined);
+  const [ state, dispatch ] = useReducer(reducer, initialState);
+
+  const { subjects, semester, defaultFag } = state;
 
   useEffect(() => {
-    authService.profileInfo().then(({ defaultFag }) => setDefaultFag(defaultFag));
+    authService.profileInfo().then(({ defaultFag }) => dispatch({ type: 'SET_DEFAULT_FAG', payload: defaultFag }));
   }, []);
 
   useEffect(() => {
     if(defaultFag) {
-      subjectsService.getSubjects(semester, defaultFag.fieldOfStudyId).then((subjects) => setSubjects(subjects));
+      subjectsService.getSubjects(semester, defaultFag.fieldOfStudyId).then((subjects) => dispatch({ type: 'SET_SUBJECTS', payload: subjects }));
       localStorageService.setSemester(semester);
     }
   }, [semester, defaultFag]);
 
   return (
     <>
-      <TopBar title="Przedmioty" onFagChange={fag => setDefaultFag(fag)}/>
+      <TopBar title="Przedmioty" onFagChange={fag => dispatch({ type: 'SET_DEFAULT_FAG', payload: fag })}/>
       <SubjectsContainer>
         <FormControl variant="outlined" className="semester-select">
-          <Select id="semester" value={semester} onChange={e => setSemester(e.target.value)}>
+          <Select id="semester" value={semester} onChange={e => dispatch({type: 'SET_SEMESTER', payload: e.target.value })}>
             {
               SEMESTERS.map(semester =>
                 <MenuItem value={semester} key={semester}>Semestr {semester}</MenuItem>

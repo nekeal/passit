@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { AppBar, Toolbar, Typography, Backdrop } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, Backdrop, IconButton } from "@material-ui/core";
 import Icon from "./Icon";
 import Settings from "./Settings";
 import {useHistory} from "react-router";
+import { APP_ROUTES } from "../consts/routes";
 
-function TopBar({ title, onFagChange, allowBack }) {
+function TopBar({ title, onFagChange, allowBack, desktopView }) {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const history = useHistory();
 
@@ -19,8 +20,20 @@ function TopBar({ title, onFagChange, allowBack }) {
           }
           <Typography variant="h5">{ title }</Typography>
         </div>
-        <div onClick={() => setSettingsOpen(!settingsOpen)}>
-          <Icon name='settings' size='big'/>
+        <div>
+          {
+            desktopView && (
+              <>
+                <IconButton href={APP_ROUTES.DASHBOARD}><Icon name="home" size="big"/></IconButton>
+                <IconButton href={APP_ROUTES.SUBJECTS}><Icon name="resources" size="big"/></IconButton>
+                <IconButton href={APP_ROUTES.LECTURERS}><Icon name="lecturer" size="big"/></IconButton>
+                <IconButton href={APP_ROUTES.MEMES}><Icon name="meme" size="big"/></IconButton>
+              </>
+            )
+          }
+          <IconButton href="#" onClick={() => setSettingsOpen(!settingsOpen)}>
+            <Icon name='settings' size='big'/>
+          </IconButton>
         </div>
       </Toolbar>
       <Backdrop open={settingsOpen} onClick={() => setSettingsOpen(false)}>

@@ -8,9 +8,18 @@
     "ASSIGNMENTS_CALENDAR": "Assignments calendar",
     "ANNOUNCEMENTS": "Announcements",
     "ADD_ANNOUNCEMENT": "Add announcement",
+    "EDIT_ANNOUNCEMENT": "Edit announcement",
     "ADD_ATTACHMENT": "Add attachment",
     "ANNOUNCEMENT_TITLE": "Announcement title",
     "ANNOUNCEMENT_CONTENT": "Announcement content",
-    "SUBJECT": "Subject"
+    "SUBJECT": "Subject",
+    "COONECTION_PROBLEM": "Oops, there is a connection problem",
+    "TAP_TO_TRY_AGAIN": "Tap the screen to try again.",
+    "CONFIRM_ANNOUNCEMENT_DELETION": "Are you sure want to delete announcement?",
+    "REQUIRED_FIELD": "Field is required",
+    "PASSWORD_CHANGE": "Change password",
+    "ACCESSIBILITY": "Accessibility",
+    "FIELD_OF_STUDY_SELECTION": "Field of study selection",
+    "LOGOUT": "Logout"
   }
 }
