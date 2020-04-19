@@ -14,6 +14,7 @@ const SettingsContainer = styled(Paper)`
   align-items: center;
   padding: 1rem;
   width: 90%;
+  max-width: 500px;
   
   .profile {
     display: flex;

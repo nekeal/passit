@@ -1,16 +1,18 @@
 import React, {useEffect, useReducer} from 'react';
-import { Container, Link, Select, MenuItem, FormControl } from '@material-ui/core';
+import {Container, Link, Select, MenuItem, FormControl, useMediaQuery} from '@material-ui/core';
 import styled from "styled-components";
 import {BottomBar, SubjectTile, TopBar} from "../components";
 import {subjectsService, localStorageService, authService, newsService} from "../services";
 import { Link as RouterLink } from 'react-router-dom';
 import { SEMESTERS } from "../consts/options";
+import {useTranslation} from "react-i18next";
 
 const SubjectsContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 5rem;
+  max-width: 600px !important;
   
   .semester-select {
     margin: 1rem 0;
@@ -37,6 +39,8 @@ function reducer(state, action) {
 
 function Subjects() {
   const [ state, dispatch ] = useReducer(reducer, initialState);
+  const { t } = useTranslation();
+  const desktopView = useMediaQuery("(min-width:800px)");
 
   const { subjects, semester, defaultFag } = state;
 
@@ -53,7 +57,7 @@ function Subjects() {
 
   return (
     <>
-      <TopBar title="Przedmioty" onFagChange={fag => dispatch({ type: 'SET_DEFAULT_FAG', payload: fag })}/>
+      <TopBar desktopView={desktopView} title={t("SUBJECTS")} onFagChange={fag => dispatch({ type: 'SET_DEFAULT_FAG', payload: fag })}/>
       <SubjectsContainer>
         <FormControl variant="outlined" className="semester-select">
           <Select id="semester" value={semester} onChange={e => dispatch({type: 'SET_SEMESTER', payload: e.target.value })}>
@@ -70,7 +74,9 @@ function Subjects() {
           </Link>
         )}
       </SubjectsContainer>
-      <BottomBar/>
+      {
+        !desktopView && <BottomBar/>
+      }
     </>
   );
 }

@@ -51,11 +51,11 @@ const sizes = {
   'huge': '4rem'
 };
 
-function Icon({ name, size, ...props }) {
+function Icon({ name, size, clickable, ...props }) {
   const iconSrc = icons[name];
   const iconSize = sizes[size || 'normal'];
   return (
-    <img src={iconSrc} alt="" style={{ height: iconSize }} {...props}/>
+    <img src={iconSrc} alt="" style={{ height: iconSize, cursor: clickable ? "pointer" : "initial" }} {...props}/>
   );
 }
 

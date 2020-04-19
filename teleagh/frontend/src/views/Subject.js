@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Container, Tabs, Tab, Typography, Paper } from '@material-ui/core';
+import {Container, Tabs, Tab, Typography, Paper, useMediaQuery} from '@material-ui/core';
 import styled from "styled-components";
 import {BottomBar, Icon, TopBar} from "../components";
 import { subjectsService } from "../services";
@@ -10,6 +10,33 @@ import { RESOURCE_TYPES } from "../consts/options";
 const SubjectContainer = styled(Container)`  
   .tabs {
     margin-top: 0.3rem;
+  }
+  
+  .desktop-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .desktop-general {
+    & > h5 {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .desktop-resources {
+    & > h5 {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .general-info {
+    ${styleHelpers.gradientBorder};
+    padding: 1rem;
+    
+    h5 {
+      margin: 0.3rem 0;
+    }
   }
 
   .resource-container {
@@ -39,15 +66,6 @@ const SubjectContainer = styled(Container)`
   }
 `;
 
-const GeneralInfo = styled(Paper)`
-  ${styleHelpers.gradientBorder};
-  padding: 1rem;
-  
-  h5 {
-    margin: 0.3rem 0;
-  }
-`;
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -64,8 +82,10 @@ function Subject() {
   const [ tabIndex, setTabIndex ] = useState(0);
   const [ resourcesTabIndex, setResourcesTabIndex ] = useState(0);
   const [ resources, setResources ] = useState({});
+  const desktopView = useMediaQuery("(min-width:800px)");
 
   useEffect(() => {
+    console.log(desktopView);
     subjectsService.getSubject(params.id).then((subject) => setSubject(subject));
   }, [params.id]);
 
@@ -79,52 +99,77 @@ function Subject() {
     }
   }, [params.id, tabIndex, resourcesTabIndex]);
 
+  const renderGeneral = () => <>
+    <Typography variant="h5">Ogólne</Typography>
+    <Paper className="general-info">
+      <Typography variant="h5">Prowadzący:</Typography>
+      <Typography variant="h6">obecnie</Typography>
+      <div className="lecturer">
+        <span className="name">dr hab. Andrzej Rusek</span>
+        <span className="function">wykładowca, prowadzący</span>
+      </div>
+    </Paper>
+    <Typography variant="h5">Opinie</Typography>
+  </>;
+
+  const renderResources = () => <>
+    <Tabs value={resourcesTabIndex} onChange={(e, newValue) => setResourcesTabIndex(newValue)} centered className="tabs">
+      <Tab label="Wykłady"/>
+      <Tab label="Egzaminy"/>
+      <Tab label="Kolokwia"/>
+      <Tab label="Inne"/>
+    </Tabs>
+    {
+      RESOURCE_TYPES.map((category, index) =>
+        <TabPanel value={resourcesTabIndex} key={index} index={index} className="resource-container">
+          { resources[category] && resources[category].length ? resources[category].map(resource =>
+            <a href={resource.url} key={resource.id} target="_blank" rel="noopener noreferrer">
+              <div className="resource">
+                <Icon name={resource.type}/>
+                <div>{ resource.name }</div>
+              </div>
+            </a>
+          ) : "Brak materiałów z tej kategorii"}
+        </TabPanel>
+      )
+    }
+  </>;
+
   return (
     <>
-      <TopBar title={subject && subject.name} allowBack />
+      <TopBar desktopView={desktopView} title={subject && subject.name} allowBack />
       <SubjectContainer>
-        <Tabs value={tabIndex} onChange={(e, newValue) => setTabIndex(newValue)} centered className="tabs">
-          <Tab label="Opis"/>
-          <Tab label="Materiały"/>
-        </Tabs>
-        <TabPanel value={tabIndex} index={0}>
-          <Typography variant="h5">Ogólne</Typography>
-          <GeneralInfo>
-            E - przedmiot objęty egzaminem
-            <Typography variant="h5">Prowadzący:</Typography>
-            <Typography variant="h6">obecnie</Typography>
-            <div className="lecturer">
-              <span className="name">dr hab. Andrzej Rusek</span>og
-              <span className="function">wykładowca, prowadzący</span>
+        {
+          desktopView ? (
+            <div className="desktop-container">
+              <div className="desktop-general">
+                <Typography variant="h5">Opis</Typography>
+                { renderGeneral() }
+              </div>
+              <div className="desktop-resources">
+                <Typography variant="h5">Materiały</Typography>
+                { renderResources() }
+              </div>
             </div>
-            <Typography variant="h6">2018/2019:</Typography>
-          </GeneralInfo>
-          <Typography variant="h5">Opinie</Typography>
-        </TabPanel>
-        <TabPanel value={tabIndex} index={1}>
-          <Tabs value={resourcesTabIndex} onChange={(e, newValue) => setResourcesTabIndex(newValue)} centered className="tabs">
-            <Tab label="Wykłady"/>
-            <Tab label="Egzaminy"/>
-            <Tab label="Kolokwia"/>
-            <Tab label="Inne"/>
-          </Tabs>
-          {
-            RESOURCE_TYPES.map((category, index) =>
-              <TabPanel value={resourcesTabIndex} key={index} index={index} className="resource-container">
-                { resources[category] && resources[category].length ? resources[category].map(resource =>
-                  <a href={resource.url} key={resource.id} target="_blank" rel="noopener noreferrer">
-                    <div className="resource">
-                      <Icon name={resource.type}/>
-                      <div>{ resource.name }</div>
-                    </div>
-                  </a>
-                ) : "Brak materiałów z tej kategorii"}
+          ) : (
+            <>
+              <Tabs value={tabIndex} onChange={(e, newValue) => setTabIndex(newValue)} centered className="tabs">
+                <Tab label="Opis"/>
+                <Tab label="Materiały"/>
+              </Tabs>
+              <TabPanel value={tabIndex} index={0}>
+                { renderGeneral() }
               </TabPanel>
-            )
-          }
-        </TabPanel>
+              <TabPanel value={tabIndex} index={1}>
+                { renderResources() }
+              </TabPanel>
+            </>
+          )
+        }
       </SubjectContainer>
-      <BottomBar/>
+      {
+        !desktopView && <BottomBar/>
+      }
     </>
   );
 }

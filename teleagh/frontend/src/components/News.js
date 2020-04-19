@@ -7,6 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import ReactMarkdown from "react-markdown";
 
 const AnnouncementContainer = styled(Paper)`
   ${styleHelpers.gradientBorder};
@@ -23,16 +24,16 @@ const AnnouncementContainer = styled(Paper)`
     padding: 0;
   }
   
-  .content {
-    cursor: pointer;
-    margin-top: 1rem;
-    
-    ${props => !props.expanded && `
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    `}
-  } 
+  // .content {
+  //   cursor: pointer;
+  //   margin-top: 1rem;
+  //  
+  //   ${props => !props.expanded && `
+  //     white-space: nowrap;
+  //     overflow: hidden;
+  //     text-overflow: ellipsis;
+  //   `}
+  // } 
   
   .attachment {
     margin-top: 1rem;
@@ -102,7 +103,7 @@ function News({ news, canEdit, onEdit, onDelete }) {
         </div>
       </div>
       <div className="content" onClick={() => setExpanded(!expanded)}>
-        { content }
+        <ReactMarkdown source={content}/>
       </div>
       {
         attachment &&

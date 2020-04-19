@@ -3,10 +3,17 @@ import styled from "styled-components";
 
 const LoaderContainer  = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
   
-  div {
+  .skele-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;  
+    flex-grow: 1;
+  }
+  
+  .skele {
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -57,14 +64,37 @@ const LoaderContainer  = styled.div`
   
 `;
 
-function Loader() {
+function Loader({ desktopView }) {
   return (
     <LoaderContainer>
-      <div className="skele-title"/>
-      <div className="skele-header"/>
-      <div className="skele-content"/>
-      <div className="skele-header"/>
-      <div className="skele-content"/>
+      {
+        !desktopView ? (
+          <div className="skele-column">
+            <div className="skele skele-title"/>
+            <div className="skele skele-header"/>
+            <div className="skele skele-content"/>
+            <div className="skele skele-header"/>
+            <div className="skele skele-content"/>
+          </div>
+        ) : (
+          <>
+            <div className="skele-column">
+              <div className="skele skele-title"/>
+              <div className="skele skele-header"/>
+              <div className="skele skele-content"/>
+              <div className="skele skele-header"/>
+              <div className="skele skele-content"/>
+            </div>
+            <div className="skele-column">
+              <div className="skele skele-title"/>
+              <div className="skele skele-header"/>
+              <div className="skele skele-content"/>
+              <div className="skele skele-header"/>
+              <div className="skele skele-content"/>
+            </div>
+          </>
+        )
+      }
     </LoaderContainer>
   )
 }

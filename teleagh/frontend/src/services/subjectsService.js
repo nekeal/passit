@@ -14,7 +14,29 @@ function getSubject(id) {
   return axios
     .get(API_ROUTES.SUBJECT(id))
     .then(response => {
-      return response.data;
+      const { name, semester, general_description: generalDescription, lecturers } = response.data;
+
+      const distinctLecturers = lecturers
+        .reduce((dl, lecturerYear) => {
+          const { lecturer: { id, first_name, last_name, title }, students_start_year } = lecturerYear;
+          if(dl.hasOwnProperty(id)) {
+            dl[id].years.push(students_start_year);
+          } else {
+            dl[id] = { fullName: `${title} ${first_name} ${last_name}`, years: [students_start_year] };
+          }
+          return dl;
+        }, {});
+
+      const processedLecturers = [];
+      for(const [id, data] of Object.entries(distinctLecturers)) {
+        const { fullName, years } = data;
+        years.sort((a, b) => a - b);
+        processedLecturers.push({ id, fullName: fullName })
+      }
+
+      console.log(lecturers);
+
+      return { name, semester, generalDescription, lecturers: processedLecturers };
     })
     .catch(error => console.log(error));
 }

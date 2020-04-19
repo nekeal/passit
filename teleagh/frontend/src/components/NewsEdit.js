@@ -1,16 +1,20 @@
 import React, {useEffect, useState} from 'react';
-import {Typography, Paper, IconButton, TextField, Button, Link} from "@material-ui/core";
+import {Typography, Paper, IconButton, TextField, Button, Link, InputAdornment} from "@material-ui/core";
 import Icon from "./Icon";
 import styled from "styled-components";
 import { Controller, useForm } from "react-hook-form";
 import {newsService} from "../services";
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import {useTranslation} from "react-i18next";
+import ReactMarkdown from "react-markdown";
 
 const NewsEditContainer = styled(Paper)`
   width: 90%;
   border-radius: 1rem;
   padding: 0.5rem;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
   
   .form {
     display: flex;
@@ -30,16 +34,38 @@ const NewsEditContainer = styled(Paper)`
   .form-field {
     width: 90%;
     margin-bottom: 0.5rem;
+    margin-top: 0.7rem;
+  }
+  
+  .add-attachment {
+    margin-left: 1rem;
+    align-self: flex-start; 
+  }
+  
+  .content-input {
+    display: ${props => props.preview ? "none" : "inline-flex"};
+  }
+  
+  .content-preview {
+    width: 90%;
+    position: relative;
+    display: ${props => props.preview ? "block" : "none"};
+    
+    .preview-close {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
   }
   
   .attachment {
-    margin-top: 1.25rem;
+    margin: 1rem 1.5rem;
+    align-self: flex-start; 
     display: flex;
     align-items: center;
     font-style: italic;
-    width: 90%;
-    justify-content: center;
-    margin-bottom: 1.25rem;
+    justify-content: flex-start;
     
     .filename {
       white-space: nowrap;
@@ -61,6 +87,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
   const [ sagSelected, setSagSelected ] = useState(null);
   const [ loading, setLoading ] = useState(false);
   const [ filename, setFilename ] = useState(undefined);
+  const [ showPreview, setShowPreview ] = useState(false);
   const { t } = useTranslation();
 
   const onSubmit = data => {
@@ -72,6 +99,8 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
       setLoading(false);
     });
   };
+
+  const content = getValues().content;
 
   useEffect(() => {
     if(news) {
@@ -101,7 +130,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
   };
 
   return (
-    <NewsEditContainer onClick={e => e.stopPropagation()}>
+    <NewsEditContainer onClick={e => e.stopPropagation()} preview={showPreview ? 1 : 0}>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="header">
           <IconButton onClick={onDecline}><Icon name="decline"/></IconButton>
@@ -119,7 +148,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
               <Icon name="decline" size="small" onClick={attachmentRemove}/>
             </div>
             :
-            <Button component="label" startIcon={<Icon name="attachment" size="big"/>}>
+            <Button className="add-attachment" component="label" startIcon={<Icon name="attachment" size="big"/>}>
               {t("ADD_ATTACHMENT")}
               <input
                 type="file"
@@ -138,15 +167,36 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
             helperText={errors.title && errors.title.message}
           />
         } />
+        <div className="content-preview">
+          <ReactMarkdown source={content}/>
+          <IconButton
+            className="preview-close"
+            tabIndex="-1"
+            onClick={() => setShowPreview(false)}
+          >
+            <Icon name="eyeOpen" clickable/>
+          </IconButton>
+        </div>
         <Controller name="content" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD") }} as={
           <TextField
-            className="form-field"
+            className="form-field content-input"
             type="text"
             name="content"
             label={t("ANNOUNCEMENT_CONTENT")}
             multiline
             error={!!errors.content}
             helperText={errors.content && errors.content.message}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">
+                <IconButton
+                  tabIndex="-1"
+                  edge="end"
+                  onClick={() => setShowPreview(true)}
+                >
+                  <Icon name="eyeClosed" clickable />
+                </IconButton>
+              </InputAdornment>
+            }}
           />
         } />
         <Autocomplete

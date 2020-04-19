@@ -19,7 +19,7 @@ const API_ROUTES = {
   NEWS_FAG: fagId => `/api/news/?field_age_group=${fagId}`,
   NEWS_ITEM: id => `/api/news/${id}/`,
   SUBJECTS: (semester, fieldOfStudyId) => `/api/subjects/?semester=${semester}&field_of_study=${fieldOfStudyId}`,
-  SUBJECT: id => `/api/subjects/${id}/`,
+  SUBJECT: id => `/api/subjects/${id}/?expand=lecturers`,
   RESOURCES: (subjectId, category) => `/api/resources/?subject=${subjectId}&category=${category}`,
   ME: '/api/auth/users/me/?expand=profile.field_age_groups.field_of_study,profile.memberships',
   LECTURERS: '/api/lecturers/',
