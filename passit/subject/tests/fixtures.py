@@ -43,4 +43,5 @@ def resource_data(subject):
         'name': 'resource',
         'subject': subject.id,
         'category': ResourceCategoryChoices.OTHER,
+        'files': [],
     }

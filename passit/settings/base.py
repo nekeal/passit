@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'webpack_loader',
     'django_extensions',
     'django_celery_results',
+    'easy_thumbnails',
     # my apps
     'passit.accounts.apps.AccountsConfig',
     'passit.lecturers.apps.LecturersConfig',
@@ -243,3 +244,11 @@ SIMPLE_JWT = {
 
 CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", 'redis://localhost:6379/2')
 CELERY_RESULT_BACKEND = 'django-db'
+
+# EASY_THUMBNAILS
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'small': {'size': (400, 0), 'crop': False},
+    },
+}

@@ -6,6 +6,7 @@ pytest_plugins = [
     'passit.news.tests.fixtures',
     'passit.subject.tests.fixtures',
     'passit.events.tests.fixtures',
+    'passit.files.tests.fixtures'
 ]
 
 
