@@ -12,6 +12,11 @@ import {useTranslation} from "react-i18next";
 const TopBarContainer = styled(AppBar)`
   align-items: center;
   
+  &.desktop.MuiPaper-root {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
   .logo {
     width: 5rem;
   }
@@ -54,7 +59,7 @@ function TopBar({ title, onFagChange, allowBack, desktopView }) {
   const { t } = useTranslation();
 
   return (
-    <TopBarContainer position="sticky" color="default">
+    <TopBarContainer position="sticky" color="default" className={desktopView && "desktop"}>
       <Toolbar>
         <div className="title">
           {
