@@ -6,6 +6,7 @@ const APP_ROUTES = {
   EVENTS: '/events',
   PASSWORD_CHANGE: '/password-change',
   LECTURERS: '/lecturers',
+  LECTURER: id => `/lecturers/${id}`,
   MEMES: '/memes',
   CONNECTION_PROBLEM: '/connection-problem'
 };

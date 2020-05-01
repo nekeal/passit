@@ -29,10 +29,10 @@ function ConfirmationDialog({ open, onAccept, onDecline }) {
       <DialogTitle id="alert-dialog-title">{t("CONFIRM_ANNOUNCEMENT_DELETION")}</DialogTitle>
       <DialogActions>
         <IconButton onClick={onDecline}>
-          <Icon name="decline"/>
+          <Icon name="decline" clickable/>
         </IconButton>
         <IconButton onClick={onAccept}>
-          <Icon name="accept"/>
+          <Icon name="accept" clickable/>
         </IconButton>
       </DialogActions>
     </DialogContainer>

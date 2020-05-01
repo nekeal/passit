@@ -1,11 +1,15 @@
-import React, {useEffect, useState} from 'react';
-import {Container, Tabs, Tab, Typography, Paper, useMediaQuery} from '@material-ui/core';
+import React, {useEffect, useReducer, useState} from 'react';
+import {Container, Tabs, Tab, Typography, Paper, useMediaQuery, Backdrop} from '@material-ui/core';
 import styled from "styled-components";
-import {BottomBar, Icon, TopBar} from "../components";
+import {BottomBar, ConfirmationDialog, Icon, NewsEdit, Opinion, TopBar} from "../components";
 import { subjectsService } from "../services";
 import { useParams } from "react-router-dom";
-import styleHelpers from "../consts/styles";
+import { styleHelpers } from "../consts/styles";
 import { RESOURCE_TYPES } from "../consts/options";
+import OpinionEdit from "../components/OpinionEdit";
+import {APP_ROUTES} from "../consts/routes";
+import { Link } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const SubjectContainer = styled(Container)`  
   .tabs {
@@ -20,8 +24,10 @@ const SubjectContainer = styled(Container)`
   
   .desktop-general {
     & > h5 {
-      margin-bottom: 1rem;
+      margin: 1rem 0;
     }
+    flex-basis: 40%;
+    flex-shrink: 0;
   }
   
   .desktop-resources {
@@ -64,60 +70,141 @@ const SubjectContainer = styled(Container)`
         border-bottom: #E5E5E5 1px solid;
      }
   }
+  
+  .opinion-header {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    img {
+      margin-left: 0.8rem;
+    }
+  }
+
 `;
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+const initialState = {
+  subject: {},
+  opinions: [],
+  resources: {},
+  tabIndex: 0,
+  resourcesTabIndex: 0,
+  processedOpinion: undefined,
+  opinionEditOpen: false,
+  opinionDeleteOpen: false
+};
 
-  return (
-    <Typography component="div" role="tabpanel" hidden={value !== index} {...other}>
-      {value === index && <>{children}</>}
-    </Typography>
-  );
+function reducer(state, action) {
+  const { type, payload } = action;
+  switch (type) {
+    case "SET_SUBJECT_INFO":
+      return { ...state, subject: payload };
+    case "SET_OPINIONS":
+      return { ...state, opinions: payload };
+    case "SET_RESOURCES":
+      return { ...state, resources: payload };
+    case "SET_TAB_INDEX":
+      return { ...state, tabIndex: payload };
+    case "SET_RESOURCES_TAB_INDEX":
+      return { ...state, resourcesTabIndex: payload };
+    case "OPINION_ADD_INIT":
+      return { ...state, opinionEditOpen: true };
+    case "OPINION_EDIT_INIT":
+      return { ...state, opinionEditOpen: true, processedOpinion: payload };
+    case "OPINION_EDIT_ACCEPT":
+      if(state.processedOpinion) {
+        return { ...state, opinionEditOpen: false, processedOpinion: undefined, opinions: state.opinions.map(opinion => opinion.id === state.processedOpinion.id ? payload : opinion) }
+      } else {
+        return { ...state, opinionEditOpen: false, opinions: [ payload, ...state.opinions ] }
+      }
+    case "OPINION_EDIT_DECLINE":
+      return { ...state, opinionEditOpen: false, processedOpinion: undefined };
+    case "OPINION_DELETE_INIT":
+      return { ...state, opinionDeleteOpen: true, processedOpinion: payload };
+    case "OPINION_DELETE_ACCEPT":
+      return { ...state, opinionDeleteOpen: false, processedOpinion: undefined,  opinions: state.opinions.filter(opinion => opinion.id !== state.processedOpinion.id) };
+    case "OPINION_DELETE_DECLINE":
+      return { ...state, opinionDeleteOpen: false, processedOpinion: undefined };
+    default:
+      return { ...state };
+  }
 }
 
 function Subject() {
   const params = useParams();
-  const [ subject, setSubject ] = useState({});
-  const [ tabIndex, setTabIndex ] = useState(0);
-  const [ resourcesTabIndex, setResourcesTabIndex ] = useState(0);
-  const [ resources, setResources ] = useState({});
+  const [ state, dispatch ] = useReducer(reducer, initialState);
   const desktopView = useMediaQuery("(min-width:800px)");
+  const { t } = useTranslation();
+
+  const { subject, opinions, resources, tabIndex, resourcesTabIndex, opinionEditOpen, opinionDeleteOpen, processedOpinion } = state;
 
   useEffect(() => {
-    console.log(desktopView);
-    subjectsService.getSubject(params.id).then((subject) => setSubject(subject));
+    subjectsService.getSubject(params.id).then(subject => dispatch({ type: "SET_SUBJECT_INFO", payload: subject }));
+    subjectsService.getOpinions(params.id).then(opinions => dispatch({ type: "SET_OPINIONS", payload: opinions }));
   }, [params.id]);
 
   useEffect(() => {
-    if(tabIndex === 1) {
+    if(tabIndex === 1 || desktopView) {
       subjectsService.getResources(params.id, RESOURCE_TYPES[resourcesTabIndex]).then((categoryResources) => {
         const newResources = { ...resources };
         newResources[RESOURCE_TYPES[resourcesTabIndex]] = categoryResources;
-        setResources(newResources);
+        dispatch({ type: "SET_RESOURCES", payload: newResources });
       });
     }
-  }, [params.id, tabIndex, resourcesTabIndex]);
+  }, [params.id, tabIndex, resourcesTabIndex, desktopView]);
+
+  const TabPanel = ({ children, value, index, ...other }) =>
+    <Typography component="div" role="tabpanel" hidden={value !== index} {...other}>
+      {value === index && <>{children}</>}
+    </Typography>;
+
+  const handleAddOpinion = opinion =>
+    subjectsService.addOpinion(subject.id, opinion).then(addedOpinion => dispatch({ type: "OPINION_EDIT_ACCEPT", payload: addedOpinion }));
+
+  const handleEditOpinion = opinion =>
+    subjectsService.updateOpinion({ id: processedOpinion.id, ...opinion }).then(updatedOpinion => dispatch({ type: "OPINION_EDIT_ACCEPT", payload: updatedOpinion }));
+
+  const handleDeleteOpinion = () =>
+    subjectsService.deleteOpinion(processedOpinion.id).then(() => dispatch({ type: "OPINION_DELETE_ACCEPT" }));
+
+  const renderOpinions = () => <>
+    <div className="opinion-header">
+      <Typography variant="h5">{t("OPINIONS")}</Typography>
+      <div>
+        <Icon name="add" size="big" clickable onClick={() => dispatch({ type: 'OPINION_ADD_INIT'})}/>
+      </div>
+    </div>
+    { opinions.map(opinion =>
+      <Opinion
+        opinion={opinion}
+        onEdit={() => dispatch({ type: "OPINION_EDIT_INIT", payload: opinion })}
+        onDelete={() => dispatch({ type: "OPINION_DELETE_INIT", payload: opinion })}
+      />) }
+  </>;
 
   const renderGeneral = () => <>
-    <Typography variant="h5">Ogólne</Typography>
+    <Typography variant="h5">{t("GENERAL")}</Typography>
     <Paper className="general-info">
-      <Typography variant="h5">Prowadzący:</Typography>
-      <Typography variant="h6">obecnie</Typography>
-      <div className="lecturer">
-        <span className="name">dr hab. Andrzej Rusek</span>
-        <span className="function">wykładowca, prowadzący</span>
-      </div>
+      <Typography variant="h5">{t("LECTURERS")}:</Typography>
+      {
+        subject.lecturers && subject.lecturers.map(({ id, fullName }) =>
+          <div className="lecturer">
+            <Link to={APP_ROUTES.LECTURER(id)} className="name">{ fullName }</Link>
+          </div>
+        )
+      }
     </Paper>
-    <Typography variant="h5">Opinie</Typography>
+    { renderOpinions() }
   </>;
 
   const renderResources = () => <>
-    <Tabs value={resourcesTabIndex} onChange={(e, newValue) => setResourcesTabIndex(newValue)} centered className="tabs">
-      <Tab label="Wykłady"/>
-      <Tab label="Egzaminy"/>
-      <Tab label="Kolokwia"/>
-      <Tab label="Inne"/>
+    <Tabs value={resourcesTabIndex} onChange={(e, newValue) => dispatch({ type: "SET_RESOURCES_TAB_INDEX", payload: newValue })} centered className="tabs">
+      <Tab label={t("LECTURES")}/>
+      <Tab label={t("EXAMS")}/>
+      <Tab label={t("MID_TERM_EXAMS")}/>
+      <Tab label={t("OTHER")}/>
     </Tabs>
     {
       RESOURCE_TYPES.map((category, index) =>
@@ -129,7 +216,7 @@ function Subject() {
                 <div>{ resource.name }</div>
               </div>
             </a>
-          ) : "Brak materiałów z tej kategorii"}
+          ) : t("NO_RESOURCES_IN_CATEGORY") }
         </TabPanel>
       )
     }
@@ -143,19 +230,19 @@ function Subject() {
           desktopView ? (
             <div className="desktop-container">
               <div className="desktop-general">
-                <Typography variant="h5">Opis</Typography>
+                <Typography variant="h3">{ subject.name }</Typography>
                 { renderGeneral() }
               </div>
               <div className="desktop-resources">
-                <Typography variant="h5">Materiały</Typography>
+                <Typography variant="h5">{t("RESOURCES")}</Typography>
                 { renderResources() }
               </div>
             </div>
           ) : (
             <>
-              <Tabs value={tabIndex} onChange={(e, newValue) => setTabIndex(newValue)} centered className="tabs">
+              <Tabs value={tabIndex} onChange={(e, newValue) => dispatch({ type: "SET_TAB_INDEX", payload: newValue })} centered className="tabs">
                 <Tab label="Opis"/>
-                <Tab label="Materiały"/>
+                <Tab label={t("RESOURCES")}/>
               </Tabs>
               <TabPanel value={tabIndex} index={0}>
                 { renderGeneral() }
@@ -170,6 +257,16 @@ function Subject() {
       {
         !desktopView && <BottomBar/>
       }
+      <Backdrop open={opinionEditOpen} style={{zIndex: 1100}}>
+        { opinionEditOpen && (
+          <OpinionEdit
+            opinion={processedOpinion}
+            onAccept={processedOpinion ? handleEditOpinion : handleAddOpinion}
+            onDecline={() => dispatch({ type: 'OPINION_EDIT_DECLINE' })}
+          />
+        )}
+      </Backdrop>
+      <ConfirmationDialog open={opinionDeleteOpen} onAccept={handleDeleteOpinion} onDecline={() => dispatch({ type: 'OPINION_DELETE_DECLINE' })}/>
     </>
   );
 }

@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import { AppBar, Toolbar, Typography, Backdrop, IconButton } from "@material-ui/core";
 import Icon from "./Icon";
 import Settings from "./Settings";
-import {useHistory} from "react-router";
+import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import { APP_ROUTES } from "../consts/routes";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
@@ -40,7 +41,7 @@ function TopBar({ title, onFagChange, allowBack, desktopView }) {
         <div className="title">
           {
             desktopView ?
-              <img className="logo" src={logo} alt="PassIt logo"/> :
+              <Link to={APP_ROUTES.DASHBOARD}><img className="logo" src={logo} alt="PassIt logo"/></Link> :
               <>
                 { allowBack &&
                 <div onClick={() => history.goBack()} className="arrow-back">
@@ -63,7 +64,7 @@ function TopBar({ title, onFagChange, allowBack, desktopView }) {
             )
           }
           <IconButton href="#" onClick={() => setSettingsOpen(!settingsOpen)}>
-            <Icon name='settings' size='big'/>
+            <Icon name="settings" size="big" clickable/>
           </IconButton>
         </div>
       </Toolbar>

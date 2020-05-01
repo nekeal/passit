@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react';
-import { Container } from '@material-ui/core';
+import {Container, useMediaQuery} from '@material-ui/core';
 import styled from 'styled-components';
 import { BottomBar, TopBar } from "../components";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,10 @@ import { LecturerTile } from "../components";
 
 const LecturersContainer = styled(Container)`
   margin: 1rem 0;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const initialState = {
@@ -24,6 +28,7 @@ function reducer(state, action) {
 
 function Lecturers() {
   const [ state, dispatch ] = useReducer(reducer, initialState);
+  const desktopView = useMediaQuery("(min-width:800px)");
   const { t } = useTranslation();
 
   const { lecturers } = state;
@@ -34,13 +39,15 @@ function Lecturers() {
 
   return (
     <>
-      <TopBar title={t("LECTURERS")}/>
+      <TopBar desktopView={desktopView} title={t("LECTURERS")}/>
       <LecturersContainer>
         {
           lecturers.map(lecturer => <LecturerTile key={lecturer.id} lecturer={lecturer}/> )
         }
       </LecturersContainer>
-      <BottomBar/>
+      {
+        !desktopView && <BottomBar/>
+      }
     </>
   )
 }

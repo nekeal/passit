@@ -74,7 +74,7 @@ function updateNews(news) {
 
 function deleteNews(newsId) {
   return axios
-    .delete(API_ROUTES.NEWS_ITEM(newsId))
+    .delete(API_ROUTES.NEWS_ITEM(666))
     .then(response => console.log(response));
 }
 

@@ -4,8 +4,8 @@ import styled from "styled-components";
 import {BottomBar, TopBar, News, Icon, NewsEdit, ConfirmationDialog, Loader, Calendar} from "../components";
 import {authService, eventsService, newsService} from "../services";
 import { Link as RouterLink } from 'react-router-dom';
-import {USER_TYPES} from "../consts/options";
-import styleHelpers from "../consts/styles";
+import {SNACKBAR_TYPES, USER_TYPES} from "../consts/options";
+import { styleHelpers } from "../consts/styles";
 import {useTranslation} from "react-i18next";
 
 const DashboardContainer = styled(Container)`
@@ -128,7 +128,7 @@ function reducer(state, action) {
   }
 }
 
-function Dashboard() {
+function Dashboard({ setSnackbar }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { t } = useTranslation();
   const desktopView = useMediaQuery("(min-width:800px)");
@@ -159,12 +159,33 @@ function Dashboard() {
     }
   }, [profileInfo]);
 
-  const handleAdd = news => newsService.addNews(news).then(addedNews => dispatch({ type: 'NEWS_EDIT_ACCEPT', payload: addedNews }));
+  const handleAddNews = news =>
+    newsService
+      .addNews(news)
+      .then(addedNews => {
+        setSnackbar(SNACKBAR_TYPES.SUCCESS, t("NEWS_ADDED_SUCCESSFULLY"));
+        dispatch({ type: 'NEWS_EDIT_ACCEPT', payload: addedNews })
+      });
 
-  const handleUpdate = news =>
-    newsService.updateNews({id: processedNews.id, ...news}).then(updatedNews => dispatch({ type: 'NEWS_EDIT_ACCEPT', payload: updatedNews }));
+  const handleUpdateNews = news =>
+    newsService
+      .updateNews({id: processedNews.id, ...news})
+      .then(updatedNews => {
+        setSnackbar(SNACKBAR_TYPES.SUCCESS, t("NEWS_UPDATED_SUCCESSFULLY"));
+        dispatch({ type: 'NEWS_EDIT_ACCEPT', payload: updatedNews })
+      });
 
-  const handleDelete = () => newsService.deleteNews(processedNews.id).then(() => dispatch({ type: 'NEWS_DELETE_ACCEPT'}));
+  const handleDeleteNews = () =>
+    newsService
+      .deleteNews(processedNews.id)
+      .then(() => {
+        setSnackbar(SNACKBAR_TYPES.SUCCESS, t("NEWS_DELETED_SUCCESSFULLY"));
+        dispatch({ type: "NEWS_DELETE_ACCEPT"});
+      })
+      .catch(() => {
+        setSnackbar(SNACKBAR_TYPES.ERROR, t("NEWS_DELETE_ERROR"));
+        dispatch({ type: "NEWS_DELETE_DECLINE"});
+      });
 
   const mapNewses = newses => newses.map(news => {
     const { type } = profileInfo.defaultFag;
@@ -245,14 +266,14 @@ function Dashboard() {
       <Backdrop open={newsEditOpen} style={{zIndex: 1100}}>
         { newsEditOpen && (
           <NewsEdit
-            onAccept={processedNews ? handleUpdate : handleAdd}
+            onAccept={processedNews ? handleUpdateNews : handleAddNews}
             onDecline={() => dispatch({ type: 'NEWS_EDIT_DECLINE' })}
             sags={sags}
             news={processedNews}
           />
         )}
       </Backdrop>
-      <ConfirmationDialog open={newsDeleteOpen} onAccept={handleDelete} onDecline={() => dispatch({ type: 'NEWS_DELETE_DECLINE' })}/>
+      <ConfirmationDialog open={newsDeleteOpen} onAccept={handleDeleteNews} onDecline={() => dispatch({ type: 'NEWS_DELETE_DECLINE' })}/>
     </>
   );
 }

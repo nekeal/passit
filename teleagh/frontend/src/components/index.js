@@ -8,3 +8,4 @@ export { default as ConfirmationDialog } from './ConfirmationDialog';
 export { default as Loader } from './Loader';
 export { default as LecturerTile } from './LecturerTile';
 export { default as Calendar } from './Calendar';
+export { default as Opinion } from './Opinion';

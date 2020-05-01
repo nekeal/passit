@@ -10,10 +10,12 @@ import Icon from '../components/Icon';
 //background-color: ${props => props.theme.bgColor};
 
 const LoginContainer = styled(Container)`
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  min-height: 100vh;
+  &.MuiContainer-root {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+  }
   
   .logo {
     width: 10rem;

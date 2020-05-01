@@ -57,6 +57,7 @@ const SettingsContainer = styled(Paper)`
   }
   
   .fag-option {
+    cursor: pointer;
     margin: 0.4rem 0;
     position: relative;
     
@@ -78,9 +79,9 @@ const SettingsContainer = styled(Paper)`
 `;
 
 function Settings({ onFagChange }) {
-  const [highContrast, setHighContrast] = useState(false);
+  const [englishVersion, setEnglishVersion] = useState(false);
   const [profileInfo, setProfileInfo] = useState(undefined);
-  const [activeFag, setActiveFag] = useState(1);
+  const [activeFag, setActiveFag] = useState(undefined);
   const history = useHistory();
   const { t, i18n } = useTranslation();
 
@@ -89,6 +90,8 @@ function Settings({ onFagChange }) {
       setProfileInfo(profileInfo);
       setActiveFag(profileInfo.defaultFag.id);
     });
+
+    setEnglishVersion(i18n.language === "en");
   }, []);
 
   return (
@@ -109,11 +112,14 @@ function Settings({ onFagChange }) {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails className="panel-details">
               <div className="contrast-switch">
-                <Typography>Placeholder</Typography>
+                <Typography>{t("ENGLISH_VERSION")}</Typography>
                 <Switch
-                  checked={highContrast}
-                  onChange={() => i18n.language === "en" ? i18n.changeLanguage("pl") : i18n.changeLanguage("en")}
-                  value="contrast"
+                  checked={englishVersion}
+                  onChange={() => {
+                    i18n.language === "en" ? i18n.changeLanguage("pl") : i18n.changeLanguage("en");
+                    setEnglishVersion(!englishVersion);
+                  }}
+                  value="language"
                 />
               </div>
             </ExpansionPanelDetails>

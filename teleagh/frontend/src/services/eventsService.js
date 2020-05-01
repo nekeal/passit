@@ -10,7 +10,6 @@ function getEvents() {
   return axios
     .get(API_ROUTES.EVENTS)
     .then(response => {
-      // console.log(response.data.sort((a, b) => new Date(a.due_date) - new Date(b.due_date)));
       return response.data
         .sort((a, b) => new Date(a.due_date) - new Date(b.due_date))
         .reduce((eventsByMonth, event) => {
@@ -24,7 +23,7 @@ function getEvents() {
             monthEvents = eventsByMonth[eventsByMonth.length - 1];
           }
 
-          monthEvents.events.push({ id, name, description, category, weekDay: date.getDay(), monthDay: date.getDate(), time: formatTime(date) });
+          monthEvents.events.push({ id, name, description, category, weekDay: date.getDay(), monthDay: date.getDate(), time: formatTime(date), date: due_date });
           return eventsByMonth;
         }, []);
     })

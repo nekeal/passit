@@ -1,25 +1,34 @@
 import React, {useState, useRef} from 'react';
 import { useHistory } from "react-router";
 import { useForm, Controller } from 'react-hook-form';
-import { Container, Button, TextField, Typography, InputAdornment, IconButton, Snackbar } from '@material-ui/core';
-// import { Alert } from '@material-ui/lab';
+import {
+  Container,
+  Button,
+  TextField,
+  InputAdornment,
+  IconButton,
+  useMediaQuery
+} from '@material-ui/core';
 import styled from 'styled-components';
 import { authService } from '../services';
-import logo from '../assets/logo.png';
 import Icon from '../components/Icon';
 import {BottomBar, TopBar} from "../components";
+import {SNACKBAR_TYPES} from "../consts/options";
+import {useTranslation} from "react-i18next";
 
 const PasswordChangeContainer = styled(Container)`
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  margin-top: 2rem;
+  &.MuiContainer-root {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 2rem;
+  }
 
   .form {
-    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: min(90%, 400px);
   }
   
   .form-field {
@@ -34,20 +43,25 @@ const PasswordChangeContainer = styled(Container)`
 
 `;
 
-function PasswordChange() {
+function PasswordChange({ setSnackbar }) {
   const [ showCurrentPass, setShowCurrentPass ] = useState(false);
   const [ showNewPass, setShowNewPass ] = useState(false);
   const [ showRepeatNewPass, setShowRepeatNewPass ] = useState(false);
 
+  const desktopView = useMediaQuery("(min-width:800px)");
+
   const { handleSubmit, errors, setError, control, watch } = useForm();
   const history = useHistory();
   const password = useRef({});
+  const { t } = useTranslation();
+
   password.current = watch("newPassword", "");
 
   const onSubmit = data => {
     const { currentPassword, newPassword } = data;
     authService.changePassword(currentPassword, newPassword)
       .then(() => {
+        setSnackbar(SNACKBAR_TYPES.SUCCESS, "Hasło zmienione pomyślnie");
         history.push('/');
       })
       .catch((error) => {
@@ -58,15 +72,15 @@ function PasswordChange() {
 
   return (
     <>
-      <TopBar title="Zmiana hasła"/>
+      <TopBar desktopView={desktopView} title={t("PASSWORD_CHANGE")}/>
       <PasswordChangeContainer>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          <Controller name="currentPassword" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
+          <Controller name="currentPassword" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD")}} as={
             <TextField
               className="form-field"
               type={showCurrentPass ? "text" : "password"}
               name="currentPassword"
-              label="Bieżące hasło"
+              label={t("CURRENT_PASSWORD")}
               error={!!errors.currentPassword}
               helperText={errors.currentPassword && errors.currentPassword.message}
               InputProps={{
@@ -76,18 +90,18 @@ function PasswordChange() {
                     onClick={() => setShowCurrentPass(!showCurrentPass)}
                     edge="end"
                   >
-                    <Icon name={showCurrentPass ? 'eyeOpen' : 'eyeClosed'} />
+                    <Icon name={showCurrentPass ? 'eyeOpen' : 'eyeClosed'} clickable/>
                   </IconButton>
                 </InputAdornment>
               }}
             />
           } />
-          <Controller name="newPassword" defaultValue="" control={control} rules={{ required: "Pole jest wymagane" }} as={
+          <Controller name="newPassword" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD") }} as={
             <TextField
               className="form-field"
               type={showNewPass ? "text" : "password"}
               name="newPassword"
-              label="Nowe hasło"
+              label={t("NEW_PASSWORD")}
               error={!!errors.newPassword}
               helperText={errors.newPassword && errors.newPassword.message}
               InputProps={{
@@ -97,18 +111,18 @@ function PasswordChange() {
                     onClick={() => setShowNewPass(!showNewPass)}
                     edge="end"
                   >
-                    <Icon name={showNewPass ? 'eyeOpen' : 'eyeClosed'} />
+                    <Icon name={showNewPass ? 'eyeOpen' : 'eyeClosed'} clickable/>
                   </IconButton>
                 </InputAdornment>
               }}
             />
           } />
-          <Controller name="newPasswordRepeat" defaultValue="" control={control} rules={{ required: "Pole jest wymagane", validate: value => value === password.current || "Hasła się nie zgadzają" }} as={
+          <Controller name="newPasswordRepeat" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD"), validate: value => value === password.current || t("PASSWORDS_DONT_MATCH") }} as={
             <TextField
               className="form-field"
               type={showRepeatNewPass ? "text" : "password"}
               name="newPasswordRepeat"
-              label="Powtórz nowe hasło"
+              label={t("REPEAT_NEW_PASSWORD")}
               error={!!errors.newPasswordRepeat}
               helperText={errors.newPasswordRepeat && errors.newPasswordRepeat.message}
               InputProps={{
@@ -119,25 +133,18 @@ function PasswordChange() {
                     onClick={() => setShowRepeatNewPass(!showRepeatNewPass)}
                     edge="end"
                   >
-                    <Icon name={showRepeatNewPass ? 'eyeOpen' : 'eyeClosed'} />
+                    <Icon name={showRepeatNewPass ? 'eyeOpen' : 'eyeClosed'} clickable/>
                   </IconButton>
                 </InputAdornment>
               }}
             />
           } />
-          {/*<IconButton>*/}
-          {/*  <Icon name="accept"/>*/}
-          {/*</IconButton>*/}
-          {/*<Snackbar open={true} autoHideDuration={6000}>*/}
-          {/*  <Alert severity="success">*/}
-          {/*    This is a success message!*/}
-          {/*  </Alert>*/}
-          {/*</Snackbar>*/}
-
-          <Button className="submit-button" type="submit" variant="outlined" color="secondary">Zmień hasło</Button>
+          <Button className="submit-button" type="submit" variant="outlined" color="secondary">{t("PASSWORD_CHANGE")}</Button>
         </form>
       </PasswordChangeContainer>
-      <BottomBar/>
+      {
+        !desktopView && <BottomBar/>
+      }
     </>
   )
 }

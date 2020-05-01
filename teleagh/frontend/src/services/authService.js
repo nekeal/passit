@@ -46,6 +46,7 @@ function profileInfo() {
       return { fullName: `${first_name} ${last_name}`, fags, defaultFag };
     })
     .catch(error => {
+      console.log(error);
       throw error.response.data;
     });
 }

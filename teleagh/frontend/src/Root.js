@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-
 import {
   ConnectionProblem,
   Dashboard,
-  Events,
+  Events, Lecturer,
   Lecturers,
   Login,
   Memes,
@@ -15,11 +14,14 @@ import {
 } from "./views";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import { Alert } from "@material-ui/lab";
 
 import { createBrowserHistory } from 'history';
 import { tokenInterceptor, authInterceptor } from "./interceptors";
 
 import { APP_ROUTES } from "./consts/routes";
+import {Snackbar} from "@material-ui/core";
+import {SNACKBAR_TYPES} from "./consts/options";
 
 const history = createBrowserHistory();
 tokenInterceptor(history);
@@ -64,17 +66,34 @@ const muiTheme = createMuiTheme({
 });
 
 const theme = {
-  bgColor: '#F0F0F0',
+  bgColor: "#F0F0F0",
+  mainViolet: "#87129A"
 };
 
 function Root() {
+  const [ snackbar, setSnackbar ] = useState({ open: false });
+
+  const renderSnackBar = () => {
+    const { open, severity, message } = snackbar;
+
+    const handleClose = () => setSnackbar({ open: false });
+
+    return (
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
+        <Alert elevation={6} variant="filled" onClose={handleClose} severity={severity}>{ message }</Alert>
+      </Snackbar>
+    );
+  };
+
+  const setSnackbarState = (type, message) => setSnackbar({ open: true, severity: type, message });
+
   return (
     <MuiThemeProvider theme={muiTheme}>
       <ThemeProvider theme={theme}>
         <Router history={history}>
           <Switch>
             <Route exact path={APP_ROUTES.DASHBOARD}>
-              <Dashboard/>
+              <Dashboard setSnackbar={setSnackbarState}/>
             </Route>
             <Route exact path={APP_ROUTES.LOGIN}>
               <Login/>
@@ -89,10 +108,13 @@ function Root() {
               <Events/>
             </Route>
             <Route exact path={APP_ROUTES.PASSWORD_CHANGE}>
-              <PasswordChange/>
+              <PasswordChange setSnackbar={setSnackbarState}/>
             </Route>
             <Route exact path={APP_ROUTES.LECTURERS}>
               <Lecturers/>
+            </Route>
+            <Route exact path={APP_ROUTES.LECTURER(":id")}>
+              <Lecturer/>
             </Route>
             <Route exact path={APP_ROUTES.MEMES}>
               <Memes/>
@@ -102,6 +124,7 @@ function Root() {
             </Route>
           </Switch>
         </Router>
+        { renderSnackBar() }
       </ThemeProvider>
     </MuiThemeProvider>
   );

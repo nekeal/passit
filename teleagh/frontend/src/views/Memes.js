@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
+import {Container, useMediaQuery} from '@material-ui/core';
 import styled from 'styled-components';
 import {BottomBar, TopBar} from "../components";
 import Loader from "../assets/koscielnik.gif";
@@ -9,15 +9,17 @@ const MemesContainer = styled(Container)`
 `;
 
 function Memes() {
-  const input = '# This is a header\n\nAnd this is a paragraph';
+  const desktopView = useMediaQuery("(min-width:800px)");
+
   return (
     <>
-      <TopBar title="Feature in progress"/>
+      <TopBar desktopView={desktopView} title="Feature in progress"/>
       <MemesContainer>
-        {/*<img src={Loader} alt=""/>*/}
-        <ReactMarkdown source={input}/>
+        <img src={Loader} alt=""/>
       </MemesContainer>
-      <BottomBar/>
+      {
+        !desktopView && <BottomBar/>
+      }
     </>
   )
 }

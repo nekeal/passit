@@ -6,10 +6,13 @@ import logo from '../assets/logo.png';
 import {useTranslation} from "react-i18next";
 
 const ConnectionProblemContainer = styled(Container)`
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  min-height: 100vh;
+  &.MuiContainer-root {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+    cursor: pointer;
+  }
   
   .logo {
     width: 10rem;

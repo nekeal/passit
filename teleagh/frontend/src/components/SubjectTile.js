@@ -1,7 +1,7 @@
 import React from "react";
 import {Paper, Typography} from "@material-ui/core";
 import styled from "styled-components";
-import styleHelpers from "../consts/styles";
+import { styleHelpers } from "../consts/styles";
 
 const SubjectContainer = styled(Paper)`
   ${styleHelpers.gradientBorder};

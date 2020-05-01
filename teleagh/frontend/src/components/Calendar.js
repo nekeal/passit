@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Typography} from '@material-ui/core';
+import {Container, Typography, IconButton} from '@material-ui/core';
 import styled from "styled-components";
 import {BottomBar, TopBar} from "../components";
 import { eventsService } from "../services";
-import styleHelpers from "../consts/styles";
+import { styleHelpers } from "../consts/styles";
+import qs from "querystring";
+import Icon from "./Icon";
 
 const EventsContainer = styled.div`  
   padding-bottom: 5rem;
@@ -29,11 +31,18 @@ const EventsContainer = styled.div`
       width: 20%;
     }
     
+    .event-calendar {
+      padding: 0;
+    }
+    
     .event-tile {
       ${styleHelpers.gradientBorder};
       border-width: 1px;
       width: 80%;
       padding: 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       //min-height: 5rem;
     }
     
@@ -58,25 +67,49 @@ const monthNames = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec"
 const weekdayShorts = ["pon.", "wt.", "śr.", "czw.", "pt.", "sb.", "nd."];
 
 function Calendar({ eventsByMonths }) {
+
+  const dateTransform = date => {
+    return new Date(date).toISOString().replace(/[-:]/g, "").replace(/\.\d\d\d/, "");
+  };
+
+  const renderEvent = event => {
+
+    const query = qs.stringify({
+      action: "TEMPLATE",
+      dates: dateTransform(event.date) + "/" + dateTransform(event.date),
+      text: event.name,
+      details: event.description
+    });
+
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?${query}`;
+
+    return (
+      <div className="event" key={event.id}>
+        <div className="event-date">
+          <div>{ weekdayShorts[event.weekDay] }</div>
+          <div>{ event.monthDay }</div>
+        </div>
+        <div className="event-tile">
+          <div className="event-data">
+            <div className="event-name">{ event.name }</div>
+            <div className="event-description">{ event.description }</div>
+            <div className="event-time">{ event.time }</div>
+          </div>
+          <IconButton className="event-calendar" href={googleCalendarUrl} target="_blank" rel="noreferrer noopener">
+            <Icon name="calendar" clickable/>
+          </IconButton>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <EventsContainer>
       {
         eventsByMonths && eventsByMonths.map(monthEvents =>
           <div key={monthEvents.month}>
             <Typography className="month" variant="h5">{ monthNames[monthEvents.month] }</Typography>
-            { monthEvents.events.map(event =>
-              <div className="event" key={event.id}>
-                <div className="event-date">
-                  <div>{ weekdayShorts[event.weekDay] }</div>
-                  <div>{ event.monthDay }</div>
-                </div>
-                <div className="event-tile">
-                  <div className="event-name">{ event.name }</div>
-                  <div className="event-description">{ event.description }</div>
-                  <div className="event-time">{ event.time }</div>
-                </div>
-              </div>
-            ) }
+            { monthEvents.events.map(renderEvent) }
           </div>
         )
       }

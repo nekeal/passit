@@ -30,11 +30,10 @@ function getSubject(id) {
       const processedLecturers = [];
       for(const [id, data] of Object.entries(distinctLecturers)) {
         const { fullName, years } = data;
+        const yearsString = "";
         years.sort((a, b) => a - b);
-        processedLecturers.push({ id, fullName: fullName })
+        processedLecturers.push({ id, fullName, years })
       }
-
-      console.log(lecturers);
 
       return { name, semester, generalDescription, lecturers: processedLecturers };
     })
@@ -59,4 +58,23 @@ function getResources(subjectId, category) {
     .catch(error => console.log(error));
 }
 
-export default { getSubjects, getSubject, getResources }
+function getOpinions(subjectId) {
+  return Promise.resolve([
+    { id: 1, content: "Ascending from the enemy abyss Ending decadent diabolic bliss Into a pit of horror it arrives", author: "Millie Petrozza" },
+    { id: 2, content: "Fear becomes the flame upon the ice Ghosts under the violent sun of death Lives are cured of greed and emptiness", author: "Some random" }
+  ]);
+}
+
+function addOpinion(subjectId, opinion) {
+  return Promise.resolve(opinion);
+}
+
+function updateOpinion(opinion) {
+  return Promise.resolve(opinion);
+}
+
+function deleteOpinion(opinionId) {
+  return Promise.resolve({});
+}
+
+export default { getSubjects, getSubject, getResources, getOpinions, addOpinion, updateOpinion, deleteOpinion }
