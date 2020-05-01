@@ -35,6 +35,13 @@ class SubjectOfAgeGroupViewSet(FlexFieldsModelViewSet):
 
 class ResourceViewSet(FlexFieldsModelViewSet):
     serializer_class = ResourceBaseSerializer
-    queryset = Resource.objects.all()
+    queryset = Resource.objects.select_related('created_by__user').select_related('modified_by__user').\
+        prefetch_related('files')
     filterset_class = ResourceFilterSet
     permit_list_expands = ('subject',)
+
+    def get_queryset(self):
+        qs = super(ResourceViewSet, self).get_queryset()
+        if is_expanded(self.request, 'subject'):
+            qs.select_related('subject')
+        return qs

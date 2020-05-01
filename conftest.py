@@ -6,6 +6,7 @@ pytest_plugins = [
     'teleagh.news.tests.fixtures',
     'teleagh.subject.tests.fixtures',
     'teleagh.events.tests.fixtures',
+    'teleagh.files.tests.fixtures'
 ]
 
 

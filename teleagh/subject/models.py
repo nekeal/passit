@@ -68,7 +68,7 @@ class Resource(TimeStampedModel, OwnedModel):
     description = models.TextField(blank=True)
     category = models.CharField(max_length=50, choices=ResourceCategoryChoices.choices())
     subject = models.ForeignKey('Subject', on_delete=models.CASCADE, related_name='resources')
-
+    files = models.ManyToManyField('files.File', blank=True)
     objects = ResourceManager.from_queryset(ResourceQuerySet)()
 
     def __str__(self) -> str:

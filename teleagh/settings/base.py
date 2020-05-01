@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'webpack_loader',
     'django_extensions',
     'django_celery_results',
+    'easy_thumbnails',
     # my apps
     'teleagh.accounts',
     'teleagh.lecturers',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'teleagh.news',
     'teleagh.events',
     'teleagh.syllabus',
+    'teleagh.files',
 ]
 
 MIDDLEWARE = [
@@ -191,3 +193,11 @@ SIMPLE_JWT = {
 
 CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", 'redis://localhost:6379/2')
 CELERY_RESULT_BACKEND = 'django-db'
+
+# EASY_THUMBNAILS
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'small': {'size': (400, 0), 'crop': False},
+    },
+}
