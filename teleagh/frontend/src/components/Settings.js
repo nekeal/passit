@@ -92,7 +92,7 @@ function Settings({ onFagChange }) {
     });
 
     setEnglishVersion(i18n.language === "en");
-  }, []);
+  }, [i18n.language]);
 
   return (
       <SettingsContainer onClick={e => e.stopPropagation()}>

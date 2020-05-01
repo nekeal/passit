@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Controller, useForm } from "react-hook-form";
 import {useTranslation} from "react-i18next";
 import { EditDialog } from "../consts/styles";
+import EditDialogHeader from "./EditDialogHeader";
 
 const OpinionEditContainer = styled(EditDialog)`  
 `;
@@ -22,36 +23,21 @@ function EventEdit({ event, onAccept, onDecline }) {
   };
 
   useEffect(() => {
-    if(opinion) {
-      const { content } = opinion;
+    if(event) {
+      const { content } = event;
       setValue("content", content);
     }
-  }, [opinion, setValue]);
+  }, [event, setValue]);
 
 
   return (
     <OpinionEditContainer onClick={e => e.stopPropagation()}>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="header">
-          <IconButton onClick={onDecline} className="form-action"><Icon name="decline" clickable/></IconButton>
-          <Typography variant="h6" >{ opinion ? t("EDIT_OPINION") : t("ADD_OPINION") }</Typography>
-          {
-            loading ?
-              <IconButton disabled><Icon name="loader"/></IconButton> :
-              <IconButton type="submit" className="form-action accept"><Icon name="accept" clickable/></IconButton>
-          }
-        </div>
-        <Controller name="content" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD") }} as={
-          <TextField
-            className="form-field"
-            type="text"
-            name="content"
-            label={t("OPINION_CONTENT")}
-            multiline
-            error={!!errors.content}
-            helperText={errors.content && errors.content.message}
-          />
-        } />
+        <EditDialogHeader
+          text={event ? t("EDIT_EVENT") : t("ADD_EVENT")}
+          loading={loading}
+          onDecline={onDecline}
+        />
       </form>
     </OpinionEditContainer>
   );

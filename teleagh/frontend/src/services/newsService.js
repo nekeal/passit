@@ -9,7 +9,7 @@ function newsResponseTransformer(news) {
   const { id, title, content, created_at, created_by: author, subject_group: sag, is_owner: isOwner, attachment } = news;
   const transformedNews = { id, title, content, date: formatDate(new Date(created_at)), author, sag, isOwner };
   if(attachment) {
-    const filename = /[^\/]+$/.exec(attachment)[0];
+    const filename = /[^/]+$/.exec(attachment)[0];
     transformedNews.attachment = { link: attachment, filename };
   }
   return transformedNews;
@@ -74,7 +74,7 @@ function updateNews(news) {
 
 function deleteNews(newsId) {
   return axios
-    .delete(API_ROUTES.NEWS_ITEM(666))
+    .delete(API_ROUTES.NEWS_ITEM(newsId))
     .then(response => console.log(response));
 }
 

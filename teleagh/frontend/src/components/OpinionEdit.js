@@ -1,10 +1,10 @@
-import React, {useEffect, useReducer, useState} from 'react';
-import {Typography, Paper, IconButton, TextField, Button, InputAdornment} from "@material-ui/core";
-import Icon from "./Icon";
+import React, {useEffect, useState} from 'react';
+import { TextField} from "@material-ui/core";
 import styled from "styled-components";
 import { Controller, useForm } from "react-hook-form";
 import {useTranslation} from "react-i18next";
 import {EditDialog} from "../consts/styles";
+import EditDialogHeader from "./EditDialogHeader";
 
 const OpinionEditContainer = styled(EditDialog)`
 
@@ -33,15 +33,11 @@ function OpinionEdit({ opinion, onAccept, onDecline }) {
   return (
     <OpinionEditContainer onClick={e => e.stopPropagation()}>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="header">
-          <IconButton onClick={onDecline} className="form-action"><Icon name="decline" clickable/></IconButton>
-          <Typography variant="h6" >{ opinion ? t("EDIT_OPINION") : t("ADD_OPINION") }</Typography>
-          {
-            loading ?
-              <IconButton disabled><Icon name="loader"/></IconButton> :
-              <IconButton type="submit" className="form-action accept"><Icon name="accept" clickable/></IconButton>
-          }
-        </div>
+        <EditDialogHeader
+          text={opinion ? t("EDIT_OPINION") : t("ADD_OPINION")}
+          loading={loading}
+          onDecline={onDecline}
+        />
         <Controller name="content" defaultValue="" control={control} rules={{ required: t("REQUIRED_FIELD") }} as={
           <TextField
             className="form-field"

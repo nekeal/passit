@@ -3,7 +3,6 @@ import {Container, useMediaQuery} from '@material-ui/core';
 import styled from 'styled-components';
 import {BottomBar, TopBar} from "../components";
 import Loader from "../assets/koscielnik.gif";
-import ReactMarkdown from "react-markdown";
 
 const MemesContainer = styled(Container)`
 `;

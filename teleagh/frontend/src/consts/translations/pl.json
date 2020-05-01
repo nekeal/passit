@@ -47,6 +47,26 @@
     "NEWS_DELETED_SUCCESSFULLY": "Udało się usunąć ogłoszenie",
     "NEWS_DELETE_ERROR": "Wystąpił błąd przy usuwaniu newsa",
     "NEWS_UPDATED_SUCCESSFULLY": "Udało się zedytować ogłoszenie",
-    "NEWS_ADDED_SUCCESSFULLY": "Udało się dodać ogłoszenie"
+    "NEWS_ADDED_SUCCESSFULLY": "Udało się dodać ogłoszenie",
+    "NEWS_SEARCH_PLACEHOLDER": "Słowo klucz, imię lub nazwisko",
+    "JANUARY": "Styczeń",
+    "FEBRUARY": "Luty",
+    "MARCH": "Marzec",
+    "APRIL": "Kwiecień",
+    "MAY": "Maj",
+    "JUNE": "Czerwiec",
+    "JULY": "Lipiec",
+    "AUGUST": "Sierpień",
+    "SEPTEMBER": "Wrzesień",
+    "OCTOBER": "Październik",
+    "NOVEMBER": "Listopad",
+    "DECEMBER": "Grudzień",
+    "MON": "pon",
+    "TUE": "wt",
+    "WED": "śr",
+    "THU": "czw",
+    "FRI": "pt",
+    "SAT": "sb",
+    "SUN": "nd"
   }
 }

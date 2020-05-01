@@ -24,3 +24,7 @@ export const SNACKBAR_TYPES = {
   SUCCESS: "success",
   ERROR: "error"
 };
+
+export const monthNames = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+
+export const weekdayShorts = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];

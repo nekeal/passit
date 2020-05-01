@@ -34,6 +34,8 @@ function reducer(state, action) {
       return { ...state, semester: payload };
     case 'SET_SUBJECTS':
       return { ...state, subjects: payload };
+    default:
+      return { ...state };
   }
 }
 

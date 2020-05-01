@@ -1,7 +1,7 @@
-import React, {useEffect, useReducer, useState} from 'react';
+import React, {useEffect, useReducer} from 'react';
 import {Container, Tabs, Tab, Typography, Paper, useMediaQuery, Backdrop} from '@material-ui/core';
 import styled from "styled-components";
-import {BottomBar, ConfirmationDialog, Icon, NewsEdit, Opinion, TopBar} from "../components";
+import {BottomBar, ConfirmationDialog, Icon,  Opinion, TopBar} from "../components";
 import { subjectsService } from "../services";
 import { useParams } from "react-router-dom";
 import { styleHelpers } from "../consts/styles";

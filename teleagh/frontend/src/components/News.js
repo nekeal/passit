@@ -67,7 +67,6 @@ const AnnouncementContainer = styled(Paper)`
   
   .attachment {
     margin-top: 1rem;
-    //display: ${props => props.expanded ? 'flex' : 'none'};
     display: flex;
     align-items: center;
     font-style: italic;

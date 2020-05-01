@@ -7,6 +7,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import {useTranslation} from "react-i18next";
 import ReactMarkdown from "react-markdown";
 import { EditDialog } from "../consts/styles";
+import EditDialogHeader from "./EditDialogHeader";
 
 const NewsEditContainer = styled(EditDialog)`
   .add-attachment {
@@ -108,7 +109,7 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
       setValue("sag", sag);
       dispatch({ type: "SET_EDITED_NEWS_DATA", payload: { sag: sags.find(s => s.id === sag), attachment } });
     }
-  }, [news, setValue]);
+  }, [news, setValue, sags]);
 
   useEffect(() => {
     register({ name: "sag" });
@@ -222,15 +223,11 @@ function NewsEdit({ news, sags, onAccept, onDecline }) {
   return (
     <NewsEditContainer onClick={e => e.stopPropagation()} preview={showPreview ? 1 : 0}>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="header">
-          <IconButton onClick={onDecline} className="form-action"><Icon name="decline" clickable/></IconButton>
-          <Typography variant="h6" >{ news ? t("EDIT_ANNOUNCEMENT") : t("ADD_ANNOUNCEMENT") }</Typography>
-          {
-            loading ?
-              <IconButton disabled><Icon name="loader"/></IconButton> :
-              <IconButton type="submit" className="form-action accept"><Icon name="accept" clickable/></IconButton>
-          }
-        </div>
+        <EditDialogHeader
+          text={news ? t("EDIT_ANNOUNCEMENT") : t("ADD_ANNOUNCEMENT")}
+          loading={loading}
+          onDecline={onDecline}
+        />
         { renderAttachmentField() }
         { renderTitleField() }
         { showPreview && renderPreview() }

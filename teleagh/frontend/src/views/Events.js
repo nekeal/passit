@@ -1,21 +1,26 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Typography} from '@material-ui/core';
-import styled from "styled-components";
 import {BottomBar, Calendar, TopBar} from "../components";
 import { eventsService } from "../services";
-import styleHelpers from "../consts/styles";
+import styled from "styled-components";
+
+const Container = styled.div`
+    width: 90%;
+    margin: 0 auto;
+`;
 
 function Events() {
-  const [ eventsByMonths, setEventsByMonths ] = useState([]);
-
-  useEffect(() => {
-    eventsService.getEvents().then(eventsByMonths => setEventsByMonths(eventsByMonths));
-  }, []);
+  // const [ eventsByMonths, setEventsByMonths ] = useState([]);
+  //
+  // useEffect(() => {
+  //   eventsService.getEvents().then(eventsByMonths => setEventsByMonths(eventsByMonths));
+  // }, []);
 
   return (
     <>
       <TopBar title="Kalendarz zaliczeń" allowBack/>
-      <Calendar eventsByMonths={eventsByMonths}/>
+        <Container>
+          <Calendar/>
+        </Container>
       <BottomBar/>
     </>
   );
