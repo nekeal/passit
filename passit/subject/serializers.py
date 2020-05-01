@@ -101,7 +101,7 @@ class ResourceBaseSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerialize
 
     class Meta:
         model = Resource
-        fields = ('id', 'name', 'image', 'url', 'description', 'subject', 'category', 'files',
+        fields = ('id', 'name', 'url', 'description', 'subject', 'category', 'files',
                   'created_by_profile', 'modified_by_profile', 'created_by', 'modified_by')
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
             'subject': (SubjectBaseSerializer, {'fields': ['id', 'name', 'semester', ]}),
