@@ -8,6 +8,7 @@ from rest_framework.serializers import Serializer
 
 from ..accounts.models import UserProfile
 from ..common.serializers import OwnedModelSerializerMixin
+from ..files.models import File
 from ..files.serializers import FileSerializer
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 from ..lecturers.serializers import LecturerOfSubjectOfAgeGroupSerializer
@@ -22,6 +23,15 @@ class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
         if not profile:
             return FieldOfStudyOfAgeGroup.objects.all()
         return FieldOfStudyOfAgeGroup.objects.filter_by_profile(profile)
+
+
+class FileRelatedFile(serializers.PrimaryKeyRelatedField):
+    def get_queryset(self):
+        request = self.context.get('request')
+        profile = request and request.user and request.user.profile
+        if not profile:
+            return File.objects.all()
+        return File.objects.filter_by_profile(profile)
 
 
 class FieldAgeGroupDefault:
@@ -98,6 +108,7 @@ class SubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):
 
 
 class ResourceBaseSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
+    files = FileRelatedFile(many=True)
 
     class Meta:
         model = Resource

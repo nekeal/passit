@@ -38,7 +38,7 @@ def field_age_group_data(field_of_study):
 
 
 @pytest.fixture
-def resource_data(subject):
+def resource_data_without_files(subject):
     return {
         'name': 'resource',
         'subject': subject.id,
