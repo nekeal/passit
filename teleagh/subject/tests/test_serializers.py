@@ -1,9 +1,6 @@
 from unittest import mock
 
 from ..serializers import FieldOfStudyOfAgeGroupSerializer, ResourceBaseSerializer
-from unittest import mock
-
-from ..serializers import FieldOfStudyOfAgeGroupSerializer, ResourceBaseSerializer
 
 
 # --- FieldOfAgeGroupSerializer ---
@@ -28,17 +25,17 @@ def test_can_create_field_age_group(db, field_age_group_data):
 
 # --- ResourceSerializer ---
 
-def test_resource_owned_model_serializer(resource_data, api_rf, user_profile1, user_profile2):
+def test_resource_owned_model_serializer(resource_data_without_files, api_rf, user_profile1, user_profile2):
     request_user1 = mock.Mock()
     request_user1.user = user_profile1.user
     request_user2 = mock.Mock()
     request_user2.user = user_profile2.user
-    serializer = ResourceBaseSerializer(data=resource_data, context={'request': request_user1})
+    serializer = ResourceBaseSerializer(data=resource_data_without_files, context={'request': request_user1})
     serializer.is_valid(raise_exception=True)
     instance = serializer.save()
     assert instance.created_by == user_profile1, "Creator is set on instace"
     assert instance.modified_by == user_profile1, "Modifier is set on instance"
-    serializer = ResourceBaseSerializer(data=resource_data, instance=instance, context={'request': request_user2})
+    serializer = ResourceBaseSerializer(data=resource_data_without_files, instance=instance, context={'request': request_user2})
     serializer.is_valid(raise_exception=True)
     instance = serializer.save()
     assert instance.created_by == user_profile1, "Creator is unchanged on instance"
