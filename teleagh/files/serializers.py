@@ -11,7 +11,8 @@ class FileSerializer(OwnedModelSerializerMixin, serializers.ModelSerializer):
 
     class Meta:
         model = File
-        fields = ('id', 'name', 'other', 'image', 'thumbnails')
+        fields = ('id', 'name', 'other', 'image', 'thumbnails', 'created_by_profile',
+                  'modified_by_profile', 'created_by', 'modified_by',)
 
     def get_thumbnails(self, obj: File):
         request = self.context.get('request')
