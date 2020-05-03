@@ -50,6 +50,7 @@ def test_student_can_create_resource_using_own_files(api_rf, resource_list_view,
     assert response.status_code == status.HTTP_201_CREATED
     assert File.objects.count() == 1
 
+
 def test_student_cant_create_resource_using_someones_files(api_rf, resource_list_view, student2, students1_file,
                                                            resource_data_without_files):
     resource_data_without_files['files'] = [students1_file.id]
