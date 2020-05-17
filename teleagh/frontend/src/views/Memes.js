@@ -14,7 +14,7 @@ function Memes() {
     <>
       <TopBar desktopView={desktopView} title="Feature in progress"/>
       <MemesContainer>
-        <img src={Loader} alt=""/>
+        {/*<img src={Loader} alt=""/>*/}
       </MemesContainer>
       {
         !desktopView && <BottomBar/>
