@@ -14,7 +14,8 @@ class EventViewSet(viewsets.ModelViewSet):
     filterset_class = EventFilterSet
 
     def get_queryset(self):
-        queryset = super().get_queryset()
+        queryset = Event.objects.filter_by_user_profile_default_field_age_group(self.request.user.profile)\
+            .select_related('created_by__user', 'modified_by__user')
         if is_expanded(self.request, 'subject') or True:
             queryset = queryset.annotate(subject=F('subject_group__subject__name'))
         if is_expanded(self.request, 'field_age_group'):
