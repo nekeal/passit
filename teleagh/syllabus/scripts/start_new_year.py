@@ -25,7 +25,6 @@ client = SyllabusClient()
 
 def run(*args):
     args = args[0].split(" ") if len(args) else args
-    print(args)
     parsed_args = parser.parse_args(args)
     service = SyllabusStartNewYearService(parsed_args.faculty, parsed_args.age_group, parsed_args.field_of_study)
     service.create_field_age_group()
