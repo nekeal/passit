@@ -1,11 +1,10 @@
 # Readme teleinformatycznej wiki
 [![CircleCI](https://circleci.com/gh/nekeal/passit.svg?style=svg&circle-token=982ca38352b4da2c8b8f47ecf96e2bd77b77c268)](https://circleci.com/gh/nekeal/passit)
-1. To start project locally run `docker-compose up` command.
-2. To create superuser account run `docker-compose run web python manage.py createsuperuser`
 
 Aby uruchomić projekt lokalnie należy użyć komendy `docker-compose up`. Wymagana jest do tego instalacja
 narzędzi docker i docker-compose.
 Uruchomi to instancje aplikacji razem z bazą danych.
+Interfejs webowy domyślnie działa na porcie 8000.  
 Aby utworzyć konto administratora należy wykonać komendę `docker-compose run web python manage.py createsuperuser`.
 Kontem tym można zalogować się pod `/admin/`
 
