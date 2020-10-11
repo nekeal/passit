@@ -2,7 +2,7 @@
 
 from django.db import migrations
 
-import teleagh.accounts.managers
+import teleagh.accounts.models
 
 
 class Migration(migrations.Migration):
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AlterModelManagers(
             name='customuser',
             managers=[
-                ('objects', teleagh.accounts.managers.CustomUserManager()),
+                ('objects', teleagh.accounts.models.CustomUserManager()),
             ],
         ),
     ]

@@ -46,11 +46,11 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_celery_results',
     # my apps
-    'teleagh.accounts',
-    'teleagh.lecturers',
-    'teleagh.subject',
-    'teleagh.news',
-    'teleagh.events',
+    'teleagh.accounts.apps.AccountsConfig',
+    'teleagh.lecturers.apps.LecturersConfig',
+    'teleagh.subject.apps.SubjectConfig',
+    'teleagh.news.apps.NewsConfig',
+    'teleagh.events.apps.EventsConfig',
     'teleagh.syllabus',
 ]
 
