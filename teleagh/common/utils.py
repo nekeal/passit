@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List, Tuple, Union, Type, Any
+from typing import Union, Type, Any
 from unittest import mock
 
 from django.db.models import QuerySet
