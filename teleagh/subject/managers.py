@@ -2,12 +2,22 @@ from typing import TYPE_CHECKING
 
 from django.db.models import Manager, QuerySet
 
-from .querysets import SubjectQuerySet, SubjectOfAgeGroupQuerySet, FieldOfStudyOfAgeGroupQuerySet, \
-    FieldOfStudyQuerySet, ResourceQuerySet
-from ..accounts.models import Membership
+from .querysets import (
+    SubjectQuerySet,
+    SubjectOfAgeGroupQuerySet,
+    FieldOfStudyOfAgeGroupQuerySet,
+    FieldOfStudyQuerySet,
+    ResourceQuerySet,
+)
 
 if TYPE_CHECKING:
-    from .models import Subject, SubjectOfAgeGroup, FieldOfStudy, FieldOfStudyOfAgeGroup, Resource
+    from .models import (
+        Subject,
+        SubjectOfAgeGroup,
+        FieldOfStudy,
+        FieldOfStudyOfAgeGroup,
+        Resource,
+    )
     from ..accounts.models import UserProfile
 
 
@@ -16,9 +26,10 @@ class FieldOfStudyManager(Manager):  # type: ignore
         return FieldOfStudyQuerySet(self.model, self._db)  # type: ignore
 
     def get_default_by_profile(self, profile: 'UserProfile') -> 'FieldOfStudy':
-        from .models import FieldOfStudyOfAgeGroup
-        default_field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(profile)
-        return self.get_queryset().get(field_age_groups=default_field_age_group)
+        return self.get_queryset().get(
+            field_age_groups__memberships__profile=profile,
+            field_age_groups__memberships__is_default=True,
+        )
 
 
 class FieldOfStudyOfAgeGroupManager(Manager):  # type: ignore
@@ -26,8 +37,7 @@ class FieldOfStudyOfAgeGroupManager(Manager):  # type: ignore
         return FieldOfStudyOfAgeGroupQuerySet(self.model, self._db)  # type: ignore
 
     def get_default_by_profile(self, profile: 'UserProfile'):
-        default_membership = Membership.objects.get_default_by_profile(profile)
-        return self.get_queryset().filter_by_profile(profile).get(memberships=default_membership)  # type: ignore
+        return super().get_queryset().get(memberships__profile=profile, memberships__is_default=True)
 
 
 class SubjectManager(Manager):  # type: ignore

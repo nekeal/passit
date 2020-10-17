@@ -37,7 +37,7 @@ class FieldOfStudyOfAgeGroup(models.Model):
     objects = FieldOfStudyOfAgeGroupManager.from_queryset(FieldOfStudyOfAgeGroupQuerySet)()
 
     def __str__(self):
-        return super().__str__()
+        return f"{self.field_of_study} {self.students_start_year}"
 
 
 class Subject(models.Model):
@@ -95,4 +95,4 @@ class Exam(models.Model):
     place = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self) -> str:
-        return f'{self.subject_group}'
+        return f'{self.subject_group} {self.starts_at}'

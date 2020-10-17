@@ -55,7 +55,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('docs/', schema_view.with_ui('redoc')),
 ]
-if settings.DEBUG:
+if settings.DEBUG:  # pragma: no cover
     urlpatterns.append(path('silk/', include('silk.urls', namespace='silk')))
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -1,13 +1,17 @@
+from unittest import mock
+
 import pytest
 from django.db.models import F
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import force_authenticate
 
-from ..models import Event
+from ..managers import EventManager
 from ..querysets import EventQuerySet
 from ..views import EventViewSet
-from ...common.utils import setup_view, get_mocked_queryset
+from ...accounts.factories import UserProfileFactory
+from ...accounts.models import CustomUser, UserProfile
+from ...common.utils import ResponseFactory, get_mocked_queryset, setup_view
 
 
 @pytest.fixture
@@ -55,25 +59,62 @@ class TestEventViewSet:
         queryset_kwargs,
     ):
         m_queryset = get_mocked_queryset(EventQuerySet)
-        monkeypatch.setattr(Event, "objects", m_queryset)
-        request = api_rf.get("/api/events/", data={"expand": expand_field_name})
+        monkeypatch.setattr(
+            EventManager, "get_queryset", mock.Mock(return_value=m_queryset)
+        )
+        monkeypatch.setattr(
+            EventManager, "get_by_profile", mock.Mock(return_value=m_queryset)
+        )
+        request = ResponseFactory(
+            '/api/events',
+            'get',
+            UserProfileFactory.build().user,
+            data={'expand': expand_field_name},
+        ).get_request()
+
         view = setup_view(EventViewSet(), request)
         view.get_queryset()
-        getattr(m_queryset, queryset_method).assert_called_with(
-            *queryset_args, **queryset_kwargs
-        )
+
         assert (
             "created_by__user",
             "modified_by__user",
         ) in m_queryset.select_related.call_args_list[0]
 
+        getattr(m_queryset, queryset_method).assert_called_with(
+            *queryset_args, **queryset_kwargs
+        )
+
     def test_queryset_is_correctly_ordered(self, api_rf, monkeypatch):
         expected_ordering = ("due_date",)
-        request = api_rf.get("/api/events")
+        request = ResponseFactory(
+            '/api/events', 'get', UserProfileFactory.build().user
+        ).get_request()
         view = setup_view(EventViewSet(), request)
-        monkeypatch.setattr(Event, "objects", EventQuerySet().none())
+        monkeypatch.setattr(
+            EventManager, "get_queryset", mock.Mock(return_value=EventQuerySet().none())
+        )
+        monkeypatch.setattr(
+            EventManager,
+            "get_by_profile",
+            mock.Mock(return_value=EventQuerySet().none()),
+        )
         queryset = view.get_queryset()
         assert queryset.query.order_by == expected_ordering
+
+    def test_queryset_if_filtered_by_current_profile(self, monkeypatch):
+        profile = mock.Mock(spec=UserProfile)
+        user = mock.Mock(spec=CustomUser)
+        user.profile = profile
+        m_get_by_profile = mock.Mock()
+        monkeypatch.setattr(EventManager, 'get_by_profile', m_get_by_profile)
+        request = ResponseFactory(
+            '/api/events/',
+            'get',
+            user,
+        ).get_request()
+        view = setup_view(EventViewSet(), request)
+        view.get_queryset()
+        m_get_by_profile.assert_called_once_with(profile)
 
     def test_can_create_event_without_subject_group(
         self, event_data, api_rf, event_list_view, user_profile1

@@ -8,3 +8,16 @@ force_grid_wrap = 0
 use_parentheses = true
 ensure_newline_before_comments = true
 line_length = 88
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:"
+]
+omit = [
+    "**/fixtures.py",
+    "manage.py",
+    "**/wsgi.py",
+    "**/settings/*.py",
+    "**/migrations/*.py",
+]

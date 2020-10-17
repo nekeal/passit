@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Union, Type, Any
+from typing import Union, Type, Any, Tuple, List
 from unittest import mock
 
 from django.db.models import QuerySet
@@ -8,7 +8,6 @@ from django.urls import resolve
 from django.views import View
 from rest_framework.test import force_authenticate, APIRequestFactory
 from rest_framework.viewsets import GenericViewSet
-from typing import List, Tuple
 
 
 class CustomEnum(Enum):
