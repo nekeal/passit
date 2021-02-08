@@ -9,6 +9,6 @@ pytest_plugins = [
 ]
 
 
-@pytest.fixture()
+@pytest.fixture
 def api_rf():
     return APIRequestFactory()

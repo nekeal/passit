@@ -19,3 +19,4 @@ requests==2.23.0
 django-redis==4.11.0
 celery==4.4.2
 django-celery-results== 1.2.1
+time-machine==2.0.1

@@ -45,6 +45,11 @@ class DefaultFieldOfAgeGroupSerializer(serializers.Serializer):
 
 
 class StudentsImportSerializer(serializers.Serializer):
+    """
+    Serializer is used by StudentImportService.
+    Necessary kwargs are passed to .save() method.
+    """
+
     username = serializers.CharField(max_length=150)
     password = serializers.CharField()
     first_name = serializers.CharField(max_length=100)

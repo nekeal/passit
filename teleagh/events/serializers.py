@@ -23,7 +23,8 @@ class EventSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
         }
 
     def validate_subject_group(self, value: SubjectOfAgeGroup):
-        data = self.get_initial()
-        if not str(value.field_age_group_id) == data['field_age_group']:
-            raise ValidationError(_('Subject does not match to field of study'))
+        if value:
+            data = self.get_initial()
+            if not str(value.field_age_group_id) == str(data['field_age_group']):
+                raise ValidationError(_('Subject does not match to field of study'))
         return value

@@ -14,6 +14,7 @@ from ..subject.models import FieldOfStudy, Subject, Resource, FieldOfStudyOfAgeG
 
 
 class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
+
     def get_queryset(self) -> 'QuerySet[FieldOfStudyOfAgeGroup]':
         request = self.context.get('request')
         profile = request and request.user and request.user.profile
