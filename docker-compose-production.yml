@@ -10,12 +10,12 @@ services:
     links:
       - redis:redis
     environment:
-      DJANGO_SETTINGS_MODULE: teleagh.settings.production
+      DJANGO_SETTINGS_MODULE: passit.settings.production
     env_file:
       - .env
     command: bash -c "python manage.py migrate
              && python manage.py collectstatic --noinput
-             && gunicorn -b 0:8000 teleagh.wsgi"
+             && gunicorn -b 0:8000 passit.wsgi"
     depends_on:
       - redis
 
@@ -28,10 +28,10 @@ services:
     links:
       - redis:redis
     environment:
-      DJANGO_SETTINGS_MODULE: teleagh.settings.production
+      DJANGO_SETTINGS_MODULE: passit.settings.production
     env_file:
       - .env
-    command: bash -c "celery worker -A teleagh -B"
+    command: bash -c "celery -A passit worker  -B"
 
   redis:
     image: 'redis:5.0.8-alpine'

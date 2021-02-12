@@ -13,7 +13,7 @@ workflows:
 version: 2
 jobs:
   test:
-    working_directory: ~/teleagh
+    working_directory: ~/passit
     docker:
       - image: circleci/python:3.7.6
         environment:
