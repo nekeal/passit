@@ -51,7 +51,6 @@ urlpatterns = [
     path('', index),
     path('api/', include((router.urls, 'api'))),
     path('api/auth/', include('passit.accounts.urls')),
-    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('docs/', schema_view.with_ui('redoc')),
 ]

@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'grappelli',
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +57,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -86,6 +85,60 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'passit.wsgi.application'
 
+
+JAZZMIN_SETTINGS = {
+    # title of the window
+    "site_title": "Passit Admin",
+    # Title on the login screen
+    "site_header": "Passit",
+    # square logo to use for your site, must be present in static files, used for favicon and brand on top left
+    "site_logo": "logo.png",
+    # Welcome text on the login screen
+    "welcome_sign": "Welcome to passit",
+    # Copyright on the footer
+    # "copyright": "nekeal",
+    # The model admin to search from the search bar, search bar omitted if excluded
+    "search_model": "accounts.CustomUser",
+    # Field name on user model that contains avatar image
+    "user_avatar": None,
+    # Links to put along the top menu
+    "topmenu_links": [
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
+        # model admin to link to (Permissions checked against model)
+        {"model": "accounts.CustomUser"},
+        # App with dropdown menu to all its models pages (Permissions checked against models)
+        {"app": "subject"},
+    ],
+    # Whether to display the side menu
+    "show_sidebar": True,
+    # Whether to aut expand the menu
+    "navigation_expanded": True,
+    # Hide these apps when generating side menu
+    "hide_apps": [],
+    # Hide these models when generating side menu
+    "hide_models": [],
+    # List of apps to base side menu ordering off of
+    "order_with_respect_to": ["accounts", "subject", "news"],
+    # Custom links to append to app groups, keyed on app name
+    "custom_links": {},
+    # Custom icons per model in the side menu See https://www.fontawesomecheatsheet.com/font-awesome-cheatsheet-5x/
+    # for a list of icon classes
+    "icons": {
+        "auth.Group": "fas fa-users",
+        "accounts.CustomUser": "fas fa-user",
+        "accounts.UserProfile": "fas fa-user-graduate",
+        "subject.Exam": "fas fa-edit",
+        "subject.FieldOfStudy": "fas fa-university",
+        "subject.FieldOfStudyOfAgeGroup": "fas fa-user-graduate",
+        "subject.Subject": "fas fa-book-open",
+        "subject.SubjectOfAgeGroup": "fas fa-calendar-week",
+        "news.News": "fas fa-rss",
+        "lecturers.Lecturer": "fas fa-chalkboard-teacher",
+        "lecturers.LecturerOfSubjectOfAgeGroup": "fab fa-mandalorian",
+        "shops.Salary": "fas fa-money-bill",
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -146,15 +199,13 @@ USE_TZ = True
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'passit/frontend/build/static'),
+    os.path.join(BASE_DIR, 'passit/frontend/src/assets'),
 ]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# GRAPPELI SECTION
-GRAPPELLI_ADMIN_TITLE = 'Teleagh'
 
 # REST FRAMEWORK CONFIGURATION
 
