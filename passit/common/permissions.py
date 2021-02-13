@@ -14,3 +14,20 @@ class IsPrivilegedOrOwnerOrReadOnly(BasePermission):
                     or hasattr(obj, 'is_owner') and obj.is_owner(request.user.profile)
                 )
             ))
+
+
+class IsStudent(BasePermission):
+
+    def has_permission(self, request, view):
+        return bool(
+            request.user
+            and hasattr(request.user, 'profile')
+            and request.user.profile.memberships.exists()
+        )
+
+
+class IsOwner(BasePermission):
+    def has_object_permission(self, request, view, obj):
+        return bool(
+            hasattr(obj, 'is_owner') and obj.is_owner(request.user.profile)
+        )

@@ -8,6 +8,8 @@ from rest_framework.serializers import Serializer
 
 from ..accounts.models import UserProfile
 from ..common.serializers import OwnedModelSerializerMixin
+from ..files.models import File
+from ..files.serializers import FileSerializer
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 from ..lecturers.serializers import LecturerOfSubjectOfAgeGroupSerializer
 from ..subject.models import FieldOfStudy, Subject, Resource, FieldOfStudyOfAgeGroup, SubjectOfAgeGroup
@@ -21,6 +23,15 @@ class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
         if not profile:
             return FieldOfStudyOfAgeGroup.objects.all()
         return FieldOfStudyOfAgeGroup.objects.filter_by_profile(profile)
+
+
+class FileRelatedFile(serializers.PrimaryKeyRelatedField):
+    def get_queryset(self):
+        request = self.context.get('request')
+        profile = request and request.user and request.user.profile
+        if not profile:
+            return File.objects.all()
+        return File.objects.filter_by_profile(profile)
 
 
 class FieldAgeGroupDefault:
@@ -97,11 +108,13 @@ class SubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):
 
 
 class ResourceBaseSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
+    files = FileRelatedFile(many=True)
 
     class Meta:
         model = Resource
-        fields = ('id', 'name', 'image', 'url', 'description', 'subject', 'category', 'created_by_profile',
-                  'modified_by_profile', 'created_by', 'modified_by')
+        fields = ('id', 'name', 'url', 'description', 'subject', 'category', 'files',
+                  'created_by_profile', 'modified_by_profile', 'created_by', 'modified_by')
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
-            'subject': (SubjectBaseSerializer, {'fields': ['id', 'name', 'semester', ]})
+            'subject': (SubjectBaseSerializer, {'fields': ['id', 'name', 'semester', ]}),
+            'files': (FileSerializer, {'many': True})
         }

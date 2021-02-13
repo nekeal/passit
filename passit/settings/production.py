@@ -49,5 +49,5 @@ DATABASE_URL = os.environ.get('DATABASE_URL')
 db_from_env = dj_database_url.config(default=DATABASE_URL, conn_max_age=500, ssl_require=True)
 DATABASES['default'].update(db_from_env)
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'public')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = Path(BASE_DIR).parent.joinpath('public')
+MEDIA_ROOT = Path(BASE_DIR).parent.joinpath('media')

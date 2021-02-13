@@ -24,6 +24,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.routers import DefaultRouter
 
 from .events.urls import router as events_router
+from .files.urls import router as files_router
 from .lecturers.urls import router as lecturers_router
 from .news.urls import router as news_router
 from .subject.urls import router as subject_router
@@ -46,6 +47,7 @@ router.registry.extend(subject_router.registry)
 router.registry.extend(lecturers_router.registry)
 router.registry.extend(news_router.registry)
 router.registry.extend(events_router.registry)
+router.registry.extend(files_router.registry)
 
 urlpatterns = [
     path('', index),

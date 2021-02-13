@@ -72,15 +72,19 @@ class ResourceCategoryChoices(CustomEnum):
 class Resource(TimeStampedModel, OwnedModel):
     name = models.CharField(max_length=100)
     url = models.URLField(blank=True)
-    image = models.ImageField(blank=True)
     description = models.TextField(blank=True)
     category = models.CharField(max_length=50, choices=ResourceCategoryChoices.choices())
     subject = models.ForeignKey('Subject', on_delete=models.CASCADE, related_name='resources')
-
+    files = models.ManyToManyField('files.File', through='ResourceAttachment', blank=True)
     objects = ResourceManager.from_queryset(ResourceQuerySet)()
 
     def __str__(self) -> str:
         return f'{self.name} - {self.subject}'
+
+
+class ResourceAttachment(models.Model):
+    file = models.ForeignKey('files.File', on_delete=models.PROTECT, related_name="resource_attachments")
+    resource = models.ForeignKey('Resource', on_delete=models.CASCADE)
 
 
 class SubjectOfAgeGroup(models.Model):
