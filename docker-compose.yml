@@ -30,7 +30,7 @@ services:
       POSTGRES_HOST: postgres
     env_file:
       - .local-env
-    command: bash -c "celery worker -A teleagh -B"
+    command: bash -c "celery -A passit worker  -B"
     depends_on:
       - postgres
       - redis
