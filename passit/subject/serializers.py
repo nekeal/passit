@@ -29,16 +29,11 @@ class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
 
 
 class FieldAgeGroupDefault:
-    field_age_group = None
+    requires_context = True
 
-    def set_context(self, serializer_field: Field):
+    def __call__(self, serializer_field: Field):
         profile: 'UserProfile' = serializer_field.context['request'].user.profile
-        self.field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(
-            profile
-        )
-
-    def __call__(self):
-        return self.field_age_group
+        return FieldOfStudyOfAgeGroup.objects.get_default_by_profile(profile)
 
 
 class FieldOfStudyBaseSerializer(FlexFieldsModelSerializer):

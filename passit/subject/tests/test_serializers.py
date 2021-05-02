@@ -1,6 +1,7 @@
 from unittest import mock
 
 import pytest
+from rest_framework.fields import Field
 
 from ..managers import FieldOfStudyOfAgeGroupManager
 from ..serializers import (
@@ -10,6 +11,7 @@ from ..serializers import (
     ResourceBaseSerializer,
     SubjectSyllabusImportSerializer,
 )
+from ...accounts.factories import UserProfileFactory
 
 
 class TestFieldOfAgeGroupSerializer:
@@ -91,30 +93,21 @@ class TestFieldAgeGroupRelatedField:
 
 
 class TestFieldAgeGroupDefault:
-    def test_set_context(self, monkeypatch):
-        m_field_age_group = mock.Mock()
-        m_get_default_by_profile = mock.Mock(return_value=m_field_age_group)
-        m_serializer_field = mock.MagicMock()
-        monkeypatch.setattr(
-            FieldOfStudyOfAgeGroupManager,
-            "get_default_by_profile",
-            m_get_default_by_profile,
-        )
-        default = FieldAgeGroupDefault()
-        default.set_context(m_serializer_field)
-        assert default.field_age_group == m_field_age_group
-        m_get_default_by_profile.assert_called_once()
-
     def test_call_on_default_returns_field_age_group(self, monkeypatch):
+        profile = UserProfileFactory.build()
+        m_context = mock.MagicMock()
+        m_context["request"].user = profile.user
         m_field_age_group = mock.Mock()
+        field = Field()
+        field.root._context = m_context
         monkeypatch.setattr(
             FieldOfStudyOfAgeGroupManager,
             "get_default_by_profile",
             mock.Mock(return_value=m_field_age_group),
         )
         default = FieldAgeGroupDefault()
-        default.set_context(mock.MagicMock())
-        assert default() == m_field_age_group
+        assert default.requires_context
+        assert default(field) == m_field_age_group
 
 
 class TestSubjectSyllabusImportSerializer:
