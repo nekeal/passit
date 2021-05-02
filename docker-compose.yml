@@ -10,6 +10,7 @@ services:
       - "8000:8000"
     links:
       - postgres:postgres
+      - redis:redis
     environment:
       POSTGRES_HOST: postgres
     env_file:
@@ -17,6 +18,22 @@ services:
     command: bash -c "python manage.py migrate && python manage.py runserver 0:8000"
     depends_on:
       - postgres
+      - redis
+
+  celery:
+    restart: always
+    build: .
+    links:
+      - postgres:postgres
+      - redis:redis
+    environment:
+      POSTGRES_HOST: postgres
+    env_file:
+      - .local-env
+    command: bash -c "celery -A passit worker  -B"
+    depends_on:
+      - postgres
+      - redis
 
   postgres:
     restart: always
@@ -28,5 +45,13 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data/
 
+  redis:
+    image: 'redis:5.0.8-alpine'
+    ports:
+      - '6379:6379'
+    volumes:
+      - 'redisdata:/data'
+
 volumes:
   pgdata:
+  redisdata:

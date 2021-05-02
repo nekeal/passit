@@ -1,6 +1,7 @@
 mypy==0.761
 django-stubs==1.4.0
-pytest==5.2.1
-pytest-django==3.8.0
-flake8==3.7.8
+pytest==6.2.2
+pytest-django==4.1.0
+pytest-xdist==2.2.1
+flake8==3.8.4
 factory-boy==2.12.0

@@ -2,13 +2,13 @@ import pytest
 from rest_framework.test import APIRequestFactory
 
 pytest_plugins = [
-    'teleagh.accounts.tests.fixtures',
-    'teleagh.news.tests.fixtures',
-    'teleagh.subject.tests.fixtures',
-    'teleagh.events.tests.fixtures',
+    'passit.accounts.tests.fixtures',
+    'passit.news.tests.fixtures',
+    'passit.subject.tests.fixtures',
+    'passit.events.tests.fixtures',
 ]
 
 
-@pytest.fixture()
+@pytest.fixture
 def api_rf():
     return APIRequestFactory()

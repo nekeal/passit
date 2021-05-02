@@ -6,7 +6,6 @@ __pycache__/
 db.sqlite3
 media
 /public
-/.env
 /.env-production
 .venv
 pg_data/
@@ -14,3 +13,6 @@ deployment/group_vars/github.yml
 .mypy_cache
 node_modules
 webpack-stats.json
+/deployment/configs/nginx/app.conf
+/deployment/configs/certbot/conf/
+/.coverage

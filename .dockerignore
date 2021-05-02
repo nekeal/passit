@@ -1,0 +1,11 @@
+deployment*
+.mypy_cache
+.idea
+.git
+htmlcov
+.pytest_cache
+__pycache__
+media
+# frontend
+**/build
+**/frontend/config

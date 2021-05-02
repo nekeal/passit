@@ -1,0 +1,10 @@
+export { default as Dashboard } from './Dashboard';
+export { default as Login } from './Login';
+export { default as Subjects } from './Subjects';
+export { default as Subject } from './Subject';
+export { default as Events } from './Events';
+export { default as PasswordChange } from './PasswordChange';
+export { default as Lecturers } from './Lecturers';
+export { default as Lecturer } from './Lecturer';
+export { default as Memes } from './Memes';
+export { default as ConnectionProblem } from './ConnectionProblem';
