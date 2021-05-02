@@ -1,5 +1,5 @@
 [flake8]
-max-line-length = 120
+max-line-length = 88
 ignore = F401,W503 #F405,F403
 exclude = */tests/*,passit/settings/*,*/migrations/*,manage.py
 format = abspath
