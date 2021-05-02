@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 # from accounts.models import User
-from .models import CustomUser, UserProfile, Membership
+from .models import CustomUser, Membership, UserProfile
 
 
 class MembershipInline(admin.TabularInline):
@@ -13,7 +13,9 @@ class MembershipInline(admin.TabularInline):
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
     model = UserProfile
-    inlines = [MembershipInline, ]
+    inlines = [
+        MembershipInline,
+    ]
 
 
 class UserProfileInline(admin.TabularInline):
@@ -21,7 +23,9 @@ class UserProfileInline(admin.TabularInline):
 
 
 class CustomUserAdmin(UserAdmin):
-    inlines = [UserProfileInline, ]
+    inlines = [
+        UserProfileInline,
+    ]
 
 
 admin.site.register(CustomUser, CustomUserAdmin)

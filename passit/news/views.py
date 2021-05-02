@@ -12,12 +12,14 @@ from ..common.permissions import IsPrivilegedOrOwnerOrReadOnly
 class NewsViewSet(viewsets.ModelViewSet):
     serializer_class = NewsSerializer
     permission_classes = (IsAuthenticated, IsPrivilegedOrOwnerOrReadOnly)
-    filter_backends = (DjangoFilterBackend, )
+    filter_backends = (DjangoFilterBackend,)
     filterset_class = NewsFilterSet
 
     def get_queryset(self) -> 'QuerySet[News]':
-        return News.objects.get_by_profile(self.request.user.profile).\
-            select_related('created_by__user').\
-            select_related('modified_by__user').\
-            annotate_is_owner(self.request.user.profile).\
-            order_by('-created_at')
+        return (
+            News.objects.get_by_profile(self.request.user.profile)
+            .select_related('created_by__user')
+            .select_related('modified_by__user')
+            .annotate_is_owner(self.request.user.profile)
+            .order_by('-created_at')
+        )

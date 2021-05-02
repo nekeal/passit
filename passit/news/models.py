@@ -2,7 +2,7 @@ from django.db import models
 
 from .managers import NewsManager
 from .querysets import NewsQuerySet
-from ..common.models import TimeStampedModel, OwnedModel
+from ..common.models import OwnedModel, TimeStampedModel
 
 
 class News(TimeStampedModel, OwnedModel):
@@ -10,10 +10,20 @@ class News(TimeStampedModel, OwnedModel):
     content = models.TextField()
     attachment = models.FileField(upload_to='attachments', blank=True)
 
-    field_age_group = models.ForeignKey('subject.FieldOfStudyOfAgeGroup', on_delete=models.PROTECT,
-                                        blank=True, null=True, related_name='news')
-    subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', on_delete=models.PROTECT, blank=True, null=True,
-                                      related_name='news')
+    field_age_group = models.ForeignKey(
+        'subject.FieldOfStudyOfAgeGroup',
+        on_delete=models.PROTECT,
+        blank=True,
+        null=True,
+        related_name='news',
+    )
+    subject_group = models.ForeignKey(
+        'subject.SubjectOfAgeGroup',
+        on_delete=models.PROTECT,
+        blank=True,
+        null=True,
+        related_name='news',
+    )
 
     objects = NewsManager.from_queryset(NewsQuerySet)()
 

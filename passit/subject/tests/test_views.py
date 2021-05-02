@@ -6,8 +6,9 @@ from passit.common.utils import ResponseFactory, setup_view
 from passit.subject.factories import FieldOfStudyFactory, SubjectFactory
 from passit.subject.views import (
     FieldOfStudiesViewSet,
+    ResourceViewSet,
+    SubjectOfAgeGroupViewSet,
     SubjectViewSet,
-    SubjectOfAgeGroupViewSet, ResourceViewSet,
 )
 
 
@@ -86,9 +87,7 @@ class TestSubjectOfAgeGroupViewSet:
 class TestResourceViewSet:
     @pytest.mark.parametrize(
         ("query_param", "param_value"),
-        (
-                ("select_related", "subject"),
-        ),
+        (("select_related", "subject"),),
     )
     def test_queryset_when_request_expanded(self, student1, query_param, param_value):
         request = ResponseFactory(

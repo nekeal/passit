@@ -3,7 +3,6 @@ from passit.accounts.serializers import StudentsImportSerializer
 
 
 class TestStudentImportSerializer:
-        
     @staticmethod
     def get_valid_data():
         return {
@@ -19,13 +18,16 @@ class TestStudentImportSerializer:
             assert field.required
 
     def test_create_student(self, field_age_group):
-        
+
         serializer = StudentsImportSerializer(data=self.get_valid_data())
         serializer.is_valid(raise_exception=True)
         user = serializer.save(field_age_group=field_age_group)
         assert user.profile is not None
-        assert Membership.objects.get(profile=user.profile).field_age_group == field_age_group
-    
+        assert (
+            Membership.objects.get(profile=user.profile).field_age_group
+            == field_age_group
+        )
+
     def test_validate_unique_username(self, user_profile1, field_age_group):
         valid_data = self.get_valid_data()
         valid_data["username"] = user_profile1.user.username

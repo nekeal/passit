@@ -6,20 +6,23 @@ from ..services import StudentImportService
 from ...subject.models import FieldOfStudyOfAgeGroup
 
 parser = argparse.ArgumentParser(description='Syllabus import')
-parser.add_argument('filename',
-                    help='Csv filename which contains users to be created',
-                    )
-parser.add_argument('--start-year',
-                    help='Specify age-group to fetch in format <year>-<year>',
-                    required=False,
-                    default='2018',
-                    type=int
-                    )
-parser.add_argument('--field-of-study',
-                    help='Specify field of study to fetch subjects from',
-                    required=False,
-                    default='stacjonarne-teleinformatyka'
-                    )
+parser.add_argument(
+    'filename',
+    help='Csv filename which contains users to be created',
+)
+parser.add_argument(
+    '--start-year',
+    help='Specify age-group to fetch in format <year>-<year>',
+    required=False,
+    default='2018',
+    type=int,
+)
+parser.add_argument(
+    '--field-of-study',
+    help='Specify field of study to fetch subjects from',
+    required=False,
+    default='stacjonarne-teleinformatyka',
+)
 
 
 @dataclasses.dataclass
@@ -33,8 +36,10 @@ class Student:
 def run(*args):
     args = args[0].split(" ") if len(args) else args
     parsed_args = parser.parse_args(args)
-    field_age_group = FieldOfStudyOfAgeGroup.objects.get(field_of_study__slug=parsed_args.field_of_study,
-                                                         students_start_year=parsed_args.start_year)
+    field_age_group = FieldOfStudyOfAgeGroup.objects.get(
+        field_of_study__slug=parsed_args.field_of_study,
+        students_start_year=parsed_args.start_year,
+    )
     service = StudentImportService(field_age_group, MembershipTypeChoices.NORMAL)
     service.create_from_filename('users.csv')
     service.print_report()
@@ -46,11 +51,16 @@ def run(*args):
     #         student = Student(*line, password)
     #         serializer = StudentsImportSerializer(data=dataclasses.asdict(student))
     #         if serializer.is_valid():
-    #             serializer.save(field_age_group=field_age_group, type=MembershipTypeChoices.NORMAL)
+    #             serializer.save(
+    #                 field_age_group=field_age_group, type=MembershipTypeChoices.NORMAL
+    #             )
     #             student_create_result['valid'].append({'student': student})
     #         else:
-    #             student_create_result['invalid'].append({'errors': serializer.errors, 'student': student})
+    #             student_create_result['invalid'].append(
+    #                 {'errors': serializer.errors, 'student': student}
+    #             )
     #
     #     from pprint import pprint
+    #
     #     pprint(student_create_result)
     #     print(student_create_result['invalid'][0])

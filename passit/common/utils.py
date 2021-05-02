@@ -1,17 +1,16 @@
 from enum import Enum
-from typing import Union, Type, Any, Tuple, List
+from typing import Any, List, Tuple, Type, Union
 from unittest import mock
 
 from django.db.models import QuerySet
 from django.http import HttpRequest
 from django.urls import resolve
 from django.views import View
-from rest_framework.test import force_authenticate, APIRequestFactory
+from rest_framework.test import APIRequestFactory, force_authenticate
 from rest_framework.viewsets import GenericViewSet
 
 
 class CustomEnum(Enum):
-
     def __str__(self) -> str:
         return self.name
 
@@ -36,9 +35,24 @@ def setup_view(view: Union[GenericViewSet, View], request, *args, **kwargs):
 
 class ResponseFactory:
     ALLOWED_METHODS = {'get', 'post', 'put', 'delete', 'patch', 'options', 'head'}
-    VIEWSET_KNOWN_ACTIONS = {'list', 'create', 'retrieve', 'update', 'partial_update', 'destroy'}
+    VIEWSET_KNOWN_ACTIONS = {
+        'list',
+        'create',
+        'retrieve',
+        'update',
+        'partial_update',
+        'destroy',
+    }
 
-    def __init__(self, url, method=None, user=None, data=None, view_kwargs=None, request_factory=APIRequestFactory):
+    def __init__(
+        self,
+        url,
+        method=None,
+        user=None,
+        data=None,
+        view_kwargs=None,
+        request_factory=APIRequestFactory,
+    ):
         self.url = url
         self.method = method
         self.user = user

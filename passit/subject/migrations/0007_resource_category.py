@@ -15,7 +15,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='resource',
             name='category',
-            field=models.CharField(choices=ResourceCategoryChoices.choices(), default=ResourceCategoryChoices.OTHER, max_length=50),
+            field=models.CharField(
+                choices=ResourceCategoryChoices.choices(),
+                default=ResourceCategoryChoices.OTHER,
+                max_length=50,
+            ),
             preserve_default=False,
         ),
     ]

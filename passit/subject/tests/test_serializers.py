@@ -4,11 +4,12 @@ import pytest
 
 from ..managers import FieldOfStudyOfAgeGroupManager
 from ..serializers import (
-    FieldAgeGroupRelatedField,
     FieldAgeGroupDefault,
+    FieldAgeGroupRelatedField,
+    FieldOfStudyOfAgeGroupSerializer,
+    ResourceBaseSerializer,
     SubjectSyllabusImportSerializer,
 )
-from ..serializers import FieldOfStudyOfAgeGroupSerializer, ResourceBaseSerializer
 
 
 class TestFieldOfAgeGroupSerializer:

@@ -1,9 +1,7 @@
-from django.contrib import admin
 from django.db import models
 
 
 class OwnedModelAdminMixin:
-
     def save_model(self, request, obj, form, change) -> models.Model:
         if not obj.pk:
             obj.created_by = request.user

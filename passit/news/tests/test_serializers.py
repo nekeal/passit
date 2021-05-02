@@ -7,9 +7,21 @@ from ..serializers import NewsSerializer
 
 
 def test_serializer_have_correct_fields():
-    assert set(NewsSerializer().fields) == {'id', 'title', 'content', 'subject_group', 'field_age_group', 'attachment',
-                                            'created_by', 'modified_by', 'created_by_profile', 'modified_by_profile',
-                                            'created_at', 'updated_at', 'is_owner'}
+    assert set(NewsSerializer().fields) == {
+        'id',
+        'title',
+        'content',
+        'subject_group',
+        'field_age_group',
+        'attachment',
+        'created_by',
+        'modified_by',
+        'created_by_profile',
+        'modified_by_profile',
+        'created_at',
+        'updated_at',
+        'is_owner',
+    }
 
 
 def test_serializer_serializes_news(news, user_profile1, user_profile2):
@@ -29,7 +41,7 @@ def test_serializer_serializes_news(news, user_profile1, user_profile2):
         'created_at': data.data['created_at'],
         'updated_at': data.data['updated_at'],
         'attachment': None,
-        'is_owner': True
+        'is_owner': True,
     }
 
     assert data.data == expected_data
@@ -42,13 +54,16 @@ def test_serializer_can_create_news(student1, subject_group):
         'title': 'New timetable',
         'content': 'not blank',
         'subject_group': subject_group.id,
-        'field_age_group': subject_group.field_age_group.id
+        'field_age_group': subject_group.field_age_group.id,
     }
     news = NewsSerializer(data=data, context={'request': request})
     news.is_valid(raise_exception=True)
     news.save()
-    assert (news.instance.title, news.instance.subject_group_id, news.instance.field_age_group_id) ==\
-           (data['title'], data['subject_group'], subject_group.field_age_group_id)
+    assert (
+        news.instance.title,
+        news.instance.subject_group_id,
+        news.instance.field_age_group_id,
+    ) == (data['title'], data['subject_group'], subject_group.field_age_group_id)
 
 
 def test_content_cant_be_empty(subject_group):
@@ -57,11 +72,13 @@ def test_content_cant_be_empty(subject_group):
         'title': 'New timetable',
         'content': '',
         'subject_group': subject_group.id,
-        'field_age_group': subject_group.field_age_group.id
+        'field_age_group': subject_group.field_age_group.id,
     }
     serializer = NewsSerializer(data=data)
     serializer.is_valid()
-    assert set(serializer.errors.keys()) == {'content',}
+    assert set(serializer.errors.keys()) == {
+        'content',
+    }
 
 
 def test_news_owned_model_serializer(news_data, api_rf, student1, student2):
@@ -74,7 +91,9 @@ def test_news_owned_model_serializer(news_data, api_rf, student1, student2):
     instance = serializer.save()
     assert instance.created_by == student1, "Creator is set on instace"
     assert instance.modified_by == student1, "Modifier is set on instance"
-    serializer = NewsSerializer(data=news_data, instance=instance, context={'request': request_user2})
+    serializer = NewsSerializer(
+        data=news_data, instance=instance, context={'request': request_user2}
+    )
     serializer.is_valid(raise_exception=True)
     instance = serializer.save()
     assert instance.created_by == student1, "Creator is unchanged on instance"

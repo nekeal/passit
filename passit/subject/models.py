@@ -4,25 +4,38 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from .managers import SubjectManager, SubjectOfAgeGroupManager, FieldOfStudyManager, \
-    FieldOfStudyOfAgeGroupManager, ResourceManager
-from .querysets import SubjectQuerySet, SubjectOfAgeGroupQuerySet, FieldOfStudyQuerySet, \
-    FieldOfStudyOfAgeGroupQuerySet, ResourceQuerySet
-from ..common.models import TimeStampedModel, OwnedModel
+from .managers import (
+    FieldOfStudyManager,
+    FieldOfStudyOfAgeGroupManager,
+    ResourceManager,
+    SubjectManager,
+    SubjectOfAgeGroupManager,
+)
+from .querysets import (
+    FieldOfStudyOfAgeGroupQuerySet,
+    FieldOfStudyQuerySet,
+    ResourceQuerySet,
+    SubjectOfAgeGroupQuerySet,
+    SubjectQuerySet,
+)
+from ..common.models import OwnedModel, TimeStampedModel
 from ..common.utils import CustomEnum
-from ..lecturers.models import LecturerOfSubjectOfAgeGroup, Lecturer
+from ..lecturers.models import Lecturer, LecturerOfSubjectOfAgeGroup
 
 
 def year_validator(value):
     max_year = datetime.datetime.now().year
     if value < 2018 or value > max_year:
-        raise ValidationError(f'{value} year is not valid. Provide value'
-                              f'between 2018 and {max_year}')
+        raise ValidationError(
+            f'{value} year is not valid. Provide value' f'between 2018 and {max_year}'
+        )
 
 
 class FieldOfStudy(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True, help_text='Slug which identifies field of study in syllabus')
+    slug = models.SlugField(
+        unique=True, help_text='Slug which identifies field of study in syllabus'
+    )
 
     objects = FieldOfStudyManager.from_queryset(FieldOfStudyQuerySet)()
 
@@ -35,10 +48,18 @@ class FieldOfStudy(models.Model):
 
 
 class FieldOfStudyOfAgeGroup(models.Model):
-    field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='field_age_groups')
-    students_start_year = models.PositiveIntegerField(validators=[year_validator, ])
+    field_of_study = models.ForeignKey(
+        'FieldOfStudy', on_delete=models.PROTECT, related_name='field_age_groups'
+    )
+    students_start_year = models.PositiveIntegerField(
+        validators=[
+            year_validator,
+        ]
+    )
 
-    objects = FieldOfStudyOfAgeGroupManager.from_queryset(FieldOfStudyOfAgeGroupQuerySet)()
+    objects = FieldOfStudyOfAgeGroupManager.from_queryset(
+        FieldOfStudyOfAgeGroupQuerySet
+    )()
 
     def __str__(self):
         return f"{self.field_of_study} {self.students_start_year}"
@@ -54,7 +75,9 @@ class Subject(models.Model):
     general_description = models.TextField()
     module_code = models.CharField(max_length=50, unique=True)
     category = models.CharField(max_length=100)
-    field_of_study = models.ForeignKey('FieldOfStudy', on_delete=models.PROTECT, related_name='subjects')
+    field_of_study = models.ForeignKey(
+        'FieldOfStudy', on_delete=models.PROTECT, related_name='subjects'
+    )
 
     objects = SubjectManager.from_queryset(SubjectQuerySet)()
 
@@ -74,8 +97,12 @@ class Resource(TimeStampedModel, OwnedModel):
     url = models.URLField(blank=True)
     image = models.ImageField(blank=True)
     description = models.TextField(blank=True)
-    category = models.CharField(max_length=50, choices=ResourceCategoryChoices.choices())
-    subject = models.ForeignKey('Subject', on_delete=models.CASCADE, related_name='resources')
+    category = models.CharField(
+        max_length=50, choices=ResourceCategoryChoices.choices()
+    )
+    subject = models.ForeignKey(
+        'Subject', on_delete=models.CASCADE, related_name='resources'
+    )
 
     objects = ResourceManager.from_queryset(ResourceQuerySet)()
 
@@ -84,12 +111,19 @@ class Resource(TimeStampedModel, OwnedModel):
 
 
 class SubjectOfAgeGroup(models.Model):
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='subjects')
+    subject = models.ForeignKey(
+        Subject, on_delete=models.CASCADE, related_name='subjects'
+    )
     description = models.TextField(blank=True)
 
-    field_age_group = models.ForeignKey('FieldOfStudyOfAgeGroup', on_delete=models.PROTECT,
-                                        related_name='subject_groups')
-    lecturers = models.ManyToManyField(Lecturer, through=LecturerOfSubjectOfAgeGroup, related_name='subject_groups')
+    field_age_group = models.ForeignKey(
+        'FieldOfStudyOfAgeGroup',
+        on_delete=models.PROTECT,
+        related_name='subject_groups',
+    )
+    lecturers = models.ManyToManyField(
+        Lecturer, through=LecturerOfSubjectOfAgeGroup, related_name='subject_groups'
+    )
 
     objects = SubjectOfAgeGroupManager.from_queryset(SubjectOfAgeGroupQuerySet)()
 
@@ -108,7 +142,9 @@ class SubjectOfAgeGroup(models.Model):
 
 
 class Exam(models.Model):
-    subject_group = models.ForeignKey(SubjectOfAgeGroup, on_delete=models.CASCADE, related_name='exams')
+    subject_group = models.ForeignKey(
+        SubjectOfAgeGroup, on_delete=models.CASCADE, related_name='exams'
+    )
     starts_at = models.DateTimeField()
     place = models.CharField(max_length=100, blank=True, null=True)
 

@@ -15,11 +15,23 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='resource',
             name='created_by',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='resource_created', to='accounts.UserProfile'),
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='resource_created',
+                to='accounts.UserProfile',
+            ),
         ),
         migrations.AlterField(
             model_name='resource',
             name='modified_by',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='resource_modified', to='accounts.UserProfile'),
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='resource_modified',
+                to='accounts.UserProfile',
+            ),
         ),
     ]

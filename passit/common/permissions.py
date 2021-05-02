@@ -1,8 +1,7 @@
-from rest_framework.permissions import BasePermission, SAFE_METHODS
+from rest_framework.permissions import SAFE_METHODS, BasePermission
 
 
 class IsPrivilegedOrOwnerOrReadOnly(BasePermission):
-
     def has_object_permission(self, request, view, obj) -> bool:
         return bool(
             request.user.is_authenticated
@@ -11,6 +10,8 @@ class IsPrivilegedOrOwnerOrReadOnly(BasePermission):
                 or request.user
                 and (
                     request.user.profile.is_privileged()
-                    or hasattr(obj, 'is_owner') and obj.is_owner(request.user.profile)
+                    or hasattr(obj, 'is_owner')
+                    and obj.is_owner(request.user.profile)
                 )
-            ))
+            )
+        )

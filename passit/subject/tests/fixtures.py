@@ -1,7 +1,12 @@
 import pytest
 
-from passit.subject.factories import SubjectFactory, FieldOfStudyFactory, SubjectOfAgeGroupFactory, \
-    FieldOfStudyOfAgeGroupFactory, ResourceFactory
+from passit.subject.factories import (
+    FieldOfStudyFactory,
+    FieldOfStudyOfAgeGroupFactory,
+    ResourceFactory,
+    SubjectFactory,
+    SubjectOfAgeGroupFactory,
+)
 from passit.subject.models import ResourceCategoryChoices
 
 
@@ -12,7 +17,9 @@ def field_of_study(db):
 
 @pytest.fixture
 def field_age_group(db, field_of_study):
-    return FieldOfStudyOfAgeGroupFactory(field_of_study=field_of_study, students_start_year=2018)
+    return FieldOfStudyOfAgeGroupFactory(
+        field_of_study=field_of_study, students_start_year=2018
+    )
 
 
 @pytest.fixture
@@ -23,6 +30,7 @@ def subject(db, field_of_study):
 @pytest.fixture
 def resource(subject):
     return ResourceFactory(name="Resource", subject=subject)
+
 
 @pytest.fixture
 def subject_group(db, subject, field_age_group):

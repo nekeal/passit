@@ -7,6 +7,4 @@ from .views import EventViewSet
 router = DefaultRouter()
 router.register('events', EventViewSet, 'event')
 
-urlpatterns: List[Any] = [
-
-]
+urlpatterns: List[Any] = []

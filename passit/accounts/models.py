@@ -1,9 +1,9 @@
 from enum import IntEnum
-from typing import Tuple, List, TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, List, Optional, Tuple
 
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.db import models
-from django.db.models import Q, Manager, QuerySet
+from django.db.models import Manager, Q, QuerySet
 
 if TYPE_CHECKING:
     from ..subject.models import FieldOfStudyOfAgeGroup
@@ -41,7 +41,7 @@ class CustomUserManager(UserManager.from_queryset(CustomUserQuerySet)):  # type:
         email: Optional[str] = None,
         password: Optional[str] = None,
     ):
-        from .models import UserProfile, Membership
+        from .models import Membership, UserProfile
 
         user = super(CustomUserManager, self).create_user(username, email, password)
         profile = UserProfile.objects.create(user=user)

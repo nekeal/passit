@@ -17,17 +17,68 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Event',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                (
+                    'id',
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name='ID',
+                    ),
+                ),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('name', models.CharField(max_length=100)),
                 ('description', models.TextField(blank=True)),
-                ('category', models.CharField(choices=[('EXAM', 'Exam'), ('MID_TERM_EXAM', 'Mid term exam'), ('PROJECT', 'Project'), ('OTHER', 'Other')], max_length=50)),
+                (
+                    'category',
+                    models.CharField(
+                        choices=[
+                            ('EXAM', 'Exam'),
+                            ('MID_TERM_EXAM', 'Mid term exam'),
+                            ('PROJECT', 'Project'),
+                            ('OTHER', 'Other'),
+                        ],
+                        max_length=50,
+                    ),
+                ),
                 ('due_date', models.DateTimeField()),
-                ('created_by', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='event_created', to='accounts.UserProfile')),
-                ('field_age_group', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='subject.FieldOfStudyOfAgeGroup')),
-                ('modified_by', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='event_modified', to='accounts.UserProfile')),
-                ('subject_group', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='subject.SubjectOfAgeGroup')),
+                (
+                    'created_by',
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name='event_created',
+                        to='accounts.UserProfile',
+                    ),
+                ),
+                (
+                    'field_age_group',
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to='subject.FieldOfStudyOfAgeGroup',
+                    ),
+                ),
+                (
+                    'modified_by',
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name='event_modified',
+                        to='accounts.UserProfile',
+                    ),
+                ),
+                (
+                    'subject_group',
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to='subject.SubjectOfAgeGroup',
+                    ),
+                ),
             ],
             options={
                 'abstract': False,

@@ -15,10 +15,20 @@ class TimeStampedModel(models.Model):
 
 
 class OwnedModel(models.Model):
-    created_by = models.ForeignKey('accounts.UserProfile', on_delete=models.CASCADE,
-                                   blank=True, null=True, related_name='%(class)s_created')
-    modified_by = models.ForeignKey('accounts.UserProfile', on_delete=models.CASCADE,
-                                    blank=True, null=True, related_name='%(class)s_modified')
+    created_by = models.ForeignKey(
+        'accounts.UserProfile',
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name='%(class)s_created',
+    )
+    modified_by = models.ForeignKey(
+        'accounts.UserProfile',
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name='%(class)s_modified',
+    )
 
     class Meta:
         abstract = True

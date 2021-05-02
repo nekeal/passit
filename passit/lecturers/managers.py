@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING
 
 from django.db.models import Manager, QuerySet
 
-from .querysets import LecturerQuerySet, LecturerOfSubjectQuerySet
+from .querysets import LecturerOfSubjectQuerySet, LecturerQuerySet
 
 if TYPE_CHECKING:
     from .models import Lecturer, LecturerOfSubjectOfAgeGroup

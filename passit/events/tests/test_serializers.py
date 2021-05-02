@@ -15,14 +15,13 @@ from passit.subject.serializers import (
 
 
 class TestEventSerializer:
-
     @staticmethod
     def get_minimal_valid_data(field_age_group, **kwargs):
         data = {
             "name": "event_name",
             "category": EventCategoryChoices.OTHER,
             "due_date": str(timezone.now()),
-            "field_age_group": field_age_group.id
+            "field_age_group": field_age_group.id,
         }
         data.update(**kwargs)
         return data
@@ -39,9 +38,15 @@ class TestEventSerializer:
         ),
     )
     def test_expandable_fields(self, field_name, serializer_class):
-        serializer = EventSerializer(expand=[field_name, ])
+        serializer = EventSerializer(
+            expand=[
+                field_name,
+            ]
+        )
         field_config = serializer._expandable_fields[field_name]
-        assert serializer.expanded_fields == [field_name, ]
+        assert serializer.expanded_fields == [
+            field_name,
+        ]
         assert field_config[0] == serializer_class
 
     @pytest.mark.parametrize(
@@ -63,34 +68,32 @@ class TestEventSerializer:
     def test_required_fields(self, field_name, is_required):
         assert EventSerializer().fields[field_name].required is is_required
 
-    @pytest.mark.parametrize('field_age_group_id', (
-        1,
-        "1"
-    ))
-    @pytest.mark.parametrize('subject_group_id', (
-        1,
-        "1"
-    ))
+    @pytest.mark.parametrize('field_age_group_id', (1, "1"))
+    @pytest.mark.parametrize('subject_group_id', (1, "1"))
     def test_validate_correct_subject_group(self, subject_group_id, field_age_group_id):
         field_age_group = FieldOfStudyOfAgeGroupFactory.build()
         subject_group = SubjectOfAgeGroupFactory.build(field_age_group=field_age_group)
         subject_group.field_age_group_id = field_age_group_id
-        serializer = EventSerializer(data={
-            'name': 'name',
-            'category': EventCategoryChoices.OTHER,
-            'field_age_group': field_age_group_id,
-            'subject_group': subject_group_id,
-        })
+        serializer = EventSerializer(
+            data={
+                'name': 'name',
+                'category': EventCategoryChoices.OTHER,
+                'field_age_group': field_age_group_id,
+                'subject_group': subject_group_id,
+            }
+        )
         assert serializer.validate_subject_group(subject_group) == subject_group
 
     def test_subject_not_match_field_age_group(self):
         subject_group = SubjectOfAgeGroupFactory.build(id=1, field_age_group_id=2)
-        serializer = EventSerializer(data={
-            'name': 'name',
-            'category': EventCategoryChoices.OTHER,
-            'field_age_group': 1,
-            'subject_group': 1,
-        })
+        serializer = EventSerializer(
+            data={
+                'name': 'name',
+                'category': EventCategoryChoices.OTHER,
+                'field_age_group': 1,
+                'subject_group': 1,
+            }
+        )
         with pytest.raises(ValidationError):
             serializer.validate_subject_group(subject_group)
 

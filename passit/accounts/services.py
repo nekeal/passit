@@ -19,11 +19,13 @@ class Student:
 
 
 class StudentImportService:
-
     def __init__(self, field_age_group, membership_type) -> None:
         self.field_age_group = field_age_group
         self.membership_type = membership_type
-        self.student_create_result: Dict[str, List[Dict[str, Student]]] = {'valid': [], 'invalid': []}
+        self.student_create_result: Dict[str, List[Dict[str, Student]]] = {
+            'valid': [],
+            'invalid': [],
+        }
 
     def create_from_file(self, file) -> None:
         csv_reader = csv.reader(file)
@@ -32,15 +34,22 @@ class StudentImportService:
             student = Student(*line, password)  # type: ignore
             serializer = StudentsImportSerializer(data=dataclasses.asdict(student))
             if serializer.is_valid():
-                serializer.save(field_age_group=field_age_group, type=MembershipTypeChoices.NORMAL)
+                serializer.save(
+                    field_age_group=field_age_group, type=MembershipTypeChoices.NORMAL
+                )
                 self.student_create_result['valid'].append({'student': student})
             else:
-                self.student_create_result['invalid'].append({'errors': serializer.errors, 'student': student})
+                self.student_create_result['invalid'].append(
+                    {'errors': serializer.errors, 'student': student}
+                )
 
     def print_report(self) -> None:
         print('Created:')
         for student in self.student_create_result['valid']:
-            print(f'{student["student"].get_full_name()} - {student["student"].username}:{student["student"].password}')
+            print(
+                f'{student["student"].get_full_name()} - '
+                f'{student["student"].username}:{student["student"].password}'
+            )
         print("Failed to create:")
         for student in self.student_create_result['invalid']:
             print(f'{student["student"].get_full_name()} - {student["errors"]}')

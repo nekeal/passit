@@ -1,4 +1,4 @@
-from typing import List, Any
+from typing import Any, List
 
 from rest_framework.routers import DefaultRouter
 
@@ -8,8 +8,6 @@ router = DefaultRouter()
 
 router.register('news', NewsViewSet, basename='news')
 
-urlpatterns: List[Any] = [
-
-]
+urlpatterns: List[Any] = []
 
 urlpatterns += router.urls

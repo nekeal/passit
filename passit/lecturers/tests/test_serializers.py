@@ -5,16 +5,15 @@ from ..serializers import LecturerBaseSerializer, LecturerSyllabusImportSerializ
 
 
 class TestLecturerBaseSerializer:
-
     @pytest.mark.parametrize(
         "field_name,is_required",
         (
-                ("id", False),
-                ("first_name", True),
-                ("last_name", True),
-                ("title", False),
-                ("contact", False),
-                ("consultations", False),
+            ("id", False),
+            ("first_name", True),
+            ("last_name", True),
+            ("title", False),
+            ("contact", False),
+            ("consultations", False),
         ),
     )
     def test_required_fields(self, field_name, is_required):
@@ -22,13 +21,8 @@ class TestLecturerBaseSerializer:
 
 
 class TestLecturerSyllabusImportSerializer:
-
     def setup_method(self):
-        self.data = {
-            "first_name": "John",
-            "last_name": "Smith",
-            "title": "dr."
-        }
+        self.data = {"first_name": "John", "last_name": "Smith", "title": "dr."}
 
     @pytest.mark.django_db
     def test_create_does_not_duplicate_lecturer(self):
@@ -46,4 +40,3 @@ class TestLecturerSyllabusImportSerializer:
         serializer.is_valid(raise_exception=True)
         instance = serializer.save()
         assert lecturer != instance
-

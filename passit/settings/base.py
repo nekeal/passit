@@ -9,10 +9,8 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
 import os
 from datetime import timedelta
-
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parents[2]
@@ -154,10 +152,8 @@ CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": os.environ.get('REDIS_LOCATION', "redis://127.0.0.1:6379/1"),
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient"
-        },
-        "KEY_PREFIX": "passit"
+        "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
+        "KEY_PREFIX": "passit",
     }
 }
 
@@ -213,25 +209,23 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_FILTER_BACKENDS': (
-        'django_filters.rest_framework.DjangoFilterBackend',
-    )
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
 }
 # WEBPACK LOADER
 
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'passit/frontend/build/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'passit/frontend/config/webpack-stats.json'),
+        'STATS_FILE': os.path.join(
+            BASE_DIR, 'passit/frontend/config/webpack-stats.json'
+        ),
     }
 }
 
 # DJOSER
 
 DJOSER = {
-    'SERIALIZERS': {
-        'current_user': 'passit.accounts.serializers.CustomUserSerializer'
-    }
+    'SERIALIZERS': {'current_user': 'passit.accounts.serializers.CustomUserSerializer'}
 }
 
 SIMPLE_JWT = {

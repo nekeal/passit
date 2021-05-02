@@ -7,12 +7,12 @@ from django.http import HttpRequest
 from django_admin_display import admin_display
 
 from passit.subject.models import (
-    Subject,
-    SubjectOfAgeGroup,
     Exam,
-    Resource,
     FieldOfStudy,
     FieldOfStudyOfAgeGroup,
+    Resource,
+    Subject,
+    SubjectOfAgeGroup,
 )
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 
