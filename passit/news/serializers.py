@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 from .models import News
 from ..common.serializers import OwnedModelSerializerMixin
-from ..subject.serializers import FieldAgeGroupRelatedField, FieldAgeGroupDefault
+from ..subject.serializers import FieldAgeGroupDefault, FieldAgeGroupRelatedField
 
 
 class NewsSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
@@ -17,5 +17,18 @@ class NewsSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerializer):
 
     class Meta:
         model = News
-        fields = ('id', 'title', 'content', 'subject_group', 'field_age_group', 'attachment', 'created_by_profile',
-                  'modified_by_profile', 'is_owner', 'created_by', 'modified_by', 'created_at', 'updated_at')
+        fields = (
+            'id',
+            'title',
+            'content',
+            'subject_group',
+            'field_age_group',
+            'attachment',
+            'created_by_profile',
+            'modified_by_profile',
+            'is_owner',
+            'created_by',
+            'modified_by',
+            'created_at',
+            'updated_at',
+        )

@@ -6,7 +6,9 @@ from django.utils.crypto import get_random_string
 
 def set_random_module_code(apps, schema_editor):
     '''Set random module code on subjects'''
-    subjects = apps.get_model("subject", "Subject").objects.filter(module_code__isnull=True)
+    subjects = apps.get_model("subject", "Subject").objects.filter(
+        module_code__isnull=True
+    )
     for subject in subjects:
         subject.module_code = get_random_string()
         subject.save()
@@ -30,7 +32,7 @@ class Migration(migrations.Migration):
             model_name='subject',
             name='module_code',
             field=models.CharField(max_length=50, unique=True),
-            preserve_default=False
+            preserve_default=False,
         ),
         migrations.AddField(
             model_name='subject',

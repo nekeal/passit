@@ -1,7 +1,7 @@
 from django.db import models
 
 from passit.lecturers.managers import LecturerManager, LecturerOfSubjectManager
-from passit.lecturers.querysets import LecturerQuerySet, LecturerOfSubjectQuerySet
+from passit.lecturers.querysets import LecturerOfSubjectQuerySet, LecturerQuerySet
 
 
 class Lecturer(models.Model):
@@ -19,8 +19,11 @@ class Lecturer(models.Model):
 
 class LecturerOfSubjectOfAgeGroup(models.Model):
     lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
-    subject_group = models.ForeignKey('subject.SubjectOfAgeGroup', on_delete=models.CASCADE,
-                                      related_name='subject_groups')
+    subject_group = models.ForeignKey(
+        'subject.SubjectOfAgeGroup',
+        on_delete=models.CASCADE,
+        related_name='subject_groups',
+    )
 
     objects = LecturerOfSubjectManager.from_queryset(LecturerOfSubjectQuerySet)()
 

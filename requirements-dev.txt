@@ -1,4 +1,0 @@
--r requirements.txt
--r requirements-ci.txt
-ansible==2.8.6
-ipython==7.9.0

@@ -1,13 +1,13 @@
 from rest_flex_fields import FlexFieldsModelViewSet, is_expanded
 from rest_framework.permissions import IsAuthenticated
 
-from .filters import SubjectFilterSet, ResourceFilterSet, SubjectOfAgeGroupFilterSet
+from .filters import ResourceFilterSet, SubjectFilterSet, SubjectOfAgeGroupFilterSet
 from ..common.permissions import IsPrivilegedOrOwnerOrReadOnly
-from ..subject.models import FieldOfStudy, Subject, Resource, SubjectOfAgeGroup
+from ..subject.models import FieldOfStudy, Resource, Subject, SubjectOfAgeGroup
 from ..subject.serializers import (
     FieldOfStudyBaseSerializer,
-    SubjectBaseSerializer,
     ResourceBaseSerializer,
+    SubjectBaseSerializer,
     SubjectOfAgeGroupSerializer,
 )
 
@@ -51,7 +51,9 @@ class ResourceViewSet(FlexFieldsModelViewSet):
     serializer_class = ResourceBaseSerializer
     queryset = Resource.objects.all()
     filterset_class = ResourceFilterSet
-    permission_classes = [IsAuthenticated, ]
+    permission_classes = [
+        IsAuthenticated,
+    ]
     permit_list_expands = ('subject',)
 
     def get_queryset(self):

@@ -21,13 +21,18 @@ def news_list_view():
 
 @pytest.fixture
 def news_detail_view():
-    return NewsViewSet.as_view({'get': 'retrieve', 'post': 'create', 'delete': 'destroy', 'put': 'update'})
+    return NewsViewSet.as_view(
+        {'get': 'retrieve', 'post': 'create', 'delete': 'destroy', 'put': 'update'}
+    )
 
 
 # --- NewsViewSet ---
 
+
 @mock.patch.object(NewsManager, 'get_by_profile', return_value=News.objects.none())
-def test_news_are_filtered_by_user(m_get_by_profile, api_rf, news_list_view, user_profile1, django_assert_num_queries):
+def test_news_are_filtered_by_user(
+    m_get_by_profile, api_rf, news_list_view, user_profile1, django_assert_num_queries
+):
     request = api_rf.get(reverse('api:news-list'))
     force_authenticate(request, user_profile1.user)
     with django_assert_num_queries(0):  # original query is mocked
@@ -42,8 +47,12 @@ def test_news_viewset_get_queryset(api_rf, user_profile1, news_list_view):
     assert view_instance.get_queryset().query.order_by == ('-created_at',)
 
 
-def test_field_age_group_is_auto_set_by_profile(api_rf, news_data, news_list_view, student1):
-    expected_field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(student1)
+def test_field_age_group_is_auto_set_by_profile(
+    api_rf, news_data, news_list_view, student1
+):
+    expected_field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(
+        student1
+    )
     news_data.pop('field_age_group')
     request = api_rf.post(reverse('api:news-list'), data=news_data)
     MembershipFactory(profile=student1)
@@ -53,28 +62,39 @@ def test_field_age_group_is_auto_set_by_profile(api_rf, news_data, news_list_vie
     assert response.data['field_age_group'] == expected_field_age_group.id
 
 
-def test_is_news_owner_flag_is_in_response(api_rf, news_list_view, student1,
-                                           student2, field_age_group):
+def test_is_news_owner_flag_is_in_response(
+    api_rf, news_list_view, student1, student2, field_age_group
+):
     request = api_rf.get(reverse('api:news-list'), data={'expand': 'is_news_owner'})
     force_authenticate(request, student1.user)
-    owned_by_user1 = NewsFactory(created_by=student1,
-                                 field_age_group=field_age_group)
-    owned_by_user2 = NewsFactory(created_by=student2,
-                                 field_age_group=field_age_group)
+    owned_by_user1 = NewsFactory(created_by=student1, field_age_group=field_age_group)
+    owned_by_user2 = NewsFactory(created_by=student2, field_age_group=field_age_group)
     response = news_list_view(request)
     news = response.data
-    assert news[0]['is_owner'] if news[0]['id'] == owned_by_user1.id else not news[0]['is_owner']
-    assert not news[1]['is_owner'] if news[1]['id'] == owned_by_user2.id else news[1]['is_owner']
+    assert (
+        news[0]['is_owner']
+        if news[0]['id'] == owned_by_user1.id
+        else not news[0]['is_owner']
+    )
+    assert (
+        not news[1]['is_owner']
+        if news[1]['id'] == owned_by_user2.id
+        else news[1]['is_owner']
+    )
 
 
-def test_is_owner_is_returned_when_creating_news(api_rf, news_list_view, news_data, student1):
+def test_is_owner_is_returned_when_creating_news(
+    api_rf, news_list_view, news_data, student1
+):
     request = api_rf.post(reverse('api:news-list'), data=news_data)
     force_authenticate(request, student1.user)
     response = news_list_view(request)
     assert response.data['is_owner']
 
 
-def test_every_authenticated_user_can_create_news(api_rf, news_list_view, news_data, student1):
+def test_every_authenticated_user_can_create_news(
+    api_rf, news_list_view, news_data, student1
+):
     request = api_rf.post(reverse('api:news-list'), data=news_data)
     force_authenticate(request, student1.user)
     response = news_list_view(request)
@@ -82,7 +102,9 @@ def test_every_authenticated_user_can_create_news(api_rf, news_list_view, news_d
     assert News.objects.count() == 1
 
 
-def test_owner_can_update_news(api_rf, news_detail_view, news_data, subject_group, student1):
+def test_owner_can_update_news(
+    api_rf, news_detail_view, news_data, subject_group, student1
+):
     news = NewsFactory(subject_group=subject_group, created_by=student1)
     new_title = "New Title"
     news_data['title'] = new_title
@@ -94,8 +116,9 @@ def test_owner_can_update_news(api_rf, news_detail_view, news_data, subject_grou
     assert news.title == new_title
 
 
-def test_privileged_can_update_news(api_rf, news_detail_view, news_data, subject_group,
-                                    student1, representative_profile):
+def test_privileged_can_update_news(
+    api_rf, news_detail_view, news_data, subject_group, student1, representative_profile
+):
     news = NewsFactory(subject_group=subject_group, created_by=student1)
     new_title = "New Title"
     news_data['title'] = new_title
@@ -107,7 +130,9 @@ def test_privileged_can_update_news(api_rf, news_detail_view, news_data, subject
     assert news.title == new_title
 
 
-def test_user_cant_update_not_his_news(api_rf, news_detail_view, news_data, subject_group, student1, student2):
+def test_user_cant_update_not_his_news(
+    api_rf, news_detail_view, news_data, subject_group, student1, student2
+):
     news = NewsFactory(subject_group=subject_group, created_by=student1)
     new_title = "New Title"
     news_data['title'] = new_title
@@ -117,7 +142,9 @@ def test_user_cant_update_not_his_news(api_rf, news_detail_view, news_data, subj
     assert response.status_code == status.HTTP_403_FORBIDDEN
 
 
-def test_owner_can_delete_news(api_rf, news_detail_view, news_data, subject_group, student1):
+def test_owner_can_delete_news(
+    api_rf, news_detail_view, news_data, subject_group, student1
+):
     news = NewsFactory(subject_group=subject_group, created_by=student1)
     request = api_rf.delete(reverse('api:news-detail', args=(news.id,)))
     force_authenticate(request, student1.user)
@@ -126,7 +153,9 @@ def test_owner_can_delete_news(api_rf, news_detail_view, news_data, subject_grou
     assert News.objects.count() == 0
 
 
-def test_user_cant_delete_not_his_news(api_rf, news_detail_view, news_data, subject_group, student1, student2):
+def test_user_cant_delete_not_his_news(
+    api_rf, news_detail_view, news_data, subject_group, student1, student2
+):
     news = NewsFactory(subject_group=subject_group, created_by=student1)
     request = api_rf.delete(reverse('api:news-detail', args=(news.id,)))
     force_authenticate(request, student2.user)
@@ -135,8 +164,9 @@ def test_user_cant_delete_not_his_news(api_rf, news_detail_view, news_data, subj
     assert News.objects.count() == 1
 
 
-def test_privileged_can_delete_news(api_rf, news_detail_view, news_data, subject_group, student1,
-                                    representative_profile):
+def test_privileged_can_delete_news(
+    api_rf, news_detail_view, news_data, subject_group, student1, representative_profile
+):
     news = NewsFactory(subject_group=subject_group, created_by=student1)
     request = api_rf.delete(reverse('api:news-detail', args=(news.id,)))
     force_authenticate(request, representative_profile.user)

@@ -14,6 +14,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='news',
             name='field_age_group',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, related_name='news', to='subject.FieldOfStudyOfAgeGroup'),
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name='news',
+                to='subject.FieldOfStudyOfAgeGroup',
+            ),
         ),
     ]

@@ -24,8 +24,8 @@ ENV PYTHONUNBUFFERED 1
 ENV PORT=8000
 WORKDIR /app
 
-ADD requirements.txt .
-RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
+ADD requirements/prod.txt .
+RUN --mount=type=cache,target=/root/.cache/pip pip install -r prod.txt
 ADD . ./
 CMD ["./entrypoint.sh"]
 

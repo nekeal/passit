@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING
 
-from django.db.models import QuerySet, F
+from django.db.models import F, QuerySet
 
 from passit.accounts.models import Membership, UserProfile
 

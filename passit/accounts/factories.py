@@ -1,6 +1,6 @@
 import factory
 
-from .models import CustomUser, UserProfile, Membership
+from .models import CustomUser, Membership, UserProfile
 from ..subject.factories import FieldOfStudyOfAgeGroupFactory
 
 

@@ -7,7 +7,6 @@ from passit.subject.models import FieldOfStudy
 
 
 class LecturerAdapter:
-
     def __init__(self, json_data_from_syllabus):
         data = json_data_from_syllabus
         self.lecturer_data = {
@@ -21,7 +20,6 @@ class LecturerAdapter:
 
 
 class SubjectAdapter:
-
     def __init__(self, field_of_study: FieldOfStudy, json_data_from_syllabus):
         self.initial_data = json_data_from_syllabus
         self.subject_data = {
@@ -35,7 +33,10 @@ class SubjectAdapter:
         }
 
     def get_lecturers(self):
-        lecturers = [LecturerAdapter(lecturer['teacher']).get_data() for lecturer in self.initial_data['teachers']]
+        lecturers = [
+            LecturerAdapter(lecturer['teacher']).get_data()
+            for lecturer in self.initial_data['teachers']
+        ]
         return lecturers
 
     def save_data(self, filename='subjects_list.json'):
@@ -48,12 +49,20 @@ class SubjectAdapter:
 
 class SyllabusClient:
     BASE_URL = "https://syllabuskrk.agh.edu.pl"
-    FIELDS_OF_STUDY_LIST_BASE_URL = urljoin(BASE_URL, '/{age_group}/magnesite/api/faculties/{faculty}/study_plans')
-    SUBJECTS_LIST_BASE_URL = \
-        urljoin(BASE_URL, '/{age_group}/magnesite/api/faculties/{faculty}/study_plans/{field_of_study}')
-    SUBJECTS_LIST_WITH_DETAILS_URL =\
-        '/'.join([SUBJECTS_LIST_BASE_URL,
-                  'modules/?fields=description,teachers,module-owner,credit-conditions,module_activities,module-code'])
+    FIELDS_OF_STUDY_LIST_BASE_URL = urljoin(
+        BASE_URL, '/{age_group}/magnesite/api/faculties/{faculty}/study_plans'
+    )
+    SUBJECTS_LIST_BASE_URL = urljoin(
+        BASE_URL,
+        '/{age_group}/magnesite/api/faculties/{faculty}/study_plans/{field_of_study}',
+    )
+    SUBJECTS_LIST_WITH_DETAILS_URL = '/'.join(
+        [
+            SUBJECTS_LIST_BASE_URL,
+            'modules/?fields=description,teachers,module-owner,'
+            'credit-conditions,module_activities,module-code',
+        ]
+    )
 
     def __init__(self, language='pl'):
         self.session = requests.Session()
@@ -66,12 +75,15 @@ class SyllabusClient:
 
     @classmethod
     def _get_subject_list_url(cls, age_group, faculty, field_of_study):
-        return cls.SUBJECTS_LIST_BASE_URL.format(age_group=age_group, faculty=faculty, field_of_study=field_of_study)
+        return cls.SUBJECTS_LIST_BASE_URL.format(
+            age_group=age_group, faculty=faculty, field_of_study=field_of_study
+        )
 
     @classmethod
     def _get_subject_list_details_url(cls, age_group, faculty, field_of_study):
-        return cls.SUBJECTS_LIST_WITH_DETAILS_URL.format(age_group=age_group, faculty=faculty,
-                                                         field_of_study=field_of_study)
+        return cls.SUBJECTS_LIST_WITH_DETAILS_URL.format(
+            age_group=age_group, faculty=faculty, field_of_study=field_of_study
+        )
 
     def _merge_subjects_data(self, common_data, detail_data):
         merged_data = {}

@@ -6,7 +6,6 @@ from passit.accounts.models import UserProfile
 
 
 class CurrentUserProfileDefault:
-
     def __init__(self) -> None:
         self.profile: Optional[UserProfile] = None
 
@@ -25,9 +24,13 @@ class CurrentUserProfileDefault:
 class OwnedModelSerializerMixin(metaclass=serializers.SerializerMetaclass):
     created_by = serializers.SerializerMethodField(read_only=True)
     modified_by = serializers.SerializerMethodField(read_only=True)
-    created_by_profile = serializers.HiddenField(source='created_by',
-                                                 default=serializers.CreateOnlyDefault(CurrentUserProfileDefault()))
-    modified_by_profile = serializers.HiddenField(source='modified_by', default=CurrentUserProfileDefault())
+    created_by_profile = serializers.HiddenField(
+        source='created_by',
+        default=serializers.CreateOnlyDefault(CurrentUserProfileDefault()),
+    )
+    modified_by_profile = serializers.HiddenField(
+        source='modified_by', default=CurrentUserProfileDefault()
+    )
 
     @staticmethod
     def get_created_by(instance):

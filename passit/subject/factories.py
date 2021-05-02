@@ -4,8 +4,15 @@ from random import randint
 import factory
 from django.utils.text import slugify
 
-from ..subject.models import FieldOfStudy, Subject, SubjectOfAgeGroup, Resource, Exam, FieldOfStudyOfAgeGroup, \
-    ResourceCategoryChoices
+from ..subject.models import (
+    Exam,
+    FieldOfStudy,
+    FieldOfStudyOfAgeGroup,
+    Resource,
+    ResourceCategoryChoices,
+    Subject,
+    SubjectOfAgeGroup,
+)
 
 
 class FieldOfStudyFactory(factory.DjangoModelFactory):
@@ -18,7 +25,9 @@ class FieldOfStudyFactory(factory.DjangoModelFactory):
 
 class FieldOfStudyOfAgeGroupFactory(factory.DjangoModelFactory):
     field_of_study = factory.SubFactory(FieldOfStudyFactory)
-    students_start_year = factory.LazyAttribute(lambda n: datetime.datetime.now().year - 1)
+    students_start_year = factory.LazyAttribute(
+        lambda n: datetime.datetime.now().year - 1
+    )
 
     class Meta:
         model = FieldOfStudyOfAgeGroup

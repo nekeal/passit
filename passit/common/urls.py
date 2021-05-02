@@ -1,8 +1,3 @@
-from typing import List, Any
+from typing import Any, List
 
-from django.urls import path
-
-
-urlpatterns: List[Any] = [
-
-]
+urlpatterns: List[Any] = []

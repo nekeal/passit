@@ -1,4 +1,4 @@
-from typing import Dict, Tuple, Any
+from typing import Any, Dict, Tuple
 
 from rest_flex_fields import FlexFieldsModelSerializer
 from rest_framework import serializers
@@ -8,14 +8,12 @@ from .models import Lecturer, LecturerOfSubjectOfAgeGroup
 
 
 class LecturerBaseSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Lecturer
         fields = ('id', 'first_name', 'last_name', 'title', 'contact', 'consultations')
 
 
 class LecturerSyllabusImportSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Lecturer
         fields = ('first_name', 'last_name', 'title')
@@ -26,11 +24,13 @@ class LecturerSyllabusImportSerializer(serializers.ModelSerializer):
 
 
 class LecturerOfSubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):
-
     class Meta:
         model = LecturerOfSubjectOfAgeGroup
-        fields = ('id', 'lecturer',)
+        fields = (
+            'id',
+            'lecturer',
+        )
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
             'lecturer': (LecturerBaseSerializer, {}),
-            'students_start_year': (serializers.IntegerField, {})
+            'students_start_year': (serializers.IntegerField, {}),
         }

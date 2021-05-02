@@ -3,22 +3,22 @@ from typing import TYPE_CHECKING
 from django.db.models import Manager, QuerySet
 
 from .querysets import (
-    SubjectQuerySet,
-    SubjectOfAgeGroupQuerySet,
     FieldOfStudyOfAgeGroupQuerySet,
     FieldOfStudyQuerySet,
     ResourceQuerySet,
+    SubjectOfAgeGroupQuerySet,
+    SubjectQuerySet,
 )
 
 if TYPE_CHECKING:
+    from ..accounts.models import UserProfile
     from .models import (
-        Subject,
-        SubjectOfAgeGroup,
         FieldOfStudy,
         FieldOfStudyOfAgeGroup,
         Resource,
+        Subject,
+        SubjectOfAgeGroup,
     )
-    from ..accounts.models import UserProfile
 
 
 class FieldOfStudyManager(Manager):  # type: ignore

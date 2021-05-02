@@ -13,7 +13,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='fieldofstudies',
             name='slug',
-            field=models.SlugField(default='slug', help_text='Slug which identifies field of study in syllabus', unique=True),
+            field=models.SlugField(
+                default='slug',
+                help_text='Slug which identifies field of study in syllabus',
+                unique=True,
+            ),
             preserve_default=False,
         ),
     ]

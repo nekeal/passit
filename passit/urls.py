@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import include, path, re_path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework.authentication import SessionAuthentication
@@ -29,14 +29,15 @@ from .news.urls import router as news_router
 from .subject.urls import router as subject_router
 from .views import index
 
-schema_view = get_schema_view(openapi.Info(
-    title='Passit API',
-    default_version='v1',
-    description='API passit wiki',
-    license=openapi.License(name='GNU General Public License v3.0'),
-),
-    authentication_classes=(SessionAuthentication, ),
-    permission_classes=(AllowAny,)
+schema_view = get_schema_view(
+    openapi.Info(
+        title='Passit API',
+        default_version='v1',
+        description='API passit wiki',
+        license=openapi.License(name='GNU General Public License v3.0'),
+    ),
+    authentication_classes=(SessionAuthentication,),
+    permission_classes=(AllowAny,),
 )
 
 

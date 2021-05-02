@@ -1,7 +1,7 @@
 from ..factories import NewsFactory
 from ..models import News
 from ...accounts.factories import MembershipFactory
-from ...subject.factories import SubjectOfAgeGroupFactory, FieldOfStudyOfAgeGroupFactory
+from ...subject.factories import FieldOfStudyOfAgeGroupFactory, SubjectOfAgeGroupFactory
 
 
 class TestNews:

@@ -6,20 +6,20 @@ from django.core.exceptions import ValidationError
 
 from passit.accounts.factories import MembershipFactory
 from passit.subject.factories import (
+    ExamFactory,
     FieldOfStudyFactory,
     FieldOfStudyOfAgeGroupFactory,
-    SubjectFactory,
     ResourceFactory,
+    SubjectFactory,
     SubjectOfAgeGroupFactory,
-    ExamFactory,
 )
 from passit.subject.models import (
     FieldOfStudy,
     FieldOfStudyOfAgeGroup,
-    year_validator,
-    SubjectOfAgeGroup,
-    Subject,
     Resource,
+    Subject,
+    SubjectOfAgeGroup,
+    year_validator,
 )
 
 

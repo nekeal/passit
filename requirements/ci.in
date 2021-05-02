@@ -1,0 +1,8 @@
+-c base.txt
+mypy
+django-stubs
+pytest
+pytest-django
+pytest-xdist
+flake8
+factory-boy

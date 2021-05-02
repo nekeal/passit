@@ -1,6 +1,6 @@
 import pytest
 
-from ..factories import MembershipFactory, UserProfileFactory, UserFactory
+from ..factories import MembershipFactory, UserFactory, UserProfileFactory
 from ..models import Membership, MembershipTypeChoices
 
 
@@ -46,12 +46,17 @@ class TestUserProfile:
         assert result == default_membership
 
     @pytest.mark.django_db
-    @pytest.mark.parametrize(("membership_type", "expected_privileged"), (
+    @pytest.mark.parametrize(
+        ("membership_type", "expected_privileged"),
+        (
             (MembershipTypeChoices.NORMAL, False),
             (MembershipTypeChoices.REPRESENTATIVE, True),
             (MembershipTypeChoices.MODERATOR, True),
-    ))
-    def test_profile_is_privileged(self, membership_type, expected_privileged, user_profile1):
+        ),
+    )
+    def test_profile_is_privileged(
+        self, membership_type, expected_privileged, user_profile1
+    ):
         MembershipFactory(profile=user_profile1, type=membership_type)
         assert user_profile1.is_privileged() is expected_privileged
 

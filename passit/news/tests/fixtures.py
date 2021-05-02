@@ -15,5 +15,5 @@ def news_data(subject_group):
         'title': 'New timetable',
         'content': 'content',
         'subject_group': subject_group.id,
-        'field_age_group': subject_group.field_age_group_id
+        'field_age_group': subject_group.field_age_group_id,
     }
