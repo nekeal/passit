@@ -124,13 +124,14 @@ django==2.2.18
     #   django-redis
     #   django-silk
     #   django-stubs
+    #   djangorestframework
     #   djangorestframework-simplejwt
     #   drf-yasg
 djangorestframework-simplejwt==4.6.0
     # via
     #   -r base.txt
     #   djoser
-djangorestframework==3.10.3
+djangorestframework==3.11.2
     # via
     #   -r base.txt
     #   djangorestframework-simplejwt
