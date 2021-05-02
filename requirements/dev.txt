@@ -139,7 +139,7 @@ djangorestframework==3.12.4
     #   drf-yasg
 djoser==2.1.0
     # via -r base.txt
-drf-flex-fields==0.7.5
+drf-flex-fields==0.8.9
     # via -r base.txt
 drf-yasg==1.20.0
     # via -r base.txt

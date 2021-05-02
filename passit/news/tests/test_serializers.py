@@ -25,7 +25,7 @@ def test_serializer_have_correct_fields():
 
 
 def test_serializer_serializes_news(news, user_profile1, user_profile2):
-    request = mock.Mock()
+    request = mock.MagicMock()
     request.user = user_profile1.user
     news.created_by = user_profile1
     news.modified_by = user_profile2
@@ -48,7 +48,7 @@ def test_serializer_serializes_news(news, user_profile1, user_profile2):
 
 
 def test_serializer_can_create_news(student1, subject_group):
-    request = mock.Mock()
+    request = mock.MagicMock()
     request.user = student1.user
     data = {
         'title': 'New timetable',
@@ -82,9 +82,9 @@ def test_content_cant_be_empty(subject_group):
 
 
 def test_news_owned_model_serializer(news_data, api_rf, student1, student2):
-    request_user1 = mock.Mock()
+    request_user1 = mock.MagicMock()
     request_user1.user = student1.user
-    request_user2 = mock.Mock()
+    request_user2 = mock.MagicMock()
     request_user2.user = student2.user
     serializer = NewsSerializer(data=news_data, context={'request': request_user1})
     serializer.is_valid(raise_exception=True)

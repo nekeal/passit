@@ -38,9 +38,9 @@ class TestResourceSerializer:
     def test_resource_owned_model_serializer(
         self, resource_data, api_rf, user_profile1, user_profile2
     ):
-        request_user1 = mock.Mock()
+        request_user1 = mock.MagicMock()
         request_user1.user = user_profile1.user
-        request_user2 = mock.Mock()
+        request_user2 = mock.MagicMock()
         request_user2.user = user_profile2.user
         serializer = ResourceBaseSerializer(
             data=resource_data, context={'request': request_user1}
