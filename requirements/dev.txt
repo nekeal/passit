@@ -309,7 +309,7 @@ python-dateutil==2.8.1
     #   django-silk
     #   faker
     #   time-machine
-python-dotenv==0.15.0
+python-dotenv==0.17.1
     # via -r base.txt
 python3-openid==3.2.0
     # via
