@@ -1,21 +1,19 @@
 from typing import Optional
 
 from rest_framework import serializers
+from rest_framework.fields import Field
 
 from passit.accounts.models import UserProfile
 
 
 class CurrentUserProfileDefault:
-    def __init__(self) -> None:
-        self.profile: Optional[UserProfile] = None
+    requires_context = True
 
-    def set_context(self, serializer_field) -> None:
+    def __call__(self, serializer_field: Field) -> 'Optional[UserProfile]':
         request = serializer_field.context.get('request')
         if request and request.user and request.user.profile:
-            self.profile = serializer_field.context['request'].user.profile
-
-    def __call__(self, *args, **kwargs) -> 'Optional[UserProfile]':
-        return self.profile
+            return request.user.profile
+        return None
 
     def __repr__(self):
         return '%s()' % self.__class__.__name__
