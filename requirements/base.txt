@@ -203,7 +203,7 @@ sqlparse==0.4.1
     # via
     #   django
     #   django-silk
-time-machine==2.0.1
+time-machine==2.1.0
     # via -r base.in
 toml==0.10.2
     # via autopep8
