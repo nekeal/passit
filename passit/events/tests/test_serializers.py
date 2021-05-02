@@ -43,6 +43,7 @@ class TestEventSerializer:
                 field_name,
             ]
         )
+        serializer.apply_flex_fields()
         field_config = serializer._expandable_fields[field_name]
         assert serializer.expanded_fields == [
             field_name,
