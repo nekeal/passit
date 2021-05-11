@@ -241,7 +241,7 @@ pickleshare==0.7.5
     # via
     #   -r base.txt
     #   ipython
-pillow==8.1.0
+pillow==8.1.1
     # via -r base.txt
 pluggy==0.13.1
     # via
