@@ -1,15 +1,8 @@
-[tool.black]
-skip_string_normalization = true
-
 [tool.isort]
-multi_line_output = 3
-include_trailing_comma = true
-force_grid_wrap = 0
-use_parentheses = true
-ensure_newline_before_comments = true
-line_length = 88
+profile = "black"
 
 [tool.coverage.report]
+branch = true
 exclude_lines = [
     "pragma: no cover",
     "if TYPE_CHECKING:"
@@ -21,3 +14,47 @@ omit = [
     "**/settings/*.py",
     "**/migrations/*.py",
 ]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "passit.settings.local"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+norecursedirs = ["deployment*",
+                 ".git/*",
+                 ".mypy_cache/*",
+                 ".pytest_cache/*",
+                 "migrations/*",
+                 "passit/frontend/*"
+]
+addopts = "--nomigrations"
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py38, flake8, black, isort, mypy
+skipsdist = True
+
+[gh-actions]
+python =
+    3.8: py38
+
+[testenv:flake8]
+basepython = python
+deps = flake8
+commands = flake8 --format=default passit
+
+[testenv:black]
+deps = black
+commands = black --check passit
+
+[testenv:isort]
+deps = isort
+commands = isort --check passit
+
+[testenv:mypy]
+deps = -r requirements/dev.txt
+commands = mypy passit
+
+[testenv]
+setenv = PYTHONPATH = {toxinidir}
+deps = -r requirements/dev.txt
+commands = pytest passit
+"""
