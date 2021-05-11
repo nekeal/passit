@@ -7,31 +7,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('subject', '0004_auto_20200210_1518'),
-        ('accounts', '0002_userprofile'),
+        ("subject", "0004_auto_20200210_1518"),
+        ("accounts", "0002_userprofile"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='resource',
-            name='created_by',
+            model_name="resource",
+            name="created_by",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                related_name='resource_created',
-                to='accounts.UserProfile',
+                related_name="resource_created",
+                to="accounts.UserProfile",
             ),
         ),
         migrations.AlterField(
-            model_name='resource',
-            name='modified_by',
+            model_name="resource",
+            name="modified_by",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                related_name='resource_modified',
-                to='accounts.UserProfile',
+                related_name="resource_modified",
+                to="accounts.UserProfile",
             ),
         ),
     ]

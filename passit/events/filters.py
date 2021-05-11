@@ -8,4 +8,4 @@ class EventFilterSet(django_filters.FilterSet):
 
     class Meta:
         model = Event
-        fields = ('due_date',)
+        fields = ("due_date",)

@@ -1,19 +1,19 @@
 import factory
 
-from .models import CustomUser, Membership, UserProfile
 from ..subject.factories import FieldOfStudyOfAgeGroupFactory
+from .models import CustomUser, Membership, UserProfile
 
 
 class UserProfileFactory(factory.DjangoModelFactory):
-    user = factory.SubFactory('passit.accounts.factories.UserFactory')
+    user = factory.SubFactory("passit.accounts.factories.UserFactory")
 
     class Meta:
         model = UserProfile
 
 
 class UserFactory(factory.DjangoModelFactory):
-    username = factory.Sequence(lambda n: f'user {n}')
-    email = factory.Faker('email')
+    username = factory.Sequence(lambda n: f"user {n}")
+    email = factory.Faker("email")
 
     class Meta:
         model = CustomUser

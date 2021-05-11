@@ -17,13 +17,13 @@ class EventViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = Event.objects.get_by_profile(
             self.request.user.profile
-        ).select_related('created_by__user', 'modified_by__user')
-        if is_expanded(self.request, 'subject'):
-            queryset = queryset.annotate(subject=F('subject_group__subject__name'))
-        if is_expanded(self.request, 'field_age_group'):
-            queryset = queryset.select_related('field_age_group')
-        if is_expanded(self.request, 'subject_group'):
-            queryset = queryset.select_related('subject_group')
-        if is_expanded(self.request, 'subject'):
-            queryset = queryset.select_related('subject_group__subject')
-        return queryset.order_by('due_date')
+        ).select_related("created_by__user", "modified_by__user")
+        if is_expanded(self.request, "subject"):
+            queryset = queryset.annotate(subject=F("subject_group__subject__name"))
+        if is_expanded(self.request, "field_age_group"):
+            queryset = queryset.select_related("field_age_group")
+        if is_expanded(self.request, "subject_group"):
+            queryset = queryset.select_related("subject_group")
+        if is_expanded(self.request, "subject"):
+            queryset = queryset.select_related("subject_group__subject")
+        return queryset.order_by("due_date")

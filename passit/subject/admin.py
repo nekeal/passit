@@ -14,6 +14,7 @@ from passit.subject.models import (
     Subject,
     SubjectOfAgeGroup,
 )
+
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 
 
@@ -29,10 +30,10 @@ class LecturerOfSubjectInlineAdmin(admin.TabularInline):
 
 class ResourceInlineAdmin(admin.StackedInline):
     model = Resource
-    readonly_fields = ['created_by', 'modified_by']
+    readonly_fields = ["created_by", "modified_by"]
     extra = 1
     formfield_overrides = {
-        models.TextField: {'widget': widgets.Textarea(attrs={'rows': 5, 'cols': 40})},
+        models.TextField: {"widget": widgets.Textarea(attrs={"rows": 5, "cols": 40})},
     }
 
 
@@ -40,20 +41,20 @@ class SubjectOfAgeGroupAdmin(admin.ModelAdmin):
     list_display = ["subject", "students_start_year"]
     inlines = [ExamInline, LecturerOfSubjectInlineAdmin]
 
-    def get_queryset(self, request: HttpRequest) -> 'QuerySet[SubjectOfAgeGroup]':
+    def get_queryset(self, request: HttpRequest) -> "QuerySet[SubjectOfAgeGroup]":
         return (
             super()
             .get_queryset(request)
             .select_related(
-                'subject', 'field_age_group', 'field_age_group__field_of_study'
+                "subject", "field_age_group", "field_age_group__field_of_study"
             )
         )
 
 
 @admin.register(FieldOfStudyOfAgeGroup)
 class FieldOfStudyOfAgeGroupAdmin(admin.ModelAdmin):
-    def get_queryset(self, request: HttpRequest) -> 'QuerySet[FieldOfStudyOfAgeGroup]':
-        return super().get_queryset(request).select_related('field_of_study')
+    def get_queryset(self, request: HttpRequest) -> "QuerySet[FieldOfStudyOfAgeGroup]":
+        return super().get_queryset(request).select_related("field_of_study")
 
 
 @admin.register(Subject)
@@ -62,14 +63,14 @@ class SubjectAdmin(admin.ModelAdmin):
         ResourceInlineAdmin,
     ]
     formfield_overrides = {
-        models.TextField: {'widget': widgets.Textarea(attrs={'rows': 5, 'cols': 40})},
+        models.TextField: {"widget": widgets.Textarea(attrs={"rows": 5, "cols": 40})},
     }
 
-    def get_queryset(self, request: HttpRequest) -> 'QuerySet[Subject]':
+    def get_queryset(self, request: HttpRequest) -> "QuerySet[Subject]":
         return (
             super(SubjectAdmin, self)
             .get_queryset(request)
-            .select_related('field_of_study')
+            .select_related("field_of_study")
             .annotate(resource_count=Count("resources"))
         )
 
@@ -86,9 +87,9 @@ class SubjectAdmin(admin.ModelAdmin):
 
 @admin.register(Exam)
 class ExamAdmin(admin.ModelAdmin):
-    list_display = ('get_field_of_study', 'get_subject', 'starts_at', 'place')
-    search_fields = ('place',)
-    list_filter = ('starts_at',)
+    list_display = ("get_field_of_study", "get_subject", "starts_at", "place")
+    search_fields = ("place",)
+    list_filter = ("starts_at",)
 
     def get_queryset(self, request: HttpRequest) -> "QuerySet[Exam]":
         return (

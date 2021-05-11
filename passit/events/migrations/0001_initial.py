@@ -9,79 +9,79 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('accounts', '0005_auto_20200308_1825'),
-        ('subject', '0008_auto_20200311_1339'),
+        ("accounts", "0005_auto_20200308_1825"),
+        ("subject", "0008_auto_20200311_1339"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Event',
+            name="Event",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('name', models.CharField(max_length=100)),
-                ('description', models.TextField(blank=True)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("name", models.CharField(max_length=100)),
+                ("description", models.TextField(blank=True)),
                 (
-                    'category',
+                    "category",
                     models.CharField(
                         choices=[
-                            ('EXAM', 'Exam'),
-                            ('MID_TERM_EXAM', 'Mid term exam'),
-                            ('PROJECT', 'Project'),
-                            ('OTHER', 'Other'),
+                            ("EXAM", "Exam"),
+                            ("MID_TERM_EXAM", "Mid term exam"),
+                            ("PROJECT", "Project"),
+                            ("OTHER", "Other"),
                         ],
                         max_length=50,
                     ),
                 ),
-                ('due_date', models.DateTimeField()),
+                ("due_date", models.DateTimeField()),
                 (
-                    'created_by',
+                    "created_by",
                     models.ForeignKey(
                         blank=True,
                         null=True,
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='event_created',
-                        to='accounts.UserProfile',
+                        related_name="event_created",
+                        to="accounts.UserProfile",
                     ),
                 ),
                 (
-                    'field_age_group',
+                    "field_age_group",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.PROTECT,
-                        to='subject.FieldOfStudyOfAgeGroup',
+                        to="subject.FieldOfStudyOfAgeGroup",
                     ),
                 ),
                 (
-                    'modified_by',
+                    "modified_by",
                     models.ForeignKey(
                         blank=True,
                         null=True,
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='event_modified',
-                        to='accounts.UserProfile',
+                        related_name="event_modified",
+                        to="accounts.UserProfile",
                     ),
                 ),
                 (
-                    'subject_group',
+                    "subject_group",
                     models.ForeignKey(
                         blank=True,
                         null=True,
                         on_delete=django.db.models.deletion.PROTECT,
-                        to='subject.SubjectOfAgeGroup',
+                        to="subject.SubjectOfAgeGroup",
                     ),
                 ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
     ]

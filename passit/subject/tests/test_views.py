@@ -34,7 +34,7 @@ class TestFieldOfStudiesViewSet:
         assert response.status_code == status.HTTP_200_OK
         assert qs.query.where.children[0].lookup_name == "in"
         assert len(response.data) == 1
-        assert response.data[0]['id'] == field_of_study.id
+        assert response.data[0]["id"] == field_of_study.id
 
 
 class TestSubjectViewSet:
@@ -60,7 +60,7 @@ class TestSubjectViewSet:
         assert response.status_code == status.HTTP_200_OK
         assert qs.query.where.children[0].lookup_name == "in"
         assert len(response.data) == 1
-        assert response.data[0]['id'] == default_subject.id
+        assert response.data[0]["id"] == default_subject.id
 
 
 class TestSubjectOfAgeGroupViewSet:
@@ -76,7 +76,7 @@ class TestSubjectOfAgeGroupViewSet:
             "/api/subjectsagegroup/",
             "get",
             student1.user,
-            {'expand': "field_age_group,subject_name"},
+            {"expand": "field_age_group,subject_name"},
         ).get_request()
         view = setup_view(SubjectOfAgeGroupViewSet(), request)
         qs = view.get_queryset()
@@ -94,7 +94,7 @@ class TestResourceViewSet:
             "/api/resources/",
             "get",
             student1.user,
-            {'expand': "subject"},
+            {"expand": "subject"},
         ).get_request()
         view = setup_view(ResourceViewSet(), request)
         qs = view.get_queryset()

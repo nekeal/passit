@@ -13,7 +13,7 @@ class LecturerQuerySet(QuerySet):  # type: ignore
 class LecturerOfSubjectQuerySet(QuerySet):  # type: ignore
     def annotate_students_start_year(
         self, *args, **kwargs
-    ) -> 'QuerySet[LecturerOfSubjectOfAgeGroup]':
+    ) -> "QuerySet[LecturerOfSubjectOfAgeGroup]":
         return self.annotate(
-            students_start_year=F('subject_group__field_age_group__students_start_year')
+            students_start_year=F("subject_group__field_age_group__students_start_year")
         )

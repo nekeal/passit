@@ -14,18 +14,18 @@ class Lecturer(models.Model):
     objects = LecturerManager.from_queryset(LecturerQuerySet)()
 
     def __str__(self) -> str:
-        return f'{self.first_name} {self.last_name}'
+        return f"{self.first_name} {self.last_name}"
 
 
 class LecturerOfSubjectOfAgeGroup(models.Model):
     lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
     subject_group = models.ForeignKey(
-        'subject.SubjectOfAgeGroup',
+        "subject.SubjectOfAgeGroup",
         on_delete=models.CASCADE,
-        related_name='subject_groups',
+        related_name="subject_groups",
     )
 
     objects = LecturerOfSubjectManager.from_queryset(LecturerOfSubjectQuerySet)()
 
     def __str__(self) -> str:
-        return f'{self.lecturer} {self.subject_group}'
+        return f"{self.lecturer} {self.subject_group}"

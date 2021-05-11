@@ -11,39 +11,39 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Lecturer',
+            name="Lecturer",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
-                ('first_name', models.CharField(max_length=50)),
-                ('last_name', models.CharField(max_length=50)),
-                ('title', models.CharField(blank=True, max_length=20)),
+                ("first_name", models.CharField(max_length=50)),
+                ("last_name", models.CharField(max_length=50)),
+                ("title", models.CharField(blank=True, max_length=20)),
             ],
         ),
         migrations.CreateModel(
-            name='LecturerOfSubject',
+            name="LecturerOfSubject",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
                 (
-                    'lecturer',
+                    "lecturer",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to='lecturers.Lecturer',
+                        to="lecturers.Lecturer",
                     ),
                 ),
             ],

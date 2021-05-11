@@ -8,60 +8,60 @@ import passit
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('subject', '0004_auto_20200210_1518'),
-        ('accounts', '0002_userprofile'),
+        ("subject", "0004_auto_20200210_1518"),
+        ("accounts", "0002_userprofile"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Membership',
+            name="Membership",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
                 (
-                    'type',
+                    "type",
                     models.PositiveSmallIntegerField(
                         choices=[
-                            (1, 'REPRESENTATIVE'),
-                            (2, 'MODERATOR'),
-                            (3, 'NORMAL'),
+                            (1, "REPRESENTATIVE"),
+                            (2, "MODERATOR"),
+                            (3, "NORMAL"),
                         ],
                         default=passit.accounts.models.MembershipTypeChoices(3),
                     ),
                 ),
                 (
-                    'field_age_group',
+                    "field_age_group",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='memberships',
-                        to='subject.FieldOfStudyOfAgeGroup',
+                        related_name="memberships",
+                        to="subject.FieldOfStudyOfAgeGroup",
                     ),
                 ),
                 (
-                    'profile',
+                    "profile",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='memberships',
-                        to='accounts.UserProfile',
+                        related_name="memberships",
+                        to="accounts.UserProfile",
                     ),
                 ),
             ],
         ),
         migrations.AddField(
-            model_name='userprofile',
-            name='field_age_groups',
+            model_name="userprofile",
+            name="field_age_groups",
             field=models.ManyToManyField(
                 blank=True,
-                related_name='students',
-                through='accounts.Membership',
-                to='subject.FieldOfStudyOfAgeGroup',
+                related_name="students",
+                through="accounts.Membership",
+                to="subject.FieldOfStudyOfAgeGroup",
             ),
         ),
     ]

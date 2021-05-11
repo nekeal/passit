@@ -1,11 +1,11 @@
 from collections import Counter
 from typing import List, Set, Tuple
 
-from .utils import SubjectAdapter, SyllabusClient
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 from ..lecturers.serializers import LecturerSyllabusImportSerializer
 from ..subject.models import FieldOfStudy, FieldOfStudyOfAgeGroup, SubjectOfAgeGroup
 from ..subject.serializers import SubjectSyllabusImportSerializer
+from .utils import SubjectAdapter, SyllabusClient
 
 
 class SyllabusStartNewYearService:
@@ -26,7 +26,7 @@ class SyllabusStartNewYearService:
 
     def get_start_year(self):
         try:
-            return int(self.age_group.split('-')[0])
+            return int(self.age_group.split("-")[0])
         except Exception as e:
             type(e)(e.message + f"\n {self.age_group}")
 
@@ -37,8 +37,8 @@ class SyllabusStartNewYearService:
         old_subject_groups = subject_age_group_summary.get(False, 0)
         new_subject_groups = subject_age_group_summary.get(True, 0)
         self.report.append(
-            f'{new_subject_groups} new subjects created, '
-            f'{old_subject_groups} already exist'
+            f"{new_subject_groups} new subjects created, "
+            f"{old_subject_groups} already exist"
         )
 
     def add_lecturers_of_age_group_create_result_to_report(self):
@@ -48,15 +48,15 @@ class SyllabusStartNewYearService:
         old_lecturer_groups = lecturer_age_group_summary.get(False, 0)
         new_lecturer_groups = lecturer_age_group_summary.get(True, 0)
         self.report.append(
-            f'{new_lecturer_groups} new lecturers of age group created, '
-            f'{old_lecturer_groups} already exist'
+            f"{new_lecturer_groups} new lecturers of age group created, "
+            f"{old_lecturer_groups} already exist"
         )
 
     def get_report(self):
         return self.report
 
     def print_report(self):
-        print('\n'.join(self.report))
+        print("\n".join(self.report))
 
     def create_field_age_group(self):
         field_age_group, created = FieldOfStudyOfAgeGroup.objects.get_or_create(
@@ -64,8 +64,8 @@ class SyllabusStartNewYearService:
         )
         self.report.append(
             f'{"Created" if created else "Retrieved"} '
-            f'field age group for {self.field_of_study.name}'
-            f'for year {self.start_year}'
+            f"field age group for {self.field_of_study.name}"
+            f"for year {self.start_year}"
         )
         self.field_age_group = field_age_group
 
@@ -93,7 +93,7 @@ class SyllabusStartNewYearService:
     def create_lecturers_of_age_group(self):
         for i in range(len(self.subject_instances)):
             lecturer_serializer = LecturerSyllabusImportSerializer(
-                data=self.subjects_parsed_data[i]['lecturers'], many=True
+                data=self.subjects_parsed_data[i]["lecturers"], many=True
             )
             lecturer_serializer.is_valid(raise_exception=False)
             lecturer_instances = lecturer_serializer.save()

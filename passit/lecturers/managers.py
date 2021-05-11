@@ -9,10 +9,10 @@ if TYPE_CHECKING:
 
 
 class LecturerManager(Manager):  # type: ignore
-    def get_queryset(self) -> 'QuerySet[Lecturer]':
+    def get_queryset(self) -> "QuerySet[Lecturer]":
         return LecturerQuerySet(self.model, self._db)  # type: ignore
 
 
 class LecturerOfSubjectManager(Manager):  # type: ignore
-    def get_queryset(self) -> 'QuerySet[LecturerOfSubjectOfAgeGroup]':
+    def get_queryset(self) -> "QuerySet[LecturerOfSubjectOfAgeGroup]":
         return LecturerOfSubjectQuerySet(self.model, self._db)  # type: ignore

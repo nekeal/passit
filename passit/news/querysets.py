@@ -5,7 +5,7 @@ from passit.accounts.models import UserProfile
 
 
 class NewsQuerySet(QuerySet):  # type: ignore
-    def annotate_is_owner(self, profile: 'UserProfile'):
+    def annotate_is_owner(self, profile: "UserProfile"):
         return self.annotate(
             is_news_owner=Case(
                 When(created_by_id=profile.id, then=Value(True)),

@@ -20,8 +20,8 @@ from ..subject.models import (
 
 
 class FieldAgeGroupRelatedField(serializers.PrimaryKeyRelatedField):
-    def get_queryset(self) -> 'QuerySet[FieldOfStudyOfAgeGroup]':
-        request = self.context.get('request')
+    def get_queryset(self) -> "QuerySet[FieldOfStudyOfAgeGroup]":
+        request = self.context.get("request")
         profile = request and request.user and request.user.profile
         if not profile:
             return FieldOfStudyOfAgeGroup.objects.all()
@@ -32,7 +32,7 @@ class FieldAgeGroupDefault:
     field_age_group = None
 
     def set_context(self, serializer_field: Field):
-        profile: 'UserProfile' = serializer_field.context['request'].user.profile
+        profile: "UserProfile" = serializer_field.context["request"].user.profile
         self.field_age_group = FieldOfStudyOfAgeGroup.objects.get_default_by_profile(
             profile
         )
@@ -44,24 +44,24 @@ class FieldAgeGroupDefault:
 class FieldOfStudyBaseSerializer(FlexFieldsModelSerializer):
     class Meta:
         model = FieldOfStudy
-        fields = ('id', 'name', 'slug')
+        fields = ("id", "name", "slug")
 
 
 class FieldOfStudyOfAgeGroupSerializer(FlexFieldsModelSerializer):
     class Meta:
         model = FieldOfStudyOfAgeGroup
         fields = (
-            'id',
-            'field_of_study',
-            'students_start_year',
+            "id",
+            "field_of_study",
+            "students_start_year",
         )
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
-            'field_of_study': (FieldOfStudyBaseSerializer, {})
+            "field_of_study": (FieldOfStudyBaseSerializer, {})
         }
 
 
 class SubjectBaseSerializer(FlexFieldsModelSerializer):
-    field_of_study = serializers.CharField(source='field_of_study.name')
+    field_of_study = serializers.CharField(source="field_of_study.name")
 
     def get_lecturers(self, instance: Subject):
         lecturers_of_age_group = LecturerOfSubjectOfAgeGroup.objects.filter(
@@ -70,16 +70,16 @@ class SubjectBaseSerializer(FlexFieldsModelSerializer):
         serializer = LecturerOfSubjectOfAgeGroupSerializer(
             lecturers_of_age_group,
             many=True,
-            expand=['lecturer', 'students_start_year'],
+            expand=["lecturer", "students_start_year"],
         )
         return serializer.data
 
     class Meta:
         model = Subject
-        fields = ('id', 'name', 'semester', 'general_description', 'field_of_study')
+        fields = ("id", "name", "semester", "general_description", "field_of_study")
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
-            'field_of_study': (FieldOfStudyBaseSerializer, {}),
-            'lecturers': (serializers.SerializerMethodField, {}),
+            "field_of_study": (FieldOfStudyBaseSerializer, {}),
+            "lecturers": (serializers.SerializerMethodField, {}),
         }
 
 
@@ -89,17 +89,17 @@ class SubjectSyllabusImportSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
         fields = (
-            'name',
-            'semester',
-            'general_description',
-            'module_code',
-            'category',
-            'field_of_study',
+            "name",
+            "semester",
+            "general_description",
+            "module_code",
+            "category",
+            "field_of_study",
         )
 
     def create(self, validated_data):
         subject, created = Subject.objects.get_or_create(
-            module_code=validated_data.pop('module_code'), defaults=validated_data
+            module_code=validated_data.pop("module_code"), defaults=validated_data
         )
         return subject
 
@@ -107,12 +107,12 @@ class SubjectSyllabusImportSerializer(serializers.ModelSerializer):
 class SubjectOfAgeGroupSerializer(FlexFieldsModelSerializer):
     class Meta:
         model = SubjectOfAgeGroup
-        fields = ('id',)
+        fields = ("id",)
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
-            'field_age_group': (FieldOfStudyOfAgeGroupSerializer, {}),
-            'lecturers': (LecturerOfSubjectOfAgeGroupSerializer, {'many': True}),
-            'subject': (SubjectBaseSerializer, {}),
-            'subject_name': (serializers.CharField, {}),
+            "field_age_group": (FieldOfStudyOfAgeGroupSerializer, {}),
+            "lecturers": (LecturerOfSubjectOfAgeGroupSerializer, {"many": True}),
+            "subject": (SubjectBaseSerializer, {}),
+            "subject_name": (serializers.CharField, {}),
         }
 
 
@@ -120,26 +120,26 @@ class ResourceBaseSerializer(OwnedModelSerializerMixin, FlexFieldsModelSerialize
     class Meta:
         model = Resource
         fields = (
-            'id',
-            'name',
-            'image',
-            'url',
-            'description',
-            'subject',
-            'category',
-            'created_by_profile',
-            'modified_by_profile',
-            'created_by',
-            'modified_by',
+            "id",
+            "name",
+            "image",
+            "url",
+            "description",
+            "subject",
+            "category",
+            "created_by_profile",
+            "modified_by_profile",
+            "created_by",
+            "modified_by",
         )
         expandable_fields: Dict[str, Tuple[Serializer, Dict[str, Any]]] = {
-            'subject': (
+            "subject": (
                 SubjectBaseSerializer,
                 {
-                    'fields': [
-                        'id',
-                        'name',
-                        'semester',
+                    "fields": [
+                        "id",
+                        "name",
+                        "semester",
                     ]
                 },
             )

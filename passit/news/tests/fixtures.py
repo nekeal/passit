@@ -12,8 +12,8 @@ def news(db, subject_group) -> News:
 @pytest.fixture
 def news_data(subject_group):
     return {
-        'title': 'New timetable',
-        'content': 'content',
-        'subject_group': subject_group.id,
-        'field_age_group': subject_group.field_age_group_id,
+        "title": "New timetable",
+        "content": "content",
+        "subject_group": subject_group.id,
+        "field_age_group": subject_group.field_age_group_id,
     }

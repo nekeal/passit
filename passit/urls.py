@@ -31,10 +31,10 @@ from .views import index
 
 schema_view = get_schema_view(
     openapi.Info(
-        title='Passit API',
-        default_version='v1',
-        description='API passit wiki',
-        license=openapi.License(name='GNU General Public License v3.0'),
+        title="Passit API",
+        default_version="v1",
+        description="API passit wiki",
+        license=openapi.License(name="GNU General Public License v3.0"),
     ),
     authentication_classes=(SessionAuthentication,),
     permission_classes=(AllowAny,),
@@ -49,14 +49,14 @@ router.registry.extend(news_router.registry)
 router.registry.extend(events_router.registry)
 
 urlpatterns = [
-    path('', index),
-    path('api/', include((router.urls, 'api'))),
-    path('api/auth/', include('passit.accounts.urls')),
-    path('admin/', admin.site.urls),
-    path('docs/', schema_view.with_ui('redoc')),
+    path("", index),
+    path("api/", include((router.urls, "api"))),
+    path("api/auth/", include("passit.accounts.urls")),
+    path("admin/", admin.site.urls),
+    path("docs/", schema_view.with_ui("redoc")),
 ]
 if settings.DEBUG:  # pragma: no cover
-    urlpatterns.append(path('silk/', include('silk.urls', namespace='silk')))
+    urlpatterns.append(path("silk/", include("silk.urls", namespace="silk")))
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns.append(re_path(r'^.*/$', index))
+urlpatterns.append(re_path(r"^.*/$", index))

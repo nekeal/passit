@@ -11,159 +11,159 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('lecturers', '0001_initial'),
+        ("lecturers", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='FieldOfStudies',
+            name="FieldOfStudies",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
-                ('name', models.CharField(max_length=100)),
+                ("name", models.CharField(max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='Subject',
+            name="Subject",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
-                ('name', models.CharField(max_length=50)),
-                ('semester', models.IntegerField()),
-                ('general_description', models.TextField()),
+                ("name", models.CharField(max_length=50)),
+                ("semester", models.IntegerField()),
+                ("general_description", models.TextField()),
                 (
-                    'field_of_studies',
+                    "field_of_studies",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.PROTECT,
-                        related_name='subjects',
-                        to='subject.FieldOfStudies',
+                        related_name="subjects",
+                        to="subject.FieldOfStudies",
                     ),
                 ),
             ],
         ),
         migrations.CreateModel(
-            name='SubjectOfAgeGroup',
+            name="SubjectOfAgeGroup",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
                 (
-                    'students_start_year',
+                    "students_start_year",
                     models.PositiveIntegerField(
                         validators=[passit.subject.models.year_validator]
                     ),
                 ),
-                ('description', models.TextField(blank=True)),
+                ("description", models.TextField(blank=True)),
                 (
-                    'lecturers',
+                    "lecturers",
                     models.ManyToManyField(
-                        related_name='lecturer_age_groups',
-                        through='lecturers.LecturerOfSubject',
-                        to='lecturers.Lecturer',
+                        related_name="lecturer_age_groups",
+                        through="lecturers.LecturerOfSubject",
+                        to="lecturers.Lecturer",
                     ),
                 ),
                 (
-                    'subject',
+                    "subject",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='subjects',
-                        to='subject.Subject',
+                        related_name="subjects",
+                        to="subject.Subject",
                     ),
                 ),
             ],
         ),
         migrations.CreateModel(
-            name='Resource',
+            name="Resource",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('name', models.CharField(max_length=100)),
-                ('url', models.URLField(blank=True)),
-                ('image', models.ImageField(blank=True, upload_to='')),
-                ('description', models.TextField(blank=True)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("name", models.CharField(max_length=100)),
+                ("url", models.URLField(blank=True)),
+                ("image", models.ImageField(blank=True, upload_to="")),
+                ("description", models.TextField(blank=True)),
                 (
-                    'created_by',
+                    "created_by",
                     models.ForeignKey(
                         blank=True,
                         null=True,
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='resource_created',
+                        related_name="resource_created",
                         to=settings.AUTH_USER_MODEL,
                     ),
                 ),
                 (
-                    'modified_by',
+                    "modified_by",
                     models.ForeignKey(
                         blank=True,
                         null=True,
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='resource_modified',
+                        related_name="resource_modified",
                         to=settings.AUTH_USER_MODEL,
                     ),
                 ),
                 (
-                    'subject',
+                    "subject",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='resources',
-                        to='subject.Subject',
+                        related_name="resources",
+                        to="subject.Subject",
                     ),
                 ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
         migrations.CreateModel(
-            name='Exam',
+            name="Exam",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
-                ('starts_at', models.DateTimeField()),
-                ('place', models.CharField(blank=True, max_length=100, null=True)),
+                ("starts_at", models.DateTimeField()),
+                ("place", models.CharField(blank=True, max_length=100, null=True)),
                 (
-                    'subject_group',
+                    "subject_group",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name='exams',
-                        to='subject.SubjectOfAgeGroup',
+                        related_name="exams",
+                        to="subject.SubjectOfAgeGroup",
                     ),
                 ),
             ],

@@ -6,7 +6,7 @@ from .views import LecturerViewSet
 
 router = DefaultRouter()
 
-router.register('lecturers', LecturerViewSet)
+router.register("lecturers", LecturerViewSet)
 
 urlpatterns: List[Any] = []
 

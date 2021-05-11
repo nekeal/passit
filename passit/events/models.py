@@ -1,17 +1,17 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from .managers import EventManager
-from .querysets import EventQuerySet
 from ..common.models import OwnedModel, TimeStampedModel
 from ..common.utils import CustomEnum
+from .managers import EventManager
+from .querysets import EventQuerySet
 
 
 class EventCategoryChoices(CustomEnum):
-    EXAM = _('Exam')
-    MID_TERM_EXAM = _('Mid term exam')
-    PROJECT = _('Project')
-    OTHER = _('Other')
+    EXAM = _("Exam")
+    MID_TERM_EXAM = _("Mid term exam")
+    PROJECT = _("Project")
+    OTHER = _("Other")
 
 
 class Event(TimeStampedModel, OwnedModel):
@@ -21,10 +21,10 @@ class Event(TimeStampedModel, OwnedModel):
     due_date = models.DateTimeField()
 
     field_age_group = models.ForeignKey(
-        'subject.FieldOfStudyOfAgeGroup', on_delete=models.PROTECT
+        "subject.FieldOfStudyOfAgeGroup", on_delete=models.PROTECT
     )
     subject_group = models.ForeignKey(
-        'subject.SubjectOfAgeGroup', blank=True, null=True, on_delete=models.PROTECT
+        "subject.SubjectOfAgeGroup", blank=True, null=True, on_delete=models.PROTECT
     )
 
     objects = EventManager.from_queryset(EventQuerySet)()

@@ -3,12 +3,13 @@ import django.db.models.deletion
 from django.db import migrations, models
 
 import passit
+
 from ..models import FieldOfStudy, FieldOfStudyOfAgeGroup
 
 
 def get_default_field_age_group():
     default_field_of_study, _ = FieldOfStudy.objects.get_or_create(
-        name='default field', slug='default-field'
+        name="default field", slug="default-field"
     )
     default_field_age_group, _ = FieldOfStudyOfAgeGroup.objects.get_or_create(
         field_of_study=default_field_of_study, students_start_year=2000
@@ -19,50 +20,50 @@ def get_default_field_age_group():
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('subject', '0003_auto_20200207_2021'),
+        ("subject", "0003_auto_20200207_2021"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='subjectofagegroup',
-            name='students_start_year',
+            model_name="subjectofagegroup",
+            name="students_start_year",
         ),
         migrations.CreateModel(
-            name='FieldOfStudyOfAgeGroup',
+            name="FieldOfStudyOfAgeGroup",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
                 (
-                    'students_start_year',
+                    "students_start_year",
                     models.PositiveIntegerField(
                         validators=[passit.subject.models.year_validator]
                     ),
                 ),
                 (
-                    'field_of_study',
+                    "field_of_study",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.PROTECT,
-                        related_name='age_groups',
-                        to='subject.FieldOfStudy',
+                        related_name="age_groups",
+                        to="subject.FieldOfStudy",
                     ),
                 ),
             ],
         ),
         migrations.AddField(
-            model_name='subjectofagegroup',
-            name='field_age_group',
+            model_name="subjectofagegroup",
+            name="field_age_group",
             field=models.ForeignKey(
                 default=get_default_field_age_group,
                 on_delete=django.db.models.deletion.PROTECT,
-                related_name='subject_groups',
-                to='subject.FieldOfStudyOfAgeGroup',
+                related_name="subject_groups",
+                to="subject.FieldOfStudyOfAgeGroup",
             ),
             preserve_default=False,
         ),

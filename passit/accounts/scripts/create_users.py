@@ -1,27 +1,27 @@
 import argparse
 import dataclasses
 
+from ...subject.models import FieldOfStudyOfAgeGroup
 from ..models import MembershipTypeChoices
 from ..services import StudentImportService
-from ...subject.models import FieldOfStudyOfAgeGroup
 
-parser = argparse.ArgumentParser(description='Syllabus import')
+parser = argparse.ArgumentParser(description="Syllabus import")
 parser.add_argument(
-    'filename',
-    help='Csv filename which contains users to be created',
+    "filename",
+    help="Csv filename which contains users to be created",
 )
 parser.add_argument(
-    '--start-year',
-    help='Specify age-group to fetch in format <year>-<year>',
+    "--start-year",
+    help="Specify age-group to fetch in format <year>-<year>",
     required=False,
-    default='2018',
+    default="2018",
     type=int,
 )
 parser.add_argument(
-    '--field-of-study',
-    help='Specify field of study to fetch subjects from',
+    "--field-of-study",
+    help="Specify field of study to fetch subjects from",
     required=False,
-    default='stacjonarne-teleinformatyka',
+    default="stacjonarne-teleinformatyka",
 )
 
 
@@ -41,7 +41,7 @@ def run(*args):
         students_start_year=parsed_args.start_year,
     )
     service = StudentImportService(field_age_group, MembershipTypeChoices.NORMAL)
-    service.create_from_filename('users.csv')
+    service.create_from_filename("users.csv")
     service.print_report()
     # student_create_result = {'valid': [], 'invalid': []}
     # with open(parsed_args.filename, 'r') as f:

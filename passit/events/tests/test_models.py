@@ -2,10 +2,10 @@ from unittest import mock
 
 import pytest
 
-from ..factories import EventFactory
-from ..models import Event
 from ...accounts.factories import UserProfileFactory
 from ...accounts.models import MembershipQuerySet
+from ..factories import EventFactory
+from ..models import Event
 
 
 class TestEventManager:
@@ -20,7 +20,7 @@ class TestEventManager:
     @pytest.mark.django_db
     def test_get_by_profile_result(self, monkeypatch):
         monkeypatch.setattr(
-            MembershipQuerySet, 'values_list', mock.Mock(return_value=[11, 12])
+            MembershipQuerySet, "values_list", mock.Mock(return_value=[11, 12])
         )
         profile = UserProfileFactory.build()
         expected = {

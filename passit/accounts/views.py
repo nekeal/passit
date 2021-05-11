@@ -11,12 +11,12 @@ from passit.accounts.serializers import (
 
 class CustomUserViewSet(UserViewSet):
     def get_serializer_class(self):
-        if self.action == 'set_default_field_age_group':
+        if self.action == "set_default_field_age_group":
             return DefaultFieldOfAgeGroupSerializer
         return super().get_serializer_class()
 
     @action(
-        methods=['put'], detail=False, url_path='set_default_fag'
+        methods=["put"], detail=False, url_path="set_default_fag"
     )  # TODO: add permission
     def set_default_field_age_group(self, request, *args, **kwargs):
         data = request.data
