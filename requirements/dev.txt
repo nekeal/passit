@@ -16,7 +16,7 @@ asgiref==3.3.4
     # via
     #   -r base.txt
     #   djoser
-attrs==20.3.0
+attrs==21.2.0
     # via
     #   -r ci.txt
     #   pytest
@@ -106,7 +106,11 @@ django-redis==4.12.1
     # via -r base.txt
 django-silk==4.1.0
     # via -r base.txt
-django-stubs==1.4.0
+django-stubs-ext==0.2.0
+    # via
+    #   -r ci.txt
+    #   django-stubs
+django-stubs==1.8.0
     # via -r ci.txt
 django-templated-mail==1.1.1
     # via
@@ -124,6 +128,7 @@ django==2.2.18
     #   django-redis
     #   django-silk
     #   django-stubs
+    #   django-stubs-ext
     #   djangorestframework-simplejwt
     #   drf-yasg
 djangorestframework-simplejwt==4.6.0
@@ -145,13 +150,13 @@ execnet==1.8.0
     # via
     #   -r ci.txt
     #   pytest-xdist
-factory-boy==2.12.0
+factory-boy==3.2.0
     # via -r ci.txt
-faker==8.1.2
+faker==8.1.3
     # via
     #   -r ci.txt
     #   factory-boy
-flake8==3.9.1
+flake8==3.9.2
     # via -r ci.txt
 gprof2dot==2021.2.21
     # via
@@ -208,7 +213,7 @@ mypy-extensions==0.4.3
     # via
     #   -r ci.txt
     #   mypy
-mypy==0.761
+mypy==0.812
     # via
     #   -r ci.txt
     #   django-stubs
@@ -286,7 +291,7 @@ pyparsing==2.4.7
     #   -r base.txt
     #   -r ci.txt
     #   packaging
-pytest-django==4.1.0
+pytest-django==4.2.0
     # via -r ci.txt
 pytest-forked==1.3.0
     # via
@@ -294,7 +299,7 @@ pytest-forked==1.3.0
     #   pytest-xdist
 pytest-xdist==2.2.1
     # via -r ci.txt
-pytest==6.2.2
+pytest==6.2.4
     # via
     #   -r ci.txt
     #   pytest-django

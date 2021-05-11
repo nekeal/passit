@@ -15,7 +15,7 @@ from ..subject.models import (
 )
 
 
-class FieldOfStudyFactory(factory.DjangoModelFactory):
+class FieldOfStudyFactory(factory.django.DjangoModelFactory):
     name = factory.sequence(lambda n: f"field{n}")
     slug = factory.LazyAttribute(lambda o: f"{slugify(o.name)}")
 
@@ -23,7 +23,7 @@ class FieldOfStudyFactory(factory.DjangoModelFactory):
         model = FieldOfStudy
 
 
-class FieldOfStudyOfAgeGroupFactory(factory.DjangoModelFactory):
+class FieldOfStudyOfAgeGroupFactory(factory.django.DjangoModelFactory):
     field_of_study = factory.SubFactory(FieldOfStudyFactory)
     students_start_year = factory.LazyAttribute(
         lambda n: datetime.datetime.now().year - 1
@@ -33,7 +33,7 @@ class FieldOfStudyOfAgeGroupFactory(factory.DjangoModelFactory):
         model = FieldOfStudyOfAgeGroup
 
 
-class SubjectFactory(factory.DjangoModelFactory):
+class SubjectFactory(factory.django.DjangoModelFactory):
     name = factory.sequence(lambda n: f"subject{n}")
     semester = factory.LazyAttribute(lambda n: randint(1, 6))
     general_description = "description"
@@ -44,7 +44,7 @@ class SubjectFactory(factory.DjangoModelFactory):
         model = Subject
 
 
-class SubjectOfAgeGroupFactory(factory.DjangoModelFactory):
+class SubjectOfAgeGroupFactory(factory.django.DjangoModelFactory):
     subject = factory.SubFactory(SubjectFactory)
     field_age_group = factory.SubFactory(FieldOfStudyOfAgeGroupFactory)
 
@@ -52,7 +52,7 @@ class SubjectOfAgeGroupFactory(factory.DjangoModelFactory):
         model = SubjectOfAgeGroup
 
 
-class ExamFactory(factory.DjangoModelFactory):
+class ExamFactory(factory.django.DjangoModelFactory):
     subject_group = factory.SubFactory(SubjectOfAgeGroupFactory)
     starts_at = datetime.datetime.now() + datetime.timedelta(days=30)
 
@@ -60,7 +60,7 @@ class ExamFactory(factory.DjangoModelFactory):
         model = Exam
 
 
-class ResourceFactory(factory.DjangoModelFactory):
+class ResourceFactory(factory.django.DjangoModelFactory):
     name = factory.sequence(lambda n: f"Resource {n}")
     subject = factory.SubFactory(SubjectFactory)
     category = ResourceCategoryChoices.OTHER

@@ -7,7 +7,7 @@ from ..subject.factories import FieldOfStudyOfAgeGroupFactory
 from .models import Event, EventCategoryChoices
 
 
-class EventFactory(factory.DjangoModelFactory):
+class EventFactory(factory.django.DjangoModelFactory):
     name = "event"
     category = EventCategoryChoices.OTHER
     due_date = factory.LazyFunction(lambda: timezone.now() - timedelta(days=1))
