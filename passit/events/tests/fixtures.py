@@ -10,7 +10,7 @@ from passit.events.models import EventCategoryChoices
 @pytest.fixture
 def event(field_age_group):
     return EventFactory(
-        name='event',
+        name="event",
         category=EventCategoryChoices.OTHER,
         due_date=timezone.now() - timedelta(days=1),
         field_age_group=field_age_group,

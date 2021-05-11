@@ -8,38 +8,38 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('subject', '0001_initial'),
+        ("subject", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='News',
+            name="News",
             fields=[
                 (
-                    'id',
+                    "id",
                     models.AutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name='ID',
+                        verbose_name="ID",
                     ),
                 ),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('title', models.CharField(max_length=100)),
-                ('content', models.TextField()),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("title", models.CharField(max_length=100)),
+                ("content", models.TextField()),
                 (
-                    'subject_group',
+                    "subject_group",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.PROTECT,
-                        related_name='news',
-                        to='subject.SubjectOfAgeGroup',
+                        related_name="news",
+                        to="subject.SubjectOfAgeGroup",
                     ),
                 ),
             ],
             options={
-                'verbose_name': 'news',
-                'verbose_name_plural': 'news',
+                "verbose_name": "news",
+                "verbose_name_plural": "news",
             },
         ),
     ]

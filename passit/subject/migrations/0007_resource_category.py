@@ -8,13 +8,13 @@ from passit.subject.models import ResourceCategoryChoices
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('subject', '0006_auto_20200308_1821'),
+        ("subject", "0006_auto_20200308_1821"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='resource',
-            name='category',
+            model_name="resource",
+            name="category",
             field=models.CharField(
                 choices=ResourceCategoryChoices.choices(),
                 default=ResourceCategoryChoices.OTHER,

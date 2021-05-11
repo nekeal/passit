@@ -7,7 +7,7 @@ from .models import News
 
 
 @admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(admin.ModelAdmin[News]):
     list_display = [
         "title",
         "get_field_of_study",

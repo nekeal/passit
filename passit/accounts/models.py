@@ -29,12 +29,12 @@ class CustomUserQuerySet(QuerySet):  # type: ignore
 
 class CustomUserManager(UserManager.from_queryset(CustomUserQuerySet)):  # type: ignore
     def get_queryset(self):
-        return super().get_queryset().select_related('profile')
+        return super().get_queryset().select_related("profile")
 
     def create_student(
         self,
         username: str,
-        field_age_group: 'FieldOfStudyOfAgeGroup',
+        field_age_group: "FieldOfStudyOfAgeGroup",
         first_name,
         last_name,
         membership_type: int = MembershipTypeChoices.NORMAL,
@@ -61,30 +61,30 @@ class UserProfileQuerySet(QuerySet):  # type: ignore
 
 
 class UserProfileManager(Manager):  # type: ignore
-    def get_queryset(self) -> 'QuerySet[UserProfile]':
+    def get_queryset(self) -> "QuerySet[UserProfile]":
         return UserProfileQuerySet(self.model, self._db)  # type: ignore
 
 
 class UserProfile(models.Model):
     user = models.OneToOneField(
-        'CustomUser', on_delete=models.CASCADE, related_name='profile'
+        "CustomUser", on_delete=models.CASCADE, related_name="profile"
     )
     field_age_groups = models.ManyToManyField(
-        'subject.FieldOfStudyOfAgeGroup',
+        "subject.FieldOfStudyOfAgeGroup",
         blank=True,
-        through='Membership',
-        related_name='students',
+        through="Membership",
+        related_name="students",
     )
 
     objects = UserProfileManager.from_queryset(UserProfileQuerySet)()
 
     def __str__(self) -> str:
-        return f'{self.user}'
+        return f"{self.user}"
 
     def get_name(self) -> str:
         if self.user_id:
-            return f'{self.user.first_name} {self.user.last_name}'
-        return 'Anonymous'
+            return f"{self.user.first_name} {self.user.last_name}"
+        return "Anonymous"
 
     def is_privileged(self) -> bool:
         return Membership.objects.filter(
@@ -93,8 +93,8 @@ class UserProfile(models.Model):
         ).exists()
 
     def set_default_field_age_group(
-        self, field_age_group: 'FieldOfStudyOfAgeGroup'
-    ) -> 'Membership':
+        self, field_age_group: "FieldOfStudyOfAgeGroup"
+    ) -> "Membership":
         current_default = Membership.objects.get_default_by_profile(self)
         new_default = Membership.objects.filter_by_profile(self).get(
             field_age_group=field_age_group
@@ -112,24 +112,24 @@ class MembershipQuerySet(QuerySet):  # type: ignore
 
 
 class MembershipManager(Manager):  # type: ignore
-    def get_queryset(self) -> 'QuerySet[Membership]':
+    def get_queryset(self) -> "QuerySet[Membership]":
         return MembershipQuerySet(self.model, self._db)  # type: ignore
 
-    def filter_by_profile(self, profile: 'UserProfile') -> 'QuerySet[Membership]':
+    def filter_by_profile(self, profile: "UserProfile") -> "QuerySet[Membership]":
         return self.get_queryset().filter(profile=profile)
 
-    def get_default_by_profile(self, profile: 'UserProfile') -> 'Membership':
+    def get_default_by_profile(self, profile: "UserProfile") -> "Membership":
         return self.get_queryset().get(profile=profile, is_default=True)
 
 
 class Membership(models.Model):
     profile = models.ForeignKey(
-        'UserProfile', on_delete=models.CASCADE, related_name='memberships'
+        "UserProfile", on_delete=models.CASCADE, related_name="memberships"
     )
     field_age_group = models.ForeignKey(
-        'subject.FieldOfStudyOfAgeGroup',
+        "subject.FieldOfStudyOfAgeGroup",
         on_delete=models.CASCADE,
-        related_name='memberships',
+        related_name="memberships",
     )
     type = models.PositiveSmallIntegerField(
         default=MembershipTypeChoices.NORMAL, choices=MembershipTypeChoices.choices()
@@ -139,4 +139,4 @@ class Membership(models.Model):
     objects = MembershipManager.from_queryset(MembershipQuerySet)()
 
     class Meta:
-        unique_together = ('profile', 'field_age_group')
+        unique_together = ("profile", "field_age_group")

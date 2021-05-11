@@ -7,19 +7,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('news', '0005_news_attachment'),
+        ("news", "0005_news_attachment"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='news',
-            name='subject_group',
+            model_name="news",
+            name="subject_group",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.PROTECT,
-                related_name='news',
-                to='subject.SubjectOfAgeGroup',
+                related_name="news",
+                to="subject.SubjectOfAgeGroup",
             ),
         ),
     ]

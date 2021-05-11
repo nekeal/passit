@@ -68,18 +68,18 @@ class TestEventSerializer:
     def test_required_fields(self, field_name, is_required):
         assert EventSerializer().fields[field_name].required is is_required
 
-    @pytest.mark.parametrize('field_age_group_id', (1, "1"))
-    @pytest.mark.parametrize('subject_group_id', (1, "1"))
+    @pytest.mark.parametrize("field_age_group_id", (1, "1"))
+    @pytest.mark.parametrize("subject_group_id", (1, "1"))
     def test_validate_correct_subject_group(self, subject_group_id, field_age_group_id):
         field_age_group = FieldOfStudyOfAgeGroupFactory.build()
         subject_group = SubjectOfAgeGroupFactory.build(field_age_group=field_age_group)
         subject_group.field_age_group_id = field_age_group_id
         serializer = EventSerializer(
             data={
-                'name': 'name',
-                'category': EventCategoryChoices.OTHER,
-                'field_age_group': field_age_group_id,
-                'subject_group': subject_group_id,
+                "name": "name",
+                "category": EventCategoryChoices.OTHER,
+                "field_age_group": field_age_group_id,
+                "subject_group": subject_group_id,
             }
         )
         assert serializer.validate_subject_group(subject_group) == subject_group
@@ -88,10 +88,10 @@ class TestEventSerializer:
         subject_group = SubjectOfAgeGroupFactory.build(id=1, field_age_group_id=2)
         serializer = EventSerializer(
             data={
-                'name': 'name',
-                'category': EventCategoryChoices.OTHER,
-                'field_age_group': 1,
-                'subject_group': 1,
+                "name": "name",
+                "category": EventCategoryChoices.OTHER,
+                "field_age_group": 1,
+                "subject_group": 1,
             }
         )
         with pytest.raises(ValidationError):

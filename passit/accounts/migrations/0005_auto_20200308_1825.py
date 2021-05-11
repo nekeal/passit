@@ -8,14 +8,14 @@ import passit.accounts.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0004_auto_20200229_1658'),
+        ("accounts", "0004_auto_20200229_1658"),
     ]
 
     operations = [
         migrations.AlterModelManagers(
-            name='customuser',
+            name="customuser",
             managers=[
-                ('objects', passit.accounts.models.CustomUserManager()),
+                ("objects", passit.accounts.models.CustomUserManager()),
             ],
         ),
     ]

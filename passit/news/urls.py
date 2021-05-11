@@ -6,7 +6,7 @@ from passit.news.views import NewsViewSet
 
 router = DefaultRouter()
 
-router.register('news', NewsViewSet, basename='news')
+router.register("news", NewsViewSet, basename="news")
 
 urlpatterns: List[Any] = []
 

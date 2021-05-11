@@ -1,3 +1,5 @@
+from typing import cast
+
 from django.contrib import admin
 from django.db import models
 from django.db.models import QuerySet
@@ -14,62 +16,64 @@ from passit.subject.models import (
     Subject,
     SubjectOfAgeGroup,
 )
+
+from ..accounts.models import CustomUser
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 
 
-class ExamInline(admin.TabularInline):
+class ExamInline(admin.TabularInline[Exam]):
     model = Exam
     extra = 1
 
 
-class LecturerOfSubjectInlineAdmin(admin.TabularInline):
+class LecturerOfSubjectInlineAdmin(admin.TabularInline[LecturerOfSubjectOfAgeGroup]):
     model = LecturerOfSubjectOfAgeGroup
     extra = 1
 
 
-class ResourceInlineAdmin(admin.StackedInline):
+class ResourceInlineAdmin(admin.StackedInline[Resource]):
     model = Resource
-    readonly_fields = ['created_by', 'modified_by']
+    readonly_fields = ["created_by", "modified_by"]
     extra = 1
     formfield_overrides = {
-        models.TextField: {'widget': widgets.Textarea(attrs={'rows': 5, 'cols': 40})},
+        models.TextField: {"widget": widgets.Textarea(attrs={"rows": 5, "cols": 40})},
     }
 
 
-class SubjectOfAgeGroupAdmin(admin.ModelAdmin):
+class SubjectOfAgeGroupAdmin(admin.ModelAdmin[SubjectOfAgeGroup]):
     list_display = ["subject", "students_start_year"]
     inlines = [ExamInline, LecturerOfSubjectInlineAdmin]
 
-    def get_queryset(self, request: HttpRequest) -> 'QuerySet[SubjectOfAgeGroup]':
+    def get_queryset(self, request: HttpRequest) -> "QuerySet[SubjectOfAgeGroup]":
         return (
             super()
             .get_queryset(request)
             .select_related(
-                'subject', 'field_age_group', 'field_age_group__field_of_study'
+                "subject", "field_age_group", "field_age_group__field_of_study"
             )
         )
 
 
 @admin.register(FieldOfStudyOfAgeGroup)
-class FieldOfStudyOfAgeGroupAdmin(admin.ModelAdmin):
-    def get_queryset(self, request: HttpRequest) -> 'QuerySet[FieldOfStudyOfAgeGroup]':
-        return super().get_queryset(request).select_related('field_of_study')
+class FieldOfStudyOfAgeGroupAdmin(admin.ModelAdmin[FieldOfStudyOfAgeGroup]):
+    def get_queryset(self, request: HttpRequest) -> "QuerySet[FieldOfStudyOfAgeGroup]":
+        return super().get_queryset(request).select_related("field_of_study")
 
 
 @admin.register(Subject)
-class SubjectAdmin(admin.ModelAdmin):
+class SubjectAdmin(admin.ModelAdmin[Subject]):
     inlines = [
         ResourceInlineAdmin,
     ]
     formfield_overrides = {
-        models.TextField: {'widget': widgets.Textarea(attrs={'rows': 5, 'cols': 40})},
+        models.TextField: {"widget": widgets.Textarea(attrs={"rows": 5, "cols": 40})},
     }
 
-    def get_queryset(self, request: HttpRequest) -> 'QuerySet[Subject]':
+    def get_queryset(self, request: HttpRequest) -> "QuerySet[Subject]":
         return (
             super(SubjectAdmin, self)
             .get_queryset(request)
-            .select_related('field_of_study')
+            .select_related("field_of_study")
             .annotate(resource_count=Count("resources"))
         )
 
@@ -78,17 +82,17 @@ class SubjectAdmin(admin.ModelAdmin):
             instances = formset.save(commit=False)
             for instance in instances:
                 if not instance.pk:
-                    instance.created_by = request.user.profile
-                instance.modified_by = request.user.profile
+                    instance.created_by = request.user.profile  # type: ignore
+                instance.modified_by = request.user.profile  # type: ignore
                 instance.save()
         super(SubjectAdmin, self).save_formset(request, form, formset, change)
 
 
 @admin.register(Exam)
-class ExamAdmin(admin.ModelAdmin):
-    list_display = ('get_field_of_study', 'get_subject', 'starts_at', 'place')
-    search_fields = ('place',)
-    list_filter = ('starts_at',)
+class ExamAdmin(admin.ModelAdmin[Exam]):
+    list_display = ("get_field_of_study", "get_subject", "starts_at", "place")
+    search_fields = ("place",)
+    list_filter = ("starts_at",)
 
     def get_queryset(self, request: HttpRequest) -> "QuerySet[Exam]":
         return (

@@ -10,7 +10,7 @@ class IsPrivilegedOrOwnerOrReadOnly(BasePermission):
                 or request.user
                 and (
                     request.user.profile.is_privileged()
-                    or hasattr(obj, 'is_owner')
+                    or hasattr(obj, "is_owner")
                     and obj.is_owner(request.user.profile)
                 )
             )

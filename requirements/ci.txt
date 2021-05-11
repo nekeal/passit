@@ -6,21 +6,26 @@
 #
 apipkg==1.5
     # via execnet
-attrs==20.3.0
+attrs==21.2.0
     # via pytest
-django-stubs==1.4.0
+django-stubs-ext==0.2.0
+    # via
+    #   -c base.txt
+    #   django-stubs
+django-stubs==1.8.0
     # via -r ci.in
 django==2.2.18
     # via
     #   -c base.txt
     #   django-stubs
+    #   django-stubs-ext
 execnet==1.8.0
     # via pytest-xdist
-factory-boy==2.12.0
+factory-boy==3.2.0
     # via -r ci.in
-faker==8.1.2
+faker==8.1.3
     # via factory-boy
-flake8==3.9.1
+flake8==3.9.2
     # via -r ci.in
 iniconfig==1.1.1
     # via pytest
@@ -28,7 +33,7 @@ mccabe==0.6.1
     # via flake8
 mypy-extensions==0.4.3
     # via mypy
-mypy==0.761
+mypy==0.812
     # via
     #   -r ci.in
     #   django-stubs
@@ -52,13 +57,13 @@ pyparsing==2.4.7
     # via
     #   -c base.txt
     #   packaging
-pytest-django==4.1.0
+pytest-django==4.2.0
     # via -r ci.in
 pytest-forked==1.3.0
     # via pytest-xdist
 pytest-xdist==2.2.1
     # via -r ci.in
-pytest==6.2.2
+pytest==6.2.4
     # via
     #   -r ci.in
     #   pytest-django

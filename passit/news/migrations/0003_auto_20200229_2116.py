@@ -7,31 +7,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0004_auto_20200229_1658'),
-        ('news', '0002_news_field_age_group'),
+        ("accounts", "0004_auto_20200229_1658"),
+        ("news", "0002_news_field_age_group"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='news',
-            name='created_by',
+            model_name="news",
+            name="created_by",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                related_name='news_created',
-                to='accounts.UserProfile',
+                related_name="news_created",
+                to="accounts.UserProfile",
             ),
         ),
         migrations.AddField(
-            model_name='news',
-            name='modified_by',
+            model_name="news",
+            name="modified_by",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                related_name='news_modified',
-                to='accounts.UserProfile',
+                related_name="news_modified",
+                to="accounts.UserProfile",
             ),
         ),
     ]

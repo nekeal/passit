@@ -6,16 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('subject', '0001_initial'),
+        ("subject", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='fieldofstudies',
-            name='slug',
+            model_name="fieldofstudies",
+            name="slug",
             field=models.SlugField(
-                default='slug',
-                help_text='Slug which identifies field of study in syllabus',
+                default="slug",
+                help_text="Slug which identifies field of study in syllabus",
                 unique=True,
             ),
             preserve_default=False,

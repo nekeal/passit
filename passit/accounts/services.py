@@ -2,9 +2,9 @@ import csv
 import dataclasses
 from typing import Dict, List
 
+from ..subject.tests.fixtures import field_age_group
 from .models import CustomUser, MembershipTypeChoices
 from .serializers import StudentsImportSerializer
-from ..subject.tests.fixtures import field_age_group
 
 
 @dataclasses.dataclass
@@ -23,8 +23,8 @@ class StudentImportService:
         self.field_age_group = field_age_group
         self.membership_type = membership_type
         self.student_create_result: Dict[str, List[Dict[str, Student]]] = {
-            'valid': [],
-            'invalid': [],
+            "valid": [],
+            "invalid": [],
         }
 
     def create_from_file(self, file) -> None:
@@ -37,21 +37,21 @@ class StudentImportService:
                 serializer.save(
                     field_age_group=field_age_group, type=MembershipTypeChoices.NORMAL
                 )
-                self.student_create_result['valid'].append({'student': student})
+                self.student_create_result["valid"].append({"student": student})
             else:
-                self.student_create_result['invalid'].append(
-                    {'errors': serializer.errors, 'student': student}
+                self.student_create_result["invalid"].append(
+                    {"errors": serializer.errors, "student": student}
                 )
 
     def print_report(self) -> None:
-        print('Created:')
-        for student in self.student_create_result['valid']:
+        print("Created:")
+        for student in self.student_create_result["valid"]:
             print(
                 f'{student["student"].get_full_name()} - '
                 f'{student["student"].username}:{student["student"].password}'
             )
         print("Failed to create:")
-        for student in self.student_create_result['invalid']:
+        for student in self.student_create_result["invalid"]:
             print(f'{student["student"].get_full_name()} - {student["errors"]}')
 
     def get_result(self):

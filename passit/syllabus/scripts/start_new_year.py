@@ -4,25 +4,25 @@ from ..services import SyllabusStartNewYearService
 from ..utils import SyllabusClient
 
 parser = argparse.ArgumentParser(
-    description='Syllabus import',
+    description="Syllabus import",
 )
 parser.add_argument(
-    '--age-group',
-    help='Specify age-group to fetch in format <year>-<year>',
+    "--age-group",
+    help="Specify age-group to fetch in format <year>-<year>",
     required=False,
-    default='2018-2019',
+    default="2018-2019",
 )
 parser.add_argument(
-    '--faculty',
-    help='Specify faculty to fetch data from',
+    "--faculty",
+    help="Specify faculty to fetch data from",
     required=False,
-    default='wieit',
+    default="wieit",
 )
 parser.add_argument(
-    '--field-of-study',
-    help='Specify field of study to fetch subjects from',
+    "--field-of-study",
+    help="Specify field of study to fetch subjects from",
     required=False,
-    default='stacjonarne-teleinformatyka',
+    default="stacjonarne-teleinformatyka",
 )
 
 client = SyllabusClient()

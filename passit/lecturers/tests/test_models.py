@@ -22,18 +22,18 @@ class TestLecturerOfSubjectQuerySet:
 
 class TestLecturerModel:
     def test_lecturer_str_method(self):
-        lecturer = LecturerFactory.build(first_name='first_name', last_name='last_name')
-        assert str(lecturer) == 'first_name last_name'
+        lecturer = LecturerFactory.build(first_name="first_name", last_name="last_name")
+        assert str(lecturer) == "first_name last_name"
 
 
 class TestLecturerOfSubjectOfAgeGroupModel:
     @pytest.mark.parametrize(
-        'lecturer,subject_group,expected',
+        "lecturer,subject_group,expected",
         (
             (
-                LecturerFactory.build(first_name='first_name', last_name='last_name'),
+                LecturerFactory.build(first_name="first_name", last_name="last_name"),
                 SubjectOfAgeGroupFactory.build(),
-                'first_name last_name subject0',
+                "first_name last_name subject0",
             ),
         ),
     )

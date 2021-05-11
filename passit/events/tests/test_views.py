@@ -6,12 +6,12 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import force_authenticate
 
-from ..managers import EventManager
-from ..querysets import EventQuerySet
-from ..views import EventViewSet
 from ...accounts.factories import UserProfileFactory
 from ...accounts.models import CustomUser, UserProfile
 from ...common.utils import ResponseFactory, get_mocked_queryset, setup_view
+from ..managers import EventManager
+from ..querysets import EventQuerySet
+from ..views import EventViewSet
 
 
 @pytest.fixture
@@ -66,10 +66,10 @@ class TestEventViewSet:
             EventManager, "get_by_profile", mock.Mock(return_value=m_queryset)
         )
         request = ResponseFactory(
-            '/api/events',
-            'get',
+            "/api/events",
+            "get",
             UserProfileFactory.build().user,
-            data={'expand': expand_field_name},
+            data={"expand": expand_field_name},
         ).get_request()
 
         view = setup_view(EventViewSet(), request)
@@ -87,7 +87,7 @@ class TestEventViewSet:
     def test_queryset_is_correctly_ordered(self, api_rf, monkeypatch):
         expected_ordering = ("due_date",)
         request = ResponseFactory(
-            '/api/events', 'get', UserProfileFactory.build().user
+            "/api/events", "get", UserProfileFactory.build().user
         ).get_request()
         view = setup_view(EventViewSet(), request)
         monkeypatch.setattr(
@@ -106,10 +106,10 @@ class TestEventViewSet:
         user = mock.Mock(spec=CustomUser)
         user.profile = profile
         m_get_by_profile = mock.Mock()
-        monkeypatch.setattr(EventManager, 'get_by_profile', m_get_by_profile)
+        monkeypatch.setattr(EventManager, "get_by_profile", m_get_by_profile)
         request = ResponseFactory(
-            '/api/events/',
-            'get',
+            "/api/events/",
+            "get",
             user,
         ).get_request()
         view = setup_view(EventViewSet(), request)

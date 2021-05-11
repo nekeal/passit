@@ -7,17 +7,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('subject', '0008_auto_20200311_1339'),
+        ("subject", "0008_auto_20200311_1339"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='fieldofstudyofagegroup',
-            name='field_of_study',
+            model_name="fieldofstudyofagegroup",
+            name="field_of_study",
             field=models.ForeignKey(
                 on_delete=django.db.models.deletion.PROTECT,
-                related_name='field_age_groups',
-                to='subject.FieldOfStudy',
+                related_name="field_age_groups",
+                to="subject.FieldOfStudy",
             ),
         ),
     ]

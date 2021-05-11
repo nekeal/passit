@@ -34,14 +34,14 @@ def setup_view(view: Union[GenericViewSet, View], request, *args, **kwargs):
 
 
 class ResponseFactory:
-    ALLOWED_METHODS = {'get', 'post', 'put', 'delete', 'patch', 'options', 'head'}
+    ALLOWED_METHODS = {"get", "post", "put", "delete", "patch", "options", "head"}
     VIEWSET_KNOWN_ACTIONS = {
-        'list',
-        'create',
-        'retrieve',
-        'update',
-        'partial_update',
-        'destroy',
+        "list",
+        "create",
+        "retrieve",
+        "update",
+        "partial_update",
+        "destroy",
     }
 
     def __init__(
@@ -76,7 +76,7 @@ class ResponseFactory:
         return resolve(self.url).func(self.request, **self.view_kwargs)
 
 
-def get_mocked_queryset(queryset_class: 'Type[QuerySet[Any]]' = QuerySet):
+def get_mocked_queryset(queryset_class: "Type[QuerySet[Any]]" = QuerySet):
     m_queryset = mock.Mock(spec=queryset_class)
     m_queryset.filter.return_value = m_queryset
     m_queryset.exclude.return_value = m_queryset
