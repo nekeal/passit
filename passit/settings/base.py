@@ -13,6 +13,9 @@ import os
 from datetime import timedelta
 from pathlib import Path
 
+import django_stubs_ext
+
+django_stubs_ext.monkeypatch()
 BASE_DIR = Path(__file__).parents[2]
 
 

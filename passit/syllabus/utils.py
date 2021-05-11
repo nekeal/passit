@@ -1,4 +1,5 @@
 import json
+from typing import Any, Dict, List
 from urllib.parse import urljoin
 
 import requests
@@ -7,7 +8,7 @@ from passit.subject.models import FieldOfStudy
 
 
 class LecturerAdapter:
-    def __init__(self, json_data_from_syllabus):
+    def __init__(self, json_data_from_syllabus) -> None:
         data = json_data_from_syllabus
         self.lecturer_data = {
             "first_name": data["name"],
@@ -15,7 +16,7 @@ class LecturerAdapter:
             "title": data["employee_title"] or "",
         }
 
-    def get_data(self):
+    def get_data(self) -> Dict[str, str]:
         return self.lecturer_data
 
 
@@ -32,7 +33,7 @@ class SubjectAdapter:
             "lecturers": self.get_lecturers(),
         }
 
-    def get_lecturers(self):
+    def get_lecturers(self) -> List[Dict[str, str]]:
         lecturers = [
             LecturerAdapter(lecturer["teacher"]).get_data()
             for lecturer in self.initial_data["teachers"]
@@ -70,22 +71,22 @@ class SyllabusClient:
         self.session.headers.update(headers)
 
     @classmethod
-    def _get_field_of_study_url(cls, age_group, faculty):
+    def _get_field_of_study_url(cls, age_group, faculty) -> str:
         return cls.FIELDS_OF_STUDY_LIST_BASE_URL.format(age_group, faculty)
 
     @classmethod
-    def _get_subject_list_url(cls, age_group, faculty, field_of_study):
+    def _get_subject_list_url(cls, age_group, faculty, field_of_study) -> str:
         return cls.SUBJECTS_LIST_BASE_URL.format(
             age_group=age_group, faculty=faculty, field_of_study=field_of_study
         )
 
     @classmethod
-    def _get_subject_list_details_url(cls, age_group, faculty, field_of_study):
+    def _get_subject_list_details_url(cls, age_group, faculty, field_of_study) -> str:
         return cls.SUBJECTS_LIST_WITH_DETAILS_URL.format(
             age_group=age_group, faculty=faculty, field_of_study=field_of_study
         )
 
-    def _merge_subjects_data(self, common_data, detail_data):
+    def _merge_subjects_data(self, common_data, detail_data) -> Dict[str, Any]:
         merged_data = {}
         for semester in common_data:
             semester_number = semester["number"]
@@ -106,7 +107,7 @@ class SyllabusClient:
         try:
             data = response.json()["syllabus"]["study_plan"]["semesters"]
         except json.JSONDecodeError:
-            raise ValueError(f"Failed during parsing response {response.content}")
+            raise ValueError(f"Failed during parsing response {str(response.content)}")
         return data
 
     def get_detail_subjects_data(self, age_group, faculty, field_of_study):
@@ -115,10 +116,14 @@ class SyllabusClient:
         try:
             data = response.json()["syllabus"]["assignments"]
         except json.JSONDecodeError:
-            raise ValueError(f"Failed during parsing response {response.content}")
+            raise ValueError(f"Failed during parsing response {str(response.content)}")
         return data
 
     def get_full_subjects_data(self, age_group, faculty, field_of_study):
-        common_data = self.get_common_subjects_data(age_group, faculty, field_of_study)
-        detail_data = self.get_detail_subjects_data(age_group, faculty, field_of_study)
+        common_data = self.get_common_subjects_data(
+            age_group, faculty, field_of_study
+        )  # type: ignore
+        detail_data = self.get_detail_subjects_data(
+            age_group, faculty, field_of_study
+        )  # type: ignore
         return self._merge_subjects_data(common_data, detail_data)

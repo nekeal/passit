@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 
 class NewsManager(Manager):  # type: ignore
     def get_queryset(self) -> "QuerySet[News]":
-        return NewsQuerySet(self.model, using=self._db)  # type: ignore
+        return NewsQuerySet(self.model, using=self._db)
 
     def get_by_profile(self, profile: UserProfile) -> "QuerySet[News]":
         member_of_field_age_group = Membership.objects.filter(profile=profile).values(

@@ -1,9 +1,15 @@
+# type: ignore[misc]
 from collections import Counter
-from typing import List, Set, Tuple
+from typing import Any, Dict, List, Set, Tuple
 
 from ..lecturers.models import LecturerOfSubjectOfAgeGroup
 from ..lecturers.serializers import LecturerSyllabusImportSerializer
-from ..subject.models import FieldOfStudy, FieldOfStudyOfAgeGroup, SubjectOfAgeGroup
+from ..subject.models import (
+    FieldOfStudy,
+    FieldOfStudyOfAgeGroup,
+    Subject,
+    SubjectOfAgeGroup,
+)
 from ..subject.serializers import SubjectSyllabusImportSerializer
 from .utils import SubjectAdapter, SyllabusClient
 
@@ -16,21 +22,21 @@ class SyllabusStartNewYearService:
         self.field_age_group = None
         self.start_year = self.get_start_year()
         self.client = SyllabusClient()
-        self.subjects_parsed_data = []
-        self.subject_instances = []
+        self.subjects_parsed_data: List[Dict[str, Any]] = []
+        self.subject_instances: List[Subject] = []
         self.subject_age_groups_create_result: List[Tuple[SubjectOfAgeGroup, bool]] = []
         self.lecturer_age_groups_create_result: Set[
             Tuple[LecturerOfSubjectOfAgeGroup, bool]
         ] = set()
-        self.report = []
+        self.report: List[str] = []
 
-    def get_start_year(self):
+    def get_start_year(self) -> int:
         try:
             return int(self.age_group.split("-")[0])
         except Exception as e:
-            type(e)(e.message + f"\n {self.age_group}")
+            raise type(e)(f"{str(e)}\n {self.age_group}")
 
-    def add_subjects_of_age_group_create_result_to_report(self):
+    def add_subjects_of_age_group_create_result_to_report(self) -> None:
         subject_age_group_summary = Counter(
             [result[1] for result in self.subject_age_groups_create_result]
         )
@@ -41,7 +47,7 @@ class SyllabusStartNewYearService:
             f"{old_subject_groups} already exist"
         )
 
-    def add_lecturers_of_age_group_create_result_to_report(self):
+    def add_lecturers_of_age_group_create_result_to_report(self) -> None:
         lecturer_age_group_summary = Counter(
             [result[1] for result in self.lecturer_age_groups_create_result]
         )

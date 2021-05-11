@@ -5,20 +5,20 @@ from django.contrib.auth.admin import UserAdmin
 from .models import CustomUser, Membership, UserProfile
 
 
-class MembershipInline(admin.TabularInline):
+class MembershipInline(admin.TabularInline[Membership]):
     model = Membership
     extra = 1
 
 
 @admin.register(UserProfile)
-class UserProfileAdmin(admin.ModelAdmin):
+class UserProfileAdmin(admin.ModelAdmin[UserProfile]):
     model = UserProfile
     inlines = [
         MembershipInline,
     ]
 
 
-class UserProfileInline(admin.TabularInline):
+class UserProfileInline(admin.TabularInline[UserProfile]):
     model = UserProfile
 
 

@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 
 class EventManager(Manager):  # type: ignore
     def get_queryset(self) -> "QuerySet[Event]":
-        return EventQuerySet(self.model, using=self._db)  # type: ignore
+        return EventQuerySet(self.model, using=self._db)
 
     def get_by_profile(self, profile: UserProfile) -> "QuerySet[Event]":
         member_of = Membership.objects.filter_by_profile(profile).values_list(
