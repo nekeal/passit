@@ -119,7 +119,7 @@ django-templated-mail==1.1.1
     #   djoser
 django-webpack-loader==0.7.0
     # via -r base.txt
-django==2.2.18
+django==2.2.20
     # via
     #   -r base.txt
     #   -r ci.txt
