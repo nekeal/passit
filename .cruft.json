@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/nekeal/cookiecutter-django-api",
+  "commit": "36e3401c797d69a3c44fab4880bc6a1154106e79",
+  "context": {
+    "cookiecutter": {
+      "project_name": "passit",
+      "full_project_name": "passit",
+      "github_username": "nekeal",
+      "github_repository_name": "passit",
+      "email": "szymon.sc.cader@gmail.com",
+      "description": "Knowledge base for students of particular university",
+      "use_jazzmin": "y",
+      "use_drf": "y",
+      "use_drf_flex_fields": "y",
+      "use_jwt": "y",
+      "use_sentry": "y",
+      "use_django_filters": "y",
+      "use_django_extensions": "y",
+      "use_tox": "y",
+      "use_celery": "y",
+      "use_dbbackup": "y",
+      "use_react_frontend": "y",
+      "_template": "https://github.com/nekeal/cookiecutter-django-api"
+    }
+  },
+  "directory": null
+}
