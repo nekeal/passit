@@ -15,7 +15,7 @@ LOGGING = {
     "disable_existing_loggers": False,
     "handlers": {
         "console_info": {
-            "level": "WARNING",
+            "level": "ERROR",
             "class": "logging.StreamHandler",
             "formatter": "django.server",
         }
@@ -33,20 +33,22 @@ LOGGING = {
         }
     },
 }
+
+# ------------- DATABASES -------------
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB", "postgres"),
-        "USER": os.environ.get("POSTGRES_USER", "postgres"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", ""),
-        "HOST": os.environ.get("POSTGRES_HOST", "localhost"),
+        "NAME": os.getenv("POSTGRES_DB", "postgres"),
+        "USER": os.getenv("POSTGRES_USER", "postgres"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD", ""),
+        "HOST": os.getenv("POSTGRES_HOST", "localhost"),
     }
 }
-DATABASE_URL = os.environ.get("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL")
 db_from_env = dj_database_url.config(
     default=DATABASE_URL, conn_max_age=500, ssl_require=True
 )
 DATABASES["default"].update(db_from_env)
 
-STATIC_ROOT = os.path.join(BASE_DIR, "public")
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+STATIC_ROOT = BASE_DIR.joinpath("public")
+MEDIA_ROOT = BASE_DIR.joinpath("media")

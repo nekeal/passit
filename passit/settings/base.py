@@ -16,24 +16,19 @@ from pathlib import Path
 import django_stubs_ext
 
 django_stubs_ext.monkeypatch()
+
 BASE_DIR = Path(__file__).parents[2]
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "w-ipd5^0$3f(+e072x3=f*9h1dgqbw8d9a2ggc=l_f!#g3ubo0"
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
-# Application definition
+# ------------- APPS -------------
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -41,13 +36,18 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+]
+
+THIRD_PARTY_APPS = [
     "rest_framework",
     "drf_yasg",
     "django_filters",
     "webpack_loader",
     "django_extensions",
     "django_celery_results",
-    # my apps
+]
+
+LOCAL_APPS = [
     "passit.accounts.apps.AccountsConfig",
     "passit.lecturers.apps.LecturersConfig",
     "passit.subject.apps.SubjectConfig",
@@ -55,7 +55,9 @@ INSTALLED_APPS = [
     "passit.events.apps.EventsConfig",
     "passit.syllabus",
 ]
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
+# ------------- MIDDLEWARES -------------
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -66,12 +68,15 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# ------------- URLS -------------
 ROOT_URLCONF = "passit.urls"
+WSGI_APPLICATION = "passit.wsgi.application"
 
+# ------------- TEMPLATES -------------
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "DIRS": [BASE_DIR.joinpath("templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -84,8 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "passit.wsgi.application"
-
+# ------------- JAZZMIN -------------
 
 JAZZMIN_SETTINGS = {
     # title of the window
@@ -141,16 +145,7 @@ JAZZMIN_SETTINGS = {
     },
 }
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    },
-}
-
+# ------------- CACHES -------------
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -160,8 +155,16 @@ CACHES = {
     }
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+# ------------- PASSWORDS -------------
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+PASSOWRD_HASHERS = [
+    "django.contrib.auth.hashers.PBKDF2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
+    "django.contrib.auth.hashers.Argon2PasswordHasher",
+    "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
+    "django.contrib.auth.hashers.BCryptPasswordHasher",
+]
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -178,14 +181,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "accounts.CustomUser"
+# ------------- INTERNALIZATION - ------------
+LANGUAGE_CODE = "en-us"
 
-# Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
-
-LANGUAGE_CODE = "en-gb"
-
-TIME_ZONE = "UTC"
+TIME_ZONE = "Europe/Warsaw"
 
 USE_I18N = True
 
@@ -193,39 +192,27 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+# ------------- STATIC -------------
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "passit/frontend/build/static"),
-    os.path.join(BASE_DIR, "passit/frontend/src/assets"),
+    BASE_DIR.joinpath(f"passit/frontend/build/static"),
+    BASE_DIR.joinpath(f"passit/frontend/src/assets"),
 ]
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "public")
+STATIC_ROOT = BASE_DIR.joinpath("public")
+
+# ------------- MEDIA -------------
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = BASE_DIR.joinpath("media")
 
-# REST FRAMEWORK CONFIGURATION
 
+# ------------- REST FRAMEWORK -------------
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
     "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
 }
-# WEBPACK LOADER
-
-WEBPACK_LOADER = {
-    "DEFAULT": {
-        "BUNDLE_DIR_NAME": "passit/frontend/build/",
-        "STATS_FILE": os.path.join(
-            BASE_DIR, "passit/frontend/config/webpack-stats.json"
-        ),
-    }
-}
-
-# DJOSER
 
 DJOSER = {
     "SERIALIZERS": {"current_user": "passit.accounts.serializers.CustomUserSerializer"}
@@ -236,7 +223,16 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=14),
 }
 
+# ------------- WEBPACK LOADER -------------
+WEBPACK_LOADER = {
+    "DEFAULT": {
+        "BUNDLE_DIR_NAME": "passit/frontend/build/",
+        "STATS_FILE": BASE_DIR.joinpath("passit/frontend/config/webpack-stats.json"),
+    }
+}
+
+
 # CELERY
 
-CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", "redis://localhost:6379/2")
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "redis://localhost:6379/2")
 CELERY_RESULT_BACKEND = "django-db"
