@@ -3,6 +3,7 @@ from unittest import mock
 import pytest
 from rest_framework.fields import Field
 
+from ...accounts.factories import UserProfileFactory
 from ..managers import FieldOfStudyOfAgeGroupManager
 from ..serializers import (
     FieldAgeGroupDefault,
@@ -11,7 +12,6 @@ from ..serializers import (
     ResourceBaseSerializer,
     SubjectSyllabusImportSerializer,
 )
-from ...accounts.factories import UserProfileFactory
 
 
 class TestFieldOfAgeGroupSerializer:
