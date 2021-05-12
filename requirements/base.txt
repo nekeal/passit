@@ -7,7 +7,9 @@
 amqp==5.0.6
     # via kombu
 asgiref==3.3.4
-    # via djoser
+    # via
+    #   django
+    #   djoser
 autopep8==1.5.7
     # via django-silk
 backcall==0.2.0
@@ -74,7 +76,7 @@ django-templated-mail==1.1.1
     # via djoser
 django-webpack-loader==0.7.0
     # via -r base.in
-django==2.2.20
+django==3.1.10
     # via
     #   -r base.in
     #   django-admin-display
@@ -85,6 +87,7 @@ django==2.2.20
     #   django-silk
     #   djangorestframework
     #   django-stubs-ext
+    #   djangorestframework
     #   djangorestframework-simplejwt
     #   drf-yasg
 djangorestframework-simplejwt==4.6.0
