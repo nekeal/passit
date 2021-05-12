@@ -1,7 +1,9 @@
 from unittest import mock
 
 import pytest
+from rest_framework.fields import Field
 
+from ...accounts.factories import UserProfileFactory
 from ..managers import FieldOfStudyOfAgeGroupManager
 from ..serializers import (
     FieldAgeGroupDefault,
@@ -36,9 +38,9 @@ class TestResourceSerializer:
     def test_resource_owned_model_serializer(
         self, resource_data, api_rf, user_profile1, user_profile2
     ):
-        request_user1 = mock.Mock()
+        request_user1 = mock.MagicMock()
         request_user1.user = user_profile1.user
-        request_user2 = mock.Mock()
+        request_user2 = mock.MagicMock()
         request_user2.user = user_profile2.user
         serializer = ResourceBaseSerializer(
             data=resource_data, context={"request": request_user1}
@@ -91,30 +93,21 @@ class TestFieldAgeGroupRelatedField:
 
 
 class TestFieldAgeGroupDefault:
-    def test_set_context(self, monkeypatch):
-        m_field_age_group = mock.Mock()
-        m_get_default_by_profile = mock.Mock(return_value=m_field_age_group)
-        m_serializer_field = mock.MagicMock()
-        monkeypatch.setattr(
-            FieldOfStudyOfAgeGroupManager,
-            "get_default_by_profile",
-            m_get_default_by_profile,
-        )
-        default = FieldAgeGroupDefault()
-        default.set_context(m_serializer_field)
-        assert default.field_age_group == m_field_age_group
-        m_get_default_by_profile.assert_called_once()
-
     def test_call_on_default_returns_field_age_group(self, monkeypatch):
+        profile = UserProfileFactory.build()
+        m_context = mock.MagicMock()
+        m_context["request"].user = profile.user
         m_field_age_group = mock.Mock()
+        field = Field()
+        field.root._context = m_context
         monkeypatch.setattr(
             FieldOfStudyOfAgeGroupManager,
             "get_default_by_profile",
             mock.Mock(return_value=m_field_age_group),
         )
         default = FieldAgeGroupDefault()
-        default.set_context(mock.MagicMock())
-        assert default() == m_field_age_group
+        assert default.requires_context
+        assert default(field) == m_field_age_group
 
 
 class TestSubjectSyllabusImportSerializer:
