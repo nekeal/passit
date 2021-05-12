@@ -10,10 +10,11 @@ class TestUserProfile:
         assert str(profile) == str(profile.user)
 
     @pytest.mark.parametrize("create_user", (True, False))
+    @pytest.mark.django_db
     def test_get_display_name(self, create_user):
         profile = UserProfileFactory.build(user=None)
         if create_user:
-            profile.user = UserFactory.build()
+            profile.user = UserFactory()
             profile.user_id = 1
             assert (
                 profile.get_name()
