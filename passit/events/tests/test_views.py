@@ -10,6 +10,7 @@ from ...accounts.factories import UserProfileFactory
 from ...accounts.models import CustomUser, UserProfile
 from ...common.utils import ResponseFactory, get_mocked_queryset, setup_view
 from ..managers import EventManager
+from ..models import Event
 from ..querysets import EventQuerySet
 from ..views import EventViewSet
 
@@ -91,12 +92,14 @@ class TestEventViewSet:
         ).get_request()
         view = setup_view(EventViewSet(), request)
         monkeypatch.setattr(
-            EventManager, "get_queryset", mock.Mock(return_value=EventQuerySet().none())
+            EventManager,
+            "get_queryset",
+            mock.Mock(return_value=EventQuerySet(Event).none()),
         )
         monkeypatch.setattr(
             EventManager,
             "get_by_profile",
-            mock.Mock(return_value=EventQuerySet().none()),
+            mock.Mock(return_value=EventQuerySet(Event).none()),
         )
         queryset = view.get_queryset()
         assert queryset.query.order_by == expected_ordering
