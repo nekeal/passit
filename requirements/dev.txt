@@ -132,7 +132,6 @@ django==3.1.10
     #   django-redis
     #   django-silk
     #   django-stubs
-    #   djangorestframework
     #   django-stubs-ext
     #   djangorestframework
     #   djangorestframework-simplejwt
