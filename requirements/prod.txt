@@ -107,7 +107,7 @@ django-templated-mail==1.1.1
     #   djoser
 django-webpack-loader==0.7.0
     # via -r base.txt
-django==3.1.10
+django==3.1.12
     # via
     #   -r base.txt
     #   django-admin-display
