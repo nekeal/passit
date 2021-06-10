@@ -311,7 +311,7 @@ uritemplate==3.0.1
     #   -r base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.4
+urllib3==1.26.5
     # via
     #   -r base.txt
     #   requests
