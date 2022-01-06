@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file=dev.txt dev.in
 #
-amqp==5.0.6
+amqp==5.0.9
     # via
     #   -r base.txt
     #   kombu
@@ -34,7 +34,7 @@ billiard==3.6.4.0
     # via
     #   -r base.txt
     #   celery
-celery==5.0.5
+celery==5.2.2
     # via
     #   -r base.txt
     #   django-celery-results
@@ -50,6 +50,13 @@ chardet==4.0.0
     # via
     #   -r base.txt
     #   requests
+click==8.0.3
+    # via
+    #   -r base.txt
+    #   celery
+    #   click-didyoumean
+    #   click-plugins
+    #   click-repl
 click-didyoumean==0.0.3
     # via
     #   -r base.txt
@@ -58,17 +65,10 @@ click-plugins==1.1.1
     # via
     #   -r base.txt
     #   celery
-click-repl==0.1.6
+click-repl==0.2.0
     # via
     #   -r base.txt
     #   celery
-click==7.1.2
-    # via
-    #   -r base.txt
-    #   celery
-    #   click-didyoumean
-    #   click-plugins
-    #   click-repl
 coreapi==2.3.3
     # via
     #   -r base.txt
@@ -94,33 +94,6 @@ defusedxml==0.7.1
     #   social-auth-core
 dj-database-url==0.5.0
     # via -r base.txt
-django-admin-display==1.3.0
-    # via -r base.txt
-django-celery-results==2.0.1
-    # via -r base.txt
-django-extensions==3.1.3
-    # via -r base.txt
-django-filter==2.4.0
-    # via -r base.txt
-django-jazzmin==2.4.4
-    # via -r base.txt
-django-redis==4.12.1
-    # via -r base.txt
-django-silk==4.1.0
-    # via -r base.txt
-django-stubs-ext==0.2.0
-    # via
-    #   -r base.txt
-    #   -r ci.txt
-    #   django-stubs
-django-stubs==1.8.0
-    # via -r ci.txt
-django-templated-mail==1.1.1
-    # via
-    #   -r base.txt
-    #   djoser
-django-webpack-loader==0.7.0
-    # via -r base.txt
 django==3.1.10
     # via
     #   -r base.txt
@@ -136,15 +109,42 @@ django==3.1.10
     #   djangorestframework
     #   djangorestframework-simplejwt
     #   drf-yasg
-djangorestframework-simplejwt==4.6.0
+django-admin-display==1.3.0
+    # via -r base.txt
+django-celery-results==2.0.1
+    # via -r base.txt
+django-extensions==3.1.3
+    # via -r base.txt
+django-filter==2.4.0
+    # via -r base.txt
+django-jazzmin==2.4.4
+    # via -r base.txt
+django-redis==4.12.1
+    # via -r base.txt
+django-silk==4.1.0
+    # via -r base.txt
+django-stubs==1.8.0
+    # via -r ci.txt
+django-stubs-ext==0.2.0
+    # via
+    #   -r base.txt
+    #   -r ci.txt
+    #   django-stubs
+django-templated-mail==1.1.1
     # via
     #   -r base.txt
     #   djoser
+django-webpack-loader==0.7.0
+    # via -r base.txt
 djangorestframework==3.12.4
     # via
     #   -r base.txt
     #   djangorestframework-simplejwt
     #   drf-yasg
+djangorestframework-simplejwt==4.6.0
+    # via
+    #   -r base.txt
+    #   djoser
 djoser==2.1.0
     # via -r base.txt
 drf-flex-fields==0.8.9
@@ -179,12 +179,12 @@ iniconfig==1.1.1
     # via
     #   -r ci.txt
     #   pytest
+ipython==7.23.0
+    # via -r base.txt
 ipython-genutils==0.2.0
     # via
     #   -r base.txt
     #   traitlets
-ipython==7.23.0
-    # via -r base.txt
 itypes==1.2.0
     # via
     #   -r base.txt
@@ -198,7 +198,7 @@ jinja2==2.11.3
     #   -r base.txt
     #   coreschema
     #   django-silk
-kombu==5.0.2
+kombu==5.2.3
     # via
     #   -r base.txt
     #   celery
@@ -214,14 +214,14 @@ mccabe==0.6.1
     # via
     #   -r ci.txt
     #   flake8
-mypy-extensions==0.4.3
-    # via
-    #   -r ci.txt
-    #   mypy
 mypy==0.812
     # via
     #   -r ci.txt
     #   django-stubs
+mypy-extensions==0.4.3
+    # via
+    #   -r ci.txt
+    #   mypy
 oauthlib==3.1.0
     # via
     #   -r base.txt
@@ -296,6 +296,12 @@ pyparsing==2.4.7
     #   -r base.txt
     #   -r ci.txt
     #   packaging
+pytest==6.2.4
+    # via
+    #   -r ci.txt
+    #   pytest-django
+    #   pytest-forked
+    #   pytest-xdist
 pytest-django==4.2.0
     # via -r ci.txt
 pytest-forked==1.3.0
@@ -304,12 +310,6 @@ pytest-forked==1.3.0
     #   pytest-xdist
 pytest-xdist==2.2.1
     # via -r ci.txt
-pytest==6.2.4
-    # via
-    #   -r ci.txt
-    #   pytest-django
-    #   pytest-forked
-    #   pytest-xdist
 python-dateutil==2.8.1
     # via
     #   -r base.txt
@@ -334,10 +334,6 @@ redis==3.5.3
     # via
     #   -r base.txt
     #   django-redis
-requests-oauthlib==1.3.0
-    # via
-    #   -r base.txt
-    #   social-auth-core
 requests==2.25.1
     # via
     #   -r base.txt
@@ -345,10 +341,10 @@ requests==2.25.1
     #   django-silk
     #   requests-oauthlib
     #   social-auth-core
-ruamel.yaml.clib==0.2.2
+requests-oauthlib==1.3.0
     # via
     #   -r base.txt
-    #   ruamel.yaml
+    #   social-auth-core
 ruamel.yaml==0.17.4
     # via
     #   -r base.txt
@@ -414,6 +410,7 @@ vine==5.0.0
     #   -r base.txt
     #   amqp
     #   celery
+    #   kombu
 wcwidth==0.2.5
     # via
     #   -r base.txt
