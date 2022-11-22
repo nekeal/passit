@@ -41,6 +41,13 @@ chardet==4.0.0
     # via
     #   -r base.txt
     #   requests
+click==7.1.2
+    # via
+    #   -r base.txt
+    #   celery
+    #   click-didyoumean
+    #   click-plugins
+    #   click-repl
 click-didyoumean==0.0.3
     # via
     #   -r base.txt
@@ -53,13 +60,6 @@ click-repl==0.1.6
     # via
     #   -r base.txt
     #   celery
-click==7.1.2
-    # via
-    #   -r base.txt
-    #   celery
-    #   click-didyoumean
-    #   click-plugins
-    #   click-repl
 coreapi==2.3.3
     # via
     #   -r base.txt
@@ -85,6 +85,19 @@ defusedxml==0.7.1
     #   social-auth-core
 dj-database-url==0.5.0
     # via -r base.txt
+django==3.1.10
+    # via
+    #   -r base.txt
+    #   django-admin-display
+    #   django-extensions
+    #   django-filter
+    #   django-jazzmin
+    #   django-redis
+    #   django-silk
+    #   django-stubs-ext
+    #   djangorestframework
+    #   djangorestframework-simplejwt
+    #   drf-yasg
 django-admin-display==1.3.0
     # via -r base.txt
 django-celery-results==2.0.1
@@ -107,28 +120,15 @@ django-templated-mail==1.1.1
     #   djoser
 django-webpack-loader==0.7.0
     # via -r base.txt
-django==3.1.10
+djangorestframework==3.12.4
     # via
     #   -r base.txt
-    #   django-admin-display
-    #   django-extensions
-    #   django-filter
-    #   django-jazzmin
-    #   django-redis
-    #   django-silk
-    #   django-stubs-ext
-    #   djangorestframework
     #   djangorestframework-simplejwt
     #   drf-yasg
 djangorestframework-simplejwt==4.6.0
     # via
     #   -r base.txt
     #   djoser
-djangorestframework==3.12.4
-    # via
-    #   -r base.txt
-    #   djangorestframework-simplejwt
-    #   drf-yasg
 djoser==2.1.0
     # via -r base.txt
 drf-flex-fields==0.8.9
@@ -149,12 +149,12 @@ inflection==0.5.1
     # via
     #   -r base.txt
     #   drf-yasg
+ipython==7.23.0
+    # via -r base.txt
 ipython-genutils==0.2.0
     # via
     #   -r base.txt
     #   traitlets
-ipython==7.23.0
-    # via -r base.txt
 itypes==1.2.0
     # via
     #   -r base.txt
@@ -201,7 +201,7 @@ pickleshare==0.7.5
     # via
     #   -r base.txt
     #   ipython
-pillow==8.2.0
+pillow==9.3.0
     # via -r base.txt
 prompt-toolkit==3.0.18
     # via
@@ -257,10 +257,6 @@ redis==3.5.3
     # via
     #   -r base.txt
     #   django-redis
-requests-oauthlib==1.3.0
-    # via
-    #   -r base.txt
-    #   social-auth-core
 requests==2.25.1
     # via
     #   -r base.txt
@@ -268,11 +264,11 @@ requests==2.25.1
     #   django-silk
     #   requests-oauthlib
     #   social-auth-core
-ruamel.yaml.clib==0.2.2
+requests-oauthlib==1.3.0
     # via
     #   -r base.txt
-    #   ruamel.yaml
-ruamel.yaml==0.17.4
+    #   social-auth-core
+ruamel-yaml==0.17.4
     # via
     #   -r base.txt
     #   drf-yasg
